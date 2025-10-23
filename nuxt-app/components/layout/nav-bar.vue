@@ -3,7 +3,7 @@
     <nav class="p-4 bg-blue-500 text-white flex flex-row">
 
         <div class="basis-2xs text-lg">
-            Dylan Tettarasar
+            <p><a href="/">Dylan Tettarasar</a></p>
         </div>
 
         <div class="basis-full flex flex row content-center justify-end">
