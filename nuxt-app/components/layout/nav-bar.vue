@@ -6,7 +6,7 @@
             <p><a href="/">Dylan Tettarasar</a></p>
         </div>
 
-        <div class="basis-full flex flex row content-center justify-end">
+        <div class="basis-full hidden lg:flex flex-row content-center justify-end">
 
             <div class="mx-8 p-2 rounded-md hover:bg-sky-700">
                 <p><a href="/">Home</a></p>
@@ -23,6 +23,12 @@
             <div class="mx-8 p-2 rounded-md hover:bg-sky-700">
                 <p><a href="/contact">Contact</a></p>
             </div>
+
+        </div>
+
+        <div class="lg:hidden">
+
+            <p>mobile menu</p>
 
         </div>
 
