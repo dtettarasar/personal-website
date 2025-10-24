@@ -11,6 +11,10 @@
             <div class="m-2" >email</div>
             <div class="m-2" >linkedin</div>
             <div class="m-2" >github</div>
+
+            <Icon name="uil:github" class="w-8 h-8 text-black hover:text-sky-500 transition-colors" />
+            <Icon name="mdi:linkedin" class="w-8 h-8 text-black hover:text-sky-500 transition-colors" />
+
         </div>
 
     </div>
