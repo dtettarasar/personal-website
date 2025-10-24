@@ -1,6 +1,6 @@
 <template>
 
-    <nav class="p-4 bg-slate-800 text-white flex flex-row">
+    <nav class="sticky top-0 z-50 p-4 bg-slate-800 text-white flex flex-row">
 
         <div class="basis-2xs p-2 text-lg">
             <p><a href="/">Dylan Tettarasar</a></p>

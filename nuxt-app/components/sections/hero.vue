@@ -7,6 +7,12 @@
             <p>This is the website Baseline</p>
         </div>
 
+        <div class="flex flex-row content-center justify-center">
+            <div class="m-2" >email</div>
+            <div class="m-2" >linkedin</div>
+            <div class="m-2" >github</div>
+        </div>
+
     </div>
 
 
