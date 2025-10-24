@@ -8,12 +8,14 @@
         </div>
 
         <div class="flex flex-row content-center justify-center">
+            
             <div class="m-2" >email</div>
             <div class="m-2" >linkedin</div>
             <div class="m-2" >github</div>
 
-            <Icon name="uil:github" class="w-8 h-8 text-black hover:text-sky-500 transition-colors" />
-            <Icon name="mdi:linkedin" class="w-8 h-8 text-black hover:text-sky-500 transition-colors" />
+            <icon name="fa7-brands:github" class="w-8 h-8 text-white hover:text-sky-500 transition-colors" />
+            <icon name="mdi:linkedin" class="w-8 h-8 text-white hover:text-sky-500 transition-colors" />
+            <icon name="ic:outline-alternate-email" class="w-8 h-8 text-white hover:text-sky-500 transition-colors" />
 
         </div>
 
