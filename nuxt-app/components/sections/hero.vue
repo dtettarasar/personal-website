@@ -1,6 +1,8 @@
 <template>
   <section id="hero" class="flex flex-col justify-center items-center h-screen text-center relative overflow-hidden">
-    <div class="space-y-6 z-10">
+    <div class="space-y-6 z-10 flex flex-col">
+
+        <img class="w-32 lg:w-48 self-center" src="/img/profile_pic_square.jpg" ></img>
 
         <h1 class="font-mono tracking-widest text-green-400 text-5xl md:text-6xl uppercase">
             Hello World! I’m Dylan :)<span class="animate-pulse">_</span>
