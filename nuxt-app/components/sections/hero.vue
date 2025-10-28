@@ -31,8 +31,8 @@
 
       <!-- Icônes -->
       <div class="flex justify-center items-center gap-8 pt-6">
-        <Icon name="ic:outline-alternate-email" class="w-10 h-10 text-gray-200 hover:text-green-400 transition-colors" />
-        <Icon name="mdi:linkedin" class="w-10 h-10 text-gray-200 hover:text-green-400 transition-colors" />
+        <Icon name="mdi:mail-ru" class="w-10 h-10 text-gray-200 hover:text-green-400 transition-colors" />
+        <Icon name="fa7-brands:linkedin" class="w-10 h-10 text-gray-200 hover:text-green-400 transition-colors" />
         <Icon name="fa7-brands:github" class="w-10 h-10 text-gray-200 hover:text-green-400 transition-colors" />
       </div>
     </div>
