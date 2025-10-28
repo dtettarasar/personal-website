@@ -8,20 +8,30 @@
 
         <div class="basis-full hidden lg:flex flex-row content-center justify-end">
 
-            <div class="mx-8 p-2 rounded-md hover:bg-green-700">
-                <p><a href="/">Home</a></p>
-            </div>
+            <div class="flex flex-row justify-center items-center gap-8 h-full">
 
-            <div class="mx-8 p-2 rounded-md hover:bg-green-700">
-                <p><a href="/resume">Resume</a></p>
-            </div>
+                <div
+                v-for="item in menuItems"
+                :key="item.to"
+                class="group flex flex-col justify-between items-center"
+                >
 
-            <div class="mx-8 p-2 rounded-md hover:bg-green-700">
-                <p><a href="/portfolio">Portfolio</a></p>
-            </div>
+                    <NuxtLink :to="item.to" class="">
+                        {{ item.label }}
+                    </NuxtLink>
 
-            <div class="mx-8 p-2 rounded-md hover:bg-green-700">
-                <p><a href="/contact">Contact</a></p>
+                    <div
+                    :class="[
+                        'w-[30px] h-[4px] rounded-full transition-all duration-300',
+                        route.path === item.to
+                        ? 'bg-emerald-400 shadow-[0_0_10px_rgba(74,222,128,0.6)]'
+                        : 'bg-transparent group-hover:bg-emerald-400 group-hover:shadow-[0_0_6px_rgba(74,222,128,0.4)]'
+                    ]"
+                    ></div>
+
+
+                </div>
+
             </div>
 
         </div>
@@ -40,6 +50,17 @@
 
 <script setup>
 
+    import { useRoute } from 'vue-router'
 
+    const route = useRoute()
+
+    const menuItems = [
+
+        { label: 'Home', to: '/' },
+        { label: 'Resume', to: '/resume' },
+        { label: 'Portfolio', to: '/portfolio' },
+        { label: 'Contact', to: '/contact' },
+        
+    ]
 
 </script>
