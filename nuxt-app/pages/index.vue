@@ -22,7 +22,7 @@
 
     </div>
 
-    <div class="container py-4 mb-4 mx-auto text-white md:text-lg">
+    <div class="container p-4 mx-auto text-white md:text-lg">
 
       <p class="my-1 md:my-4">
 
