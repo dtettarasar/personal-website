@@ -3,8 +3,6 @@
     id="hero"
     class="relative flex flex-col justify-center items-center h-screen text-center overflow-hidden"
   >
-    <!-- Scanlines subtiles -->
-    <div class="absolute inset-0 opacity-10 bg-[url('/img/scanlines.png')] bg-repeat bg-center animate-scanlines"></div>
 
     <!-- Contenu principal -->
     <div class="space-y-8 z-10 flex flex-col items-center px-4">
