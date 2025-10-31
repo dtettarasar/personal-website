@@ -2,9 +2,9 @@
 
     <div class="bg-slate-800">
 
-        <div class="container py-4 mx-auto flex flex col">
+        <div class="container py-4 mx-auto flex flex col justify-center">
 
-            <p>this is the footer component</p>
+            <p class="text-green-400 drop-shadow-[0_0_15px_rgba(74,222,128,0.4)] md:text-xl">Website created by Dylan Tettarasar © 2025</p>
 
         </div>
 

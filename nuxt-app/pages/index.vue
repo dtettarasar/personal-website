@@ -22,24 +22,33 @@
 
     </div>
 
-    <div class="container py-4 mb-4 mx-auto text-white">
+    <div class="container py-4 mb-4 mx-auto text-white md:text-lg">
 
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-        Mauris eget tristique erat. Sed vitae tincidunt odio. Nam venenatis tellus augue. Pellentesque sit amet molestie magna. 
-        Cras suscipit ex ac metus sodales, et laoreet enim varius. Ut sollicitudin molestie velit id viverra. 
-        Praesent a erat iaculis, ornare nibh ullamcorper, accumsan sapien. Sed in consectetur tellus. 
+      <p class="my-1 md:my-4">
+
+        I started my career in <strong>digital communication and web project management</strong>, spending several years leading projects that connected strategy, 
+        creativity, and technology.
+
       </p>
 
-      <p>
+      <p class="my-1 md:my-4">
 
-        Nullam nec congue ipsum. Donec a nunc sed tellus iaculis posuere fermentum eu lorem. 
-        Proin faucibus dui eget malesuada finibus. Sed eleifend sapien ac mi pharetra, at pulvinar felis pretium. 
-        Cras ultricies sit amet mi vel laoreet. Aliquam malesuada enim sed mi efficitur, id luctus mauris gravida. 
-        Phasellus aliquet arcu quis orci ornare, ut dignissim mauris lacinia. Proin eleifend est quis neque placerat lobortis. 
-        Mauris tempus arcu ac lacinia scelerisque. Quisque eget iaculis erat. Nam tincidunt augue nibh, vel laoreet sem eleifend in. 
-        Sed vitae imperdiet metus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. 
-        Sed at augue augue. In orci tellus, porttitor eu auctor feugiat, vehicula non risus. 
+        During this time, I worked on <strong>WordPress websites, SEO optimization, and web content production</strong>, 
+        often taking on both the strategic vision and the hands-on execution — from UX design to publishing and performance analysis.
+
+      </p>
+
+      <p class="my-1 md:my-4">
+
+        This experience gave me a <strong>360° understanding of the web ecosystem</strong>: how a website is designed, developed, optimized, and maintained over time. 
+        It also shaped my sense of autonomy, creativity, and adaptability — qualities that have always guided my work.
+
+      </p>
+
+      <p class="my-1 md:my-4">
+
+        Over time, I felt the need to go deeper into the <strong>technical side of creation</strong>, to understand what happens under the hood — beyond CMS tools and pre-built solutions.
+        That’s what led me to learn <strong>JavaScript, Python, and modern frameworks like Nuxt.js, Vue, and Django</strong>, and to gradually move towards <strong>fullstack development</strong>.
 
       </p>
 
