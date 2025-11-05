@@ -17,7 +17,7 @@ export default defineNuxtConfig({
 
     mongoUser: process.env.MONGO_INITDB_ROOT_USERNAME,
     mongoPass: process.env.MONGO_INITDB_ROOT_PASSWORD,
-    mongoDbName: process.env.MONGO_DB_NAME || 'testdb',
+    mongoDbName: process.env.MONGO_DB_NAME,
     
   },
 
