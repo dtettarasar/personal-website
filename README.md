@@ -7,8 +7,6 @@ It is designed to showcase both my portfolio and technical skills, while remaini
 
 The project can be deployed as-is via Docker or used as a starting point to create a similar Nuxt.js-based application.
 
----
-
 ## 🧰 Tech Stack
 
 - **Nuxt 3 / Vue 3** — Integrated frontend + backend framework (server-side API)
@@ -17,8 +15,6 @@ The project can be deployed as-is via Docker or used as a starting point to crea
 - **Mongoose** *(optional)* — ODM to simplify MongoDB model and query management
 - **Docker & Docker Compose** — Containerization and orchestration
 - **Node.js 18+** — JavaScript runtime environment
-
----
 
 ## ✨ Features (Work in Progress)
 
@@ -29,4 +25,24 @@ The project can be deployed as-is via Docker or used as a starting point to crea
 - ⚙️ **Back Office** — Manage all content (profile, CV, portfolio, contact form) from a secure admin dashboard.
 - 🚀 **SEO-Friendly Architecture (thanks to Nuxt JS)** — Server-side rendering (SSR) for optimized search engine visibility.
 
----
+## 🧑‍💻 Development Setup
+
+**Prerequisites**
+
+- Docker & Docker Compose installed
+- Node.js (optional, if you want to run Nuxt locally)
+
+### Installation
+
+~~~
+# Clone the repository
+git clone https://github.com/dtettarasar/news-ipsum.git
+
+# Move into the project folder
+cd news-ipsum
+
+# Start the containers
+docker compose up --build
+~~~
+
+
