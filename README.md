@@ -34,15 +34,88 @@ The project can be deployed as-is via Docker or used as a starting point to crea
 
 ### Installation
 
+⚙️ Environment Variables
+
+The application uses a .env file at the project root.
+Example configuration:
+
+### ⚙️ Environment Variables
+
+The application uses a .env file at the project root.
+Example configuration:
+
+~~~
+MONGO_INITDB_ROOT_USERNAME=admin
+MONGO_INITDB_ROOT_PASSWORD=secure-password1234!!
+MONGO_DB_NAME=personal_site
+MONGO_DB_URI=mongodb://admin:secure-password1234!!@mongodb:27017/
+ME_CONFIG_BASICAUTH_USERNAME=devadmin
+ME_CONFIG_BASICAUTH_PASSWORD=devsecret
+~~~
+
 ~~~
 # Clone the repository
-git clone https://github.com/dtettarasar/news-ipsum.git
+git clone https://github.com/dtettarasar/personal-website.git
 
 # Move into the project folder
-cd news-ipsum
+cd personal-website
+
+# create the .env file and add variables in it using your editor
+touch .env
 
 # Start the containers
 docker compose up --build
 ~~~
 
+**Once running** 
 
+- App available at → http://localhost:3000
+- Mongo Express (database UI) → http://localhost:8081
+
+#### Important notes
+
+**Mongo Express is reserved for local development.**
+It must never be activated in production (risk of security breach).
+The service is configured to be deployed only in the development environment.
+
+**The identifiers “devadmin / devsecret” are examples for local use.**
+You can change them freely, but keep them simple for your local environment.
+
+**In production**, the application does not depend on Mongo Express.
+Only MONGO_INITDB_ROOT_USERNAME, MONGO_INITDB_ROOT_PASSWORD, MONGO_DB_NAME, and MONGO_DB_URI are required.
+
+#### 🚀 Production environment
+
+In production, Mongo Express is disabled for security reasons.
+Only the Nuxt app and MongoDB services are started.
+
+**Command:**
+
+```bash
+docker compose -f docker-compose.yml up -d
+```
+
+This ensures that:
+
+- Only essential containers are running.
+- No admin interface is publicly exposed.
+
+You can safely deploy this configuration on your production server or staging environment.
+
+#### 🔄 Other Useful Docker commands
+
+```bash
+
+# List running containers
+docker compose ps
+
+# Stream logs from all containers
+docker compose logs -f
+
+# Stop and remove containers and volumes
+docker compose down -v
+
+# Rebuild all images from scratch
+docker compose build --no-cache
+
+```
