@@ -34,11 +34,6 @@ The project can be deployed as-is via Docker or used as a starting point to crea
 
 ### Installation
 
-⚙️ Environment Variables
-
-The application uses a .env file at the project root.
-Example configuration:
-
 ### ⚙️ Environment Variables
 
 The application uses a .env file at the project root.
