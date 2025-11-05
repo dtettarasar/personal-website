@@ -114,3 +114,25 @@ docker compose down -v
 docker compose build --no-cache
 
 ```
+
+## 🧩 Planned Features
+
+- 🔐 Authentication system for the back office
+- 🧠 Markdown-based content management
+- 🖼️ Media upload and image optimization
+- 🗃️ Project categories and filtering
+- 📨 Mailer service integration (NodeMailer or similar)
+
+## 📅 Project Status
+
+This project is **currently under development**.
+The structure and main components are being implemented progressively, and features will be added step by step.
+
+## 💡 About the Author
+
+I’m **Dylan Tettarasar**, a **Fullstack Developer** and former **Web Project Manager**, with a background in **digital marketing and communication**.
+My goal with this project is to merge my experience in web management with my growing expertise in development — and to create a personal site that reflects my technical journey and creative side.
+
+## 📄 License
+
+This project is released under the **MIT License** — feel free to fork, modify, and reuse it for your own portfolio.
