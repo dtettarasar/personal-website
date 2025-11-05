@@ -4,7 +4,7 @@
 
     <sections-hero></sections-hero>
 
-    <text-section-title></text-section-title>
+    <text-section-title icon="mdi:account-circle" title="About me" ></text-section-title>
 
     <div class="container p-4 mx-auto text-white md:text-lg">
 
@@ -38,25 +38,7 @@
 
     </div>
 
-  
-
-    <div class="container py-8 mx-auto">
-
-      <div class="flex flex-col gap-4">
-
-        <div class="justify-center border-green-400 text-2xl md:text-4xl flex flex-row items-center gap-4">
-
-          <Icon name="mdi:comment-account" class="w-10 h-10 text-green-400" />
-          <h2 class="text-green-400 drop-shadow-[0_0_15px_rgba(74,222,128,0.4)]">Contact</h2>
-
-        </div>
-
-        <div class="w-full h-[4px] rounded-full bg-emerald-400 shadow-[0_0_10px_rgba(74,222,128,0.6)]">
-        </div>
-
-      </div>
-
-    </div>
+    <text-section-title icon="mdi:comment-account" title="Contact" ></text-section-title>
 
   </div>
 
