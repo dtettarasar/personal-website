@@ -1,21 +1,26 @@
 services:
-  personal-nuxt-app:
+  nuxt-app:
     build: ./nuxt-app
-    container_name: personal-nuxt-app
+    restart: unless-stopped
     ports:
       - "3000:3000"
     environment:
       - NODE_ENV=development
-      - MONGODB_URI=mongodb://personal-mongodb:27017
+      - MONGO_INITDB_ROOT_USERNAME=${MONGO_INITDB_ROOT_USERNAME}
+      - MONGO_INITDB_ROOT_PASSWORD=${MONGO_INITDB_ROOT_PASSWORD}
+      - MONGO_DB_NAME=${MONGO_DB_NAME}
     volumes:
       - ./nuxt-app:/usr/src/app
     depends_on:
-      - personal-mongodb
+      - mongodb
 
-  personal-mongodb:
+  mongodb:
     image: mongo:latest
-    container_name: personal-mongodb
+    restart: unless-stopped
     ports:
-      - "27018:27017"
+      - "27017:27017"
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=${MONGO_INITDB_ROOT_USERNAME}
+      - MONGO_INITDB_ROOT_PASSWORD=${MONGO_INITDB_ROOT_PASSWORD}
     volumes:
-      - ./data/db:/data/db
+      - ./data/personal-db:/data/db

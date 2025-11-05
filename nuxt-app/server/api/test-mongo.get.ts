@@ -1,17 +1,13 @@
-import { MongoClient } from 'mongodb'
+import TestMessage from '../database/models/test-message'
 
 export default defineEventHandler(async (event) => {
-  const client = new MongoClient('mongodb://mongodb:27017') // mongodb = nom du service dans docker-compose
-  await client.connect()
-  const db = client.db('testdb') // une DB de test
-  const collection = db.collection('testCollection')
 
-  // Insert un doc test
-  const result = await collection.insertOne({ message: 'Hello from Nuxt server!' })
+  // On insère un document de test
+  const newMessage = await TestMessage.create({ message: 'Hello from Nuxt + Mongoose!' });
 
-  // Récupère le doc
-  const doc = await collection.findOne({ _id: result.insertedId })
+  // Et on le récupère juste après
+  const foundMessage = await TestMessage.findById(newMessage._id)
 
-  await client.close()
-  return doc
+  return foundMessage
+
 })
