@@ -1,4 +1,13 @@
 <script setup>
+
+const separatorClasses = [
+  'w-full',
+  'h-[4px]',
+  'rounded-full',
+  'bg-emerald-400',
+  'shadow-[0_0_10px_rgba(74,222,128,0.6)]'
+]
+
 defineProps({
   title: {
     type: String,
@@ -9,6 +18,7 @@ defineProps({
     default: 'mdi:star' // icône par défaut si aucune n’est passée
   }
 })
+
 </script>
 
 <template>
@@ -21,7 +31,8 @@ defineProps({
         </h2>
       </div>
 
-      <div class="w-full h-[4px] rounded-full bg-emerald-400 shadow-[0_0_10px_rgba(74,222,128,0.6)]"></div>
+      <div :class="separatorClasses"></div>
+
     </div>
   </div>
 </template>
