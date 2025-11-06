@@ -36,6 +36,26 @@
 
       </p>
 
+      <div>
+
+        <NuxtLink to="/resume">
+          
+          <div>
+            Resume
+          </div>
+
+        </NuxtLink>
+
+        <NuxtLink to="/portfolio">
+          
+          <div>
+            Portfolio
+          </div>
+
+        </NuxtLink>
+
+      </div>
+
     </div>
 
     <text-section-title icon="mdi:comment-account" title="Contact" ></text-section-title>
