@@ -38,9 +38,9 @@
 
       <div class="flex flex-wrap flex-row justify-around pt-4">
 
-        <button-link link="/resume" icon="mdi:comment-account" label="Resume"></button-link> 
+        <button-link link="/resume" icon="mdi:card-account-details" label="Resume"></button-link> 
 
-        <button-link link="/resume" icon="mdi:comment-account" label="Portfolio"></button-link> 
+        <button-link link="/portfolio" icon="mdi:application-braces" label="Portfolio"></button-link> 
 
       </div>
 
