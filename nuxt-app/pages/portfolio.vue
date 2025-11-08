@@ -1,6 +1,7 @@
 <template>
   <div>
-    <h1 class="text-3xl font-bold underline" >Portfolio Page</h1>
+
+    <sections-hero-small icon="mdi:application-braces" title="Portfolio" ></sections-hero-small>
 
   </div>
 </template>

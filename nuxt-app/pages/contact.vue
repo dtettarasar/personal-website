@@ -1,6 +1,7 @@
 <template>
   <div>
-    <h1 class="text-3xl font-bold underline" >Contact Page</h1>
+    
+    <sections-hero-small icon="mdi:comment-account" title="Contact" ></sections-hero-small>
 
   </div>
 </template>
