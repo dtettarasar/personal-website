@@ -11,13 +11,13 @@
       <div class="relative">
         <img
           src="/img/profile_pic_square.jpg"
-          class="w-32 lg:w-48 rounded-full border-4 border-green-400 shadow-[0_0_25px_rgba(74,222,128,0.5)] animate-borderPulse"
+          class="w-32 lg:w-48 rounded-full border-4 border-emerald-400 shadow-[0_0_25px_rgba(74,222,128,0.5)] animate-borderPulse"
         />
       </div>
 
       <!-- Titre principal -->
       <h1
-        class="font-mono tracking-[0.3em] text-green-400 text-4xl md:text-6xl uppercase drop-shadow-[0_0_15px_rgba(74,222,128,0.4)]"
+        class="font-mono tracking-[0.3em] text-emerald-400 text-4xl md:text-6xl uppercase drop-shadow-[0_0_15px_rgba(74,222,128,0.4)]"
       >
         Hello World! I’m Dylan<span class="animate-pulse">_</span>
       </h1>
@@ -29,9 +29,9 @@
 
       <!-- Icônes -->
       <div class="flex justify-center items-center gap-8 pt-6">
-        <Icon name="mdi:mail-ru" class="w-10 h-10 text-gray-200 hover:text-green-400 transition-colors" />
-        <Icon name="fa7-brands:linkedin" class="w-10 h-10 text-gray-200 hover:text-green-400 transition-colors" />
-        <Icon name="fa7-brands:github" class="w-10 h-10 text-gray-200 hover:text-green-400 transition-colors" />
+        <Icon name="mdi:mail-ru" class="w-10 h-10 text-gray-200 hover:text-emerald-400 transition-colors" />
+        <Icon name="fa7-brands:linkedin" class="w-10 h-10 text-gray-200 hover:text-emerald-400 transition-colors" />
+        <Icon name="fa7-brands:github" class="w-10 h-10 text-gray-200 hover:text-emerald-400 transition-colors" />
       </div>
     </div>
   </section>
