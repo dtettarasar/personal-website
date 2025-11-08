@@ -2,7 +2,7 @@
   
   <div class="bg-slate-800">
 
-    <sections-hero></sections-hero>
+    <sections-hero-big></sections-hero-big>
 
     <text-section-title icon="mdi:account-circle" title="About me" ></text-section-title>
 
