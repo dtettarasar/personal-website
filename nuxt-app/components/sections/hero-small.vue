@@ -1,6 +1,6 @@
 <template>
 
-    <section class="bg-indigo-500 flex flex-col justify-center items-center py-5">
+    <section id="hero" class="flex flex-col justify-center items-center py-5">
 
         <div class="flex flex-col items-center">
             
@@ -15,8 +15,6 @@
 </template>
 
 <style scoped>
-
-
 
 </style>
 

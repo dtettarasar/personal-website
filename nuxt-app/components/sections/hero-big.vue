@@ -39,38 +39,6 @@
 
 <style scoped>
 
-/* Animation du gradient */
-#hero {
-  background: linear-gradient(
-    135deg,
-    #0d1117,    /* Noir bleuté profond */
-    #1c2834,    /* Bleu graphite mat */
-    #223844,    /* Bleu-gris doux */
-    #234d4d,    /* Vert froid désaturé */
-    #3aa37f     /* Vert accent légèrement adouci */
-  );
-  background-size: 400% 400%;
-  animation: gradientMove 25s ease-in-out infinite alternate;
-}
-
-#hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(
-    circle at center,
-    rgba(255, 255, 255, 0.06),
-    transparent 60%
-  );
-  z-index: 0;
-}
-
-@keyframes gradientMove {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
-
 /* Effet halo vert autour de la photo */
 @keyframes borderPulse {
   0% {
