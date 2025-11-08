@@ -1,12 +1,12 @@
 <template>
 
-    <section id="hero" class="flex flex-col justify-center items-center py-5">
+    <section id="hero" class="flex flex-col justify-center items-center py-8">
 
         <div class="flex flex-col items-center">
             
-            <Icon :name="icon" class="text-4xl md:text-6xl text-emerald-400 drop-shadow-[0_0_15px_rgba(74,222,128,0.4)]" />
+            <Icon :name="icon" class="text-4xl md:text-6xl text-emerald-400 drop-shadow-[0_0_15px_rgba(74,222,128,0.4)] mb-2" />
 
-            <h1 :class="titleClasses" >Resume<span class="animate-pulse">_</span></h1>
+            <h1 :class="titleClasses" >{{ title }}<span class="animate-pulse">_</span></h1>
 
         </div>
 
