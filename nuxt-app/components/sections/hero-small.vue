@@ -4,9 +4,9 @@
 
         <div class="flex flex-col items-center">
             
-            <Icon :name="icon" class="w-10 h-10 text-white text-2xl md:text-3xl" />
+            <Icon :name="icon" class="text-2xl md:text-4xl text-emerald-400 drop-shadow-[0_0_15px_rgba(74,222,128,0.4)]" />
 
-            <h1 class="text-3xl md:text-5xl" >Resume</h1>
+            <h1 :class="titleClasses" >Resume<span class="animate-pulse">_</span></h1>
 
         </div>
 
@@ -19,6 +19,16 @@
 </style>
 
 <script setup>
+
+const titleClasses = [
+
+    'text-3xl',
+    'md:text-5xl',
+    'font-mono',
+    'text-emerald-400',
+    'drop-shadow-[0_0_15px_rgba(74,222,128,0.4)]'
+
+]
 
 defineProps({
   title: {
