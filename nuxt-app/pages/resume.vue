@@ -1,6 +1,8 @@
 <template>
   <div>
-    <h1 class="text-3xl font-bold underline" >Resume Page</h1>
+    
+    <sections-hero-small></sections-hero-small>
+
 
     <other-test-mongo-db></other-test-mongo-db>
 
