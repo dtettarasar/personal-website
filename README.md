@@ -79,6 +79,15 @@ You can change them freely, but keep them simple for your local environment.
 **In production**, the application does not depend on Mongo Express.
 Only MONGO_INITDB_ROOT_USERNAME, MONGO_INITDB_ROOT_PASSWORD, MONGO_DB_NAME, and MONGO_DB_URI are required.
 
+#### Development environment 
+
+**Command:**
+
+```bash
+docker compose -f docker-compose.dev.yml up --build
+docker compose -f docker-compose.dev.yml down
+```
+
 #### 🚀 Production environment
 
 In production, Mongo Express is disabled for security reasons.
@@ -87,7 +96,8 @@ Only the Nuxt app and MongoDB services are started.
 **Command:**
 
 ```bash
-docker compose -f docker-compose.yml up -d
+docker compose -f docker-compose.prod.yml up -d --build
+docker compose -f docker-compose.prod.yml down
 ```
 
 This ensures that:
