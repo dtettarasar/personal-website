@@ -2,12 +2,22 @@ import TestMessage from '../database/models/test-message'
 
 export default defineEventHandler(async (event) => {
 
-  // On insère un document de test
-  const newMessage = await TestMessage.create({ message: 'Hello from Nuxt + Mongoose!' });
+  console.log("received call to test-mongo.get.ts")
 
-  // Et on le récupère juste après
-  const foundMessage = await TestMessage.findById(newMessage._id)
+  try {
 
-  return foundMessage
+    // On insère un document de test
+    const newMessage = await TestMessage.create({ message: 'Hello from Nuxt + Mongoose!' });
+    console.log('Created:', newMessage)
+
+    const foundMessage = await TestMessage.findById(newMessage._id)
+    console.log('Found:', foundMessage)
+
+    return foundMessage
+
+  } catch (e) {
+    console.error('Error in test-mongo:', e)
+    throw e
+  }
 
 })
