@@ -5,12 +5,10 @@ services:
     ports:
       - "3000:3000"
     environment:
-      - NODE_ENV=development
+      - NODE_ENV=production
       - MONGO_INITDB_ROOT_USERNAME=${MONGO_INITDB_ROOT_USERNAME}
       - MONGO_INITDB_ROOT_PASSWORD=${MONGO_INITDB_ROOT_PASSWORD}
       - MONGO_DB_NAME=${MONGO_DB_NAME}
-    volumes:
-      - ./nuxt-app:/usr/src/app
     depends_on:
       - mongodb
 
