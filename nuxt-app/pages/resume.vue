@@ -1,7 +1,7 @@
 <template>
   <div>
     
-    <sections-hero-small></sections-hero-small>
+    <sections-hero-small title="Resume"></sections-hero-small>
 
 
     <other-test-mongo-db></other-test-mongo-db>
