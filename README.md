@@ -29,8 +29,19 @@ The project can be deployed as-is via Docker or used as a starting point to crea
 
 **Prerequisites**
 
-- Docker & Docker Compose installed
-- Node.js (optional, if you want to run Nuxt locally)
+- **Docker & Docker Compose** installed
+- **Node.js** (optional, if you want to run Nuxt locally, but recommended for tooling)
+- **Make** (Required for executing development/production commands via the `Makefile`)
+
+### Installing Make
+
+The project uses a `Makefile` to simplify Docker commands. You must have **Make** installed on your system.
+
+| OS | Installation Instructions |
+| :--- | :--- |
+| **macOS** | Included with **Xcode Command Line Tools**. If the `make` command fails, run: `xcode-select --install` |
+| **Linux** | Usually pre-installed. If not, install the build tools, e.g., on Ubuntu: `sudo apt install build-essential` |
+| **Windows** | Recommended via **WSL 2** (Windows Subsystem for Linux), or available through **Git Bash** (included with Git for Windows). |
 
 ### Installation
 
@@ -58,8 +69,13 @@ cd personal-website
 # create the .env file and add variables in it using your editor
 touch .env
 
-# Start the containers
-docker compose up --build
+# Install project dependencies (optional but good practice)
+npm install 
+
+# Start in Development mode (uses docker-compose.yml and docker-compose.dev.yml)
+# This command uses the Makefile for Hot Reload and Mongo Express.
+make dev
+
 ~~~
 
 **Once running** 
@@ -67,53 +83,60 @@ docker compose up --build
 - App available at → http://localhost:3000
 - Mongo Express (database UI) → http://localhost:8081
 
-#### Important notes
+## 🐳 Docker Environments and Deployment
 
-**Mongo Express is reserved for local development.**
-It must never be activated in production (risk of security breach).
-The service is configured to be deployed only in the development environment.
+This project uses Docker Compose with two separate configuration files for clear separation:
+* **`docker-compose.yml`**: Defines the essential services for **Production** (Nuxt App, MongoDB).
+* **`docker-compose.dev.yml`**: A configuration override that adds **Development** features (Hot Reload volumes, Mongo Express).
 
-**The identifiers “devadmin / devsecret” are examples for local use.**
-You can change them freely, but keep them simple for your local environment.
+### ⚙️ Local Development (Hot Reload & DB Admin)
 
-**In production**, the application does not depend on Mongo Express.
-Only MONGO_INITDB_ROOT_USERNAME, MONGO_INITDB_ROOT_PASSWORD, MONGO_DB_NAME, and MONGO_DB_URI are required.
-
-#### 🚀 Production environment
-
-In production, Mongo Express is disabled for security reasons.
-Only the Nuxt app and MongoDB services are started.
+Use the `make dev` command to run the environment locally. It automatically uses both configuration files.
 
 **Command:**
 
-```bash
-docker compose -f docker-compose.yml up -d
-```
+~~~
+make dev
+~~~
 
-This ensures that:
+### 🚀 Production Deployment (Secure & Optimized)
 
-- Only essential containers are running.
-- No admin interface is publicly exposed.
+In production, Mongo Express is disabled, the Nuxt application is served from its compiled .output files, and code volumes are omitted for security and performance.
 
-You can safely deploy this configuration on your production server or staging environment.
+You can launch the production environment using the Makefile (recommended for logs) or directly via Docker Compose.
 
-#### 🔄 Other Useful Docker commands
+**1. Launch and Attach Logs (Foreground)**
 
-```bash
+~~~
+make prod-log
+~~~
 
+*Use this to check for runtime errors, typically during the first deployment.*
+
+**2. Launch in Detached Mode (Background)**
+
+~~~
+make prod-no-log
+~~~
+
+*Use this for continuous operation on a remote server.*
+
+### 🔄 Other Useful Docker commands
+
+~~~
 # List running containers
 docker compose ps
 
-# Stream logs from all containers
-docker compose logs -f
+# Stream logs from the production stack (use this if prod-no-log is running)
+docker compose -f docker-compose.yml logs -f
 
-# Stop and remove containers and volumes
-docker compose down -v
+# Stop and remove containers and volumes for the full DEV stack
+# (This includes mongo-express, even if it's currently down)
+make down
 
-# Rebuild all images from scratch
-docker compose build --no-cache
-
-```
+# Rebuild all images from scratch (uses the DEV stack)
+docker compose -f docker-compose.yml -f docker-compose.dev.yml build --no-cache
+~~~
 
 ## 🧩 Planned Features
 
