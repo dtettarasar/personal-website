@@ -1,7 +1,7 @@
 <template>
   <section
     id="hero"
-    class="relative flex flex-col justify-center items-center h-screen text-center overflow-hidden"
+    class="relative flex flex-col justify-center items-center h-screen text-center overflow-hidden animate-gradient-move"
   >
 
     <!-- Contenu principal -->
@@ -38,6 +38,23 @@
 </template>
 
 <style scoped>
+
+/*
+ * Nous laissons le gradient CSS complexe ici, car il est difficile
+ * de le recréer avec les utilitaires de base de Tailwind.
+ * En le laissant ici, il est SCOPED et géré localement.
+ */
+#hero {
+  background: linear-gradient(
+    135deg,
+    #0d1117,
+    #1c2834,
+    #223844,
+    #234d4d,
+    #3aa37f
+  );
+  background-size: 400% 400%;
+}
 
 /* Effet halo vert autour de la photo */
 @keyframes borderPulse {

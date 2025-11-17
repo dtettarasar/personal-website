@@ -1,31 +1,16 @@
+# docker-compose.dev.yml (Surcharge pour le développement local)
 services:
   nuxt-app:
-    build: ./nuxt-app
-    restart: unless-stopped
-    ports:
-      - "3000:3000"
     environment:
-      - NODE_ENV=development
-      - MONGO_INITDB_ROOT_USERNAME=${MONGO_INITDB_ROOT_USERNAME}
-      - MONGO_INITDB_ROOT_PASSWORD=${MONGO_INITDB_ROOT_PASSWORD}
-      - MONGO_DB_NAME=${MONGO_DB_NAME}
+      - NODE_ENV=development # Surcharge la variable pour le dev
     volumes:
-      - ./nuxt-app:/usr/src/app
-      - /usr/src/app/node_modules
-    depends_on:
-      - mongodb
-
-  mongodb:
-    image: mongo:latest
-    restart: unless-stopped
-    ports:
-      - "27017:27017"
-    environment:
-      - MONGO_INITDB_ROOT_USERNAME=${MONGO_INITDB_ROOT_USERNAME}
-      - MONGO_INITDB_ROOT_PASSWORD=${MONGO_INITDB_ROOT_PASSWORD}
-    volumes:
-      - ./data/personal-db:/data/db
-
+      - ./nuxt-app:/usr/src/app # Ajout du volume pour le Hot Reload
+      - /usr/src/app/node_modules # Contournement pour éviter d'écraser node_modules
+    
+    # Surcharge la commande pour utiliser 'npm run dev'
+    # Utilisation d'un entrypoint pour s'assurer que Nuxt dev est bien appelé
+    entrypoint: ["npm", "run", "dev"]
+    
   mongo-express:
     image: mongo-express
     restart: unless-stopped
