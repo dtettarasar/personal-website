@@ -5,6 +5,8 @@
 
     <other-teasing></other-teasing>
 
+    <other-test-mongo-db></other-test-mongo-db>
+
   </div>
 </template>
 

@@ -138,6 +138,83 @@ make down
 docker compose -f docker-compose.yml -f docker-compose.dev.yml build --no-cache
 ~~~
 
+## 🔐 Reverse Proxy & HTTPS with Caddy
+
+This project uses **Caddy** as the production web server and reverse-proxy.
+Caddy automatically handles:
+
+- Reverse-proxying traffic to the Nuxt application
+- Automatic HTTPS certificates via Let’s Encrypt
+- HTTP → HTTPS redirection
+- Simplified domain configuration
+
+This makes the deployment extremely easy and secure without manual SSL configuration.
+
+### 📁 Caddyfile (example)
+
+A minimal example Caddyfile looks like this:
+
+~~~
+your-domain.dev {
+    reverse_proxy nuxt-app:3000
+}
+~~~
+
+Caddy listens on ports **80/443** and forwards traffic to the internal Docker service nuxt-app running on port 3000.
+
+### ⚙️ Local Development
+
+In development, Caddy is optional.
+
+You can simply run:
+
+~~~
+http://localhost:3000
+~~~
+
+But if you want to test Caddy locally:
+
+**1. Create a local-only Caddyfile:**
+
+~~~
+localhost {
+    reverse_proxy nuxt-app:3000
+}
+~~~
+
+**2. Start with the dev Docker Compose:**
+
+~~~
+docker compose -f docker-compose.yml -f docker-compose.dev.yml up --build
+~~~
+
+or
+
+~~~
+make dev
+~~~
+
+Then visit:
+
+~~~
+http://localhost
+~~~
+
+Mongo Express should be also available here: 
+
+~~~
+http://localhost:8081
+~~~
+
+### 🌍 Production Deployment Steps
+
+1. Point your domain to the server’s IP using DNS A/AAAA records
+2. Add your real domain to the Caddyfile
+3. Deploy using Docker Compose
+4. Caddy automatically provisions HTTPS certificates
+
+No manual SSL setup, no Certbot, no cronjobs — Caddy handles everything.
+
 ## 🧩 Planned Features
 
 - 🔐 Authentication system for the back office
