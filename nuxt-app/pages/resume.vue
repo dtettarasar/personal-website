@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="bg-slate-800">
     
     <sections-hero-small icon="mdi:card-account-details" title="Resume" ></sections-hero-small>
 
