@@ -46,12 +46,6 @@
 
     </div>
 
-    <text-section-title icon="mdi:comment-account" title="Contact" ></text-section-title>
-
-  </div>
-
-  <div>
-    <other-test-mongo-db></other-test-mongo-db>
   </div>
 
 </template>
