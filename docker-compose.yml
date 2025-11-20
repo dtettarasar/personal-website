@@ -33,12 +33,13 @@ services:
       - ./data/personal-db:/data/db
 
   caddy:
-    image: caddy:latest
+    image: caddy:2.8.4
     container_name: personal-caddy
     restart: unless-stopped
     ports:
       - "80:80"
       - "443:443"
+      - "443:443/udp"
     depends_on:
       - nuxt-app
     volumes:
