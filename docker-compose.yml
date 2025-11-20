@@ -24,7 +24,7 @@ services:
       - mongodb
 
   mongodb:
-    image: mongo:latest
+    image: mongo:8.0
     restart: unless-stopped
     environment:
       - MONGO_INITDB_ROOT_USERNAME=${MONGO_INITDB_ROOT_USERNAME}
