@@ -48,6 +48,8 @@
 
   </div>
 
+  <other-test-mongo-db></other-test-mongo-db>
+
 </template>
 
 <script setup lang="ts">
