@@ -1,6 +1,6 @@
 <template>
 
-    <nav class="sticky top-0 z-50 p-4 bg-slate-800 text-white flex flex-row">
+    <nav class="sticky top-0 z-50 p-4 bg-slate-800 text-white flex flex-row justify-between">
 
         <div class="w-[300px] p-2 text-lg">
             <p><a href="/">Dylan Tettarasar</a></p>
@@ -38,7 +38,11 @@
 
         <div class="lg:hidden">
 
-            <p>mobile menu</p>
+            <Icon
+                @click="toggleMenu"
+                :name="isMenuOpen ? 'mdi:close-circle' : 'mdi:chevron-down-circle'"
+                class="w-10 h-10 text-gray-200 hover:text-emerald-400 transition-colors"
+            />
 
         </div>
 
@@ -51,8 +55,14 @@
 <script setup>
 
     import { useRoute } from 'vue-router'
+    import { ref } from 'vue'
 
     const route = useRoute()
+    const isMenuOpen = ref(false)
+
+    const toggleMenu = () => {
+        isMenuOpen.value = !isMenuOpen.value
+    }
 
     const menuItems = [
 
