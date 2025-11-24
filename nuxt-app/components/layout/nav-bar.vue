@@ -48,24 +48,22 @@
 
     </nav>
 
-    <div class="bg-slate-800 text-white lg:hidden" v-if="isMenuOpen">
-
-        <div class="flex flex-col items-center justify-center">
-
-            <div
-            v-for="item in menuItems"
-            :key="item.to"
-            >
-
-                <NuxtLink @click="toggleMenu" :to="item.to" class="">
-                    {{ item.label }}
-                </NuxtLink>
-
+    <Transition name="slide">
+        <div class="bg-slate-800 text-white lg:hidden overflow-hidden" v-show="isMenuOpen">
+            
+            <div class="flex flex-col items-center justify-center py-4"> <div
+                v-for="item in menuItems"
+                :key="item.to"
+                class="py-2"
+                >
+                    <NuxtLink @click="toggleMenu" :to="item.to" class="text-lg">
+                        {{ item.label }}
+                    </NuxtLink>
+                </div>
             </div>
 
         </div>
-
-    </div>
+    </Transition>
 
 </template>
 
@@ -91,3 +89,34 @@
     ]
 
 </script>
+
+<style scoped>
+
+    /* 1. Définition de la transition pour la phase de mouvement */
+    .slide-enter-active,
+    .slide-leave-active {
+        /* Nous voulons que l'animation dure 0.3s et affecte max-height et opacity */
+        transition: max-height 0.3s ease-out, opacity 0.3s ease-in-out; 
+        /* IMPORTANT : Mettre une grande valeur ici pour garantir que la hauteur est lue correctement 
+        avant de se rétracter ou s'étendre. */
+        overflow: hidden; 
+    }
+
+    /* 2. État initial (Entrée) et état final (Sortie) */
+    .slide-enter-from,
+    .slide-leave-to {
+        /* Commence plat (0) et transparent */
+        max-height: 0;
+        opacity: 0;
+    }
+
+    /* 3. État final (Entrée) et état initial (Sortie) */
+    .slide-enter-to,
+    .slide-leave-from {
+        /* Finit déplié et opaque. */
+        max-height: 500px; /* Doit être suffisant pour couvrir le menu le plus grand */
+        opacity: 1;
+    }
+
+
+</style>
