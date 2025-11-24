@@ -48,7 +48,9 @@
 
     </nav>
 
-    
+    <div class="bg-slate-800 text-white" v-if="isMenuOpen">
+        <p>menu mobile</p>
+    </div>
 
 </template>
 
