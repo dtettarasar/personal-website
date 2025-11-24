@@ -49,20 +49,44 @@
     </nav>
 
     <Transition name="slide">
+
         <div class="bg-slate-800 text-white lg:hidden overflow-hidden" v-show="isMenuOpen">
             
-            <div class="flex flex-col items-center justify-center py-4"> <div
-                v-for="item in menuItems"
-                :key="item.to"
-                class="py-2"
+            <div class="flex flex-col items-center justify-center py-4">
+
+                <div
+                    v-for="item in menuItems"
+                    :key="item.to"
+                    class="w-full text-center py-2 transition-colors duration-200"
+                    :class="{
+                        // 💥 CLASSE DE FOND ACTIF : utilise bg-slate-700
+                        'bg-slate-700': route.path === item.to,
+                        // 💥 EFFET HOVER : utilise group-hover pour un style harmonieux
+                        'hover:bg-slate-700/50': route.path !== item.to
+                    }"
                 >
-                    <NuxtLink @click="toggleMenu" :to="item.to" class="text-lg">
+
+                    <NuxtLink
+                            @click="toggleMenu"
+                            :to="item.to"
+                            class="block text-lg font-semibold w-full px-4 py-2" 
+                            :class="{
+                                // 💥 COULEUR DU TEXTE ACTIF : utilise une couleur vive pour le contraste
+                                'text-emerald-400': route.path === item.to,
+                                'text-white': route.path !== item.to
+                            }"
+                        >
+                        
                         {{ item.label }}
+
                     </NuxtLink>
-                </div>
+
+                </div> 
+
             </div>
 
         </div>
+
     </Transition>
 
 </template>
