@@ -48,8 +48,23 @@
 
     </nav>
 
-    <div class="bg-slate-800 text-white" v-if="isMenuOpen">
-        <p>menu mobile</p>
+    <div class="bg-slate-800 text-white lg:hidden" v-if="isMenuOpen">
+
+        <div class="flex flex-col items-center justify-center">
+
+            <div
+            v-for="item in menuItems"
+            :key="item.to"
+            >
+
+                <NuxtLink @click="toggleMenu" :to="item.to" class="">
+                    {{ item.label }}
+                </NuxtLink>
+
+            </div>
+
+        </div>
+
     </div>
 
 </template>
