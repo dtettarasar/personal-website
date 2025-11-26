@@ -21,17 +21,14 @@ defineProps({
 
 </script>
 
-<style lang="css" scoped>
-</style>
-
 <template>
 
-    <div class="bg-slate-800 p-4 lg:p-6 rounded-lg flex flex-row items-center mb-6 gap-3 md:gap-4 lg:gap-6">
+    <div class="bg-slate-800 p-4 lg:p-6 rounded-lg flex flex-row flex-wrap md:flex-nowrap items-center mb-6 gap-3 md:gap-4 lg:gap-6">
 
         <div class="flex drop-shadow-emerald-glow"> 
             <Icon 
                 :name="icon" 
-                class="sm:size-[30px] md:size-[40px] lg:size-[60px] text-emerald-400" 
+                class="size-[30px] md:size-[40px] lg:size-[60px] text-emerald-400" 
             />
         </div>
 
