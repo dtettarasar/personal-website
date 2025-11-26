@@ -11,6 +11,12 @@
 
   </div>
 
+  <div class="container p-4 mx-auto">
+
+    <resume-xp-content></resume-xp-content>
+
+  </div>
+
   <!--<other-test-mongo-db></other-test-mongo-db>-->
 
 </template>
