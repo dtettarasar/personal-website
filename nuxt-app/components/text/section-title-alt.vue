@@ -23,13 +23,24 @@ defineProps({
 
 <style lang="css" scoped>
 
+.icon-wrapper {
+    /* Appliquez le filtre sur le conteneur du SVG */
+    filter: drop-shadow(0 0 10px rgba(74, 222, 128, 0.5)); 
+    display: flex; /* Assurez que le conteneur n'est pas trop grand */
+}
+
 </style>
 
 <template>
 
     <div class="bg-slate-800 p-4 lg:p-6 rounded-lg flex flex-row items-center mb-6 gap-3 md:gap-4 lg:gap-6">
 
-        <Icon :name="icon" class="size-20 text-emerald-400" />
+        <div class="icon-wrapper"> 
+            <Icon 
+                :name="icon" 
+                class="sm:size-[30px] md:size-[40px] lg:size-[60px] text-emerald-400" 
+            />
+        </div>
 
         <h2 class="text-white text-xl md:text-2xl lg:text-3xl">
             {{ title }}
