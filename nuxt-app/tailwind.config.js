@@ -48,7 +48,7 @@ module.exports = {
             },
             dropShadow: {
                 // Ceci générera la classe utilitaire: 'drop-shadow-emerald-glow'
-                'emerald-glow': '0 0 10px rgba(74, 222, 128, 0.8)', // Lueur émeraude
+                'emerald-glow': '0 0 10px rgba(74, 222, 128, 0.6)', // Lueur émeraude
             },
         },
 
