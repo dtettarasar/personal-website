@@ -2,10 +2,10 @@
 
     <div class="flex flex-row">
 
-        <div class='flex flex-row gap-8'>
+        <div class='flex flex-col md:flex-row gap-4 md:gap-8 w-full'>
 
-            <div class='w-64 flex-none'>
-                <img src="https://dtettarasar.github.io/img/resume/xp/company-logo-dii.png">
+            <div class='w-full md:w-64 flex-none'>
+                <img class="mx-auto md:mx-0" src="https://dtettarasar.github.io/img/resume/xp/company-logo-dii.png">
             </div>
 
             <div class='flex-1 min-w-0'>
