@@ -11,15 +11,7 @@
 
   <div class="container p-4 mx-auto text-white md:text-lg">
 
-    <div class="bg-slate-800 p-6 rounded-lg flex flex-row items-center mb-6 gap-2">
-
-      <h2 class="text-white">Experiences</h2>
-
-      <div class="bg-white h-[4px] w-full rounded-lg ">
-
-      </div>
-
-    </div>
+    <text-section-title-alt icon="mdi:briefcase" title="Experiences"></text-section-title-alt>
 
   </div>
 
