@@ -4,7 +4,7 @@
         'w-[70%]',
         'h-[4px]',
         'rounded-full',
-        'bg-emerald-400',
+        'bg-emerald-500',
         'mx-auto',
         'my-4',
     ]
@@ -21,6 +21,11 @@
             required: false
         },
 
+        jobTitle: {
+            type: String,
+            required: true
+        },
+
     })
 
 </script>
@@ -34,35 +39,47 @@
         </div>
         <div class="px-6 py-4">
 
-            <div class="flex flex-row items-center gap-1 mb-1">
+            <div class="flex flex-row items-center gap-2 mb-1">
 
                 <Icon 
                 name="mdi:office-building" 
-                class=" text-emerald-400 size-[24px]" 
+                class=" text-emerald-500 size-[24px]" 
                 />
 
                 <p class="text-xl md:text-2xl text-slate-800" >{{ companyName }}</p>
 
             </div>
 
-            <div v-if="companyVenue" class="flex flex-row items-center gap-1 mb-4">
+            <div v-if="companyVenue" class="flex flex-row items-center gap-2 mb-1">
 
                 <Icon 
                 name="mdi:map-marker-radius" 
-                class=" text-emerald-400 size-[24px]" 
+                class=" text-emerald-500 size-[24px]" 
                 />
 
                 <p class="text-xl md:text-2xl text-slate-800" >{{ companyVenue }}</p>
 
             </div>
 
-            <div class="flex flex-row gap-3 text-l md:text-xl font-light text-slate-700 font-semibold">
+            <div class="flex flex-row items-center gap-2 mb-1">
 
-                <p>Webmaster</p>
+                <Icon 
+                name="mdi:clipboard-account" 
+                class=" text-emerald-500 size-[24px]" 
+                />
 
-                <span class="text-emerald-400">•</span>
+                <p class="text-lg font-light text-slate-700 font-semibold" >{{ jobTitle }}</p>
 
-                <p>January 2018 - Present</p>
+            </div>
+
+            <div class="flex flex-row items-center gap-2 mb-1">
+
+                <Icon 
+                name="mdi:calendar-month" 
+                class=" text-emerald-500 size-[24px]" 
+                />
+
+                <p class="text-lg font-light text-slate-700 font-semibold" >January 2018 - Present</p>
 
             </div>
 

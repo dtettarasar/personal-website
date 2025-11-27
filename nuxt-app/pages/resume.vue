@@ -16,16 +16,19 @@
     <resume-xp-content
       companyName="Drive Innovation Insights"
       companyVenue="Paris, France"
+      jobTitle="Webmaster"
     ></resume-xp-content>
 
     <resume-xp-content
       companyName="Drive Innovation Insights"
       companyVenue="Paris, France"
+      jobTitle="Web Project Manager"
     ></resume-xp-content>
 
     <resume-xp-content
       companyName="Drive Innovation Insights"
       companyVenue="Paris, France"
+      jobTitle="CRM Manager"
     ></resume-xp-content>
 
   </div>
