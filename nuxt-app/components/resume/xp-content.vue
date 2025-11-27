@@ -9,17 +9,42 @@
         'my-4',
     ]
 
+    defineProps({
+        
+    })
+
 </script>
 
 <template>
 
-    <div class="max-w-md overflow-hidden bg-white border-2 border-slate-300 rounded-lg">
+    <div class="max-w-md overflow-hidden bg-white border-2 border-slate-300 rounded-lg p-4">
 
         <div class="p-8 border-b-2 border-slate-300">
             <img class="w-[70%] md:w-[50%] mx-auto" src="/img/resume/experiences/company-logo-dii.png"></img>
         </div>
         <div class="px-6 py-4">
-            <p class="text-xl md:text-2xl mb-2 text-slate-800" >Drive Innovation Insights (Paris, France)</p>
+
+            <div class="flex flex-row items-center gap-1 mb-1">
+
+                <Icon 
+                name="mdi:office-building" 
+                class=" text-emerald-400 size-[24px]" 
+                />
+
+                <p class="text-xl md:text-2xl text-slate-800" >Drive Innovation Insights</p>
+
+            </div>
+
+            <div class="flex flex-row items-center gap-1 mb-4">
+
+                <Icon 
+                name="mdi:map-marker-radius" 
+                class=" text-emerald-400 size-[24px]" 
+                />
+
+                <p class="text-xl md:text-2xl text-slate-800" >Paris, France</p>
+
+            </div>
 
             <div class="flex flex-row gap-3 text-l md:text-xl font-light text-slate-700 font-semibold">
 
