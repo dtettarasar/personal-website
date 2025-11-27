@@ -23,7 +23,7 @@ defineProps({
 
 <template>
 
-    <div class="bg-slate-800 p-4 lg:p-6 rounded-lg flex flex-row flex-wrap md:flex-nowrap items-center mb-2 gap-3 md:gap-4 lg:gap-6">
+    <div class="bg-slate-800 p-4 lg:p-6 rounded-lg flex flex-row flex-wrap md:flex-nowrap items-center gap-3 md:gap-4 lg:gap-6">
 
         <div class="flex drop-shadow-emerald-glow"> 
             <Icon 
