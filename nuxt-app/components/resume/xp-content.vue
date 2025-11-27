@@ -11,6 +11,11 @@
 
     defineProps({
         
+        companyName: {
+            type: String,
+            required: true
+        },
+
     })
 
 </script>
@@ -31,7 +36,7 @@
                 class=" text-emerald-400 size-[24px]" 
                 />
 
-                <p class="text-xl md:text-2xl text-slate-800" >Drive Innovation Insights</p>
+                <p class="text-xl md:text-2xl text-slate-800" >{{ companyName }}</p>
 
             </div>
 

@@ -13,11 +13,17 @@
 
   <div class="container p-4 mx-auto flex flex-row gap-8 flex-wrap justify-center"> 
 
-    <resume-xp-content></resume-xp-content>
+    <resume-xp-content
+      companyName="Drive Innovation Insights"
+    ></resume-xp-content>
 
-    <resume-xp-content></resume-xp-content>
+    <resume-xp-content
+      companyName="Drive Innovation Insights"
+    ></resume-xp-content>
 
-    <resume-xp-content></resume-xp-content>
+    <resume-xp-content
+      companyName="Drive Innovation Insights"
+    ></resume-xp-content>
 
   </div>
 
