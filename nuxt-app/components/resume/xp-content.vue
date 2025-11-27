@@ -23,7 +23,7 @@
 
             <div class="flex flex-row gap-3 text-l md:text-xl font-light text-slate-700">
 
-                <p class="">Webmaster</p>
+                <p>Webmaster</p>
 
                 <span class="text-emerald-400">•</span>
 
@@ -34,7 +34,7 @@
             <div :class="separatorClasses"></div>
             
             <div>
-                    <ul class="text-slate-600 md:text-l">
+                    <ul class="text-slate-600 md:text-l list-disc list-inside space-y-2 mt-4">
 
                         <li>websites creation and content management, using WordPress</li>
                         <li>graphic design (photo-editing, banners, visual elements for social media...)</li>
