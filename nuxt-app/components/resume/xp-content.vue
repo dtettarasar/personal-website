@@ -16,6 +16,11 @@
             required: true
         },
 
+        companyVenue: {
+            type: String,
+            required: false
+        },
+
     })
 
 </script>
@@ -40,14 +45,14 @@
 
             </div>
 
-            <div class="flex flex-row items-center gap-1 mb-4">
+            <div v-if="companyVenue" class="flex flex-row items-center gap-1 mb-4">
 
                 <Icon 
                 name="mdi:map-marker-radius" 
                 class=" text-emerald-400 size-[24px]" 
                 />
 
-                <p class="text-xl md:text-2xl text-slate-800" >Paris, France</p>
+                <p class="text-xl md:text-2xl text-slate-800" >{{ companyVenue }}</p>
 
             </div>
 

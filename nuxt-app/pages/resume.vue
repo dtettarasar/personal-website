@@ -15,14 +15,17 @@
 
     <resume-xp-content
       companyName="Drive Innovation Insights"
+      companyVenue="Paris, France"
     ></resume-xp-content>
 
     <resume-xp-content
       companyName="Drive Innovation Insights"
+      companyVenue="Paris, France"
     ></resume-xp-content>
 
     <resume-xp-content
       companyName="Drive Innovation Insights"
+      companyVenue="Paris, France"
     ></resume-xp-content>
 
   </div>
