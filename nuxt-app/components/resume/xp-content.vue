@@ -37,6 +37,18 @@
         <div class="p-8 border-b-2 border-slate-300">
             <img class="w-[70%] md:w-[50%] mx-auto" src="/img/resume/experiences/company-logo-dii.png"></img>
         </div>
+
+        <div class="flex flex-col items-center gap-2 mb-1 border-b-2 border-slate-300 p-4">
+
+            <Icon 
+                name="mdi:clipboard-account" 
+                class=" text-emerald-500 size-[36px]" 
+            />
+
+            <p class="text-2xl md:text-3xl text-slate-800" >{{ jobTitle }}</p>
+
+        </div>
+
         <div class="px-6 py-4">
 
             <div class="flex flex-row items-center gap-2 mb-1">
@@ -53,33 +65,24 @@
             <div v-if="companyVenue" class="flex flex-row items-center gap-2 mb-1">
 
                 <Icon 
-                name="mdi:map-marker-radius" 
-                class=" text-emerald-500 size-[24px]" 
-                />
-
-                <p class="text-xl md:text-2xl text-slate-800" >{{ companyVenue }}</p>
-
-            </div>
-
-            <div class="flex flex-row items-center gap-2 mb-1">
-
-                <Icon 
-                name="mdi:clipboard-account" 
-                class=" text-emerald-500 size-[24px]" 
-                />
-
-                <p class="text-lg font-light text-slate-700 font-semibold" >{{ jobTitle }}</p>
-
-            </div>
-
-            <div class="flex flex-row items-center gap-2 mb-1">
-
-                <Icon 
                 name="mdi:calendar-month" 
                 class=" text-emerald-500 size-[24px]" 
                 />
 
                 <p class="text-lg font-light text-slate-700 font-semibold" >January 2018 - Present</p>
+
+            </div>
+
+            <div class="flex flex-row items-center gap-2 mb-1">
+
+                
+
+                <Icon 
+                name="mdi:map-marker-radius" 
+                class=" text-emerald-500 size-[24px]" 
+                />
+
+                <p class="text-lg font-light text-slate-700 font-semibold" >{{ companyVenue }}</p>
 
             </div>
 
