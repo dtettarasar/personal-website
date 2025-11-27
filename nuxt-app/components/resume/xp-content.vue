@@ -13,7 +13,7 @@
 
 <template>
 
-    <div class="max-w-lg overflow-hidden bg-white shadow-sm border-2 border-slate-200 rounded-lg">
+    <div class="max-w-md overflow-hidden bg-white shadow-sm border-2 border-slate-200 rounded-lg">
 
         <div class="p-8 border-b-2 border-slate-200">
             <img class="w-[70%] md:w-[50%] mx-auto" src="/img/resume/experiences/company-logo-dii.png"></img>
