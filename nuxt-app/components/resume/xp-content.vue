@@ -13,15 +13,15 @@
 
 <template>
 
-    <div class="max-w-md overflow-hidden bg-white shadow-sm border-2 border-slate-200 rounded-lg">
+    <div class="max-w-md overflow-hidden bg-white border-2 border-slate-300 rounded-lg">
 
-        <div class="p-8 border-b-2 border-slate-200">
+        <div class="p-8 border-b-2 border-slate-300">
             <img class="w-[70%] md:w-[50%] mx-auto" src="/img/resume/experiences/company-logo-dii.png"></img>
         </div>
         <div class="px-6 py-4">
             <p class="text-xl md:text-2xl mb-2 text-slate-800" >Drive Innovation Insights (Paris, France)</p>
 
-            <div class="flex flex-row gap-3 text-l md:text-xl font-light text-slate-700">
+            <div class="flex flex-row gap-3 text-l md:text-xl font-light text-slate-700 font-semibold">
 
                 <p>Webmaster</p>
 
