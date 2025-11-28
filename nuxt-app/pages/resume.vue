@@ -78,6 +78,17 @@
         "Reporting & campaign analysis",
         "Managing the group's YouTube channel",
       ]
+    },
+    {
+      companyName: "Btown Ltd",
+      companyVenue: "New Delhi, India",
+      jobTitle: "Web Content Writer",
+      period:"Apr 2014 - Aug 2014",
+      jobMissions: [
+        "Article writing & SEO (WordPress, Yoast SEO)",
+        "Infographic creation + photo editing",
+        "Facebook/Twitter posts & engagement",
+      ]
     }
   ]
 
