@@ -29,7 +29,12 @@
         jobMissions: {
             type: Array,
             required: false,
-        }
+        },
+
+        period: {
+            type: String,
+            required: true
+        },
 
     })
 
@@ -74,7 +79,7 @@
                 class=" text-emerald-500 size-[24px]" 
                 />
 
-                <p class="text-lg font-light text-slate-700 font-semibold" >January 2018 - Present</p>
+                <p class="text-lg font-light text-slate-700 font-semibold" >{{ period }}</p>
 
             </div>
 

@@ -20,6 +20,7 @@
       :companyVenue="xp.companyVenue"
       :jobTitle="xp.jobTitle"
       :jobMissions="xp.jobMissions"
+      :period="xp.period"
     ></resume-xp-content>
 
   </div>
@@ -41,6 +42,7 @@
       companyName: "Drive Innovation Insights",
       companyVenue: "Paris, France",
       jobTitle: "Webmaster",
+      period:" Jan 2020 - Dec 2022",
       jobMissions: [
         "websites creation and content management, using WordPress",
         "graphic design (photo-editing, banners, visual elements for social media...)",
@@ -52,6 +54,7 @@
       companyName: "Drive Innovation Insights",
       companyVenue: "Paris, France",
       jobTitle: "Web Project Manager",
+      period:" Jan 2020 - Dec 2022",
       jobMissions: [
         "project management for clients' websites creation",
         "coordination between clients, developers and designers",
@@ -62,6 +65,7 @@
       companyName: "Drive Innovation Insights",
       companyVenue: "Paris, France",
       jobTitle: "CRM Manager",
+      period:" Jan 2020 - Dec 2022",
       jobMissions: [
         "managing and optimizing the company's CRM system",
         "training staff on CRM best practices",
