@@ -39,15 +39,18 @@
 
   const experiences = [
     {
-      companyName: "Drive Innovation Insights",
+      companyName: "DII / POLITICO",
       companyVenue: "Paris, France",
-      jobTitle: "Webmaster",
-      period:" Jan 2020 - Dec 2022",
+      jobTitle: "Web & CRM Manager",
+      period:" Jan 2018 - Dec 2024",
       jobMissions: [
-        "websites creation and content management, using WordPress",
-        "graphic design (photo-editing, banners, visual elements for social media...)",
-        "stats monitoring in Google Analytics",
-        "Salesforce administration and internal support"
+        "WordPress website creation and management: integration, mock-ups, redesigns, UX optimization",
+        "Wireframe and prototype design (Figma)",
+        "Visual production: banners, retouching, event branding.",
+        "SEO and analytics: optimization, performance monitoring, content strategy.",
+        "Technical project management: writing specs, Jira tickets, QA, coordination with the dev team.",
+        "Salesforce administration: automation, internal support, reporting.",
+        "Cross-functional management between design, technical, and business teams.",
       ]
     },
     {
