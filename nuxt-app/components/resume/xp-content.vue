@@ -36,7 +36,14 @@
             required: true
         },
 
+        companyLogoSrc: { 
+            type: String, 
+            required: true
+        },
+
     })
+
+    const logoLink = "/img/resume/experiences/company-logo-dii.png"
 
 </script>
 
@@ -45,7 +52,7 @@
     <div class="max-w-md overflow-hidden bg-white border-2 border-slate-300 rounded-lg p-4">
 
         <div class="p-8 border-b-2 border-slate-300">
-            <img class="w-[70%] md:w-[50%] mx-auto" src="/img/resume/experiences/company-logo-dii.png"></img>
+            <img class="w-[70%] md:w-[50%] mx-auto" :src="companyLogoSrc"></img>
         </div>
 
         <div class="flex flex-col items-center gap-2 mb-1 border-b-2 border-slate-300 p-4">

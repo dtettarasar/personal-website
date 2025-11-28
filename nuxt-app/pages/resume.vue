@@ -21,6 +21,7 @@
       :jobTitle="xp.jobTitle"
       :jobMissions="xp.jobMissions"
       :period="xp.period"
+      :companyLogoSrc="xp.companyLogoSrc"
     ></resume-xp-content>
 
   </div>
@@ -43,6 +44,7 @@
       companyVenue: "Paris, France",
       jobTitle: "Web & CRM Manager",
       period:"Jan 2018 - Dec 2024",
+      companyLogoSrc:"/img/resume/experiences/company-logo-dii.png",
       jobMissions: [
         "WordPress website creation and management: integration, mock-ups, redesigns, UX optimization",
         "Wireframe and prototype design (Figma)",
@@ -58,6 +60,7 @@
       companyVenue: "Villeneuve-le-Roi, France",
       jobTitle: "Digital Marketing Executive",
       period:"Feb 2016 - Jun 2017",
+      companyLogoSrc:"/img/resume/experiences/company-logo-abus.png",
       jobMissions: [
         "Management of the FR website: product pages, content, formatting",
         "Graphic design (photos, visuals, infographics)",
@@ -71,6 +74,7 @@
       companyVenue: "Paris, France",
       jobTitle: "Social Media Manager Assistant",
       period:"Feb 2015 - Aug 2015",
+      companyLogoSrc:"/img/resume/experiences/company-logo-pvcp.png",
       jobMissions: [
         "Writing articles & SEO optimization",
         "Creating visuals for social media",
@@ -84,6 +88,7 @@
       companyVenue: "New Delhi, India",
       jobTitle: "Web Content Writer",
       period:"Apr 2014 - Aug 2014",
+      companyLogoSrc:"/img/resume/experiences/company-logo-btown.png",
       jobMissions: [
         "Article writing & SEO (WordPress, Yoast SEO)",
         "Infographic creation + photo editing",
