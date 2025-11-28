@@ -42,7 +42,7 @@
       companyName: "DII / POLITICO",
       companyVenue: "Paris, France",
       jobTitle: "Web & CRM Manager",
-      period:" Jan 2018 - Dec 2024",
+      period:"Jan 2018 - Dec 2024",
       jobMissions: [
         "WordPress website creation and management: integration, mock-ups, redesigns, UX optimization",
         "Wireframe and prototype design (Figma)",
@@ -54,14 +54,16 @@
       ]
     },
     {
-      companyName: "Drive Innovation Insights",
-      companyVenue: "Paris, France",
-      jobTitle: "Web Project Manager",
-      period:" Jan 2020 - Dec 2022",
+      companyName: "ABUS France",
+      companyVenue: "Villeneuve-le-Roi, France",
+      jobTitle: "Digital Marketing Executive",
+      period:"Feb 2016 - Jun 2017",
       jobMissions: [
-        "project management for clients' websites creation",
-        "coordination between clients, developers and designers",
-        "ensuring deadlines and quality standards are met"
+        "Management of the FR website: product pages, content, formatting",
+        "Graphic design (photos, visuals, infographics)",
+        "Writing & translation for the website, press releases, web media",
+        "SEO & analytics monitoring",
+        "Optimization of the Amazon.fr catalog"
       ]
     },
     {
