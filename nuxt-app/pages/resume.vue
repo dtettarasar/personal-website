@@ -33,6 +33,12 @@
 
   </div>
 
+  <div class="container p-4 mx-auto text-white md:text-lg">
+
+    <text-section-title-alt icon="mdi:school" title="Education"></text-section-title-alt>
+
+  </div>
+
   <!--<other-test-mongo-db></other-test-mongo-db>-->
 
 </template>
