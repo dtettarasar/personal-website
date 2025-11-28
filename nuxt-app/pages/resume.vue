@@ -62,7 +62,7 @@
       period:"Feb 2016 - Jun 2017",
       companyLogoSrc:"/img/resume/experiences/company-logo-abus.png",
       jobMissions: [
-        "Management of the FR website: product pages, content, formatting",
+        "Management of the French website: product pages, content, formatting",
         "Graphic design (photos, visuals, infographics)",
         "Writing & translation for the website, press releases, web media",
         "SEO & analytics monitoring",
