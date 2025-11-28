@@ -67,14 +67,16 @@
       ]
     },
     {
-      companyName: "Drive Innovation Insights",
+      companyName: "Pierre & Vacances",
       companyVenue: "Paris, France",
-      jobTitle: "CRM Manager",
-      period:" Jan 2020 - Dec 2022",
+      jobTitle: "Social Media Manager Assistant",
+      period:"Feb 2015 - Aug 2015",
       jobMissions: [
-        "managing and optimizing the company's CRM system",
-        "training staff on CRM best practices",
-        "analyzing customer data to improve marketing strategies"
+        "Writing articles & SEO optimization",
+        "Creating visuals for social media",
+        "Managing and planning Facebook/Twitter posts",
+        "Reporting & campaign analysis",
+        "Managing the group's YouTube channel",
       ]
     }
   ]
