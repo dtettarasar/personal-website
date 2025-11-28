@@ -48,7 +48,7 @@
       jobMissions: [
         "WordPress website creation and management: integration, mock-ups, redesigns, UX optimization",
         "Wireframe and prototype design (Figma)",
-        "Visual production: banners, retouching, event branding.",
+        "Visual production: banners, image editing, event branding.",
         "SEO and analytics: optimization, performance monitoring, content strategy.",
         "Technical project management: writing specs, Jira tickets, QA, coordination with the dev team.",
         "Salesforce administration: automation, internal support, reporting.",
