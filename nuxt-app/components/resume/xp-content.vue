@@ -26,6 +26,11 @@
             required: true
         },
 
+        jobMissions: {
+            type: Array,
+            required: false,
+        }
+
     })
 
 </script>
@@ -86,18 +91,22 @@
 
             </div>
 
-            <div :class="separatorClasses"></div>
+            <div v-if="jobMissions" :class="separatorClasses"></div>
             
-            <div>
-                    <ul class="text-slate-600 md:text-l list-disc list-inside space-y-2 mt-4">
+            <div v-if="jobMissions">
 
-                        <li>websites creation and content management, using WordPress</li>
-                        <li>graphic design (photo-editing, banners, visual elements for social media...)</li>
-                        <li>stats monitoring in Google Analytics</li>
-                        <li>Salesforce administration and internal support</li>
+                <ul class="text-slate-600 md:text-l list-disc list-inside space-y-2 mt-4">
 
-                    </ul>
-                </div>
+                    <li
+                        v-for="(mission, index) in jobMissions"
+                        :key="index"
+                    >
+                        {{ mission }}
+                    </li>
+
+                </ul>
+
+            </div>
 
         </div>
 

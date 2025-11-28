@@ -17,6 +17,7 @@
       companyName="Drive Innovation Insights"
       companyVenue="Paris, France"
       jobTitle="Webmaster"
+      :jobMissions="['test1', 'test2']"
     ></resume-xp-content>
 
     <resume-xp-content
