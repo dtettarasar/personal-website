@@ -5,9 +5,18 @@
 
   </div>
 
-  <div class="container p-4 mx-auto text-white md:text-lg">
+  <div :class="containerStyleClasses">
 
     <text-section-title-alt icon="mdi:briefcase" title="Experiences"></text-section-title-alt>
+
+  </div>
+
+  <div :class="containerStyleClasses">
+
+    <p>
+      Over the years, I’ve worked at the crossroads of web production, design and project management: creating and managing WordPress websites, integrating brand guidelines into responsive layouts, designing visuals, and coordinating with developers and marketing teams.
+      Today, I build on this experience as a frontend developer focused on Vue / Nuxt, UI/UX, accessibility and performance.
+    </p>
 
   </div>
 
@@ -26,9 +35,15 @@
 
   </div>
 
-  <div class="container p-4 mx-auto text-white md:text-lg">
+  <div :class="containerStyleClasses">
 
     <text-section-title-alt icon="mdi:school" title="Education"></text-section-title-alt>
+
+  </div>
+
+  <div :class="containerStyleClasses" >
+
+    <resume-edu-content></resume-edu-content>
 
   </div>
 
@@ -37,6 +52,12 @@
 </template>
 
 <script setup lang="ts">
+
+  const containerStyleClasses = [
+    'container',
+    'p-4',
+    'mx-auto',
+  ]
 
   const experiences = [
     {
