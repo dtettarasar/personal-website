@@ -49,12 +49,14 @@
     class="flex flex-row gap-8 flex-wrap justify-center"
   >
 
-    <resume-edu-content
-      educationLogoSrc="/img/resume/experiences/company-logo-dii.png"
-      title="Python Dev"
-      issuer="Harvard / CS50"
-      year="2020"
-      certificationLink="https://www.youtube.com/watch?v=HTxFu_j9rag"
+    <resume-edu-content 
+      v-for="(edu, index) in educations"
+      :key="index"
+      :educationLogoSrc="edu.educationLogoSrc"
+      :title="edu.title"
+      :issuer="edu.issuer"
+      :year="edu.year"
+      :certificationLink="edu.certificationLink"
     ></resume-edu-content>
 
   </div>
@@ -130,6 +132,32 @@
     }
   ]
 
-  const education = []
+  const educations = [
+
+    {
+      educationLogoSrc:"/img/resume/experiences/company-logo-dii.png",
+      title:"Python Dev",
+      issuer:"Harvard / CS50",
+      year:"2020",
+      certificationLink:"https://www.youtube.com/watch?v=HTxFu_j9rag",
+    },
+
+    {
+      educationLogoSrc:"/img/resume/experiences/company-logo-dii.png",
+      title:"Python Dev",
+      issuer:"Harvard / CS50",
+      year:"2020",
+      certificationLink:"https://www.youtube.com/watch?v=HTxFu_j9rag",
+    },
+
+    {
+      educationLogoSrc:"/img/resume/experiences/company-logo-dii.png",
+      title:"Python Dev",
+      issuer:"Harvard / CS50",
+      year:"2020",
+      certificationLink:"https://www.youtube.com/watch?v=HTxFu_j9rag",
+    }
+
+  ]
 
 </script>
