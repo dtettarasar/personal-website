@@ -58,12 +58,12 @@
         <div class="px-6 py-4">
             
             <div class="flex flex-row items-center gap-2 mb-1">
-                <Icon name="mdi:school" class="text-slate-800 size-[24px] flex-shrink-0" />
+                <Icon name="mdi:school" class="text-emerald-500 size-[24px] flex-shrink-0" />
                 <p class="text-xl md:text-2xl text-slate-800 font-semibold" >{{issuer}}</p>
             </div>
 
             <div class="flex flex-row items-center gap-2 mb-1">
-                <Icon name="mdi:calendar-month" class="text-slate-500 size-[24px]" />
+                <Icon name="mdi:calendar-month" class="text-emerald-500 size-[24px]" />
                 <p class="text-lg font-light text-slate-700" >{{ year }}</p>
             </div>
 
