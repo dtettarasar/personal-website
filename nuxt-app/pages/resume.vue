@@ -50,11 +50,11 @@
   >
 
     <resume-edu-content
-      logo="/img/resume/experiences/company-logo-dii.png"
+      educationLogoSrc="/img/resume/experiences/company-logo-dii.png"
       title="Python Dev"
       issuer="Harvard / CS50"
       year="2020"
-      credentialUrl="https://www.youtube.com/watch?v=HTxFu_j9rag"
+      certificationLink="https://www.youtube.com/watch?v=HTxFu_j9rag"
     ></resume-edu-content>
 
   </div>
@@ -129,5 +129,7 @@
       ]
     }
   ]
+
+  const education = []
 
 </script>

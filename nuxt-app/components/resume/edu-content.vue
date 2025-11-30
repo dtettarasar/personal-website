@@ -1,5 +1,14 @@
 <script setup>
 
+    const separatorClasses = [
+        'w-[70%]',
+        'h-[4px]',
+        'rounded-full',
+        'bg-emerald-500',
+        'mx-auto',
+        'my-4',
+    ]
+
     defineProps({
         title: {
             type: String,
@@ -12,7 +21,18 @@
         year: {
             type: String,
             required: true
-        }
+        },
+
+        educationLogoSrc: { 
+            type: String, 
+            required: true
+        },
+
+        certificationLink: {
+            type: String, 
+            required: true
+        },
+
     })
 
 </script>
@@ -22,10 +42,9 @@
 
         <div class="flex flex-col items-center gap-2 mb-1 border-b-2 border-slate-300 p-4">
 
-            <Icon 
-                name="mdi:cap" 
-                class="text-emerald-500 size-[36px]" 
-            />
+            <div class="p-8">
+                <img class="w-[70%] md:w-[50%] mx-auto" :src="educationLogoSrc"></img>
+            </div>
 
             <p class="text-2xl md:text-3xl text-emerald-600 font-bold text-center" >{{title}}</p>
 
@@ -42,8 +61,6 @@
                 <Icon name="mdi:calendar-month" class="text-slate-500 size-[24px]" />
                 <p class="text-lg font-light text-slate-700" >{{ year }}</p>
             </div>
-
-            <div :class="separatorClasses"></div>
             
             <div v-if="certificationLink" class="mt-4 text-center">
                 <a 
@@ -51,15 +68,9 @@
                     target="_blank" 
                     class="inline-flex items-center justify-center gap-2 px-6 py-3 bg-emerald-500 text-white font-bold rounded-full transition-colors hover:bg-emerald-600 shadow-lg"
                 >
-                    Voir le Certificat
+                    Show credential
                     <Icon name="mdi:open-in-new" class="size-[20px]" />
                 </a>
-            </div>
-            
-            <div v-else-if="courseDetails">
-                <ul class="text-slate-600 md:text-l list-disc list-inside space-y-2 mt-4">
-                    <li v-for="(detail, i) in courseDetails" :key="i">{{ detail }}</li>
-                </ul>
             </div>
 
         </div>
