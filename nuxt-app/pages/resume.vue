@@ -40,7 +40,7 @@
 
   <div :class="containerStyleClasses">
 
-    <text-section-title-alt icon="mdi:school" title="Education"></text-section-title-alt>
+    <text-section-title-alt icon="mdi:school" title="Education & Certifications"></text-section-title-alt>
 
   </div>
 

@@ -1,7 +1,7 @@
 <script setup>
 
 const separatorClasses = [
-  'w-full',
+  'flex-grow',
   'h-[4px]',
   'rounded-full',
   'bg-emerald-400',
@@ -32,7 +32,7 @@ defineProps({
             />
         </div>
 
-        <h2 class="text-white text-xl md:text-2xl lg:text-3xl">
+        <h2 class="text-white text-xl md:text-2xl lg:text-3xl flex-shrink-0">
             {{ title }}
         </h2>
 
