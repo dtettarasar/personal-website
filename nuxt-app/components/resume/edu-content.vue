@@ -28,9 +28,14 @@
             required: true
         },
 
+        courseDetails: {
+            type: Array,
+            required: false
+        },
+
         certificationLink: {
             type: String, 
-            required: true
+            required: false
         },
 
     })
@@ -43,7 +48,7 @@
         <div class="flex flex-col items-center gap-2 mb-1 border-b-2 border-slate-300 p-4">
 
             <div class="p-8">
-                <img class="w-[70%] md:w-[50%] mx-auto" :src="educationLogoSrc"></img>
+                <img class="w-[90%] md:w-[80%] mx-auto rounded-md" :src="educationLogoSrc"></img>
             </div>
 
             <p class="text-2xl md:text-3xl text-emerald-600 font-bold text-center" >{{title}}</p>
@@ -60,6 +65,12 @@
             <div class="flex flex-row items-center gap-2 mb-1">
                 <Icon name="mdi:calendar-month" class="text-slate-500 size-[24px]" />
                 <p class="text-lg font-light text-slate-700" >{{ year }}</p>
+            </div>
+
+            <div v-if="courseDetails">
+                <ul class="text-slate-600 md:text-l list-disc list-inside space-y-2 mt-4">
+                    <li v-for="(detail, i) in courseDetails" :key="i">{{ detail }}</li>
+                </ul>
             </div>
             
             <div v-if="certificationLink" class="mt-4 text-center">
