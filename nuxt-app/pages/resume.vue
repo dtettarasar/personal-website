@@ -20,7 +20,10 @@
 
   </div>
 
-  <div class="container p-4 mx-auto flex flex-row gap-8 flex-wrap justify-center"> 
+  <div 
+    :class="containerStyleClasses" 
+    class="flex flex-row gap-8 flex-wrap justify-center"
+  >
 
     <resume-xp-content
       v-for="(xp, index) in experiences"
@@ -41,9 +44,18 @@
 
   </div>
 
-  <div :class="containerStyleClasses" >
+  <div 
+    :class="containerStyleClasses" 
+    class="flex flex-row gap-8 flex-wrap justify-center"
+  >
 
-    <resume-edu-content></resume-edu-content>
+    <resume-edu-content
+      logo="/img/resume/experiences/company-logo-dii.png"
+      title="Python Dev"
+      issuer="Harvard / CS50"
+      year="2020"
+      credentialUrl="https://www.youtube.com/watch?v=HTxFu_j9rag"
+    ></resume-edu-content>
 
   </div>
 
