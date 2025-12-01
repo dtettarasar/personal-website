@@ -1,5 +1,7 @@
 <script setup>
 
+    // Component used to display one education (diploma or certification)
+
     const separatorClasses = [
         'w-[70%]',
         'h-[4px]',

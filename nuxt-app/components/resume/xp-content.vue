@@ -1,5 +1,7 @@
 <script lang="js" setup>
 
+    // Component used to display one experience
+
     const separatorClasses = [
         'w-[70%]',
         'h-[4px]',
