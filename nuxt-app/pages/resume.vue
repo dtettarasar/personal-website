@@ -20,23 +20,7 @@
 
   </div>
 
-  <div 
-    :class="containerStyleClasses" 
-    class="flex flex-row gap-8 flex-wrap justify-center"
-  >
-
-    <resume-xp-content
-      v-for="(xp, index) in experiences"
-      :key="index"
-      :companyName="xp.companyName"
-      :companyVenue="xp.companyVenue"
-      :jobTitle="xp.jobTitle"
-      :jobMissions="xp.jobMissions"
-      :period="xp.period"
-      :companyLogoSrc="xp.companyLogoSrc"
-    ></resume-xp-content>
-
-  </div>
+  <resume-xp-section></resume-xp-section>
 
   <div :class="containerStyleClasses">
 
