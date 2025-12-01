@@ -62,6 +62,12 @@
 
   </div>
 
+  <div :class="containerStyleClasses">
+
+    <text-section-title-alt icon="mdi:tools" title="Skills"></text-section-title-alt>
+
+  </div>
+
   <!--<other-test-mongo-db></other-test-mongo-db>-->
 
 </template>
