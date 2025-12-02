@@ -18,35 +18,33 @@
 
     ]
 
+    const skillClasses = [
+
+        'flex', 'flex-col', 'items-center', 'justofy-center'
+
+    ]
+
 </script>
 
 <template>
 
     <div :class="containerStyleClasses">
 
-        <div id="skill-container" class="animate-gradient-move rounded-lg h-[500px]" >
+        <div id="skill-container" class="animate-gradient-move rounded-lg p-6" >
 
-            <div class="flex flex-col md:flex-row items-center justify-center gap-2 py-4">
+            <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6">
 
-                <Icon 
-                    name="mdi:star" 
-                    class="size-[30px] md:size-[40px] lg:size-[60px] text-white" 
-                />
+                <div :class="skillClasses">
 
-                <p class="text-white text-lg md:text-xl lg:text-2xl flex-shrink-0">Computing</p>
+                    <Icon 
+                        name="mdi:star" 
+                        class="size-[30px] md:size-[40px] lg:size-[60px] text-white" 
+                    />
 
-            </div>
+                    <p class="text-white text-lg md:text-xl lg:text-2xl flex-shrink-0">Computing</p>
 
-            <div :class="separatorClasses"></div>
+                </div>
 
-            <div class="flex flex-col md:flex-row items-center justify-center gap-2 py-4">
-
-                <Icon 
-                    name="mdi:star" 
-                    class="size-[30px] md:size-[40px] lg:size-[60px] text-white" 
-                />
-
-                <p class="text-white text-lg md:text-xl lg:text-2xl flex-shrink-0">Language</p>
 
             </div>
 
