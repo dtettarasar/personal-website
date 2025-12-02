@@ -6,24 +6,6 @@
         'mx-auto',
     ]
 
-    const separatorClasses = [
-
-        'w-[70%]',
-        'h-[4px]',
-        'rounded-full',
-        'bg-white',
-        'shadow-[0_0_10px_rgba(255,255,255,0.6)]',
-        'mx-auto',
-        'my-2',
-
-    ]
-
-    const skillClasses = [
-
-        'flex', 'flex-col', 'items-center', 'justofy-center'
-
-    ]
-
 </script>
 
 <template>
@@ -34,17 +16,11 @@
 
             <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6">
 
-                <div :class="skillClasses">
+                <resume-skill-content icon="mdi:vuejs" label="Vue.js" ></resume-skill-content>
 
-                    <Icon 
-                        name="mdi:star" 
-                        class="size-[30px] md:size-[40px] lg:size-[60px] text-white" 
-                    />
+                <resume-skill-content icon="mdi:nuxt" label="Nuxt.js" ></resume-skill-content>
 
-                    <p class="text-white text-lg md:text-xl lg:text-2xl flex-shrink-0">Computing</p>
-
-                </div>
-
+                <resume-skill-content icon="mdi:tailwind" label="Tailwind CSS" ></resume-skill-content>
 
             </div>
 
