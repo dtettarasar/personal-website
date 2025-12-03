@@ -7,7 +7,7 @@
 
   <div :class="containerStyleClasses">
 
-    <text-section-title-alt icon="mdi:briefcase" title="Experiences"></text-section-title-alt>
+    <TextSectionTitleAlt icon="mdi:briefcase" title="Experiences"/>
 
   </div>
 
