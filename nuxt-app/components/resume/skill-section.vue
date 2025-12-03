@@ -82,7 +82,7 @@
 
         <div id="skill-container" class="animate-gradient-move rounded-lg p-6" >
 
-            <div v-for="section in skillSections" :key="section.title" class="mb-8">
+            <div v-for="(section, index) in skillSections" :key="section.title + index" class="mb-8">
 
                 <text-section-title-lite-white
                     :title="section.title"
@@ -93,7 +93,7 @@
 
                     <resume-skill-content
                         v-for="skill in section.items"
-                        :key="skill.label"
+                        :key="section.title + '-' + skill.label"
                         :icon="skill.icon"
                         :label="skill.label"
                     />
@@ -103,7 +103,7 @@
             </div>
 
         </div>
-        
+
     </div>
 
 </template>
