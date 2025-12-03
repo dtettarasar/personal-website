@@ -5,7 +5,7 @@
 
   </div>
 
-  <div :class="containerStyleClasses">
+  <div class="mt-4" :class="containerStyleClasses">
 
     <TextSectionTitleAlt icon="mdi:briefcase" title="Experiences"/>
 
@@ -43,6 +43,12 @@
   <div :class="containerStyleClasses">
 
     <TextSectionTitleAlt icon="majesticons:translate" title="Language"/>
+
+  </div>
+
+  <div class="mb-4" :class="containerStyleClasses">
+
+    <ResumeLanguageContent />
 
   </div>
 
