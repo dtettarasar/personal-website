@@ -17,6 +17,7 @@
                 { icon: "mdi:tailwind", label: "Tailwind CSS" }
             ]
         },
+
         {
             title: "Web & Integration",
             icon: "mdi:code-tags",
@@ -30,6 +31,17 @@
 
         {
             title: "Tools & Workflow",
+            icon: "carbon:tools-alt",
+            items: [
+                { icon: "mdi:git", label: "Git" },
+                { icon: "mdi:docker", label: "Docker" },
+                { icon: "simple-icons:caddy", label: "Caddy" },
+                { icon: "mdi:github", label: "GitHub" },
+            ]
+        },
+
+        {
+            title: "Backend (not my primary focus but operational)",
             icon: "carbon:tools-alt",
             items: [
                 { icon: "mdi:git", label: "Git" },

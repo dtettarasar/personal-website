@@ -36,7 +36,7 @@ defineProps({
         class="size-[24px] md:size-[30px] text-white drop-shadow-[0_0_5px_rgba(255,255,255,0.6)]"
       />
 
-      <h3 class="text-white text-lg md:text-xl font-medium flex-shrink-0">
+      <h3 class="text-white text-lg md:text-xl font-medium whitespace-normal break-words">
         {{ title }}
       </h3>
 
