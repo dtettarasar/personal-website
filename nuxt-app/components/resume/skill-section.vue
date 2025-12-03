@@ -37,6 +37,7 @@
                 { icon: "mdi:docker", label: "Docker" },
                 { icon: "simple-icons:caddy", label: "Caddy" },
                 { icon: "mdi:github", label: "GitHub" },
+                {icon: "mdi:jira", label: "Jira"},
             ]
         },
 
@@ -48,8 +49,28 @@
                 { icon: "lineicons:mongodb", label: "MongoDB" },
                 { icon: "mdi:language-python", label: "Python" },
                 { icon: "devicon-plain:django", label: "Django" },
+                { icon: "mdi:database", label: "SQL" },
             ]
-        }
+        },
+
+        {
+            title: "CMS & Business Tools",
+            icon: "lsicon:marketing-filled",
+            items: [
+                { icon: "ic:baseline-wordpress", label: "WordPress" },
+                { icon: "mdi:salesforce", label: "Salesforce" },
+                { icon: "mdi:microsoft", label: "Office Suite" },
+            ]
+        },
+
+        {
+            title: "Creative Tools",
+            icon: "ion:color-palette",
+            items: [
+                { icon: "file-icons:gimp", label: "GIMP" },
+                { icon: "simple-icons:krita", label: "Krita" },
+            ]
+        },
 
     ]
 
