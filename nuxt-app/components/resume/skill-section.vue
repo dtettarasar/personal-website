@@ -32,7 +32,10 @@
             title: "Tools & Workflow",
             icon: "carbon:tools-alt",
             items: [
-                { icon: "mdi:language-html5", label: "HTML5" },
+                { icon: "mdi:git", label: "Git" },
+                { icon: "mdi:docker", label: "Docker" },
+                { icon: "simple-icons:caddy", label: "Caddy" },
+                { icon: "mdi:github", label: "GitHub" },
             ]
         }
 
