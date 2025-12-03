@@ -1,17 +1,29 @@
 <template>
-  <div :class="skillClasses">
+  <div 
+    :class="[
+      ...skillClasses, // Les classes de base non conditionnelles (group, flex, etc.)
+      
+      // 💥 Classes dynamiques de l'état actif/hover : Appliquées si isActive VRAI OU si survol
+      isActive 
+          ? 'bg-emerald-400 shadow-[0_0_15px_rgba(74,222,128,0.6)] is-active-pulse' 
+          : 'bg-slate-800 hover:bg-emerald-400 hover:shadow-[0_0_15px_rgba(74,222,128,0.6)] hover:animate-borderPulse'
+    ]"
+  >
     <Icon 
       :name="icon" 
-      class="size-[40px] md:size-[50px] lg:size-[60px]
-             text-white 
-             transition-all duration-300
-             group-hover:text-black"
+      :class="[
+          'size-[40px] md:size-[50px] lg:size-[60px] transition-all duration-300',
+          // Couleur de l'icône : Noir si actif, sinon Blanc (avec transition au survol)
+          isActive ? 'text-black' : 'text-white group-hover:text-black'
+      ]"
     />
 
     <p 
-      class="text-lg mt-2 opacity-0
-             transition-all duration-300
-             group-hover:opacity-100 text-black"
+      :class="[
+          'text-lg mt-2 transition-all duration-300 text-black',
+          // Opacité du texte : visible si actif, sinon invisible (avec transition au survol)
+          isActive ? 'opacity-100' : 'opacity-0 group-hover:opacity-100'
+      ]"
     >
       {{ label }}
     </p>
@@ -27,6 +39,10 @@ defineProps({
   icon: {
     type: String,
     default: 'mdi:star'
+  },
+  isActive: { // 💥 NOUVEAU : Prop pour l'état actif
+      type: Boolean,
+      default: false
   }
 })
 
@@ -38,7 +54,7 @@ const skillClasses = [
   'flex-col',
   'items-center',
   'justify-center',
-  'bg-slate-800',
+  // 'bg-slate-800',
   'border-3',
   'border-emerald-400',
   'rounded-xl',
@@ -47,13 +63,14 @@ const skillClasses = [
   'm-auto',
 
   // Hover effects
-  'hover:bg-emerald-400',
-  'hover:shadow-[0_0_15px_rgba(74,222,128,0.6)]',
+  //'hover:bg-emerald-400',
+  //'hover:shadow-[0_0_15px_rgba(74,222,128,0.6)]',
   'animate-none', // de base aucun pulse
 
   // Little pulse on hover
-  'hover:animate-borderPulse'
+  //'hover:animate-borderPulse'
 ]
+
 </script>
 
 <style scoped>
@@ -69,7 +86,14 @@ const skillClasses = [
   }
 }
 
+/* 💥 NOUVEAU : Classe pour forcer l'animation quand isActive est true */
+.is-active-pulse {
+  animation: borderPulse 2.8s infinite ease-in-out;
+}
+
+/* Conservez la règle ci-dessous si vous voulez appliquer le pulse sur le hover desktop */
 .hover\:animate-borderPulse:hover {
   animation: borderPulse 2.8s infinite ease-in-out;
 }
+
 </style>

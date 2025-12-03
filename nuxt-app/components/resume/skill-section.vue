@@ -1,5 +1,7 @@
 <script setup lang="ts">
 
+    import { ref } from 'vue'
+
     const containerStyleClasses = [
         'container',
         'p-4',
@@ -74,6 +76,19 @@
 
     ]
 
+    // 💥 NOUVEAU : État pour l'identifiant de la compétence active
+    const activeSkillLabel = ref('')
+
+    const toggleActive = (label: string) => {
+        // Si l'élément est déjà actif, désactivez-le (vide la ref)
+        if (activeSkillLabel.value === label) {
+            activeSkillLabel.value = ''
+        } else {
+            // Sinon, activez le nouvel élément
+            activeSkillLabel.value = label
+        }
+    }
+
 </script>
 
 <template>
@@ -96,6 +111,9 @@
                         :key="section.title + '-' + skill.label"
                         :icon="skill.icon"
                         :label="skill.label"
+
+                        :isActive="activeSkillLabel === skill.label"
+                        @click="toggleActive(skill.label)"
                     />
 
                 </div>
