@@ -3,8 +3,10 @@
     <section id="hero" class="flex flex-col justify-center items-center py-5 animate-gradient-move">
 
         <div class="flex flex-col items-center">
-            
-            <Icon :name="icon" class="text-4xl md:text-6xl text-emerald-400 drop-shadow-[0_0_15px_rgba(74,222,128,0.4)] mb-2" />
+          
+            <div class="flex drop-shadow-emerald-glow">
+              <Icon :name="icon" class="text-4xl md:text-6xl text-emerald-400 drop-shadow-[0_0_15px_rgba(74,222,128,0.4)] mb-2" />
+            </div>
 
             <h1 :class="titleClasses" >{{ title }}<span class="animate-pulse">_</span></h1>
 

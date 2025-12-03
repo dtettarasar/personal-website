@@ -46,6 +46,10 @@ module.exports = {
             backgroundImage: {
                 'radial-gradient': 'radial-gradient(circle at center, rgba(255, 255, 255, 0.06), transparent 60%)',
             },
+            dropShadow: {
+                // Ceci générera la classe utilitaire: 'drop-shadow-emerald-glow'
+                'emerald-glow': '0 0 10px rgba(74, 222, 128, 0.6)', // Lueur émeraude
+            },
         },
 
     },
