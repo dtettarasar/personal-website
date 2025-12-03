@@ -20,7 +20,7 @@
 
     <p 
       :class="[
-          'text-lg md:text-2xl mt-2 transition-all duration-300 text-black',
+          'text-lg md:text-2xl mt-2 transition-all duration-300 text-black whitespace-normal break-words',
           // Opacité du texte : visible si actif, sinon invisible (avec transition au survol)
           isActive ? 'opacity-100' : 'opacity-0 group-hover:opacity-100'
       ]"
