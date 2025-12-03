@@ -12,8 +12,8 @@
 
       <div :class="languageSeparatorClasses"></div>
       
-      <p class="text-lg sm:text-xl font-semibold text-white mt-2">French</p>
-      <p class="text-sm sm:text-md text-emerald-400">Native Language</p>
+      <p class="md:text-2xl sm:text-xl font-semibold text-white mt-2">French</p>
+      <p class="md:text-xl sm:text-md text-emerald-400">Native Language</p>
 
     </div>
 
@@ -27,8 +27,8 @@
 
       <div :class="languageSeparatorClasses"></div>
 
-      <p class="text-lg sm:text-xl font-semibold text-white mt-2">English</p>
-      <p class="text-sm sm:text-md text-emerald-400">Business Level</p>
+      <p class="md:text-2xl sm:text-xl font-semibold text-white mt-2">English</p>
+      <p class="md:text-xl sm:text-md text-emerald-400">Business Level</p>
       
     </div>
 
