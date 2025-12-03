@@ -9,25 +9,32 @@
     const skillSections = [
 
         {
-            title: "Frontend",
+            title: "Frontend – Main Stack",
             icon: "mdi:star-four-points",
             items: [
-            { icon: "mdi:vuejs", label: "Vue.js" },
-            { icon: "mdi:nuxt", label: "Nuxt.js" },
-            { icon: "mdi:tailwind", label: "Tailwind CSS" }
+                { icon: "mdi:vuejs", label: "Vue.js" },
+                { icon: "mdi:nuxt", label: "Nuxt.js" },
+                { icon: "mdi:tailwind", label: "Tailwind CSS" }
             ]
         },
         {
-            title: "Web Essentials",
+            title: "Web & Integration",
             icon: "mdi:code-tags",
             items: [
-            { icon: "mdi:language-html5", label: "HTML5" },
-            { icon: "mdi:language-css3", label: "CSS3" },
-            { icon: "mdi:language-javascript", label: "JavaScript" },
-            { icon: "mdi:bootstrap", label: "Bootstrap" }
+                { icon: "mdi:language-html5", label: "HTML5" },
+                { icon: "mdi:language-css3", label: "CSS3" },
+                { icon: "mdi:language-javascript", label: "JavaScript" },
+                { icon: "mdi:bootstrap", label: "Bootstrap" }
             ]
         },
-        // etc...
+
+        {
+            title: "Tools & Workflow",
+            icon: "carbon:tools-alt",
+            items: [
+                { icon: "mdi:language-html5", label: "HTML5" },
+            ]
+        }
 
     ]
 
@@ -43,6 +50,7 @@
 
                 <text-section-title-lite-white
                     :title="section.title"
+                    :icon="section.icon"
                 />
 
                 <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6 mt-4">
