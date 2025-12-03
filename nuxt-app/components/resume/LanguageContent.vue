@@ -12,8 +12,9 @@
 
       <div :class="languageSeparatorClasses"></div>
       
-      <p class="text-lg sm:text-xl font-semibold text-slate-800 mt-2">Français</p>
-      <p class="text-sm sm:text-md text-emerald-600">Langue Maternelle</p>
+      <p class="text-lg sm:text-xl font-semibold text-slate-800 mt-2">French</p>
+      <p class="text-sm sm:text-md text-emerald-600">Native Language</p>
+
     </div>
 
     <div class="language-card p-4 sm:p-6">
@@ -26,8 +27,9 @@
 
       <div :class="languageSeparatorClasses"></div>
 
-      <p class="text-lg sm:text-xl font-semibold text-slate-800 mt-2">Anglais</p>
-      <p class="text-sm sm:text-md text-emerald-600">Niveau Professionnel</p>
+      <p class="text-lg sm:text-xl font-semibold text-slate-800 mt-2">English</p>
+      <p class="text-sm sm:text-md text-emerald-600">Business Level</p>
+      
     </div>
 
   </div>
