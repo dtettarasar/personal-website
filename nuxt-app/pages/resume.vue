@@ -40,6 +40,12 @@
 
   <!--<other-test-mongo-db></other-test-mongo-db>-->
 
+  <div :class="containerStyleClasses">
+
+    <TextSectionTitleAlt icon="majesticons:translate" title="Language"/>
+
+  </div>
+
 </template>
 
 <script setup lang="ts">
