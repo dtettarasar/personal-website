@@ -14,6 +14,8 @@
 
         <div id="skill-container" class="animate-gradient-move rounded-lg p-6" >
 
+            <text-section-title-lite-white title="test" ></text-section-title-lite-white>
+
             <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6">
 
                 <resume-skill-content icon="mdi:vuejs" label="Vue.js" ></resume-skill-content>
