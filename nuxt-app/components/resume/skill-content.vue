@@ -12,7 +12,7 @@
     <Icon 
       :name="icon" 
       :class="[
-          'size-[40px] md:size-[50px] lg:size-[60px] transition-all duration-300',
+          'size-[40px] md:size-[60px] lg:size-[80px] transition-all duration-300',
           // Couleur de l'icône : Noir si actif, sinon Blanc (avec transition au survol)
           isActive ? 'text-black' : 'text-white group-hover:text-black'
       ]"
@@ -20,7 +20,7 @@
 
     <p 
       :class="[
-          'text-lg mt-2 transition-all duration-300 text-black',
+          'text-lg md:text-2xl mt-2 transition-all duration-300 text-black',
           // Opacité du texte : visible si actif, sinon invisible (avec transition au survol)
           isActive ? 'opacity-100' : 'opacity-0 group-hover:opacity-100'
       ]"
