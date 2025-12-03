@@ -44,6 +44,7 @@ const skillClasses = [
   'rounded-xl',
   'transition-all',
   'duration-300',
+  'm-auto',
 
   // Hover effects
   'hover:bg-emerald-400',
