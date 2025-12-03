@@ -6,6 +6,31 @@
         'mx-auto',
     ]
 
+    const skillSections = [
+
+        {
+            title: "Frontend",
+            icon: "mdi:star-four-points",
+            items: [
+            { icon: "mdi:vuejs", label: "Vue.js" },
+            { icon: "mdi:nuxt", label: "Nuxt.js" },
+            { icon: "mdi:tailwind", label: "Tailwind CSS" }
+            ]
+        },
+        {
+            title: "Web Essentials",
+            icon: "mdi:code-tags",
+            items: [
+            { icon: "mdi:language-html5", label: "HTML5" },
+            { icon: "mdi:language-css3", label: "CSS3" },
+            { icon: "mdi:language-javascript", label: "JavaScript" },
+            { icon: "mdi:bootstrap", label: "Bootstrap" }
+            ]
+        },
+        // etc...
+
+    ]
+
 </script>
 
 <template>
@@ -14,15 +39,22 @@
 
         <div id="skill-container" class="animate-gradient-move rounded-lg p-6" >
 
-            <text-section-title-lite-white title="test" ></text-section-title-lite-white>
+            <div v-for="section in skillSections" :key="section.title" class="mb-8">
 
-            <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6">
+                <text-section-title-lite-white
+                    :title="section.title"
+                />
 
-                <resume-skill-content icon="mdi:vuejs" label="Vue.js" ></resume-skill-content>
+                <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6 mt-4">
 
-                <resume-skill-content icon="mdi:nuxt" label="Nuxt.js" ></resume-skill-content>
+                    <resume-skill-content
+                        v-for="skill in section.items"
+                        :key="skill.label"
+                        :icon="skill.icon"
+                        :label="skill.label"
+                    />
 
-                <resume-skill-content icon="mdi:tailwind" label="Tailwind CSS" ></resume-skill-content>
+                </div>
 
             </div>
 
