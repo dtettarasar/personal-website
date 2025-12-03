@@ -61,7 +61,7 @@
             items: [
                 { icon: "ic:baseline-wordpress", label: "WordPress" },
                 { icon: "mdi:salesforce", label: "Salesforce" },
-                { icon: "mdi:microsoft", label: "Office Suite" },
+                { icon: "mdi:microsoft-office", label: "Office Suite" },
             ]
         },
 
