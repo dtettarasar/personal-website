@@ -42,12 +42,12 @@
 
         {
             title: "Backend (not my primary focus but operational)",
-            icon: "carbon:tools-alt",
+            icon: "mdi:server-network",
             items: [
-                { icon: "mdi:git", label: "Git" },
-                { icon: "mdi:docker", label: "Docker" },
-                { icon: "simple-icons:caddy", label: "Caddy" },
-                { icon: "mdi:github", label: "GitHub" },
+                { icon: "mdi:nodejs", label: "Node.js / Express" },
+                { icon: "lineicons:mongodb", label: "MongoDB" },
+                { icon: "mdi:language-python", label: "Python" },
+                { icon: "devicon-plain:django", label: "Django" },
             ]
         }
 
