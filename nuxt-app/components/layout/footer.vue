@@ -23,12 +23,12 @@
 
       <p>
         <a 
-          href="https://www.flaticon.com/fr/icones-gratuites/boulangerie" 
-          title="boulangerie icônes"
+          href="https://www.flaticon.com/free-icons/bakery"
+          title="bakery icons"
           class="underline hover:text-emerald-400"
           target="_blank"
         >
-          Boulangerie icônes créées par cahụụngung – Flaticon
+          Bakery icon  created by cahụụngung – Flaticon
         </a>
       </p>
 
