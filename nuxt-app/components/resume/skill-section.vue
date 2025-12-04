@@ -61,6 +61,7 @@
             items: [
                 { icon: "ic:baseline-wordpress", label: "WordPress" },
                 { icon: "mdi:salesforce", label: "Salesforce" },
+                {icon: "mdi:google-analytics", label: "Google Analytics"},
                 { icon: "mdi:microsoft-office", label: "Office Suite" },
             ]
         },
@@ -71,6 +72,7 @@
             items: [
                 { icon: "file-icons:gimp", label: "GIMP" },
                 { icon: "simple-icons:krita", label: "Krita" },
+                { icon:"solar:figma-bold", label: "Figma" },
             ]
         },
 

@@ -10,29 +10,29 @@
 
       <p class="my-2 md:my-4">
 
-        I started my career in <strong>digital communication and web project management</strong>, spending several years leading projects that connected strategy, 
-        creativity, and technology.
+       I started my career in digital communication and web project management, working across strategy, design, and execution. 
+       For several years, <strong>I led and built WordPress websites, worked on SEO optimization, and handled UX, content creation, and performance analysis</strong>.
 
       </p>
 
       <p class="my-2 md:my-4">
 
-        During this time, I worked on <strong>WordPress websites, SEO optimization, and web content production</strong>, 
-        often taking on both the strategic vision and the hands-on execution — from UX design to publishing and performance analysis.
+        <strong>This gave me a full, practical understanding of how a website is conceived, designed, developed, delivered, and maintained</strong> — from both a technical and business perspective. 
+        It also shaped my autonomy, creativity, and ability to bridge the gap between technical teams and user needs.
 
       </p>
 
       <p class="my-2 md:my-4">
 
-        This experience gave me a <strong>360° understanding of the web ecosystem</strong>: how a website is designed, developed, optimized, and maintained over time. 
-        It also shaped my sense of autonomy, creativity, and adaptability — qualities that have always guided my work.
+        But over time, <strong>I felt the need to go deeper</strong> — to move past CMS limitations and actually build things from the ground up. 
+        That’s when I shifted toward development and started learning JavaScript, Python, and modern tools.
 
       </p>
 
       <p class="my-2 md:my-4">
 
-        Over time, I felt the need to go deeper into the <strong>technical side of creation</strong>, to understand what happens under the hood — beyond CMS tools and pre-built solutions.
-        That’s what led me to learn <strong>JavaScript, Python, and modern frameworks like Nuxt.js, Vue, and Django</strong>, and to gradually move towards <strong>fullstack development</strong>.
+        Today, I focus primarily on <strong>frontend development with Vue.js, Nuxt, and Tailwind CSS</strong>. 
+        I enjoy crafting clean interfaces, smooth user experiences, and well-structured components, while keeping a flexible full-stack edge thanks to Node, Django, and database fundamentals.
 
       </p>
 

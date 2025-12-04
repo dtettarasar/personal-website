@@ -24,7 +24,7 @@
 
       <!-- Sous-titre -->
       <p class="text-lg md:text-2xl lg:text-3xl font-light text-gray-200">
-        Full Stack Web Developer & Project Manager
+        Frontend Developer – Vue.js / Nuxt
       </p>
 
       <!-- Icônes -->
