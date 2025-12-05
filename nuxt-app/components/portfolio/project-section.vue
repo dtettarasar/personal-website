@@ -3,7 +3,6 @@
   import { ref } from 'vue'
 
   const projects = ref([
-
     {
       title: "CS50P: Final Project",
       img: "/img/portfolio/img-portfolio-cs50-homepage.png",
@@ -14,7 +13,7 @@
       ],
       code: "https://github.com/dtettarasar/CS50P-final-project",
       demo:"https://www.youtube.com/watch?v=uEjsgDL0S_0",
-      icon: "hugeicons:tic-tac-toe",
+      icon: "ic:round-terminal",
       stack: [
         "mdi:language-python",
       ]
