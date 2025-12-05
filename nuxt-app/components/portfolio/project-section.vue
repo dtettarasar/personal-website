@@ -7,9 +7,9 @@
       title: "Otis AI: Your Digital Scribe",
       img: "/img/portfolio/img-portfolio-cs50-homepage.png",
       desc: [
-        "This is a web app created to assist content writer in article creation.",
-        "This application allow to quickly generated SEO friendly with the help of AI (using the Open AI API), by simply providing keywords, a short description or a title.",
-        "Built with Vue, Express JS and MongoDB."
+        "This is a web app designed to help content writers create articles faster.",
+        "It generates SEO-friendly drafts using AI (OpenAI API) based on keywords, short descriptions, or titles.",
+        "Built with Vue, Express.js and MongoDB."
       ],
       icon: "material-symbols:edit-note-rounded",
       stack: [
@@ -38,8 +38,8 @@
       title: "CS50P: Final Project",
       img: "/img/portfolio/img-portfolio-cs50-homepage.png",
       desc: [
-        "Project made for CS50P's final project",
-        "The project is command-line tool developed in Python for protecting visual artworks from predatory generative artificial intelligence systems (such as midjourney, dall-e, sora, etc...).",
+        "Final project for Harvard's CS50P course.",
+        "This command-line tool protects visual artworks from predatory generative AI systems (Midjourney, DALL-E, Sora, etc.).",
         "Built with Python",
       ],
       icon: "ic:round-terminal",
@@ -63,9 +63,9 @@
       title: "CS50x: Tic Tac Toe",
       img: "/img/portfolio/img-portfolio-cs50-homepage.png",
       desc: [
-        "Project made for CS50x's final project",
-        "The project is a Tic Tac Toe Game, running in the browser.",
-        "Built with HTML, CSS and JS.",
+        "Final project for Harvard’s CS50x.",
+        "A Tic Tac Toe game running in the browser.",
+        "Built with HTML, CSS and JavaScript.",
       ],
       icon: "hugeicons:tic-tac-toe",
       stack: [
@@ -90,9 +90,9 @@
       title: "CS50x: Homepage",
       img: "/img/portfolio/img-portfolio-cs50-homepage.png",
       desc: [
-        "Project made for CS50x.",
-        "Built with HTML, CSS, JS, and Bootstrap.",
-        "Website designed to present and promote a business conference."
+        "Project made for Harvard’s CS50x.",
+        "Built with HTML, CSS, JavaScript and Bootstrap.",
+        "A responsive promotional website for a business conference."
       ],
       icon: "mdi:star-circle",
       stack: [
@@ -113,8 +113,8 @@
       title: "freeCodeCamp: Technical Documentation Page",
       img: "/img/portfolio/img-portfolio-doc-page.png",
       desc: [
-        "Project made for the Responsive Web Design certification.",
-        "Clean, accessible and responsive page structure."
+        "Built for the Responsive Web Design certification.",
+        "Clean, accessible and responsive layout."
       ],
       icon: "mdi:file-document",
       stack: [
