@@ -4,6 +4,23 @@
 
   const projects = ref([
     {
+      title: "CS50x: Tic Tac Toe",
+      img: "/img/portfolio/img-portfolio-cs50-homepage.png",
+      desc: [
+        "Project made for CS50x's final project",
+        "The project is a Tic Tac Toe Game, running in the browser.",
+        "Built with HTML, CSS and JS.",
+      ],
+      code: "https://github.com/dtettarasar/CS50-tic-tac-toe",
+      demo:"https://www.youtube.com/watch?v=jnWGF0sQf5U",
+      icon: "hugeicons:tic-tac-toe",
+      stack: [
+        "mdi:language-html5",
+        "mdi:language-css3",
+        "mdi:language-javascript",
+      ]
+    },
+    {
       title: "CS50x: Homepage",
       img: "/img/portfolio/img-portfolio-cs50-homepage.png",
       desc: [
