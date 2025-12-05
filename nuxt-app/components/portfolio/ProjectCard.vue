@@ -71,23 +71,16 @@ defineProps({
 
           <!-- LINK BUTTON -->
           <NuxtLink
-            v-if="project.code"
-            :to="project.code"
+            v-for="link in project.links"
+            :to="link.url"
             target="_blank"
             class="inline-flex items-center mx-2 gap-2 bg-slate-900 border-2 border-emerald-400 text-white font-mono px-4 py-2 rounded-lg hover:bg-emerald-400 hover:text-black hover:shadow-[0_0_15px_rgba(74,222,128,0.6)] transition-all duration-300 w-fit"
           >
-            <Icon name="material-symbols:code-blocks" class="text-2xl" />
-            View source code
-          </NuxtLink>
 
-          <NuxtLink
-            v-if="project.demo"
-            :to="project.demo"
-            target="_blank"
-            class="inline-flex items-center mx-2 gap-2 bg-slate-900 border-2 border-emerald-400 text-white font-mono px-4 py-2 rounded-lg hover:bg-emerald-400 hover:text-black hover:shadow-[0_0_15px_rgba(74,222,128,0.6)] transition-all duration-300 w-fit"
-          >
-            <Icon name="material-symbols:video-library" class="text-2xl" />
-            Watch demo video
+            <Icon :name="link.icon" class="text-2xl" />
+
+            {{ link.label }}
+
           </NuxtLink>
 
         </div>

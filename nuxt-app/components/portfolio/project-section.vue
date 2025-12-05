@@ -16,7 +16,19 @@
       icon: "ic:round-terminal",
       stack: [
         "mdi:language-python",
-      ]
+      ],
+      links: [
+        { 
+          label:"View source code", 
+          url: "https://github.com/dtettarasar/CS50P-final-project",
+          icon:"material-symbols:code-blocks", 
+        },
+        { 
+          label:"Watch demo video",
+          url: "https://www.youtube.com/watch?v=uEjsgDL0S_0",
+          icon:"material-symbols:video-library", 
+        },
+      ],
     },
     {
       title: "CS50x: Tic Tac Toe",
