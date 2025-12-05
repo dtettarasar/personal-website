@@ -3,6 +3,22 @@
   import { ref } from 'vue'
 
   const projects = ref([
+
+    {
+      title: "CS50P: Final Project",
+      img: "/img/portfolio/img-portfolio-cs50-homepage.png",
+      desc: [
+        "Project made for CS50P's final project",
+        "The project is command-line tool developed in Python for protecting visual artworks from predatory generative artificial intelligence systems (such as midjourney, dall-e, sora, etc...).",
+        "Built with Python",
+      ],
+      code: "https://github.com/dtettarasar/CS50P-final-project",
+      demo:"https://www.youtube.com/watch?v=uEjsgDL0S_0",
+      icon: "hugeicons:tic-tac-toe",
+      stack: [
+        "mdi:language-python",
+      ]
+    },
     {
       title: "CS50x: Tic Tac Toe",
       img: "/img/portfolio/img-portfolio-cs50-homepage.png",
