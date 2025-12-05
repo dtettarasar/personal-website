@@ -11,7 +11,7 @@
         "Built with HTML, CSS, JS, and Bootstrap.",
         "Website designed to present and promote a business conference."
       ],
-      link: "https://github.com/dtettarasar/cs50x-homepage",
+      code: "https://github.com/dtettarasar/cs50x-homepage",
       icon: "mdi:star-circle",
       stack: [
         "mdi:language-html5",
@@ -27,7 +27,7 @@
         "Project made for the Responsive Web Design certification.",
         "Clean, accessible and responsive page structure."
       ],
-      link: "https://codepen.io/dtettarasar/full/rNNemwV",
+      code: "https://codepen.io/dtettarasar/full/rNNemwV",
       icon: "mdi:file-document",
       stack: [
         "mdi:language-html5",
