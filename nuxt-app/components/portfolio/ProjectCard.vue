@@ -64,7 +64,7 @@ defineProps({
                 v-for="tech in project.stack"
                 :key="tech"
                 :name="tech"
-                class="w-9 h-9 text-emerald-400 drop-shadow-[0_0_8px_rgba(74,222,128,0.6)] hover:scale-110 transition-transform duration-300"
+                class="w-9 h-9 text-emerald-400 drop-shadow-[0_0_8px_rgba(74,222,128,0.6)]"
                 :alt="tech"
             />
           </div>
