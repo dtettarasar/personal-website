@@ -15,7 +15,7 @@
             icon: "mdi:star-four-points",
             items: [
                 { icon: "mdi:vuejs", label: "Vue.js" },
-                { icon: "mdi:nuxt", label: "Nuxt.js" },
+                { icon: "lineicons:nuxt", label: "Nuxt.js" },
                 { icon: "mdi:tailwind", label: "Tailwind CSS" }
             ]
         },
