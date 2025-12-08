@@ -8,8 +8,8 @@
       img: "/img/portfolio/img-portfolio-cs50-homepage.png",
       desc: [
         "The website you're on right now :)",
-        "Designed and developed from scratch with Nuxt, Vue & Tailwind.",
-        "Dockerized and deployed with Caddy for a clean, production-ready setup.",
+        "Designed and developed <strong>from scratch</strong> with Nuxt, Vue & Tailwind.",
+        "Dockerized and deployed with <strong>Caddy</strong>.",
         "Fast, responsive, and mobile-first."
       ],
       icon: "material-symbols:person-pin-rounded",

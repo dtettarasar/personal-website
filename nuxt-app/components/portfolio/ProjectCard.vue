@@ -53,9 +53,8 @@ defineProps({
               v-for="(d, i) in project.desc"
               :key="i"
               class="leading-relaxed"
-            >
-              {{ d }}
-            </p>
+              v-html="d"
+            ></p>
           </div>
 
           <!-- STACK ICONS -->
