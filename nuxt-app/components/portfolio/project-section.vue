@@ -66,7 +66,7 @@
     },
     {
       title: "CS50P: Final Project",
-      img: "/img/portfolio/img-portfolio-cs50-homepage.png",
+      img: "/img/portfolio/cs50.jpg",
       desc: [
         "Final project for <strong>Harvard's CS50P course</strong>.",
         "This command-line tool <strong>protects visual artworks from predatory generative AI systems</strong> (Midjourney, DALL-E, Sora, etc.).",
