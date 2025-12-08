@@ -35,7 +35,7 @@
     },
     {
       title: "Otis AI: Your Digital Scribe",
-      img: "/img/portfolio/img-portfolio-cs50-homepage.png",
+      img: "/img/portfolio/otis-ai-homepage.png",
       desc: [
         "This is a web app designed to help content writers create articles faster.",
         "It generates <strong>SEO-friendly drafts using AI</strong> (OpenAI API) based on keywords, short descriptions, or titles.",
@@ -62,6 +62,11 @@
           url: "https://github.com/dtettarasar/otis-ai-backend",
           icon:"material-symbols:code-blocks", 
         },
+        {
+          label:"Watch demo video",
+          url: "https://www.youtube.com/watch?v=4xhqBR_Kues",
+          icon:"material-symbols:video-library",
+        }
       ],
     },
     {
