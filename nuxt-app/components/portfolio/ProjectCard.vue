@@ -37,7 +37,7 @@ defineProps({
       <div class="px-6 pb-6 pt-3 flex flex-col gap-6">
 
         <!-- IMAGE -->
-        <div class="w-full overflow-hidden rounded-lg aspect-[16/9]">
+        <div v-if="project.img" class="w-full overflow-hidden rounded-lg aspect-[16/9]">
           <img
             :src="project.img"
             class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"

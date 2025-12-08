@@ -84,7 +84,7 @@
         },
         { 
           label:"Watch demo video",
-          url: "https://www.youtube.com/watch?v=uEjsgDL0S_0",
+          url: "https://www.youtube.com/watch?v=fzHck-rlLZ0",
           icon:"material-symbols:video-library", 
         },
       ],
@@ -103,6 +103,7 @@
         "mdi:language-css3",
         "mdi:language-javascript",
       ],
+      video: "https://youtu.be/O13g7CtV2bI",
       links: [
         { 
           label:"View source code", 
@@ -111,7 +112,7 @@
         },
         { 
           label:"Watch demo video",
-          url: "https://www.youtube.com/watch?v=jnWGF0sQf5U",
+          url: "https://youtu.be/O13g7CtV2bI",
           icon:"material-symbols:video-library", 
         },
       ],
