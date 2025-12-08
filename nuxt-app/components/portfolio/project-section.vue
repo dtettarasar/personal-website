@@ -38,7 +38,7 @@
       img: "/img/portfolio/img-portfolio-cs50-homepage.png",
       desc: [
         "This is a web app designed to help content writers create articles faster.",
-        "It generates SEO-friendly drafts using AI (OpenAI API) based on keywords, short descriptions, or titles.",
+        "It generates <strong>SEO-friendly drafts using AI</strong> (OpenAI API) based on keywords, short descriptions, or titles.",
         "Built with Vue, Express.js and MongoDB."
       ],
       icon: "material-symbols:edit-note-rounded",
@@ -68,8 +68,8 @@
       title: "CS50P: Final Project",
       img: "/img/portfolio/img-portfolio-cs50-homepage.png",
       desc: [
-        "Final project for Harvard's CS50P course.",
-        "This command-line tool protects visual artworks from predatory generative AI systems (Midjourney, DALL-E, Sora, etc.).",
+        "Final project for <strong>Harvard's CS50P course</strong>.",
+        "This command-line tool <strong>protects visual artworks from predatory generative AI systems</strong> (Midjourney, DALL-E, Sora, etc.).",
         "Built with Python",
       ],
       icon: "ic:round-terminal",
@@ -93,7 +93,7 @@
       title: "CS50x: Tic Tac Toe",
       img: "/img/portfolio/img-portfolio-cs50-homepage.png",
       desc: [
-        "Final project for Harvard’s CS50x.",
+        "<strong>Final project for Harvard’s CS50x.</strong>",
         "A Tic Tac Toe game running in the browser.",
         "Built with HTML, CSS and JavaScript.",
       ],
@@ -120,7 +120,7 @@
       title: "CS50x: Homepage",
       img: "/img/portfolio/img-portfolio-cs50-homepage.png",
       desc: [
-        "Project made for Harvard’s CS50x.",
+        "<strong>Project made for Harvard’s CS50x.</strong>",
         "Built with HTML, CSS, JavaScript and Bootstrap.",
         "A responsive promotional website for a business conference."
       ],
