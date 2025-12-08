@@ -4,6 +4,36 @@
 
   const projects = ref([
     {
+      title: "My personal website",
+      img: "/img/portfolio/img-portfolio-cs50-homepage.png",
+      desc: [
+        "The website you're on right now :)",
+        "Designed and developed from scratch with Nuxt, Vue & Tailwind.",
+        "Dockerized and deployed with Caddy for a clean, production-ready setup.",
+        "Fast, responsive, and mobile-first."
+      ],
+      icon: "material-symbols:person-pin-rounded",
+      stack: [
+        "mdi:language-html5",
+        "mdi:language-css3",
+        "mdi:language-javascript",
+        "mdi:tailwind",
+        "mdi:vuejs",
+        "lineicons:nuxt",
+        "fa7-brands:node-js",
+        "lineicons:mongodb",
+        "mdi:docker",
+        "simple-icons:caddy"
+      ],
+      links: [
+        {
+          label:"View source code", 
+          url: "https://github.com/dtettarasar/personal-website",
+          icon:"material-symbols:code-blocks"
+        }
+      ]
+    },
+    {
       title: "Otis AI: Your Digital Scribe",
       img: "/img/portfolio/img-portfolio-cs50-homepage.png",
       desc: [
