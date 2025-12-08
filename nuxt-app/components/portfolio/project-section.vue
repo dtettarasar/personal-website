@@ -91,7 +91,7 @@
     },
     {
       title: "CS50x: Tic Tac Toe",
-      img: "/img/portfolio/img-portfolio-cs50-homepage.png",
+      img: "/img/portfolio/img-portfolio-cs50x-final.png",
       desc: [
         "<strong>Final project for Harvard’s CS50x.</strong>",
         "A Tic Tac Toe game running in the browser.",
