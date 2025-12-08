@@ -5,7 +5,7 @@
   const projects = ref([
     {
       title: "My personal website",
-      img: "/img/portfolio/img-portfolio-cs50-homepage.png",
+      img: "/img/portfolio/img-portfolio-personal-homepage.png",
       desc: [
         "The website you're on right now :)",
         "Designed and developed <strong>from scratch</strong> with Nuxt, Vue & Tailwind.",
