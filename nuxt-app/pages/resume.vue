@@ -25,7 +25,7 @@
 
   <div :class="containerStyleClasses">
 
-    <text-section-title-alt icon="mdi:school" title="Education & Certifications"></text-section-title-alt>
+    <text-section-title-alt icon="material-symbols:school-rounded" title="Education & Certifications"></text-section-title-alt>
 
   </div>
 
