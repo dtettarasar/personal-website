@@ -29,9 +29,19 @@
 
       <!-- Icônes -->
       <div class="flex justify-center items-center gap-8 pt-6">
-        <Icon name="mdi:mail-ru" class="w-10 h-10 text-gray-200 hover:text-emerald-400 transition-colors" />
-        <Icon name="fa7-brands:linkedin" class="w-10 h-10 text-gray-200 hover:text-emerald-400 transition-colors" />
-        <Icon name="fa7-brands:github" class="w-10 h-10 text-gray-200 hover:text-emerald-400 transition-colors" />
+
+        <a href="mailto:dtettarasar@gmail.com">
+          <Icon name="mdi:mail-ru" class="w-10 h-10 text-gray-200 hover:text-emerald-400 transition-colors" />
+        </a>
+
+        <a href="https://www.linkedin.com/in/dylan-tettarasar-a89a0865/" target="_blank">
+          <Icon name="fa7-brands:linkedin" class="w-10 h-10 text-gray-200 hover:text-emerald-400 transition-colors" />
+        </a>
+
+        <a href="https://github.com/dtettarasar" target="_blank">
+          <Icon name="fa7-brands:github" class="w-10 h-10 text-gray-200 hover:text-emerald-400 transition-colors" />
+        </a>
+        
       </div>
     </div>
   </section>
