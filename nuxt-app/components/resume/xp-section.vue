@@ -14,13 +14,14 @@
       period:"Jan 2018 - Dec 2024",
       companyLogoSrc:"/img/resume/experiences/company-logo-dii.png",
       jobMissions: [
-        "WordPress website creation and management: integration, mock-ups, redesigns, UX optimization",
-        "Wireframe and prototype design (Figma)",
+        "WordPress website creation and management: integration, mock-ups, redesigns, UX optimization.",
+        "Wireframe and prototype design (Figma).",
         "Visual production: banners, image editing, event branding.",
         "SEO and analytics: optimization, performance monitoring, content strategy.",
         "Technical project management: writing specs, Jira tickets, QA, coordination with the dev team.",
         "Salesforce administration: automation, internal support, reporting.",
-        "Cross-functional management between design, technical, and business teams.",
+        "Frontend adjustments on Salesforce Lightning Web Components (HTML/CSS): UI fixes, content updates, Git workflow (branches, test & production deployments).",
+        "Cross-functional collaboration between design, technical, and business teams."
       ]
     },
     {
