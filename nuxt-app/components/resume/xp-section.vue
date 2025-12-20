@@ -14,13 +14,14 @@
       period:"Jan 2018 - Dec 2024",
       companyLogoSrc:"/img/resume/experiences/company-logo-dii.png",
       jobMissions: [
-        "WordPress website creation and management: integration, mock-ups, redesigns, UX optimization",
-        "Wireframe and prototype design (Figma)",
+        "WordPress website creation and management: integration, mock-ups, redesigns, UX optimization.",
+        "Wireframe and prototype design (Figma).",
         "Visual production: banners, image editing, event branding.",
         "SEO and analytics: optimization, performance monitoring, content strategy.",
         "Technical project management: writing specs, Jira tickets, QA, coordination with the dev team.",
         "Salesforce administration: automation, internal support, reporting.",
-        "Cross-functional management between design, technical, and business teams.",
+        "Frontend adjustments on Salesforce Lightning Web Components (HTML/CSS): UI fixes, content updates, Git workflow (branches, test & production deployments).",
+        "Cross-functional collaboration between design, technical, and business teams."
       ]
     },
     {
@@ -30,11 +31,11 @@
       period:"Feb 2016 - Jun 2017",
       companyLogoSrc:"/img/resume/experiences/company-logo-abus.png",
       jobMissions: [
-        "Management of the French website (CMS eZ Publish): product pages, content, formatting",
-        "Graphic design (photos, visuals, infographics)",
-        "Writing & translation for the website, press releases, web media",
-        "SEO & analytics monitoring",
-        "Optimization of the Amazon.fr catalog"
+        "Management of the French website (CMS eZ Publish): product pages, content, formatting.",
+        "Graphic design (photos, visuals, infographics).",
+        "Writing & translation for the website, press releases, web media.",
+        "SEO & analytics monitoring.",
+        "Optimization of the Amazon.fr catalog."
       ]
     },
     {
@@ -44,11 +45,11 @@
       period:"Feb 2015 - Aug 2015",
       companyLogoSrc:"/img/resume/experiences/company-logo-pvcp.png",
       jobMissions: [
-        "Writing articles & SEO optimization",
-        "Creating visuals for social media",
-        "Managing and planning Facebook/Twitter posts",
-        "Reporting & campaign analysis",
-        "Managing the group's YouTube channel",
+        "Writing articles & SEO optimization.",
+        "Creating visuals for social media.",
+        "Managing and planning Facebook/Twitter posts.",
+        "Reporting & campaign analysis.",
+        "Managing the group's YouTube channel.",
       ]
     },
     {
@@ -58,9 +59,9 @@
       period:"Apr 2014 - Aug 2014",
       companyLogoSrc:"/img/resume/experiences/company-logo-btown.png",
       jobMissions: [
-        "Article writing & SEO (WordPress, Yoast SEO)",
-        "Infographic creation + photo editing",
-        "Facebook/Twitter posts & engagement",
+        "Article writing & SEO (WordPress, Yoast SEO).",
+        "Infographic creation + photo editing.",
+        "Facebook/Twitter posts & engagement.",
       ]
     }
   ]
