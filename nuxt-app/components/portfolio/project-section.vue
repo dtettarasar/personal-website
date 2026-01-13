@@ -4,6 +4,43 @@
 
   const projects = ref([
     {
+      title: "News Ipsum (In Progress)",
+      img: "/img/portfolio/news-ipsum-homepage.png", // Prends une capture du carrousel !
+      desc: [
+        "A modern News Platform built with <strong>Nuxt 3 and JavaScript</strong>.",
+        "Transitioning to <strong>TypeScript</strong> for enhanced code reliability and better developer experience.",
+        "Features a <strong>test-driven development</strong> approach with Vitest.",
+        "Full-stack integration with MongoDB, Pinia for state management, and Tailwind CSS.",
+        "Modular architecture with <strong>Pinia stores</strong> for efficient state management.",
+        "Automated deployment using <strong>Docker & Caddy</strong> on a VPS.",
+        "Implementing a <strong>vertical architecture</strong>: each component is developed with its dedicated Pinia store and API endpoints."
+      ],
+      icon: "material-symbols:newspaper-rounded",
+      stack: [
+        "mdi:language-typescript",
+        "mdi:vuejs",
+        "lineicons:nuxt",
+        "simple-icons:vitest",
+        "fa7-brands:node-js",
+        "mdi:tailwind",
+        "lineicons:mongodb",
+        "mdi:docker",
+        "simple-icons:caddy",
+      ],
+      links: [
+        { 
+          label: "View source code", 
+          url: "https://github.com/dtettarasar/news-ipsum", 
+          icon: "material-symbols:code-blocks" 
+        },
+        { 
+          label: "Live Demo", 
+          url: "https://projects-news.dylan-tettarasar.dev/", 
+          icon: "material-symbols:rocket-launch" 
+        }
+      ]
+    },
+    {
       title: "My personal website",
       img: "/img/portfolio/img-portfolio-personal-homepage.png",
       desc: [
@@ -161,7 +198,7 @@
       links: [
         { 
           label:"View source code", 
-          url: "https://codepen.io/dtettarasar/full/rNNemwV",
+          url: "https://codepen.io/dtettarasar/pen/rNNemwV",
           icon:"material-symbols:code-blocks", 
         },
       ],
