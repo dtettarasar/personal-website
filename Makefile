@@ -33,6 +33,19 @@ prod-all-log:
 down:
 	docker compose $(COMPOSE_PROD) down
 
+# ----- TESTS -----
+test-watch:
+	docker compose $(COMPOSE_DEV) exec nuxt-app npm run test:watch
+test-coverage:
+	docker compose $(COMPOSE_DEV) exec nuxt-app npm run test:coverage
+test-integration:
+	docker compose $(COMPOSE_DEV) exec nuxt-app npm run test:integration
+test-frontend:
+	docker compose $(COMPOSE_DEV) exec nuxt-app npm run test:frontend
+test-backend:
+	docker compose $(COMPOSE_DEV) exec nuxt-app npm run test:backend
+test-all:
+	docker compose $(COMPOSE_DEV) exec nuxt-app npm run test
 
 # ----- MAINTENANCE & CLEANUP -----
 

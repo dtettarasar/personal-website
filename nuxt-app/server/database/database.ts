@@ -45,6 +45,11 @@ export async function initDB(uri: string) {
     }
 }
 
+/** Réinitialise l'état de connexion (uniquement pour les tests unitaires). */
+export function _resetForTesting(): void {
+  isConnected = false
+}
+
 export async function closeDB() {
 
     try {
