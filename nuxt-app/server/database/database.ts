@@ -2,7 +2,10 @@ import mongoose from 'mongoose'
 
 let isConnected = false
 
-mongoose.set('debug', true)
+// Éviter de logger les requêtes (et données sensibles) en production
+if (process.env.NODE_ENV !== 'production') {
+  mongoose.set('debug', true)
+}
 
 process.on('unhandledRejection', (reason, promise) => {
 
@@ -12,9 +15,6 @@ process.on('unhandledRejection', (reason, promise) => {
 
 export async function initDB(uri: string) {
 
-    console.log('🔌 Starting initDB function...');
-    console.log('MongoDB URI:', uri);
-
     if (isConnected) {
 
         console.log('⚡ MongoDB is already connected.');
@@ -23,8 +23,6 @@ export async function initDB(uri: string) {
     }
 
     try {
-
-        console.log('⏳ Attempting to connect to MongoDB...')
 
         const connection = await mongoose.connect(uri, {
             serverSelectionTimeoutMS: 30000, // 30s timeout
@@ -45,6 +43,11 @@ export async function initDB(uri: string) {
         throw error;
 
     }
+}
+
+/** Réinitialise l'état de connexion (uniquement pour les tests unitaires). */
+export function _resetForTesting(): void {
+  isConnected = false
 }
 
 export async function closeDB() {
