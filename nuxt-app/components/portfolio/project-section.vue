@@ -111,12 +111,15 @@
       ],
     },
     {
-      title: "CS50P: Final Project",
+      title: "AI Art Shield – Protect Your Art",
       img: "/img/portfolio/cs50.jpg",
       desc: [
-        "Final project for <strong>Harvard's CS50P course</strong>.",
-        "This command-line tool <strong>protects visual artworks from predatory generative AI systems</strong> (Midjourney, DALL-E, Sora, etc.).",
-        "Built with Python",
+        "A <strong>Advanced Python-based security tool</strong> designed to protect visual artworks from unauthorized AI training and scraping.",
+        "Implements <strong>invisible perturbations</strong> (Discrete Cosine Transform - DCT) to disrupt AI style recognition without altering human perception.",
+        "Features a <strong>Protection Evaluation System</strong> that measures and compares alteration levels between original and secured versions.",
+        "Engineered with <strong>Pillow, OpenCV, and NumPy</strong> for high-performance image processing and pixel-level manipulation.",
+        "Future-ready architecture: Designed for modular refactoring and integration of <strong>Adversarial Perturbations</strong> and <strong>Blockchain-signed signatures</strong>.",
+        "The project is part of <strong>Harvard's CS50P course</strong>.",
       ],
       icon: "ic:round-terminal",
       stack: [
