@@ -7,13 +7,11 @@
       title: "News Ipsum (In Progress)",
       img: "/img/portfolio/news-ipsum-homepage.png", // Prends une capture du carrousel !
       desc: [
-        "A modern News Platform built with <strong>Nuxt 3 and JavaScript</strong>.",
-        "Transitioning to <strong>TypeScript</strong> for enhanced code reliability and better developer experience.",
-        "Features a <strong>test-driven development</strong> approach with Vitest.",
-        "Full-stack integration with MongoDB, Pinia for state management, and Tailwind CSS.",
-        "Modular architecture with <strong>Pinia stores</strong> for efficient state management.",
-        "Automated deployment using <strong>Docker & Caddy</strong> on a VPS.",
-        "Implementing a <strong>vertical architecture</strong>: each component is developed with its dedicated Pinia store and API endpoints."
+        "<strong>High-performance News Platform</strong> built with a modern Nuxt 4/3 and TypeScript architecture.",
+        "Implemented a <strong>Test-Driven Development (TDD)</strong> approach with Vitest to ensure reliable business logic from day one.",
+        "Focus on <strong>Web Accessibility (a11y)</strong>, aiming for WCAG compliance to provide an optimal reading experience.",
+        "Developed custom <strong>CLI internal tools</strong> for efficient Docker environment management and admin initialization.",
+        "Automated deployment using a <strong>Docker & Caddy</strong> stack with native SSL management on a VPS."
       ],
       icon: "material-symbols:newspaper-rounded",
       stack: [
