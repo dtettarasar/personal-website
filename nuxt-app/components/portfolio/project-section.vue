@@ -196,11 +196,13 @@
       ]
     },
     {
-      title: "freeCodeCamp: Technical Documentation Page",
+      title: "Technical Documentation Interface",
       img: "/img/portfolio/img-portfolio-doc-page.png",
       desc: [
-        "Built for the Responsive Web Design certification.",
-        "Clean, accessible and responsive layout."
+        "<strong>High-readability documentation portal</strong> designed for the freeCodeCamp Responsive Web Design certification.",
+        "Strict adherence to <strong>HTML5 Semantic standards</strong> and ARIA roles to ensure full compatibility with screen readers.",
+        "Engineered a <strong>dynamic CSS layout</strong> with sticky navigation and fluid typography for an optimal technical reading experience.",
+        "Certified 'Pixel Perfect' implementation, passing 100% of automated accessibility and responsiveness tests."
       ],
       icon: "mdi:file-document",
       stack: [
@@ -210,12 +212,12 @@
       ],
       links: [
         { 
-          label:"View source code", 
+          label: "View code on CodePen", 
           url: "https://codepen.io/dtettarasar/pen/rNNemwV",
-          icon:"material-symbols:code-blocks", 
-        },
-      ],
-    },
+          icon: "material-symbols:code-blocks" 
+        }
+      ]
+    }
   ])
 
   const active = ref(null)
