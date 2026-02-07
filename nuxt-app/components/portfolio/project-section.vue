@@ -4,7 +4,7 @@
 
   const projects = ref([
     {
-      title: "News Ipsum (In Progress)",
+      title: "News Ipsum",
       img: "/img/portfolio/news-ipsum-homepage.png", // Prends une capture du carrousel !
       desc: [
         "<strong>High-performance News Platform</strong> built with a modern Nuxt 4/3 and TypeScript architecture.",
@@ -69,12 +69,14 @@
       ]
     },
     {
-      title: "Otis AI: Your Digital Scribe",
+      title: "Otis AI – AI SaaS Platform",
       img: "/img/portfolio/otis-ai-homepage.png",
       desc: [
-        "This is a web app designed to help content writers create articles faster.",
-        "It generates <strong>SEO-friendly drafts using AI</strong> (OpenAI API) based on keywords, short descriptions, or titles.",
-        "Built with Vue, Express.js and MongoDB."
+        "An <strong>AI-assisted content generation SaaS</strong> integrating OpenAI models via dynamic prompt engineering.",
+        "Full implementation of a <strong>monetization system</strong> using the Stripe API with a credit-based business model.",
+        "Robust <strong>JWT-based authentication</strong> system securing exchanges between the Vue.js frontend and Node.js backend.",
+        "Rich content editor allowing post-generation formatting and real-time database updates.",
+        "Comprehensive test suite (Unit & Integration) with <strong>Vitest</strong> to ensure API and UI stability.",
       ],
       icon: "material-symbols:edit-note-rounded",
       stack: [
@@ -84,7 +86,10 @@
         "mdi:bootstrap",
         "mdi:vuejs",
         "fa7-brands:node-js",
+        "simple-icons:vitest",
         "lineicons:mongodb",
+        "bi:stripe",
+        "simple-icons:openai"
       ],
       links: [
         { 
