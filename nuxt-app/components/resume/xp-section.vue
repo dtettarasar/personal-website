@@ -7,63 +7,58 @@
   ]
 
   const experiences = [
+
     {
       companyName: "DII / POLITICO",
       companyVenue: "Paris, France",
-      jobTitle: "Web & CRM Manager",
-      period:"Jan 2018 - Dec 2024",
-      companyLogoSrc:"/img/resume/experiences/company-logo-dii.png",
+      jobTitle: "Project Manager Web & CRM",
+      period: "Jan 2018 - Dec 2024",
+      companyLogoSrc: "/img/resume/experiences/company-logo-dii.png",
       jobMissions: [
-        "WordPress website creation and management: integration, mock-ups, redesigns, UX optimization.",
-        "Wireframe and prototype design (Figma).",
-        "Visual production: banners, image editing, event branding.",
-        "SEO and analytics: optimization, performance monitoring, content strategy.",
-        "Technical project management: writing specs, Jira tickets, QA, coordination with the dev team.",
-        "Salesforce administration: automation, internal support, reporting.",
-        "Frontend adjustments on Salesforce Lightning Web Components (HTML/CSS): UI fixes, content updates, Git workflow (branches, test & production deployments).",
-        "Cross-functional collaboration between design, technical, and business teams."
+        "<strong>Web Development & CMS Architecture:</strong> Managed a WordPress Multisite network for high-profile clients (Uber, KPMG, Politico). Responsible for 'Pixel Perfect' responsive integration (HTML5/CSS3/JS) and performance optimization (Core Web Vitals).",
+        "<strong>Salesforce Engineering (LWC):</strong> Developed front-end adjustments on Lightning Web Components. Managed the full technical lifecycle: UI fixes, logic updates, and Git-based deployments (staging/production).",
+        "<strong>Technical Project Management:</strong> Bridged the gap between business needs and technical execution. Wrote functional specifications, managed Jira workflows, and led Quality Assurance (QA) testing.",
+        "<strong>DevOps & Infrastructure:</strong> Orchestrated domain lifecycles (Gandi), DNS configurations, and security layers via Cloudflare.",
+        "<strong>Product Design:</strong> Crafted interactive prototypes and functional wireframes using Figma to streamline the development process."
       ]
     },
     {
       companyName: "ABUS France",
       companyVenue: "Villeneuve-le-Roi, France",
-      jobTitle: "Digital Marketing Executive",
-      period:"Feb 2016 - Jun 2017",
-      companyLogoSrc:"/img/resume/experiences/company-logo-abus.png",
+      jobTitle: "Digital Marketing & Web Referent",
+      period: "Feb 2016 - Jun 2017",
+      companyLogoSrc: "/img/resume/experiences/company-logo-abus.png",
       jobMissions: [
-        "Management of the French website (CMS eZ Publish): product pages, content, formatting.",
-        "Graphic design (photos, visuals, infographics).",
-        "Writing & translation for the website, press releases, web media.",
-        "SEO & analytics monitoring.",
-        "Optimization of the Amazon.fr catalog."
+        "<strong>CMS Administration:</strong> Managed the French product catalog using eZ Publish, focusing on structural content updates and technical SEO.",
+        "<strong>Technical Interface:</strong> Acted as the primary point of contact for the German HQ development team, managing bug tracking and feature requests.",
+        "<strong>Front-End Integration:</strong> Developed and styled custom landing pages and marketing assets using HTML/CSS.",
+        "<strong>Digital Assets:</strong> Created complex infographics and visual branding for the French market's digital presence."
       ]
     },
     {
-      companyName: "Pierre & Vacances",
+      companyName: "Pierre & Vacances Center Parcs",
       companyVenue: "Paris, France",
-      jobTitle: "Social Media Manager Assistant",
-      period:"Feb 2015 - Aug 2015",
-      companyLogoSrc:"/img/resume/experiences/company-logo-pvcp.png",
+      jobTitle: "Assistant Digital Manager",
+      period: "Feb 2015 - Aug 2015",
+      companyLogoSrc: "/img/resume/experiences/company-logo-pvcp.png",
       jobMissions: [
-        "Writing articles & SEO optimization.",
-        "Creating visuals for social media.",
-        "Managing and planning Facebook/Twitter posts.",
-        "Reporting & campaign analysis.",
-        "Managing the group's YouTube channel.",
+        "<strong>SEO & Content Strategy:</strong> Optimized editorial content for the group's web portals to increase organic reach.",
+        "<strong>Digital Asset Management:</strong> Produced visual content for social campaigns and managed the corporate YouTube channel architecture.",
+        "<strong>Performance Reporting:</strong> Monitored key engagement metrics and provided data-driven insights for digital marketing campaigns."
       ]
     },
     {
       companyName: "Btown Ltd",
       companyVenue: "New Delhi, India",
-      jobTitle: "Web Content Writer",
-      period:"Apr 2014 - Aug 2014",
-      companyLogoSrc:"/img/resume/experiences/company-logo-btown.png",
+      jobTitle: "Web Content Specialist",
+      period: "Apr 2014 - Aug 2014",
+      companyLogoSrc: "/img/resume/experiences/company-logo-btown.png",
       jobMissions: [
-        "Article writing & SEO (WordPress, Yoast SEO).",
-        "Infographic creation + photo editing.",
-        "Facebook/Twitter posts & engagement.",
+        "<strong>International SEO:</strong> Content creation and optimization using WordPress/Yoast SEO in a multicultural environment.",
+        "<strong>Visual Storytelling:</strong> Designed infographics and digital assets to support editorial growth."
       ]
     }
+
   ]
 
 </script>

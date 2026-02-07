@@ -113,9 +113,8 @@
 
                     <li
                         v-for="(mission, index) in jobMissions"
-                        :key="index"
+                        :key="index" v-html="mission"
                     >
-                        {{ mission }}
                     </li>
 
                 </ul>
