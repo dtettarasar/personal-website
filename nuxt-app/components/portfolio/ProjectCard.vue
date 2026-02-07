@@ -52,7 +52,7 @@ defineProps({
             <p
               v-for="(d, i) in project.desc"
               :key="i"
-              class="leading-relaxed"
+              class="leading-relaxed mb-2"
               v-html="d"
             ></p>
           </div>
