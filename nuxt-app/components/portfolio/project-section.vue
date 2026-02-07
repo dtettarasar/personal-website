@@ -39,13 +39,14 @@
       ]
     },
     {
-      title: "My personal website",
+      title: "Personal Portfolio Architecture",
       img: "/img/portfolio/img-portfolio-personal-homepage.png",
       desc: [
-        "The website you're on right now :)",
-        "Designed and developed <strong>from scratch</strong> with Nuxt, Vue & Tailwind.",
-        "Dockerized and deployed with <strong>Caddy</strong>.",
-        "Fast, responsive, and mobile-first."
+        "A <strong>Fullstack SSR application</strong> built with Nuxt 4, featuring a custom API for dynamic content management.",
+        "Engineered as a <strong>Generic Starter Kit</strong>, available as Open Source on GitHub under MIT license.",
+        "Orchestrated with <strong>Docker</strong> (multi-service environment) including separate Dev and Production configurations.",
+        "Automated workflows via <strong>Makefile</strong> to standardize deployment and maintenance commands.",
+        "Secure infrastructure using <strong>Caddy</strong> as a reverse proxy with automated HTTPS/SSL certificates.",
       ],
       icon: "material-symbols:person-pin-rounded",
       stack: [
