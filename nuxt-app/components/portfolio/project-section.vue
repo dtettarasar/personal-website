@@ -139,12 +139,15 @@
       ],
     },
     {
-      title: "CS50x: Tic Tac Toe",
+      title: "Tic Tac Toe AI – Algorithm Mastery",
       img: "/img/portfolio/img-portfolio-cs50x-final.png",
       desc: [
-        "<strong>Final project for Harvard’s CS50x.</strong>",
-        "A Tic Tac Toe game running in the browser.",
-        "Built with HTML, CSS and JavaScript.",
+        "An <strong>Advanced Browser-based Game</strong> featuring an unbeatable AI powered by the <strong>Minimax Algorithm</strong>.",
+        "Engineered three distinct game modes: Human vs. Human, Easy AI (Randomized logic), and Impossible AI (Recursive decision-making).",
+        "Implemented a <strong>recursive search tree</strong> to evaluate all possible moves and guarantee the optimal outcome for the AI.",
+        "Developed a real-time <strong>Score & Statistics Tracker</strong> managing session states across multiple game rounds.",
+        "Focus on clean UI/UX with responsive design and integrated SVG iconography for a 'Pixel Perfect' visual rendering.",
+        "The project is part of <strong>Harvard's CS50x course</strong>.",
       ],
       icon: "hugeicons:tic-tac-toe",
       stack: [
@@ -167,27 +170,30 @@
       ],
     },
     {
-      title: "CS50x: Homepage",
+      title: "Business Conference Platform",
       img: "/img/portfolio/img-portfolio-cs50-homepage.png",
       desc: [
-        "<strong>Project made for Harvard’s CS50x.</strong>",
-        "Built with HTML, CSS, JavaScript and Bootstrap.",
-        "A responsive promotional website for a business conference."
+        "<strong>Responsive event platform</strong> featuring a complex registration system and interactive UI components built with Vanilla JavaScript.",
+        "Engineered a <strong>custom Form Validation Engine</strong> using Regular Expressions (Regex) to handle real-time error messaging and data integrity.",
+        "Developed <strong>dynamic scroll-triggered animations</strong>, including automated counters and smart navigation elements (Go-to-top logic).",
+        "Implemented <strong>DOM manipulation patterns</strong> for state management: toggling success states and handling multi-input data structures (radios, checkboxes, text).",
+        "Built with a mobile-first approach using <strong>Bootstrap</strong>, ensuring cross-browser compatibility and optimized visual consistency.",
+        "The project is part of <strong>Harvard's CS50x course</strong>.",
       ],
-      icon: "mdi:star-circle",
+      icon: "material-symbols:event-available-rounded",
       stack: [
+        "mdi:language-javascript",
         "mdi:language-html5",
         "mdi:language-css3",
-        "mdi:language-javascript",
-        "mdi:bootstrap",
+        "mdi:bootstrap"
       ],
       links: [
         { 
-          label:"View source code", 
+          label: "View source code", 
           url: "https://github.com/dtettarasar/cs50x-homepage",
-          icon:"material-symbols:code-blocks", 
-        },
-      ],
+          icon: "material-symbols:code-blocks" 
+        }
+      ]
     },
     {
       title: "freeCodeCamp: Technical Documentation Page",
