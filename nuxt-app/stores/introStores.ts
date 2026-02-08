@@ -12,14 +12,17 @@ export const useIntroStore = defineStore('intro', {
   actions: {
     async fetchIntroText() {
 
-      if (this.paragraphs.length > 0) return
-
+      if (this.paragraphs.length > 0) {
+        return this.paragraphs
+      }
+        
       this.loading = true
       this.error = null
 
       try {
         const data = await $fetch<string[]>('/api/intro-text')
         this.paragraphs = data
+        return data
 
       } catch (err: any) {
         this.error = err?.statusMessage ?? err?.message ?? 'Erreur lors du chargement de l’intro'

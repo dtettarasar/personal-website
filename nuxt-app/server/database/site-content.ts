@@ -17,3 +17,23 @@ export function getIntroText(): string[] {
         I enjoy crafting clean interfaces, smooth user experiences, and well-structured components, while keeping a flexible full-stack edge thanks to Node, Django, and database fundamentals.`,
     ]
   }
+
+  export function getLanguageContent() {
+
+    return [
+
+        {
+            name: 'French',
+            level: 'Native Language',
+            img: '/img/language/france-croissant.png'
+        },
+
+        {
+            name: 'English',
+            level: 'Business Level',
+            img: '/img/language/uk-afternoon-tea.png'
+        },
+
+    ]
+
+  }
