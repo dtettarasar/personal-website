@@ -32,7 +32,7 @@ import { useLanguageContentStore } from '@/stores/languageContentStore'
 const languageContentStore = useLanguageContentStore()
 
 // Get data with SSR method
-await useAsyncData('lang-content', () => languageContentStore.fetchLanguageContent())
+await useAsyncData('lang-content', () => languageContentStore.fetchData())
 
 // Séparateur fin pour l'esthétique
 const languageSeparatorClasses = [

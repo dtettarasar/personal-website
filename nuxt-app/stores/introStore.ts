@@ -10,7 +10,7 @@ export const useIntroStore = defineStore('intro', {
   }),
 
   actions: {
-    async fetchIntroText() {
+    async fetchData() {
 
       if (this.paragraphs.length > 0) {
         return this.paragraphs

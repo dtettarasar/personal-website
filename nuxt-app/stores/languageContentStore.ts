@@ -10,7 +10,7 @@ export const useLanguageContentStore = defineStore('languageContent', {
 
     actions: {
 
-        async fetchLanguageContent() {
+        async fetchData() {
     
             if (this.languagesContent.length > 0) { 
 

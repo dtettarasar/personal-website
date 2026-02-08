@@ -32,7 +32,7 @@ import { useIntroStore } from '~/stores/introStore'
 const introStore = useIntroStore()
 
 // Get data with SSR method
-await useAsyncData('intro-text', () => introStore.fetchIntroText())
+await useAsyncData('intro-text', () => introStore.fetchData())
 
 // Get data with CSR method using OnMounted
 // onMounted(() => { introStore.fetchIntroText() } )
