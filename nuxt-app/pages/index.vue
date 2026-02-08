@@ -8,7 +8,7 @@
 
     <div class="container p-4 mx-auto text-white md:text-lg">
 
-      <p class="my-2 md:my-4" v-for="paragraph in introStore.paragraphs" :key="paragraph" v-html="paragraph"></p>
+      <p class="my-2 md:my-4" v-for="paragraph in introStore.data" :key="paragraph" v-html="paragraph"></p>
 
 
       <div class="flex flex-wrap flex-row justify-around pt-4">
