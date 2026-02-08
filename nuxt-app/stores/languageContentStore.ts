@@ -3,7 +3,7 @@ import { defineStore } from 'pinia'
 export const useLanguageContentStore = defineStore('languageContent', {
 
     state: () => ({
-        languagesContent: [],
+        data: [],
         loading: false,
         error: null as string | null,
     }),
@@ -12,9 +12,9 @@ export const useLanguageContentStore = defineStore('languageContent', {
 
         async fetchData() {
     
-            if (this.languagesContent.length > 0) { 
+            if (this.data.length > 0) { 
 
-                return this.languagesContent
+                return this.data
                 
             }
     
@@ -22,13 +22,14 @@ export const useLanguageContentStore = defineStore('languageContent', {
           this.error = null
     
           try {
-            const data = await $fetch<string[]>('/api/lang-content')
-            this.languagesContent = data
-            return data
+
+            this.data = await $fetch<string[]>('/api/lang-content')
+            return this.data
     
           } catch (err: any) {
-            this.error = err?.statusMessage ?? err?.message ?? 'Erreur lors du chargement de l’intro'
-            
+            this.error = err?.statusMessage ?? err?.message ?? 'Erreur lors du chargement du contenu des langues'
+            return []
+
           } finally {
             this.loading = false
           }

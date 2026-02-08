@@ -27,7 +27,7 @@ export const useExperienceStore = defineStore('experience', {
             return this.data
     
           } catch (err: any) {
-            this.error = err?.statusMessage ?? err?.message ?? 'Erreur lors du chargement de l’intro'
+            this.error = err?.statusMessage ?? err?.message ?? 'Erreur lors du chargement des experiences'
             return []
             
           } finally {

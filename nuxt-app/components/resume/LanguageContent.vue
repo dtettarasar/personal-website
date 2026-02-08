@@ -3,7 +3,7 @@
   <div class="grid grid-cols-2 gap-4 sm:gap-6 md:gap-8 text-center">
 
     <div 
-      v-for="language in languageContentStore.languagesContent" 
+      v-for="language in languageContentStore.data" 
       :key="language.id"
       :language="language"
       class="language-card p-4 sm:p-6 bg-slate-800 rounded-lg border-2 border-slate-700 shadow-xl transition-shadow hover:shadow-emerald-500/50"
