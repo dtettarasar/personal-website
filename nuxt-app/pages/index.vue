@@ -27,7 +27,7 @@
 
 <script setup lang="ts">
 
-import { useIntroStore } from '@/stores/introStores'
+import { useIntroStore } from '~/stores/introStore'
 
 const introStore = useIntroStore()
 

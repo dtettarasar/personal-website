@@ -37,3 +37,9 @@ export function getIntroText(): string[] {
     ]
 
   }
+
+  export function getExperiences() {
+
+    
+
+  }
