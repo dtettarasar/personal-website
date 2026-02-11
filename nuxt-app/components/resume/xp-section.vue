@@ -1,11 +1,18 @@
 <script setup lang="ts">
 
+  import { useExperienceStore } from '@/stores/experienceStore'
+
   const containerStyleClasses = [
     'container',
     'p-4',
     'mx-auto',
   ]
 
+  const experienceStore = useExperienceStore()
+
+  await useAsyncData('experience', () => experienceStore.fetchData())
+
+  /*
   const experiences = [
 
     {
@@ -59,7 +66,9 @@
       ]
     }
 
-  ]
+  ]*/
+
+
 
 </script>
 
@@ -71,7 +80,7 @@
     >
 
         <resume-xp-content
-        v-for="(xp, index) in experiences"
+        v-for="(xp, index) in experienceStore.data"
         :key="index"
         :companyName="xp.companyName"
         :companyVenue="xp.companyVenue"
