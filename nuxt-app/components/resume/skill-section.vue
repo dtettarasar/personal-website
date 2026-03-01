@@ -2,80 +2,15 @@
 
     import { ref } from 'vue'
 
+    import {useSkillsStore} from '@/stores/skillsStore'
+
+    const skillsStore = useSkillsStore();
+    await useAsyncData('skills', () => skillsStore.fetchData())
+
     const containerStyleClasses = [
         'container',
         'p-4',
         'mx-auto',
-    ]
-
-    const skillSections = [
-
-        {
-            title: "Frontend – Main Stack",
-            icon: "mdi:star-four-points",
-            items: [
-                { icon: "mdi:vuejs", label: "Vue.js" },
-                { icon: "lineicons:nuxt", label: "Nuxt.js" },
-                { icon: "mdi:tailwind", label: "Tailwind CSS" }
-            ]
-        },
-
-        {
-            title: "Web & Integration",
-            icon: "mdi:code-tags",
-            items: [
-                { icon: "mdi:language-html5", label: "HTML5" },
-                { icon: "mdi:language-css3", label: "CSS3" },
-                { icon: "mdi:language-javascript", label: "JavaScript" },
-                { icon: "mdi:bootstrap", label: "Bootstrap" }
-            ]
-        },
-
-        {
-            title: "Tools & Workflow",
-            icon: "carbon:tools-alt",
-            items: [
-                { icon: "mdi:git", label: "Git" },
-                { icon: "mdi:docker", label: "Docker" },
-                { icon: "simple-icons:caddy", label: "Caddy" },
-                { icon: "mdi:github", label: "GitHub" },
-                {icon: "mdi:jira", label: "Jira"},
-            ]
-        },
-
-        {
-            title: "Backend (not my primary focus but operational)",
-            icon: "mdi:server-network",
-            items: [
-                { icon: "mdi:nodejs", label: "Node.js / Express" },
-                { icon: "lineicons:mongodb", label: "MongoDB" },
-                { icon: "mdi:language-python", label: "Python" },
-                { icon: "devicon-plain:django", label: "Django" },
-                { icon: "mdi:database", label: "SQL" },
-            ]
-        },
-
-        {
-            title: "CMS & Business Tools",
-            icon: "lsicon:marketing-filled",
-            items: [
-                { icon: "ic:baseline-wordpress", label: "WordPress" },
-                { icon: "mdi:salesforce", label: "Salesforce" },
-                {icon: "mdi:google-analytics", label: "Google Analytics"},
-                { icon: "mdi:microsoft-office", label: "Office Suite" },
-            ]
-        },
-
-        {
-            title: "Creative Tools",
-            icon: "ion:color-palette",
-            items: [
-                { icon: "file-icons:gimp", label: "GIMP" },
-                { icon: "simple-icons:krita", label: "Krita" },
-                { icon:"solar:figma-bold", label: "Figma" },
-            ]
-        },
-
     ]
 
     // 💥 NOUVEAU : État pour l'identifiant de la compétence active
@@ -99,7 +34,7 @@
 
         <div id="skill-container" class="animate-gradient-move rounded-lg p-6" >
 
-            <div v-for="(section, index) in skillSections" :key="section.title + index" class="mb-8">
+            <div v-for="(section, index) in skillsStore.data" :key="section.title + index" class="mb-8">
 
                 <text-section-title-lite-white
                     :title="section.title"
