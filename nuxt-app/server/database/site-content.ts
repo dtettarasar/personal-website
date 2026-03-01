@@ -96,3 +96,135 @@ export function getIntroText(): string[] {
     ]
 
   }
+
+  export function getSkills() {
+    return [
+      {
+        title: "Frontend – Main Stack",
+        icon: "mdi:star-four-points",
+        items: [
+          { icon: "mdi:vuejs", label: "Vue.js" },
+          { icon: "lineicons:nuxt", label: "Nuxt.js" },
+          { icon: "mdi:tailwind", label: "Tailwind CSS" }
+        ]
+      },
+
+      {
+        title: "Web & Integration",
+        icon: "mdi:code-tags",
+        items: [
+          { icon: "mdi:language-html5", label: "HTML5" },
+          { icon: "mdi:language-css3", label: "CSS3" },
+          { icon: "mdi:language-javascript", label: "JavaScript" },
+          { icon: "mdi:bootstrap", label: "Bootstrap" }
+        ]
+      },
+
+      {
+        title: "Tools & Workflow",
+        icon: "carbon:tools-alt",
+        items: [
+          { icon: "mdi:git", label: "Git" },
+          { icon: "mdi:docker", label: "Docker" },
+          { icon: "simple-icons:caddy", label: "Caddy" },
+          { icon: "mdi:github", label: "GitHub" },
+          { icon: "mdi:jira", label: "Jira" }
+        ]
+      },
+
+      {
+        title: "Backend (not my primary focus but operational)",
+        icon: "mdi:server-network",
+        items: [
+          { icon: "mdi:nodejs", label: "Node.js / Express" },
+          { icon: "lineicons:mongodb", label: "MongoDB" },
+          { icon: "mdi:language-python", label: "Python" },
+          { icon: "devicon-plain:django", label: "Django" },
+          { icon: "mdi:database", label: "SQL" }
+        ]
+      },
+
+      {
+        title: "CMS & Business Tools",
+        icon: "lsicon:marketing-filled",
+        items: [
+          { icon: "ic:baseline-wordpress", label: "WordPress" },
+          { icon: "mdi:salesforce", label: "Salesforce" },
+          { icon: "mdi:google-analytics", label: "Google Analytics" },
+          { icon: "mdi:microsoft-office", label: "Office Suite" }
+        ]
+      },
+
+      {
+        title: "Creative Tools",
+        icon: "ion:color-palette",
+        items: [
+          { icon: "file-icons:gimp", label: "GIMP" },
+          { icon: "simple-icons:krita", label: "Krita" },
+          { icon: "solar:figma-bold", label: "Figma" }
+        ]
+      }
+    ]
+  }
+
+  export function getEducations() {
+    return [
+      {
+        educationLogoSrc: "/img/resume/educations/harvard-university-logo-0.png",
+        title: "Introduction to Programming with Python",
+        issuer: "Harvard University",
+        year: "2025",
+        certificationLink: "https://certificates.cs50.io/eed08f81-a764-4e60-b861-87bb616aacff.pdf?size=letter"
+      },
+
+      {
+        educationLogoSrc: "/img/resume/educations/fcc_logo.png",
+        title: "Back End Development and APIs",
+        issuer: "freeCodeCamp",
+        year: "2023",
+        certificationLink: "https://www.freecodecamp.org/certification/fcc9e0cf531/back-end-development-and-apis"
+      },
+
+      {
+        educationLogoSrc: "/img/resume/educations/harvard-university-logo-0.png",
+        title: "CS50x - Introduction to Computer Science",
+        issuer: "Harvard University",
+        year: "2021",
+        certificationLink: "https://courses.edx.org/certificates/8c91c4feaae048159aab19a913c47924"
+      },
+
+      {
+        educationLogoSrc: "/img/resume/educations/fcc_logo.png",
+        title: "JavaScript Algorithms and Data Structures",
+        issuer: "freeCodeCamp",
+        year: "2020",
+        certificationLink: "https://www.freecodecamp.org/certification/fcc9e0cf531/javascript-algorithms-and-data-structures"
+      },
+
+      {
+        educationLogoSrc: "/img/resume/educations/fcc_logo.png",
+        title: "Responsive Web Design",
+        issuer: "freeCodeCamp",
+        year: "2020",
+        certificationLink: "https://www.freecodecamp.org/certification/fcc9e0cf531/responsive-web-design"
+      },
+
+      {
+        educationLogoSrc: "/img/resume/educations/diploma-logo-inseec.png",
+        title: "Master's degree - Digital Marketing",
+        issuer: "INSEEC Business School Paris",
+        year: "2015"
+      },
+
+      {
+        educationLogoSrc: "/img/resume/educations/diploma-logo-uvsq.png",
+        title: "BTEC Higher National Diploma",
+        issuer: "Versailles Saint-Quentin-en-Yvelines University",
+        year: "2012",
+        courseDetails: [
+          "French Title : DUT Techniques de Commercialisation",
+          "Specialized in Marketing"
+        ]
+      }
+    ]
+  }
