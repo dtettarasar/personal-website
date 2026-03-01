@@ -2,19 +2,19 @@
 
 export function getIntroText(): string[] {
     return [
-        'Hello world I am Dylan Tettarasar, a frontend developer with a passion for creating clean, efficient, and user-friendly interfaces.',
+        'Hello world I am Dylan Tettarasar, a Technical Product Owner & Web Project Manager with hands-on fullstack development expertise.',
 
         `I started my career in digital communication and web project management, working across strategy, design, and execution. 
-        'For several years, <strong>I led and built WordPress websites, worked on SEO optimization, and handled UX, content creation, and performance analysis</strong>.`,
+        For several years, <strong>I led and orchestrated WordPress platforms for enterprise clients (Uber, KPMG, Politico), managed cross-functional teams, and owned the complete product lifecycle from conception to production</strong>.`,
         
-        `<strong>This gave me a full, practical understanding of how a website is conceived, designed, developed, delivered, and maintained</strong> — from both a technical and business perspective. 
-        It also shaped my autonomy, creativity, and ability to bridge the gap between technical teams and user needs.`,
+        `<strong>This gave me a comprehensive, operational understanding of how products are built, deployed, and scaled</strong> — from both technical architecture and business impact perspectives. 
+        I developed expertise in product strategy, backlog management, cross-functional leadership, and—crucially—the ability to speak fluently with developers because I understand their world deeply.`,
 
-        `But over time, <strong>I felt the need to go deeper</strong> — to move past CMS limitations and actually build things from the ground up. 
-        That's when I shifted toward development and started learning JavaScript, Python, and modern tools.`,
+        `Over time, <strong>I decided to deepen my technical foundation</strong> — to move beyond project management tools and actually understand the systems I was managing. 
+        That's when I shifted to hands-on development, mastering JavaScript, Python, Docker, APIs, and modern full-stack frameworks.`,
        
-        `Today, I focus primarily on <strong>frontend development with Vue.js, Nuxt, and Tailwind CSS</strong>. 
-        I enjoy crafting clean interfaces, smooth user experiences, and well-structured components, while keeping a flexible full-stack edge thanks to Node, Django, and database fundamentals.`,
+        `Today, I position myself as a <strong>Technical Product Owner who codes</strong>. I combine product thinking (roadmap strategy, user needs, business metrics) with hands-on development skills (Vue.js, Nuxt, Node.js, MongoDB, DevOps). 
+        This combination lets me <strong>challenge developers with confidence, architect solutions, and ship products that are both strategically sound and technically excellent</strong>.`,
     ]
   }
 
