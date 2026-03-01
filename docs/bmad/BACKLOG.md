@@ -487,7 +487,104 @@ The backlog is a prioritized list of work items organized by:
 
 ---
 
-### Epic 4: Advanced Features (Q4 2026+)
+### Epic 5: Code Quality & Architecture (Planned Q1-Q2 2026)
+**Status:** 🔴 Not Started  
+**Complexity:** Medium  
+**Estimated Points:** 34
+
+⚠️ **IMPORTANT NOTE:** This epic focuses on improving code quality, architecture patterns, and maintainability. These improvements enable cleaner future development, better team collaboration, and reduced technical debt.
+
+#### User Story: Refactor Stores to Composition API (🔴 Not Started)
+**Priority:** Medium  
+**Points:** 13  
+**Sprint Goal:** Migrate existing state management from Options API to modern Composition API pattern
+
+**Context:** Current stores (`experienceStore`, `introStore`, `languageContentStore`) use Options API pattern. New stores (`skillsStore`, `educationsStore`) have been created using Composition API. For consistency, code quality, and future-proofing, all existing stores should be migrated to Composition API.
+
+**Why This Matters:**
+- **Modern Standards:** Composition API is Vue 3 + Nuxt 3 recommended pattern
+- **TypeScript:** Better type inference, less `as` casting needed
+- **Testability:** Pure functions easier to unit test
+- **Reusability:** Logic extractible into composables
+- **Maintainability:** Scales better than Options API (most critical > 500 loc)
+- **Future-Proof:** Aligns with Vue 4 direction
+- **Code Consistency:** All stores follow same pattern
+
+**Tasks:**
+
+- [ ] 🔴 Refactor experienceStore to Composition API (4pts)
+  - Convert `state()` object to `ref()` declarations
+  - Convert `actions` to functions
+  - Convert `getters` to function-based getters
+  - Update Pinia `defineStore` wrapper
+  - Maintain backward compatibility with current components (no component changes needed)
+  - Add error handling following skillsStore/educationsStore pattern
+  - Implement caching (avoid refetch if data already loaded)
+
+- [ ] 🔴 Refactor introStore to Composition API (3pts)
+  - Same conversion process as experienceStore
+  - Ensure intro text arrays loaded once and reused
+  - Add proper TypeScript interfaces for intro data
+  - Maintain API compatibility with current components
+
+- [ ] 🔴 Refactor languageContentStore to Composition API (3pts)
+  - Same conversion process
+  - Add getters for language filtering (e.g., `getLanguageByName()`)
+  - Implement caching pattern
+  - Type safety for language objects
+
+- [ ] 🔴 Testing & Validation (3pts)
+  - Unit tests for each store's actions/getters
+  - Component integration tests (ensure components still work)
+  - No console errors or warnings in browser
+  - Verify caching behavior (no unnecessary re-fetches)
+  - Performance benchmarks (before/after bundle size)
+
+**Acceptance Criteria:**
+- [ ] All 3 stores (experience, intro, languages) refactored to Composition API
+- [ ] Store structure matches skillsStore/educationsStore pattern
+- [ ] Zero breaking changes to component API (components don't need updates)
+- [ ] TypeScript types inferred correctly (minimal type assertions)
+- [ ] All getters functional and tested
+- [ ] Caching implemented consistently across all stores
+- [ ] Unit tests cover all actions/getters
+- [ ] Component integration tests pass
+- [ ] Bundle size improved or neutral
+- [ ] Developer experience improved (cleaner code, easier to extend)
+
+**Code Pattern Reference:**
+```typescript
+// AFTER: Composition API pattern
+export const useExperienceStore = defineStore('experience', () => {
+  // State
+  const data = ref<Experience[]>([])
+  const loading = ref(false)
+  const error = ref<string | null>(null)
+
+  // Actions
+  async function fetchData() { ... }
+
+  // Getters
+  function getExperienceByCompany(name: string) { ... }
+
+  return { data, loading, error, fetchData, getExperienceByCompany }
+})
+```
+
+**Notes:**
+- This is **NOT urgent** for MVP but important for code quality
+- No changes required to components (backward compatible API)
+- Enables future extraction of logic into composables
+- Reduces technical debt score
+- Demonstrates modern Vue/Nuxt expertise
+
+**Depends On:** None (can be done in-parallel with other work)
+
+**Blocked By:** None
+
+---
+
+### Epic 6: Advanced Features (Q4 2026+)
 **Status:** 🔴 Not Started  
 **Complexity:** High  
 **Estimated Points:** 89
