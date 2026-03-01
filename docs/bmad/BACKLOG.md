@@ -105,52 +105,49 @@ The backlog is a prioritized list of work items organized by:
 
 ---
 
-#### Story: Data Migration: Skills & Education (🔴 Not Started)
+#### Story: Data Migration: Skills, Education & Projects (🟢 Done)
 **Priority:** High  
-**Points:** 8  
-**Sprint Goal:** Migrate hardcoded skills and education data to centralized site-content.ts
+**Points:** 11  
+**Sprint Goal:** Migrate hardcoded skills, education and projects data to centralized site-content.ts
+**Completed:** 2026-03-01
 
-**Context:** Currently skills and education are hardcoded in component state. They need to be moved to site-content.ts (Phase 1 of data consolidation). Future phases will migrate to MongoDB + admin dashboard, but for now consolidation is key.
+**Context:** Skills, education and projects were hardcoded in component state. All have been moved to site-content.ts (Phase 1 of data consolidation). Future phases will migrate to MongoDB + admin dashboard.
 
-**Tasks:**
-- [ ] 🔴 Migrate skills from skill-section.vue to site-content.ts (3pts)
-  - Extract skillSections array from component
-  - Create getSkills() function in site-content.ts
-  - Update skill-section.vue to consume from API
-  - Create GET /api/skills endpoint
-  - Ensure response format matches component expectations
+**Completed Tasks:**
+- [x] 🟢 Migrate skills from skill-section.vue to site-content.ts (3pts)
+  - Created getSkills() function in site-content.ts
+  - Created GET /api/skills endpoint
+  - Created skillsStore (Composition API)
+  - Updated skill-section.vue to consume from store
+  - Added AI tools (GitHub Copilot, Claude Code) and Vitest to skills
 
-- [ ] 🔴 Migrate education from edu-section.vue to site-content.ts (3pts)
-  - Extract educations array from component
-  - Create getEducations() function in site-content.ts
-  - Update edu-section.vue to consume from API
-  - Create GET /api/educations endpoint
-  - Validate data format
+- [x] 🟢 Migrate education from edu-section.vue to site-content.ts (3pts)
+  - Created getEducations() function in site-content.ts
+  - Created GET /api/educations endpoint
+  - Created educationsStore (Composition API)
+  - Updated edu-section.vue to consume from store
 
-- [ ] 🔴 Testing & validation (2pts)
-  - Verify all skills display correctly
-  - Verify all certifications display correctly
-  - Test responsive rendering
-  - No data loss or duplication
+- [x] 🟢 Migrate projects from project-section.vue to site-content.ts (3pts)
+  - Created getProjects() function in site-content.ts
+  - Created GET /api/projects endpoint
+  - Created projectsStore (Composition API)
+  - Updated project-section.vue to consume from store
 
-**Acceptance Criteria:**
-- [ ] Skills no longer hardcoded in component (data fetched from API)
-- [ ] Education no longer hardcoded in component (data fetched from API)
-- [ ] /api/skills returns properly formatted response
-- [ ] /api/educations returns properly formatted response
-- [ ] All data persists across page reloads
-- [ ] No console errors or warnings
-- [ ] Mobile rendering unaffected
+- [x] 🟢 Testing & validation (2pts)
+  - All skills, certifications and projects display correctly
+  - All API endpoints return properly formatted responses
+  - No console errors or warnings
+  - Responsive rendering unaffected
 
 **Notes:**
-- This is **Phase 1 (Consolidation)** of data migration strategy (see MODEL.md)
-- Phase 2 (MongoDB) will come later and depends on this completion
+- This completes **Phase 1 (Consolidation)** for business data (see MODEL.md)
+- All 6 data stores now use Composition API pattern
+- Phase 2 (MongoDB) will come later
 - Admin dashboard comes after Phase 2
-- This unblocks profile completeness for PO repositioning
 
 ---
 
-#### Story: Content Repositioning: Product Owner Profile (🔴 Not Started)
+#### Story: Content Repositioning: Product Owner Profile (� In Progress)
 **Priority:** High  
 **Points:** 8  
 **Sprint Goal:** Reposition profile narrative towards "Technical Product Owner & Full-Stack Developer" target role
@@ -162,10 +159,10 @@ The backlog is a prioritized list of work items organized by:
 - Business-to-technical translation skills
 
 **Tasks:**
-- [ ] 🔴 Update intro bio paragraph (2pts)
-  - Current: "frontend developer with passion for clean interfaces"
-  - Target: "Technical Product Owner with 7+ years bridging product strategy and technical execution"
-  - Highlight: PO experience, technical credibility, business acumen
+- [x] 🟢 Update intro bio paragraph (2pts) — *Done 2026-03-01*
+  - Updated hero-big.vue subtitle: "Technical Product Owner · Fullstack Developer"
+  - Updated intro text in site-content.ts with TPO positioning
+  - Updated resume.vue intro paragraph with strategic narrative
 
 - [ ] 🔴 Refactor experience descriptions (3pts)
   - Reframe DII/POLITICO role to emphasize PO/TPM aspects
@@ -184,7 +181,7 @@ The backlog is a prioritized list of work items organized by:
   - Link projects to PO narrative (strategy → execution)
 
 **Acceptance Criteria:**
-- [ ] Intro clearly positions as "Technical Product Owner"
+- [x] Intro clearly positions as "Technical Product Owner"
 - [ ] Experience descriptions emphasize PO/strategy over pure development
 - [ ] Project section highlights product thinking & business impact
 - [ ] All content naturally flows from dev → PO progression
@@ -242,6 +239,43 @@ The backlog is a prioritized list of work items organized by:
 
 ---
 
+#### Story: Migrate Identity & Profile Content to site-content.ts (🔴 Not Started)
+**Priority:** Medium  
+**Points:** 5  
+**Sprint Goal:** Centralize remaining hardcoded identity content from components to server-side data
+
+**Context:** Phase 1 data consolidation is complete for business data (experiences, skills, educations, projects, languages, intro). However, some identity/profile content remains hardcoded in components. Moving it to site-content.ts ensures a single source of truth and prepares for future admin dashboard management.
+
+**Tasks:**
+- [ ] 🔴 Migrate hero-big.vue content to site-content.ts (3pts)
+  - Extract personal name ("Hello World! I'm Dylan")
+  - Extract title/subtitle ("Technical Product Owner · Fullstack Developer")
+  - Extract social links (email, LinkedIn, GitHub URLs)
+  - Extract profile picture path
+  - Create `getProfileIdentity()` function in site-content.ts
+  - Create GET /api/profile endpoint
+  - Update hero-big.vue to consume from API/store
+
+- [ ] 🔴 Migrate resume.vue intro paragraph to site-content.ts (2pts)
+  - Extract intro paragraph text (TPO positioning narrative)
+  - Add to existing `getIntroText()` or create `getResumeIntro()` function
+  - Update resume.vue to consume from API/store
+
+**Acceptance Criteria:**
+- [ ] Hero identity data (name, title, links, photo) no longer hardcoded in component
+- [ ] Resume intro paragraph fetched from server
+- [ ] No visual or functional regression
+- [ ] Consistent with existing store/API patterns
+
+**Notes:**
+- Lower priority than business data migration (already done)
+- Not blocking for MVP launch
+- Enables future single-source profile management
+
+**Depends On:** None
+
+---
+
 ### 2.2 Sprint Metrics
 | Metric | Target | Actual |
 |--------|--------|--------|
@@ -258,8 +292,8 @@ The backlog is a prioritized list of work items organized by:
 
 **Current Priority Order (Q1-Q3 2026):**
 
-1. **Data Migration (Q1 - CRITICAL):** Move skills & education to site-content.ts
-2. **Content Repositioning (Q1 - CRITICAL):** Rebrand as Technical Product Owner
+1. ~~**Data Migration (Q1 - CRITICAL):** Move skills & education to site-content.ts~~ ✅ **DONE** (2026-03-01) — Skills, educations & projects migrated + stores + APIs
+2. **Content Repositioning (Q1 - CRITICAL):** Rebrand as Technical Product Owner — 🟡 IN PROGRESS (intro done, experience descriptions pending)
 3. **Contact Form (Q1 - HIGH):** Complete API + UI
 4. **Mobile Optimization (Q1-Q2 - HIGH):** Ensure responsive perfection
 5. **MongoDB Migration (Q2 - MEDIUM):** Move data to persistence layer
@@ -490,7 +524,7 @@ The backlog is a prioritized list of work items organized by:
 ### Epic 5: Code Quality & Architecture (Planned Q1-Q2 2026)
 **Status:** 🔴 Not Started  
 **Complexity:** Medium  
-**Estimated Points:** 34
+**Estimated Points:** 55
 
 ⚠️ **IMPORTANT NOTE:** This epic focuses on improving code quality, architecture patterns, and maintainability. These improvements enable cleaner future development, better team collaboration, and reduced technical debt.
 
@@ -581,6 +615,135 @@ export const useExperienceStore = defineStore('experience', () => {
 **Depends On:** None (can be done in-parallel with other work)
 
 **Blocked By:** None
+
+---
+
+#### User Story: Tests for New Stores & Components (🔴 Not Started)
+**Priority:** High  
+**Points:** 21  
+**Sprint Goal:** Ensure reliability and prevent regressions on newly created stores, API endpoints, and refactored components
+
+**Context:** Three new Composition API stores (`skillsStore`, `educationsStore`, `projectsStore`) and their associated API endpoints (`/api/skills`, `/api/educations`, `/api/projects`) were created during Phase 1 data consolidation. The consuming components (`skill-section.vue`, `edu-section.vue`, `project-section.vue`) were also refactored to use these stores. Currently, none of these have test coverage.
+
+**Why This Matters:**
+- These stores are the backbone of content rendering — a regression breaks the entire site
+- API endpoints need validation of response format (components depend on exact structure)
+- Store caching logic and error handling must be verified
+- Components consuming stores via `useAsyncData` need integration tests
+- Current test coverage is ~70%, target is 80%+
+
+**Tasks:**
+
+- [ ] 🔴 Unit tests: skillsStore (3pts)
+  - Test `fetchData()` calls API and populates `data`
+  - Test caching: second call doesn't re-fetch
+  - Test `getSkillByLabel()` returns correct skill
+  - Test `getSkillCount()` returns total across all sections
+  - Test `getSectionByTitle()` returns correct section
+  - Test error state when API fails
+  - Test loading state transitions
+
+- [ ] 🔴 Unit tests: educationsStore (3pts)
+  - Test `fetchData()` calls API and populates `data`
+  - Test caching behavior
+  - Test `getEducationByTitle()` returns correct education
+  - Test `getEducationsByYear()` filters correctly
+  - Test `getEducationsByIssuer()` filters correctly
+  - Test `getEducationCount()` returns correct count
+  - Test `hasCredential()` returns boolean based on certificationLink
+  - Test error/loading states
+
+- [ ] 🔴 Unit tests: projectsStore (3pts)
+  - Test `fetchData()` calls API and populates `data`
+  - Test caching behavior
+  - Test `getProjectByTitle()` returns correct project
+  - Test `getProjectCount()` returns correct count
+  - Test `getProjectsByStackIcon()` filters by tech stack
+  - Test error/loading states
+
+- [ ] 🔴 Unit tests: API endpoints (4pts)
+  - Test GET /api/skills returns `{ status: 'success', data: [...], timestamp }`
+  - Test GET /api/educations returns correct format
+  - Test GET /api/projects returns correct format
+  - Verify data structure matches TypeScript interfaces
+  - Test error responses (simulate site-content.ts failure)
+  - Validate response timestamps
+
+- [ ] 🔴 Integration tests: skill-section.vue (3pts)
+  - Test component renders all skill sections from store
+  - Test each section displays title and icon
+  - Test skill items render with correct labels
+  - Test loading state display
+  - Test error state fallback
+  - Mock store data for deterministic tests
+
+- [ ] 🔴 Integration tests: edu-section.vue (3pts)
+  - Test component renders all education items from store
+  - Test certification links render when present
+  - Test courseDetails render when present
+  - Test items without certificationLink render correctly
+  - Mock store data for deterministic tests
+
+- [ ] 🔴 Integration tests: project-section.vue (2pts)
+  - Test component renders all projects from store
+  - Test project cards display title, description, stack icons, links
+  - Test video link renders when present
+  - Mock store data for deterministic tests
+
+**Acceptance Criteria:**
+- [ ] All 3 new stores have unit tests covering actions, getters, and error states
+- [ ] All 3 API endpoints have unit tests validating response format
+- [ ] All 3 refactored components have integration tests
+- [ ] Caching logic verified: no duplicate API calls
+- [ ] Error handling verified: stores handle API failures gracefully
+- [ ] Tests follow existing patterns (Vitest + `@nuxt/test-utils`)
+- [ ] All tests pass in CI (`vitest run`)
+- [ ] Test coverage reaches 80%+ target
+
+**Test Pattern Reference:**
+```typescript
+// Store unit test pattern
+import { setActivePinia, createPinia } from 'pinia'
+import { describe, it, expect, beforeEach, vi } from 'vitest'
+import { useSkillsStore } from '~/stores/skillsStore'
+
+describe('skillsStore', () => {
+  beforeEach(() => {
+    setActivePinia(createPinia())
+  })
+
+  it('fetches and caches data', async () => {
+    const store = useSkillsStore()
+    vi.stubGlobal('$fetch', vi.fn().mockResolvedValue({ data: mockSkills }))
+    await store.fetchData()
+    expect(store.data).toHaveLength(6)
+    // Second call should not re-fetch
+    await store.fetchData()
+    expect($fetch).toHaveBeenCalledTimes(1)
+  })
+})
+```
+
+```typescript
+// Component integration test pattern
+import { mountSuspended } from '@nuxt/test-utils/runtime'
+import SkillSection from '~/components/resume/skill-section.vue'
+
+describe('SkillSection', () => {
+  it('renders skill sections from store', async () => {
+    const wrapper = await mountSuspended(SkillSection)
+    expect(wrapper.findAll('[data-testid="skill-section"]')).toHaveLength(6)
+  })
+})
+```
+
+**Notes:**
+- Priority is HIGH because these stores serve critical content
+- Existing tests use `mountSuspended` from `@nuxt/test-utils/runtime` (see hero-small.spec.ts)
+- Follow same directory structure: `tests/unit/frontend/` for stores & components, `tests/unit/backend/` for API endpoints
+- Can be parallelized: store tests and component tests are independent
+
+**Depends On:** None (stores and components already implemented)
 
 ---
 
@@ -822,7 +985,7 @@ export const useExperienceStore = defineStore('experience', () => {
 
 | Item | Severity | Points | Notes |
 |------|----------|--------|-------|
-| ComponentTests Missing | Medium | 8 | Add test coverage for all components |
+| ComponentTests Missing | Medium | 8 | Add test coverage for all components — **stores & data components prioritized (see Epic 5)** |
 | Database Query N+1 | High | 13 | Audit and fix inefficient queries |
 | Type Safety | Medium | 5 | Add stricter TypeScript checks |
 | API Error Handling | High | 8 | Standardize error responses |
@@ -843,8 +1006,9 @@ export const useExperienceStore = defineStore('experience', () => {
 - ✅ Core pages (Home, Resume, Portfolio)
 - ✅ Database integration
 - 🟡 Contact form (in-progress)
-- 📋 **Data migration: Skills & Education to site-content.ts** (CRITICAL - Mar 5-7)
-- 📋 **Content repositioning: Product Owner narrative** (CRITICAL - Mar 8-14)
+- ✅ **Data migration: Skills, Education & Projects to site-content.ts** (DONE - Mar 1)
+- 🟡 **Content repositioning: Product Owner narrative** (IN PROGRESS - intro done)
+- 📋 **Tests: New stores & components** (HIGH - Mar 5-10)
 - 📋 Mobile optimization
 - 📋 Performance optimization
 
