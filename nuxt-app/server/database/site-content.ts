@@ -128,7 +128,10 @@ export function getIntroText(): string[] {
           { icon: "mdi:docker", label: "Docker" },
           { icon: "simple-icons:caddy", label: "Caddy" },
           { icon: "mdi:github", label: "GitHub" },
-          { icon: "mdi:jira", label: "Jira" }
+          { icon: "mdi:jira", label: "Jira" },
+          { icon: "ri:copilot-fill", label: "GitHub Copilot" },
+          { icon: "ri:claude-fill", label: "Claude Code" },
+          { icon: "devicon-plain:vitest", label: "Vitest" }
         ]
       },
 
