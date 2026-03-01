@@ -45,8 +45,6 @@
 
     })
 
-    const logoLink = "/img/resume/experiences/company-logo-dii.png"
-
 </script>
 
 <template>
