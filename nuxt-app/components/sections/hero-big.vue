@@ -24,7 +24,8 @@
 
       <!-- Sous-titre -->
       <p class="text-lg md:text-2xl lg:text-3xl font-light text-gray-200">
-        Frontend Developer – Vue.js / Nuxt
+        Technical Product Owner
+        <span class="block md:inline">· Fullstack Developer</span>
       </p>
 
       <!-- Icônes -->

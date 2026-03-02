@@ -14,9 +14,9 @@
   <div :class="containerStyleClasses">
 
     <p class="text-lg md:text-xl text-slate-700 leading-relaxed border-l-4 border-emerald-500 pl-4">
-      Over the years, I’ve worked at the crossroads of web production, design and project management: creating and managing WordPress websites, integrating brand guidelines into responsive layouts, designing visuals, and coordinating with developers and marketing teams.
+      Over the years, I've worked at the crossroads of web production, design, and technical leadership: architecting WordPress platforms for enterprise clients, managing cross-functional teams, and translating business requirements into robust technical solutions.
       
-      Today, I build on this experience as a <strong>frontend developer</strong> focused on <strong>Vue / Nuxt</strong>, <strong>UI/UX</strong>, <strong>accessibility</strong> and <strong>performance</strong>.
+      Today, I combine this strategic experience with hands-on fullstack development: <strong>Technical Product Owner</strong> and <strong>Fullstack Developer</strong> specializing in <strong>Vue / Nuxt</strong>, <strong>full-stack architecture</strong>, and <strong>shipping products that scale</strong>.
     </p>
 
   </div>
