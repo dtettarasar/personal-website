@@ -3,7 +3,7 @@
 
 **Version:** 1.0  
 **Status:** Active Development  
-**Last Updated:** 2026-02-28  
+**Last Updated:** 2026-03-02  
 **Owner:** Dylan Tettarasar
 
 ---
@@ -522,7 +522,7 @@ The backlog is a prioritized list of work items organized by:
 ---
 
 ### Epic 5: Code Quality & Architecture (Planned Q1-Q2 2026)
-**Status:** 🔴 Not Started  
+**Status:** � In Progress  
 **Complexity:** Medium  
 **Estimated Points:** 55
 
@@ -568,6 +568,8 @@ The backlog is a prioritized list of work items organized by:
   - Type safety for language objects
 
 - [ ] 🔴 Testing & Validation (3pts)
+  - ⚠️ **Write unit tests for each refactored store during refactoring (TDD approach)**
+  - Follow same pattern as skillsStore/educationsStore/projectsStore tests
   - Unit tests for each store's actions/getters
   - Component integration tests (ensure components still work)
   - No console errors or warnings in browser
@@ -618,7 +620,7 @@ export const useExperienceStore = defineStore('experience', () => {
 
 ---
 
-#### User Story: Tests for New Stores & Components (🔴 Not Started)
+#### User Story: Tests for New Stores & Components (� In Progress)
 **Priority:** High  
 **Points:** 21  
 **Sprint Goal:** Ensure reliability and prevent regressions on newly created stores, API endpoints, and refactored components
@@ -634,32 +636,32 @@ export const useExperienceStore = defineStore('experience', () => {
 
 **Tasks:**
 
-- [ ] 🔴 Unit tests: skillsStore (3pts)
-  - Test `fetchData()` calls API and populates `data`
-  - Test caching: second call doesn't re-fetch
-  - Test `getSkillByLabel()` returns correct skill
-  - Test `getSkillCount()` returns total across all sections
-  - Test `getSectionByTitle()` returns correct section
-  - Test error state when API fails
-  - Test loading state transitions
+- [x] 🟢 Unit tests: skillsStore (3pts) — **DONE Mar 2** (23 tests passing)
+  - ✅ Test `fetchData()` calls API and populates `data`
+  - ✅ Test caching: second call doesn't re-fetch
+  - ✅ Test `getSkillByLabel()` returns correct skill
+  - ✅ Test `getSkillCount()` returns total across all sections
+  - ✅ Test `getSectionByTitle()` returns correct section
+  - ✅ Test error state when API fails (3 variants: message, statusMessage, fallback)
+  - ✅ Test loading state transitions
 
-- [ ] 🔴 Unit tests: educationsStore (3pts)
-  - Test `fetchData()` calls API and populates `data`
-  - Test caching behavior
-  - Test `getEducationByTitle()` returns correct education
-  - Test `getEducationsByYear()` filters correctly
-  - Test `getEducationsByIssuer()` filters correctly
-  - Test `getEducationCount()` returns correct count
-  - Test `hasCredential()` returns boolean based on certificationLink
-  - Test error/loading states
+- [x] 🟢 Unit tests: educationsStore (3pts) — **DONE Mar 2** (31 tests passing)
+  - ✅ Test `fetchData()` calls API and populates `data`
+  - ✅ Test caching behavior
+  - ✅ Test `getEducationByTitle()` returns correct education (partial, case-insensitive)
+  - ✅ Test `getEducationsByYear()` filters correctly
+  - ✅ Test `getEducationsByIssuer()` filters correctly (partial, case-insensitive)
+  - ✅ Test `getEducationCount()` returns correct count
+  - ✅ Test `hasCredential()` returns boolean based on certificationLink
+  - ✅ Test error/loading states (3 variants + reset)
 
-- [ ] 🔴 Unit tests: projectsStore (3pts)
-  - Test `fetchData()` calls API and populates `data`
-  - Test caching behavior
-  - Test `getProjectByTitle()` returns correct project
-  - Test `getProjectCount()` returns correct count
-  - Test `getProjectsByStackIcon()` filters by tech stack
-  - Test error/loading states
+- [x] 🟢 Unit tests: projectsStore (3pts) — **DONE Mar 2** (22 tests passing)
+  - ✅ Test `fetchData()` calls API and populates `data`
+  - ✅ Test caching behavior
+  - ✅ Test `getProjectByTitle()` returns correct project (with/without video)
+  - ✅ Test `getProjectCount()` returns correct count
+  - ✅ Test `getProjectsByStackIcon()` filters by tech stack
+  - ✅ Test error/loading states (3 variants + reset)
 
 - [ ] 🔴 Unit tests: API endpoints (4pts)
   - Test GET /api/skills returns `{ status: 'success', data: [...], timestamp }`
@@ -1008,7 +1010,8 @@ describe('SkillSection', () => {
 - 🟡 Contact form (in-progress)
 - ✅ **Data migration: Skills, Education & Projects to site-content.ts** (DONE - Mar 1)
 - 🟡 **Content repositioning: Product Owner narrative** (IN PROGRESS - intro done)
-- 📋 **Tests: New stores & components** (HIGH - Mar 5-10)
+- ✅ **Tests: New store unit tests** (DONE - Mar 2, 76 tests: skills 23 + educations 31 + projects 22)
+- 📋 **Tests: API endpoints & component integration** (Mar 5-10)
 - 📋 Mobile optimization
 - 📋 Performance optimization
 
