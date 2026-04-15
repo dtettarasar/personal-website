@@ -59,7 +59,7 @@ export function getIntroText(): string[] {
             "<strong>Salesforce Component Development:</strong> Modified and maintained Lightning Web Components (Salesforce): HTML/CSS/JavaScript adjustments, UI fixes, and logic updates. Managed the full development lifecycle: Git branching, testing, and deployments (staging/production).",
             "<strong>Technical Project Management:</strong> Collaborated with development teams to bridge business needs and technical execution. Wrote technical specifications, managed Jira workflows, and led Quality Assurance (QA) testing.",
             "<strong>Performance & Accessibility:</strong> Optimized web performance (Core Web Vitals) and implemented accessibility standards (WCAG) across all projects.",
-            "<strong>Infrastructure & DevOps:</strong> Managed domain lifecycles (Gandi), DNS configurations, and security layers via Cloudflare."
+            "<strong>Infrastructure & DevOps:</strong> Managed domain lifecycles and DNS configurations via Gandi.net, and coordinated with hosting providers for deployment and maintenance of client websites."
           ]
         },
         {
