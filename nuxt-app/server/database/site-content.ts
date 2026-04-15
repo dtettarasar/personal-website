@@ -142,7 +142,7 @@ export function getIntroText(): string[] {
       },
 
       {
-        title: "Backend (not my primary focus but operational)",
+        title: "Backend & Databases",
         icon: "mdi:server-network",
         items: [
           { icon: "mdi:nodejs", label: "Node.js / Express" },
