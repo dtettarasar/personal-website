@@ -55,11 +55,11 @@ export function getIntroText(): string[] {
           period: "Jan 2018 - Dec 2024",
           companyLogoSrc: "/img/resume/experiences/company-logo-dii.png",
           jobMissions: [
-            "<strong>Web Development & CMS Architecture:</strong> Managed a WordPress Multisite network for high-profile clients (Uber, KPMG, Politico). Responsible for 'Pixel Perfect' responsive integration (HTML5/CSS3/JS) and performance optimization (Core Web Vitals).",
-            "<strong>Salesforce Engineering (LWC):</strong> Developed front-end adjustments on Lightning Web Components. Managed the full technical lifecycle: UI fixes, logic updates, and Git-based deployments (staging/production).",
-            "<strong>Technical Project Management:</strong> Bridged the gap between business needs and technical execution. Wrote functional specifications, managed Jira workflows, and led Quality Assurance (QA) testing.",
-            "<strong>DevOps & Infrastructure:</strong> Orchestrated domain lifecycles (Gandi), DNS configurations, and security layers via Cloudflare.",
-            "<strong>Product Design:</strong> Crafted interactive prototypes and functional wireframes using Figma to streamline the development process."
+            "<strong>Frontend Development & Integration:</strong> Developed and maintained 15+ WordPress sites for enterprise clients (Uber, KPMG, Politico). Responsible for responsive HTML5/CSS3/JavaScript integration from Figma mockups and performance optimization (Core Web Vitals).",
+            "<strong>Salesforce Component Development:</strong> Modified and maintained Lightning Web Components (Salesforce): HTML/CSS/JavaScript adjustments, UI fixes, and logic updates. Managed the full development lifecycle: Git branching, testing, and deployments (staging/production).",
+            "<strong>Technical Project Management:</strong> Collaborated with development teams to bridge business needs and technical execution. Wrote technical specifications, managed Jira workflows, and led Quality Assurance (QA) testing.",
+            "<strong>Performance & Accessibility:</strong> Optimized web performance (Core Web Vitals) and implemented accessibility standards (WCAG) across all projects.",
+            "<strong>Infrastructure & DevOps:</strong> Managed domain lifecycles (Gandi), DNS configurations, and security layers via Cloudflare."
           ]
         },
         {
