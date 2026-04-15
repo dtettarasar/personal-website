@@ -24,8 +24,8 @@
 
       <!-- Sous-titre -->
       <p class="text-lg md:text-2xl lg:text-3xl font-light text-gray-200">
-        Technical Product Owner
-        <span class="block md:inline">· Fullstack Developer</span>
+        Frontend Developer
+        <span class="block md:inline">· Vue.js / Nuxt.js Specialist</span>
       </p>
 
       <!-- Icônes -->
