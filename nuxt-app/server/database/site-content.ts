@@ -3,7 +3,7 @@
 export function getMyTitle() {
     return {
         title: `Hello World! I’m Dylan`,
-        subtitle: `Digital Project Manager & Technical Product Owner <span class="block md:inline">· Web, CRM & Digital Platform`,
+        subtitle: `Digital Project Manager & Technical Product Owner <span class="block md:inline">· Web, CRM & Digital Platform</span>`,
     }
 }
 

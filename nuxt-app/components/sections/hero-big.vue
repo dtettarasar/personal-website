@@ -11,7 +11,7 @@
       <div class="relative">
         <img
           src="/img/profile_pic_square.jpg"
-          class="w-32 lg:w-48 rounded-full border-4 border-emerald-400 shadow-[0_0_25px_rgba(74,222,128,0.5)] animate-borderPulse"
+          class="w-32 lg:w-48 rounded-full border-4 border-emerald-400 shadow-[0_0_25px_rgba(74,222,128,0.5)] animate-border-pulse"
         />
       </div>
 
@@ -47,6 +47,15 @@
   </section>
 </template>
 
+<script setup lang="ts">
+
+import { useMyTitleStore } from '~/stores/myTitleStore'
+
+const myTitleStore = useMyTitleStore()
+await useAsyncData('my-title', () => myTitleStore.fetchData())
+
+</script>
+
 <style scoped>
 
 /*
@@ -66,22 +75,6 @@
   background-size: 400% 400%;
 }
 
-/* Effet halo vert autour de la photo */
-@keyframes borderPulse {
-  0% {
-    box-shadow: 0 0 0 0 rgba(74, 222, 128, 0.4);
-  }
-  70% {
-    box-shadow: 0 0 25px 15px rgba(74, 222, 128, 0);
-  }
-  100% {
-    box-shadow: 0 0 0 0 rgba(74, 222, 128, 0);
-  }
-}
-.animate-borderPulse {
-  animation: borderPulse 2.8s infinite ease-in-out;
-}
-
 /* Scanlines subtiles */
 @keyframes scanlines {
   from { background-position: 0 0; }
@@ -93,12 +86,3 @@
 }
 
 </style>
-
-<script setup lang="ts">
-
-import { useMyTitleStore } from '~/stores/myTitleStore'
-
-const myTitleStore = useMyTitleStore()
-await useAsyncData('my-title', () => myTitleStore.fetchData())
-
-</script>
