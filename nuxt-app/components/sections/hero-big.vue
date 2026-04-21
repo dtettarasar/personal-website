@@ -19,13 +19,12 @@
       <h1
         class="font-mono tracking-[0.3em] text-emerald-400 text-4xl md:text-6xl uppercase drop-shadow-[0_0_15px_rgba(74,222,128,0.4)]"
       >
-        Hello World! I’m Dylan<span class="animate-pulse">_</span>
+        {{ myTitleStore.data?.title || 'Loading...' }}<span class="animate-pulse">_</span>
       </h1>
 
       <!-- Sous-titre -->
       <p class="text-lg md:text-2xl lg:text-3xl font-light text-gray-200">
-        Frontend Developer
-        <span class="block md:inline">· Vue.js / Nuxt.js Specialist</span>
+        <span v-html="myTitleStore.data?.subtitle || 'Loading subtitle...'"></span>
       </p>
 
       <!-- Icônes -->
