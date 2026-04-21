@@ -101,6 +101,4 @@ import { useMyTitleStore } from '~/stores/myTitleStore'
 const myTitleStore = useMyTitleStore()
 await useAsyncData('my-title', () => myTitleStore.fetchData())
 
-console.log('My Title Data:', myTitleStore.data)
-
 </script>
