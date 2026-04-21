@@ -24,6 +24,15 @@ export function getIntroText(): string[] {
     ]
   }
 
+  export function getResumeIntro() {
+
+    return [
+        `Over the years, I've worked at the crossroads of web project management, CRM platforms, and technical development: piloting WordPress platforms for enterprise clients (Uber, KPMG, Politico), managing Salesforce projects end-to-end, and coordinating development teams from specifications to production delivery.`,
+        `Today, I combine this hands-on experience with a genuine technical background in modern web development — making me a Project Manager who truly speaks the same language as developers, and a Technical Product Owner who can bridge business needs and technical execution with confidence.`
+    ]
+
+  }
+
   export function getLanguageContent() {
 
     return [
