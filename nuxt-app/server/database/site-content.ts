@@ -122,24 +122,51 @@ export function getIntroText(): string[] {
 
   export function getSkills() {
     return [
+
       {
-        title: "Frontend – Main Stack",
-        icon: "mdi:star-four-points",
+        title: "Project Management",
+        icon: "mdi:clipboard-check",
         items: [
-          { icon: "mdi:vuejs", label: "Vue.js" },
-          { icon: "lineicons:nuxt", label: "Nuxt.js" },
-          { icon: "mdi:tailwind", label: "Tailwind CSS" }
+          { icon: "mdi:jira", label: "Jira" },
+          { icon: "mdi:atlassian", label: "Confluence" },
+          { icon: "bi:kanban-fill", label: "Agile / Kanban" },
+          { icon: "mdi:file-document-edit", label: "Functional Specs" },
+          { icon: "mdi:account-group", label: "Stakeholder Management" }
         ]
       },
 
       {
-        title: "Web & Integration",
-        icon: "mdi:code-tags",
+        title: "CRM & Business Platforms",
+        icon: "lsicon:marketing-filled",
+        items: [
+          { icon: "mdi:salesforce", label: "Salesforce" },
+          { icon: "ic:baseline-wordpress", label: "WordPress" },
+          { icon: "mdi:google-analytics", label: "Google Analytics" },
+          { icon: "mdi:microsoft-office", label: "Office Suite" }
+        ]
+      },
+
+      {
+        title: "SEO & Performance",
+        icon: "mdi:magnify",
+        items: [
+          { icon: "mdi:search-web", label: "Technical SEO" },
+          { icon: "mdi:speedometer", label: "Core Web Vitals" },
+          { icon: "mdi:eye-check", label: "Accessibility (WCAG)" }
+        ]
+      },
+
+      {
+        title: "Web & Digital",
+        icon: "mdi:web",
         items: [
           { icon: "mdi:language-html5", label: "HTML5" },
           { icon: "mdi:language-css3", label: "CSS3" },
           { icon: "mdi:language-javascript", label: "JavaScript" },
-          { icon: "mdi:bootstrap", label: "Bootstrap" }
+          { icon: "mdi:tailwind", label: "Tailwind CSS" },
+          { icon: "mdi:bootstrap", label: "Bootstrap" },
+          { icon: "mdi:vuejs", label: "Vue.js" },
+          { icon: "lineicons:nuxt", label: "Nuxt.js" }
         ]
       },
 
@@ -151,7 +178,6 @@ export function getIntroText(): string[] {
           { icon: "mdi:docker", label: "Docker" },
           { icon: "simple-icons:caddy", label: "Caddy" },
           { icon: "mdi:github", label: "GitHub" },
-          { icon: "mdi:jira", label: "Jira" },
           { icon: "ri:copilot-fill", label: "GitHub Copilot" },
           { icon: "ri:claude-fill", label: "Claude Code" },
           { icon: "devicon-plain:vitest", label: "Vitest" }
@@ -165,19 +191,7 @@ export function getIntroText(): string[] {
           { icon: "mdi:nodejs", label: "Node.js / Express" },
           { icon: "lineicons:mongodb", label: "MongoDB" },
           { icon: "mdi:language-python", label: "Python" },
-          { icon: "devicon-plain:django", label: "Django" },
           { icon: "mdi:database", label: "SQL" }
-        ]
-      },
-
-      {
-        title: "CMS & Business Tools",
-        icon: "lsicon:marketing-filled",
-        items: [
-          { icon: "ic:baseline-wordpress", label: "WordPress" },
-          { icon: "mdi:salesforce", label: "Salesforce" },
-          { icon: "mdi:google-analytics", label: "Google Analytics" },
-          { icon: "mdi:microsoft-office", label: "Office Suite" }
         ]
       },
 
