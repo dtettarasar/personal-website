@@ -269,13 +269,13 @@ export function getIntroText(): string[] {
     return [
       {
         title: "News Ipsum",
-        img: "/img/portfolio/news-ipsum-homepage.png", // Prends une capture du carrousel !
+        img: "/img/portfolio/news-ipsum-homepage.png",
         desc: [
-          "<strong>High-performance News Platform</strong> built with a modern Nuxt 4/3 and TypeScript architecture.",
-          "Implemented a <strong>Test-Driven Development (TDD)</strong> approach with Vitest to ensure reliable business logic from day one.",
-          "Focus on <strong>Web Accessibility (a11y)</strong>, aiming for WCAG compliance to provide an optimal reading experience.",
-          "Developed custom <strong>CLI internal tools</strong> for efficient Docker environment management and admin initialization.",
-          "Automated deployment using a <strong>Docker & Caddy</strong> stack with native SSL management on a VPS."
+          "<strong>End-to-end web project</strong> managed and built from conception to production deployment — illustrating full ownership of a digital product lifecycle.",
+          "Defined <strong>product architecture and technical roadmap</strong> before development, applying structured project management methodology (specs, backlog, iterative delivery).",
+          "Implemented <strong>Test-Driven Development (TDD)</strong> with Vitest to ensure reliable business logic and maintainable codebase.",
+          "Automated deployment using a <strong>Docker & Caddy</strong> stack with native SSL management on a VPS — demonstrating DevOps awareness.",
+          "Focus on <strong>Web Accessibility (a11y)</strong> and SEO optimization, ensuring both technical excellence and user experience quality."
         ],
         icon: "material-symbols:newspaper-rounded",
         stack: [
@@ -306,11 +306,11 @@ export function getIntroText(): string[] {
         title: "Personal Portfolio Architecture",
         img: "/img/portfolio/img-portfolio-personal-homepage.png",
         desc: [
-          "A <strong>Fullstack SSR application</strong> built with Nuxt 4, featuring a custom API for dynamic content management.",
-          "Engineered as a <strong>Generic Starter Kit</strong>, available as Open Source on GitHub under MIT license.",
+          "A <strong>Fullstack SSR application</strong> designed and built as a complete digital product — from architecture design to production deployment.",
+          "Demonstrates <strong>end-to-end project ownership</strong>: technical architecture, API design, frontend integration and infrastructure management.",
           "Orchestrated with <strong>Docker</strong> (multi-service environment) including separate Dev and Production configurations.",
-          "Automated workflows via <strong>Makefile</strong> to standardize deployment and maintenance commands.",
           "Secure infrastructure using <strong>Caddy</strong> as a reverse proxy with automated HTTPS/SSL certificates.",
+          "Engineered as a <strong>Generic Starter Kit</strong>, available as Open Source on GitHub under MIT license.",
         ],
         icon: "material-symbols:person-pin-rounded",
         stack: [
@@ -338,11 +338,11 @@ export function getIntroText(): string[] {
         title: "Otis AI – AI SaaS Platform",
         img: "/img/portfolio/otis-ai-homepage.png",
         desc: [
-          "An <strong>AI-assisted content generation SaaS</strong> integrating OpenAI models via dynamic prompt engineering.",
-          "Full implementation of a <strong>monetization system</strong> using the Stripe API with a credit-based business model.",
-          "Robust <strong>JWT-based authentication</strong> system securing exchanges between the Vue.js frontend and Node.js backend.",
-          "Rich content editor allowing post-generation formatting and real-time database updates.",
-          "Comprehensive test suite (Unit & Integration) with <strong>Vitest</strong> to ensure API and UI stability.",
+          "A <strong>complete SaaS product</strong> designed and delivered end-to-end — from product concept to technical implementation and monetization.",
+          "Defined and implemented a <strong>credit-based business model</strong> with full Stripe API integration, demonstrating product strategy and business thinking.",
+          "Architected a <strong>secure full-stack application</strong> with JWT authentication, REST API and real-time database interactions.",
+          "Built a comprehensive <strong>test suite (Unit & Integration)</strong> with Vitest to ensure product stability and reliability.",
+          "Integrates <strong>OpenAI API</strong> via dynamic prompt engineering for AI-assisted content generation workflows.",
         ],
         icon: "material-symbols:edit-note-rounded",
         stack: [
@@ -379,11 +379,10 @@ export function getIntroText(): string[] {
         title: "AI Art Shield – Protect Your Art",
         img: "/img/portfolio/cs50.jpg",
         desc: [
-          "A <strong>Advanced Python-based security tool</strong> designed to protect visual artworks from unauthorized AI training and scraping.",
+          "A <strong>Python-based security tool</strong> designed to protect visual artworks from unauthorized AI training and scraping.",
           "Implements <strong>invisible perturbations</strong> (Discrete Cosine Transform - DCT) to disrupt AI style recognition without altering human perception.",
           "Features a <strong>Protection Evaluation System</strong> that measures and compares alteration levels between original and secured versions.",
-          "Engineered with <strong>Pillow, OpenCV, and NumPy</strong> for high-performance image processing and pixel-level manipulation.",
-          "Future-ready architecture: Designed for modular refactoring and integration of <strong>Adversarial Perturbations</strong> and <strong>Blockchain-signed signatures</strong>.",
+          "Engineered with <strong>Pillow, OpenCV, and NumPy</strong> for high-performance image processing.",
           "The project is part of <strong>Harvard's CS50P course</strong>.",
         ],
         icon: "ic:round-terminal",
@@ -407,11 +406,10 @@ export function getIntroText(): string[] {
         title: "Tic Tac Toe AI – Algorithm Mastery",
         img: "/img/portfolio/img-portfolio-cs50x-final.png",
         desc: [
-          "An <strong>Advanced Browser-based Game</strong> featuring an unbeatable AI powered by the <strong>Minimax Algorithm</strong>.",
+          "A <strong>browser-based game</strong> featuring an unbeatable AI powered by the <strong>Minimax Algorithm</strong>.",
           "Engineered three distinct game modes: Human vs. Human, Easy AI (Randomized logic), and Impossible AI (Recursive decision-making).",
-          "Implemented a <strong>recursive search tree</strong> to evaluate all possible moves and guarantee the optimal outcome for the AI.",
           "Developed a real-time <strong>Score & Statistics Tracker</strong> managing session states across multiple game rounds.",
-          "Focus on clean UI/UX with responsive design and integrated SVG iconography for a 'Pixel Perfect' visual rendering.",
+          "Focus on clean UI/UX with responsive design — demonstrating product thinking and user experience sensitivity.",
           "The project is part of <strong>Harvard's CS50x course</strong>.",
         ],
         icon: "hugeicons:tic-tac-toe",
@@ -420,7 +418,6 @@ export function getIntroText(): string[] {
           "mdi:language-css3",
           "mdi:language-javascript",
         ],
-        video: "https://youtu.be/O13g7CtV2bI",
         links: [
           { 
             label:"View source code", 
@@ -438,11 +435,10 @@ export function getIntroText(): string[] {
         title: "Business Conference Platform",
         img: "/img/portfolio/img-portfolio-cs50-homepage.png",
         desc: [
-          "<strong>Responsive event platform</strong> featuring a complex registration system and interactive UI components built with Vanilla JavaScript.",
-          "Engineered a <strong>custom Form Validation Engine</strong> using Regular Expressions (Regex) to handle real-time error messaging and data integrity.",
-          "Developed <strong>dynamic scroll-triggered animations</strong>, including automated counters and smart navigation elements (Go-to-top logic).",
-          "Implemented <strong>DOM manipulation patterns</strong> for state management: toggling success states and handling multi-input data structures (radios, checkboxes, text).",
-          "Built with a mobile-first approach using <strong>Bootstrap</strong>, ensuring cross-browser compatibility and optimized visual consistency.",
+          "<strong>Responsive event platform</strong> featuring a complex registration system — demonstrating UX thinking and user journey design.",
+          "Engineered a <strong>custom Form Validation Engine</strong> using Regex for real-time error messaging and data integrity.",
+          "Developed <strong>dynamic scroll-triggered animations</strong> and smart navigation elements.",
+          "Built with a mobile-first approach using <strong>Bootstrap</strong>, ensuring cross-browser compatibility.",
           "The project is part of <strong>Harvard's CS50x course</strong>.",
         ],
         icon: "material-symbols:event-available-rounded",
@@ -464,9 +460,9 @@ export function getIntroText(): string[] {
         title: "Technical Documentation Interface",
         img: "/img/portfolio/img-portfolio-doc-page.png",
         desc: [
-          "<strong>High-readability documentation portal</strong> designed for the freeCodeCamp Responsive Web Design certification.",
-          "Strict adherence to <strong>HTML5 Semantic standards</strong> and ARIA roles to ensure full compatibility with screen readers.",
-          "Engineered a <strong>dynamic CSS layout</strong> with sticky navigation and fluid typography for an optimal technical reading experience.",
+          "<strong>High-readability documentation portal</strong> — demonstrating information architecture and content structuring skills.",
+          "Strict adherence to <strong>HTML5 Semantic standards</strong> and ARIA roles for full accessibility compliance.",
+          "Engineered a <strong>dynamic CSS layout</strong> with sticky navigation and fluid typography for optimal reading experience.",
           "Certified 'Pixel Perfect' implementation, passing 100% of automated accessibility and responsiveness tests."
         ],
         icon: "mdi:file-document",
@@ -484,4 +480,4 @@ export function getIntroText(): string[] {
         ]
       }
     ]
-  }
+}
