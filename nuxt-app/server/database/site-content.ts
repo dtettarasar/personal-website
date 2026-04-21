@@ -62,9 +62,7 @@ export function getIntroText(): string[] {
   }
 
   export function getExperiences() {
-
     return [
-
         {
           companyName: "DII / POLITICO",
           companyVenue: "Paris, France",
@@ -72,11 +70,11 @@ export function getIntroText(): string[] {
           period: "Jan 2018 - Dec 2024",
           companyLogoSrc: "/img/resume/experiences/company-logo-dii.png",
           jobMissions: [
-            "<strong>Frontend Development & Integration:</strong> Developed and maintained 15+ WordPress sites for enterprise clients (Uber, KPMG, Politico). Responsible for responsive HTML5/CSS3/JavaScript integration from Figma mockups and performance optimization (Core Web Vitals).",
-            "<strong>Salesforce Component Development:</strong> Modified and maintained Lightning Web Components (Salesforce): HTML/CSS/JavaScript adjustments, UI fixes, and logic updates. Managed the full development lifecycle: Git branching, testing, and deployments (staging/production).",
-            "<strong>Technical Project Management:</strong> Collaborated with development teams to bridge business needs and technical execution. Wrote technical specifications, managed Jira workflows, and led Quality Assurance (QA) testing.",
-            "<strong>Performance & Accessibility:</strong> Optimized web performance (Core Web Vitals) and implemented accessibility standards (WCAG) across all projects.",
-            "<strong>Infrastructure & DevOps:</strong> Managed domain lifecycles and DNS configurations via Gandi.net, and coordinated with hosting providers for deployment and maintenance of client websites."
+            "<strong>Technical Project Management:</strong> Collected and structured business requirements from internal stakeholders, translated them into clear functional specifications and Jira workflows. Coordinated development teams, managed delivery cycles, and led QA testing from staging to production.",
+            "<strong>CRM Project Management:</strong> Piloted Salesforce projects end-to-end: requirements gathering, functional specs, ticket creation and prioritization, developer coordination, UAT testing and production validation. Managed Flows configuration, custom objects and deployment workflows.",
+            "<strong>Web Project Management:</strong> Managed and maintained 15+ WordPress platforms for enterprise clients (Uber, KPMG, Politico). Coordinated with design teams from Figma mockups to production, managed hosting providers, DNS configurations and SSL certificates.",
+            "<strong>Performance & SEO:</strong> Led technical SEO optimization and web performance initiatives (Core Web Vitals) across all client platforms. Monitored analytics and provided data-driven recommendations.",
+            "<strong>Frontend Development:</strong> Hands-on HTML5/CSS3/JavaScript integration and Lightning Web Components (Salesforce) adjustments, ensuring technical autonomy when interfacing with development teams."
           ]
         },
         {
@@ -86,8 +84,8 @@ export function getIntroText(): string[] {
           period: "Feb 2016 - Jun 2017",
           companyLogoSrc: "/img/resume/experiences/company-logo-abus.png",
           jobMissions: [
+            "<strong>Technical Interface:</strong> Acted as the primary point of contact for the German HQ development team, managing bug tracking, feature requests and project follow-up.",
             "<strong>CMS Administration:</strong> Managed the French product catalog using eZ Publish, focusing on structural content updates and technical SEO.",
-            "<strong>Technical Interface:</strong> Acted as the primary point of contact for the German HQ development team, managing bug tracking and feature requests.",
             "<strong>Front-End Integration:</strong> Developed and styled custom landing pages and marketing assets using HTML/CSS.",
             "<strong>Digital Assets:</strong> Created complex infographics and visual branding for the French market's digital presence."
           ]
@@ -115,10 +113,8 @@ export function getIntroText(): string[] {
             "<strong>Visual Storytelling:</strong> Designed infographics and digital assets to support editorial growth."
           ]
         }
-    
     ]
-
-  }
+}
 
   export function getSkills() {
     return [
