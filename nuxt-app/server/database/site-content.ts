@@ -1,5 +1,9 @@
 // server/data/site-content.ts
 
+export function getMyTitle() {
+    return "Digital Project Manager & Technical Product Owner · Web, CRM & Digital Platforms"
+}
+
 export function getIntroText(): string[] {
     return [
         `Hello, I'm Dylan Tettarasar, a Frontend Developer specializing in Vue.js and Nuxt.js, with 7 years of experience building web applications and managing technical projects.`,
