@@ -1,7 +1,10 @@
 // server/data/site-content.ts
 
 export function getMyTitle() {
-    return "Digital Project Manager & Technical Product Owner · Web, CRM & Digital Platforms"
+    return {
+        title: `Hello World! I’m Dylan`,
+        subtitle: `Digital Project Manager & Technical Product Owner <span class="block md:inline">· Web, CRM & Digital Platform`,
+    }
 }
 
 export function getIntroText(): string[] {
