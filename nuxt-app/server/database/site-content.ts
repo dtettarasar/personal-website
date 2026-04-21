@@ -9,27 +9,28 @@ export function getMyTitle() {
 
 export function getIntroText(): string[] {
     return [
-        `Hello, I'm Dylan Tettarasar, a Frontend Developer specializing in Vue.js and Nuxt.js, with 7 years of experience building web applications and managing technical projects.`,
+        `Hello, I'm Dylan Tettarasar, a Digital Project Manager & Technical Product Owner with 7 years of experience in web environments, bridging the gap between business needs and technical execution.`,
 
         `I started my career in web development and digital project management, working across design, integration, and deployment. 
-        For several years, <strong>I developed and maintained WordPress platforms for enterprise clients (Uber, KPMG, Politico), 
-        built custom interfaces with HTML/CSS/JavaScript, and managed the complete development lifecycle from conception to production</strong>.`,
+        For several years, <strong>I managed and maintained WordPress platforms for enterprise clients (Uber, KPMG, Politico), 
+        coordinated development teams, wrote technical specifications, and oversaw the complete project lifecycle from conception to production</strong>.`,
         
-        `<strong>This gave me a comprehensive understanding of how modern web applications are built, deployed, and scaled</strong> both 
-        from a technical architecture perspective and a product/business impact angle. I developed expertise in frontend development, 
-        responsive design, performance optimization, and crucially the ability to collaborate effectively with cross-functional teams 
-        as I understand both the technical and business sides.`,
+        `<strong>This gave me a comprehensive understanding of how modern web applications are built, deployed, and scaled</strong> — 
+        both from a technical architecture perspective and a product/business impact angle. I developed strong expertise in 
+        digital project management, CRM platforms (Salesforce), performance optimization, and the ability to collaborate 
+        effectively with cross-functional teams as I understand both the technical and business sides.`,
 
-        `Over time, <strong>I decided to deepen my technical skills on modern frameworks and full-stack architectures</strong>. 
-        That's when I mastered Vue.js, Nuxt.js, Node.js, and modern DevOps workflows (Docker, Git, CI/CD). 
-        I built several production-ready applications to consolidate this expertise.`,
+        `Over time, <strong>I deepened my technical skills on modern frameworks and full-stack architectures</strong>. 
+        I mastered Vue.js, Nuxt.js, Node.js, and modern DevOps workflows (Docker, Git, CI/CD), 
+        and built several production-ready applications. <strong>This hands-on development experience makes me a more effective 
+        project manager</strong> — I speak the same language as developers and can evaluate technical solutions with confidence.`,
        
-        `Today, I position myself as a <strong>Frontend Developer with strong product sense</strong>. I combine technical skills 
-        (Vue.js, Nuxt.js, JavaScript, HTML/CSS, performance optimization) with an understanding of user needs and business metrics. 
-        This combination allows me to <strong>build applications that are not only technically excellent but also strategically aligned 
-        with product goals</strong>.`,
+        `Today, I position myself as a <strong>Technical Product Owner with strong hands-on web expertise</strong>. I combine 
+        project management skills (backlog management, specs, stakeholder coordination) with a genuine understanding of 
+        technical constraints and digital product strategy. This combination allows me to <strong>deliver projects that are 
+        not only well-executed but also strategically aligned with business goals</strong>.`,
     ]
-  }
+}
 
   export function getResumeIntro() {
 
