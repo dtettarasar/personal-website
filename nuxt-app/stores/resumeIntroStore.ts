@@ -1,37 +1,33 @@
 // stores/resumeIntroStore.ts
 import { defineStore } from 'pinia'
+import { ref } from 'vue'
 
-export const useResumeIntroStore = defineStore('resumeIntro', {
+export const useResumeIntroStore = defineStore('resumeIntro', () => {
+  // ===== STATE =====
+  const data = ref<string[]>([])
+  const loading = ref<boolean>(false)
+  const error = ref<string | null>(null)
 
-  state: () => ({
-    data: [] as string[],
-    loading: false,
-    error: null as string | null,
-  }),
+  // ===== ACTIONS =====
+  async function fetchData(): Promise<string[]> {
+    if (data.value.length > 0) {
+      return data.value
+    }
 
-  actions: {
-    async fetchData() {
+    loading.value = true
+    error.value = null
 
-      if (this.data.length > 0) {
-        return this.data
-      }
+    try {
+      data.value = await $fetch<string[]>('/api/resume-intro')
+      return data.value
+    } catch (err: any) {
+      error.value = err?.statusMessage ?? err?.message ?? 'Erreur lors du chargement de l\'intro resume'
+      return []
+    } finally {
+      loading.value = false
+    }
+  }
 
-      this.loading = true
-      this.error = null
-
-      try {
-        this.data = await $fetch<string[]>('/api/resume-intro')
-        return this.data
-
-      } catch (err: any) {
-        this.error = err?.statusMessage ?? err?.message ?? 'Erreur lors du chargement de l\'intro resume'
-        return []
-
-      } finally {
-        this.loading = false
-      }
-
-    },
-  },
-
+  // ===== RETURN =====
+  return { data, loading, error, fetchData }
 })

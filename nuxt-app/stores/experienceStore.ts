@@ -1,60 +1,43 @@
+// stores/experienceStore.ts
 import { defineStore } from 'pinia'
+import { ref } from 'vue'
 
-// Type des données renvoyées par l’API (à adapter selon ton API)
+// ===== INTERFACES TYPESCRIPT =====
 interface ExperienceItem {
+  companyName: string
+  companyVenue: string
+  jobTitle: string
+  period: string
+  companyLogoSrc: string
+  jobMissions: string[]
+}
 
-        companyName: string
-        companyVenue: string
-        jobTitle: string
-        period: string
-        companyLogoSrc: string
-        jobMissions: string[]
+export const useExperienceStore = defineStore('experience', () => {
+  // ===== STATE =====
+  const data = ref<ExperienceItem[]>([])
+  const loading = ref<boolean>(false)
+  const error = ref<string | null>(null)
 
+  // ===== ACTIONS =====
+  async function fetchData(): Promise<ExperienceItem[]> {
+    if (data.value.length > 0) {
+      return data.value
     }
-  
-interface ExperienceState {
 
-        data: ExperienceItem[]
-        loading: boolean
-        error: string | null
+    loading.value = true
+    error.value = null
 
+    try {
+      data.value = await $fetch<ExperienceItem[]>('/api/experience')
+      return data.value
+    } catch (err: any) {
+      error.value = err?.statusMessage ?? err?.message ?? 'Erreur lors du chargement des experiences'
+      return []
+    } finally {
+      loading.value = false
     }
+  }
 
-export const useExperienceStore = defineStore('experience', {
-
-    state: (): ExperienceState => ({
-        data: [],
-        loading: false,
-        error: null as string | null,
-    }),
-
-    actions: {
-
-        async fetchData() {
-    
-            if (this.data.length > 0) { 
-
-                return this.data
-                
-            }
-    
-          this.loading = true
-          this.error = null
-    
-          try {
-            // const data = await $fetch<string[]>('/api/experience')
-            this.data = await $fetch<string[]>('/api/experience')
-            return this.data
-    
-          } catch (err: any) {
-            this.error = err?.statusMessage ?? err?.message ?? 'Erreur lors du chargement des experiences'
-            return []
-            
-          } finally {
-            this.loading = false
-          }
-    
-        },
-      },
-
+  // ===== RETURN =====
+  return { data, loading, error, fetchData }
 })

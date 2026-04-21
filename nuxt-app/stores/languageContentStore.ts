@@ -1,40 +1,40 @@
+// stores/languageContentStore.ts
 import { defineStore } from 'pinia'
+import { ref } from 'vue'
 
-export const useLanguageContentStore = defineStore('languageContent', {
+// ===== INTERFACES TYPESCRIPT =====
+interface LanguageContent {
+  name: string
+  level: string
+  img: string
+}
 
-    state: () => ({
-        data: [],
-        loading: false,
-        error: null as string | null,
-    }),
+export const useLanguageContentStore = defineStore('languageContent', () => {
+  // ===== STATE =====
+  const data = ref<LanguageContent[]>([])
+  const loading = ref<boolean>(false)
+  const error = ref<string | null>(null)
 
-    actions: {
+  // ===== ACTIONS =====
+  async function fetchData(): Promise<LanguageContent[]> {
+    if (data.value.length > 0) {
+      return data.value
+    }
 
-        async fetchData() {
-    
-            if (this.data.length > 0) { 
+    loading.value = true
+    error.value = null
 
-                return this.data
-                
-            }
-    
-          this.loading = true
-          this.error = null
-    
-          try {
+    try {
+      data.value = await $fetch<LanguageContent[]>('/api/lang-content')
+      return data.value
+    } catch (err: any) {
+      error.value = err?.statusMessage ?? err?.message ?? 'Erreur lors du chargement du contenu des langues'
+      return []
+    } finally {
+      loading.value = false
+    }
+  }
 
-            this.data = await $fetch<string[]>('/api/lang-content')
-            return this.data
-    
-          } catch (err: any) {
-            this.error = err?.statusMessage ?? err?.message ?? 'Erreur lors du chargement du contenu des langues'
-            return []
-
-          } finally {
-            this.loading = false
-          }
-    
-        },
-      },
-
+  // ===== RETURN =====
+  return { data, loading, error, fetchData }
 })
