@@ -11,7 +11,7 @@
       <div class="relative">
         <img
           src="/img/profile_pic_square.jpg"
-          class="w-32 lg:w-48 rounded-full border-4 border-emerald-400 shadow-[0_0_25px_rgba(74,222,128,0.5)] animate-borderPulse"
+          class="w-32 lg:w-48 rounded-full border-4 border-emerald-400 shadow-[0_0_25px_rgba(74,222,128,0.5)] animate-border-pulse"
         />
       </div>
 
@@ -19,13 +19,12 @@
       <h1
         class="font-mono tracking-[0.3em] text-emerald-400 text-4xl md:text-6xl uppercase drop-shadow-[0_0_15px_rgba(74,222,128,0.4)]"
       >
-        Hello World! I’m Dylan<span class="animate-pulse">_</span>
+        {{ myTitleStore.data?.title || 'Loading...' }}<span class="animate-pulse">_</span>
       </h1>
 
       <!-- Sous-titre -->
       <p class="text-lg md:text-2xl lg:text-3xl font-light text-gray-200">
-        Frontend Developer
-        <span class="block md:inline">· Vue.js / Nuxt.js Specialist</span>
+        <span v-html="myTitleStore.data?.subtitle || 'Loading subtitle...'"></span>
       </p>
 
       <!-- Icônes -->
@@ -48,6 +47,15 @@
   </section>
 </template>
 
+<script setup lang="ts">
+
+import { useMyTitleStore } from '~/stores/myTitleStore'
+
+const myTitleStore = useMyTitleStore()
+await useAsyncData('my-title', () => myTitleStore.fetchData())
+
+</script>
+
 <style scoped>
 
 /*
@@ -65,22 +73,6 @@
     #3aa37f
   );
   background-size: 400% 400%;
-}
-
-/* Effet halo vert autour de la photo */
-@keyframes borderPulse {
-  0% {
-    box-shadow: 0 0 0 0 rgba(74, 222, 128, 0.4);
-  }
-  70% {
-    box-shadow: 0 0 25px 15px rgba(74, 222, 128, 0);
-  }
-  100% {
-    box-shadow: 0 0 0 0 rgba(74, 222, 128, 0);
-  }
-}
-.animate-borderPulse {
-  animation: borderPulse 2.8s infinite ease-in-out;
 }
 
 /* Scanlines subtiles */

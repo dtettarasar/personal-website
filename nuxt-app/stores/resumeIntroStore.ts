@@ -1,8 +1,8 @@
-// stores/introStore.ts
+// stores/resumeIntroStore.ts
 import { defineStore } from 'pinia'
 import { ref } from 'vue'
 
-export const useIntroStore = defineStore('intro', () => {
+export const useResumeIntroStore = defineStore('resumeIntro', () => {
   // ===== STATE =====
   const data = ref<string[]>([])
   const loading = ref<boolean>(false)
@@ -18,10 +18,10 @@ export const useIntroStore = defineStore('intro', () => {
     error.value = null
 
     try {
-      data.value = await $fetch<string[]>('/api/intro-text')
+      data.value = await $fetch<string[]>('/api/resume-intro')
       return data.value
     } catch (err: any) {
-      error.value = err?.statusMessage ?? err?.message ?? 'Erreur lors du chargement de l\'intro'
+      error.value = err?.statusMessage ?? err?.message ?? 'Erreur lors du chargement de l\'intro resume'
       return []
     } finally {
       loading.value = false

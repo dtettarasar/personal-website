@@ -1,27 +1,44 @@
 // server/data/site-content.ts
 
+export function getMyTitle() {
+    return {
+        title: `Hello World! I’m Dylan`,
+        subtitle: `Digital Project Manager & Technical Product Owner <span class="block md:inline">· Web, CRM & Digital Platform</span>`,
+    }
+}
+
 export function getIntroText(): string[] {
     return [
-        `Hello, I'm Dylan Tettarasar, a Frontend Developer specializing in Vue.js and Nuxt.js, with 7 years of experience building web applications and managing technical projects.`,
+        `Hello, I'm Dylan Tettarasar, a Digital Project Manager & Technical Product Owner with 7 years of experience in web environments, bridging the gap between business needs and technical execution.`,
 
         `I started my career in web development and digital project management, working across design, integration, and deployment. 
-        For several years, <strong>I developed and maintained WordPress platforms for enterprise clients (Uber, KPMG, Politico), 
-        built custom interfaces with HTML/CSS/JavaScript, and managed the complete development lifecycle from conception to production</strong>.`,
+        For several years, <strong>I managed and maintained WordPress platforms for enterprise clients (Uber, KPMG, Politico), 
+        coordinated development teams, wrote technical specifications, and oversaw the complete project lifecycle from conception to production</strong>.`,
         
-        `<strong>This gave me a comprehensive understanding of how modern web applications are built, deployed, and scaled</strong> both 
-        from a technical architecture perspective and a product/business impact angle. I developed expertise in frontend development, 
-        responsive design, performance optimization, and crucially the ability to collaborate effectively with cross-functional teams 
-        as I understand both the technical and business sides.`,
+        `<strong>This gave me a comprehensive understanding of how modern web applications are built, deployed, and scaled</strong> — 
+        both from a technical architecture perspective and a product/business impact angle. I developed strong expertise in 
+        digital project management, CRM platforms (Salesforce), performance optimization, and the ability to collaborate 
+        effectively with cross-functional teams as I understand both the technical and business sides.`,
 
-        `Over time, <strong>I decided to deepen my technical skills on modern frameworks and full-stack architectures</strong>. 
-        That's when I mastered Vue.js, Nuxt.js, Node.js, and modern DevOps workflows (Docker, Git, CI/CD). 
-        I built several production-ready applications to consolidate this expertise.`,
+        `Over time, <strong>I deepened my technical skills on modern frameworks and full-stack architectures</strong>. 
+        I mastered Vue.js, Nuxt.js, Node.js, and modern DevOps workflows (Docker, Git, CI/CD), 
+        and built several production-ready applications. <strong>This hands-on development experience makes me a more effective 
+        project manager</strong> — I speak the same language as developers and can evaluate technical solutions with confidence.`,
        
-        `Today, I position myself as a <strong>Frontend Developer with strong product sense</strong>. I combine technical skills 
-        (Vue.js, Nuxt.js, JavaScript, HTML/CSS, performance optimization) with an understanding of user needs and business metrics. 
-        This combination allows me to <strong>build applications that are not only technically excellent but also strategically aligned 
-        with product goals</strong>.`,
+        `Today, I position myself as a <strong>Technical Product Owner with strong hands-on web expertise</strong>. I combine 
+        project management skills (backlog management, specs, stakeholder coordination) with a genuine understanding of 
+        technical constraints and digital product strategy. This combination allows me to <strong>deliver projects that are 
+        not only well-executed but also strategically aligned with business goals</strong>.`,
     ]
+}
+
+  export function getResumeIntro() {
+
+    return [
+        `Over the years, I've worked at the crossroads of web project management, CRM platforms, and technical development: piloting WordPress platforms for enterprise clients (Uber, KPMG, Politico), managing Salesforce projects end-to-end, and coordinating development teams from specifications to production delivery.`,
+        `Today, I combine this hands-on experience with a genuine technical background in modern web development — making me a Project Manager who truly speaks the same language as developers, and a Technical Product Owner who can bridge business needs and technical execution with confidence.`
+    ]
+
   }
 
   export function getLanguageContent() {
@@ -45,9 +62,7 @@ export function getIntroText(): string[] {
   }
 
   export function getExperiences() {
-
     return [
-
         {
           companyName: "DII / POLITICO",
           companyVenue: "Paris, France",
@@ -55,11 +70,11 @@ export function getIntroText(): string[] {
           period: "Jan 2018 - Dec 2024",
           companyLogoSrc: "/img/resume/experiences/company-logo-dii.png",
           jobMissions: [
-            "<strong>Frontend Development & Integration:</strong> Developed and maintained 15+ WordPress sites for enterprise clients (Uber, KPMG, Politico). Responsible for responsive HTML5/CSS3/JavaScript integration from Figma mockups and performance optimization (Core Web Vitals).",
-            "<strong>Salesforce Component Development:</strong> Modified and maintained Lightning Web Components (Salesforce): HTML/CSS/JavaScript adjustments, UI fixes, and logic updates. Managed the full development lifecycle: Git branching, testing, and deployments (staging/production).",
-            "<strong>Technical Project Management:</strong> Collaborated with development teams to bridge business needs and technical execution. Wrote technical specifications, managed Jira workflows, and led Quality Assurance (QA) testing.",
-            "<strong>Performance & Accessibility:</strong> Optimized web performance (Core Web Vitals) and implemented accessibility standards (WCAG) across all projects.",
-            "<strong>Infrastructure & DevOps:</strong> Managed domain lifecycles and DNS configurations via Gandi.net, and coordinated with hosting providers for deployment and maintenance of client websites."
+            "<strong>Technical Project Management:</strong> Collected and structured business requirements from internal stakeholders, translated them into clear functional specifications and Jira workflows. Coordinated development teams, managed delivery cycles, and led QA testing from staging to production.",
+            "<strong>CRM Project Management:</strong> Piloted Salesforce projects end-to-end: requirements gathering, functional specs, ticket creation and prioritization, developer coordination, UAT testing and production validation. Managed Flows configuration, custom objects and deployment workflows.",
+            "<strong>Web Project Management:</strong> Managed and maintained 15+ WordPress platforms for enterprise clients (Uber, KPMG, Politico). Coordinated with design teams from Figma mockups to production, managed hosting providers, DNS configurations and SSL certificates.",
+            "<strong>Performance & SEO:</strong> Led technical SEO optimization and web performance initiatives (Core Web Vitals) across all client platforms. Monitored analytics and provided data-driven recommendations.",
+            "<strong>Frontend Development:</strong> Hands-on HTML5/CSS3/JavaScript integration and Lightning Web Components (Salesforce) adjustments, ensuring technical autonomy when interfacing with development teams."
           ]
         },
         {
@@ -69,8 +84,8 @@ export function getIntroText(): string[] {
           period: "Feb 2016 - Jun 2017",
           companyLogoSrc: "/img/resume/experiences/company-logo-abus.png",
           jobMissions: [
+            "<strong>Technical Interface:</strong> Acted as the primary point of contact for the German HQ development team, managing bug tracking, feature requests and project follow-up.",
             "<strong>CMS Administration:</strong> Managed the French product catalog using eZ Publish, focusing on structural content updates and technical SEO.",
-            "<strong>Technical Interface:</strong> Acted as the primary point of contact for the German HQ development team, managing bug tracking and feature requests.",
             "<strong>Front-End Integration:</strong> Developed and styled custom landing pages and marketing assets using HTML/CSS.",
             "<strong>Digital Assets:</strong> Created complex infographics and visual branding for the French market's digital presence."
           ]
@@ -98,31 +113,56 @@ export function getIntroText(): string[] {
             "<strong>Visual Storytelling:</strong> Designed infographics and digital assets to support editorial growth."
           ]
         }
-    
     ]
-
-  }
+}
 
   export function getSkills() {
     return [
+
       {
-        title: "Frontend – Main Stack",
-        icon: "mdi:star-four-points",
+        title: "Project Management",
+        icon: "mdi:clipboard-check",
         items: [
-          { icon: "mdi:vuejs", label: "Vue.js" },
-          { icon: "lineicons:nuxt", label: "Nuxt.js" },
-          { icon: "mdi:tailwind", label: "Tailwind CSS" }
+          { icon: "mdi:jira", label: "Jira" },
+          { icon: "mdi:atlassian", label: "Confluence" },
+          { icon: "bi:kanban-fill", label: "Agile / Kanban" },
+          { icon: "mdi:file-document-edit", label: "Functional Specs" },
+          { icon: "mdi:account-group", label: "Stakeholder Management" }
         ]
       },
 
       {
-        title: "Web & Integration",
-        icon: "mdi:code-tags",
+        title: "CRM & Business Platforms",
+        icon: "lsicon:marketing-filled",
+        items: [
+          { icon: "mdi:salesforce", label: "Salesforce" },
+          { icon: "ic:baseline-wordpress", label: "WordPress" },
+          { icon: "mdi:google-analytics", label: "Google Analytics" },
+          { icon: "mdi:microsoft-office", label: "Office Suite" }
+        ]
+      },
+
+      {
+        title: "SEO & Performance",
+        icon: "mdi:magnify",
+        items: [
+          { icon: "mdi:search-web", label: "Technical SEO" },
+          { icon: "mdi:speedometer", label: "Core Web Vitals" },
+          { icon: "mdi:eye-check", label: "Accessibility (WCAG)" }
+        ]
+      },
+
+      {
+        title: "Web & Digital",
+        icon: "mdi:web",
         items: [
           { icon: "mdi:language-html5", label: "HTML5" },
           { icon: "mdi:language-css3", label: "CSS3" },
           { icon: "mdi:language-javascript", label: "JavaScript" },
-          { icon: "mdi:bootstrap", label: "Bootstrap" }
+          { icon: "mdi:tailwind", label: "Tailwind CSS" },
+          { icon: "mdi:bootstrap", label: "Bootstrap" },
+          { icon: "mdi:vuejs", label: "Vue.js" },
+          { icon: "lineicons:nuxt", label: "Nuxt.js" }
         ]
       },
 
@@ -134,7 +174,6 @@ export function getIntroText(): string[] {
           { icon: "mdi:docker", label: "Docker" },
           { icon: "simple-icons:caddy", label: "Caddy" },
           { icon: "mdi:github", label: "GitHub" },
-          { icon: "mdi:jira", label: "Jira" },
           { icon: "ri:copilot-fill", label: "GitHub Copilot" },
           { icon: "ri:claude-fill", label: "Claude Code" },
           { icon: "devicon-plain:vitest", label: "Vitest" }
@@ -148,19 +187,7 @@ export function getIntroText(): string[] {
           { icon: "mdi:nodejs", label: "Node.js / Express" },
           { icon: "lineicons:mongodb", label: "MongoDB" },
           { icon: "mdi:language-python", label: "Python" },
-          { icon: "devicon-plain:django", label: "Django" },
           { icon: "mdi:database", label: "SQL" }
-        ]
-      },
-
-      {
-        title: "CMS & Business Tools",
-        icon: "lsicon:marketing-filled",
-        items: [
-          { icon: "ic:baseline-wordpress", label: "WordPress" },
-          { icon: "mdi:salesforce", label: "Salesforce" },
-          { icon: "mdi:google-analytics", label: "Google Analytics" },
-          { icon: "mdi:microsoft-office", label: "Office Suite" }
         ]
       },
 
@@ -242,13 +269,13 @@ export function getIntroText(): string[] {
     return [
       {
         title: "News Ipsum",
-        img: "/img/portfolio/news-ipsum-homepage.png", // Prends une capture du carrousel !
+        img: "/img/portfolio/news-ipsum-homepage.png",
         desc: [
-          "<strong>High-performance News Platform</strong> built with a modern Nuxt 4/3 and TypeScript architecture.",
-          "Implemented a <strong>Test-Driven Development (TDD)</strong> approach with Vitest to ensure reliable business logic from day one.",
-          "Focus on <strong>Web Accessibility (a11y)</strong>, aiming for WCAG compliance to provide an optimal reading experience.",
-          "Developed custom <strong>CLI internal tools</strong> for efficient Docker environment management and admin initialization.",
-          "Automated deployment using a <strong>Docker & Caddy</strong> stack with native SSL management on a VPS."
+          "<strong>End-to-end web project</strong> managed and built from conception to production deployment — illustrating full ownership of a digital product lifecycle.",
+          "Defined <strong>product architecture and technical roadmap</strong> before development, applying structured project management methodology (specs, backlog, iterative delivery).",
+          "Implemented <strong>Test-Driven Development (TDD)</strong> with Vitest to ensure reliable business logic and maintainable codebase.",
+          "Automated deployment using a <strong>Docker & Caddy</strong> stack with native SSL management on a VPS — demonstrating DevOps awareness.",
+          "Focus on <strong>Web Accessibility (a11y)</strong> and SEO optimization, ensuring both technical excellence and user experience quality."
         ],
         icon: "material-symbols:newspaper-rounded",
         stack: [
@@ -279,11 +306,11 @@ export function getIntroText(): string[] {
         title: "Personal Portfolio Architecture",
         img: "/img/portfolio/img-portfolio-personal-homepage.png",
         desc: [
-          "A <strong>Fullstack SSR application</strong> built with Nuxt 4, featuring a custom API for dynamic content management.",
-          "Engineered as a <strong>Generic Starter Kit</strong>, available as Open Source on GitHub under MIT license.",
+          "A <strong>Fullstack SSR application</strong> designed and built as a complete digital product — from architecture design to production deployment.",
+          "Demonstrates <strong>end-to-end project ownership</strong>: technical architecture, API design, frontend integration and infrastructure management.",
           "Orchestrated with <strong>Docker</strong> (multi-service environment) including separate Dev and Production configurations.",
-          "Automated workflows via <strong>Makefile</strong> to standardize deployment and maintenance commands.",
           "Secure infrastructure using <strong>Caddy</strong> as a reverse proxy with automated HTTPS/SSL certificates.",
+          "Engineered as a <strong>Generic Starter Kit</strong>, available as Open Source on GitHub under MIT license.",
         ],
         icon: "material-symbols:person-pin-rounded",
         stack: [
@@ -311,11 +338,11 @@ export function getIntroText(): string[] {
         title: "Otis AI – AI SaaS Platform",
         img: "/img/portfolio/otis-ai-homepage.png",
         desc: [
-          "An <strong>AI-assisted content generation SaaS</strong> integrating OpenAI models via dynamic prompt engineering.",
-          "Full implementation of a <strong>monetization system</strong> using the Stripe API with a credit-based business model.",
-          "Robust <strong>JWT-based authentication</strong> system securing exchanges between the Vue.js frontend and Node.js backend.",
-          "Rich content editor allowing post-generation formatting and real-time database updates.",
-          "Comprehensive test suite (Unit & Integration) with <strong>Vitest</strong> to ensure API and UI stability.",
+          "A <strong>complete SaaS product</strong> designed and delivered end-to-end — from product concept to technical implementation and monetization.",
+          "Defined and implemented a <strong>credit-based business model</strong> with full Stripe API integration, demonstrating product strategy and business thinking.",
+          "Architected a <strong>secure full-stack application</strong> with JWT authentication, REST API and real-time database interactions.",
+          "Built a comprehensive <strong>test suite (Unit & Integration)</strong> with Vitest to ensure product stability and reliability.",
+          "Integrates <strong>OpenAI API</strong> via dynamic prompt engineering for AI-assisted content generation workflows.",
         ],
         icon: "material-symbols:edit-note-rounded",
         stack: [
@@ -352,11 +379,10 @@ export function getIntroText(): string[] {
         title: "AI Art Shield – Protect Your Art",
         img: "/img/portfolio/cs50.jpg",
         desc: [
-          "A <strong>Advanced Python-based security tool</strong> designed to protect visual artworks from unauthorized AI training and scraping.",
+          "A <strong>Python-based security tool</strong> designed to protect visual artworks from unauthorized AI training and scraping.",
           "Implements <strong>invisible perturbations</strong> (Discrete Cosine Transform - DCT) to disrupt AI style recognition without altering human perception.",
           "Features a <strong>Protection Evaluation System</strong> that measures and compares alteration levels between original and secured versions.",
-          "Engineered with <strong>Pillow, OpenCV, and NumPy</strong> for high-performance image processing and pixel-level manipulation.",
-          "Future-ready architecture: Designed for modular refactoring and integration of <strong>Adversarial Perturbations</strong> and <strong>Blockchain-signed signatures</strong>.",
+          "Engineered with <strong>Pillow, OpenCV, and NumPy</strong> for high-performance image processing.",
           "The project is part of <strong>Harvard's CS50P course</strong>.",
         ],
         icon: "ic:round-terminal",
@@ -380,11 +406,10 @@ export function getIntroText(): string[] {
         title: "Tic Tac Toe AI – Algorithm Mastery",
         img: "/img/portfolio/img-portfolio-cs50x-final.png",
         desc: [
-          "An <strong>Advanced Browser-based Game</strong> featuring an unbeatable AI powered by the <strong>Minimax Algorithm</strong>.",
+          "A <strong>browser-based game</strong> featuring an unbeatable AI powered by the <strong>Minimax Algorithm</strong>.",
           "Engineered three distinct game modes: Human vs. Human, Easy AI (Randomized logic), and Impossible AI (Recursive decision-making).",
-          "Implemented a <strong>recursive search tree</strong> to evaluate all possible moves and guarantee the optimal outcome for the AI.",
           "Developed a real-time <strong>Score & Statistics Tracker</strong> managing session states across multiple game rounds.",
-          "Focus on clean UI/UX with responsive design and integrated SVG iconography for a 'Pixel Perfect' visual rendering.",
+          "Focus on clean UI/UX with responsive design — demonstrating product thinking and user experience sensitivity.",
           "The project is part of <strong>Harvard's CS50x course</strong>.",
         ],
         icon: "hugeicons:tic-tac-toe",
@@ -393,7 +418,6 @@ export function getIntroText(): string[] {
           "mdi:language-css3",
           "mdi:language-javascript",
         ],
-        video: "https://youtu.be/O13g7CtV2bI",
         links: [
           { 
             label:"View source code", 
@@ -411,11 +435,10 @@ export function getIntroText(): string[] {
         title: "Business Conference Platform",
         img: "/img/portfolio/img-portfolio-cs50-homepage.png",
         desc: [
-          "<strong>Responsive event platform</strong> featuring a complex registration system and interactive UI components built with Vanilla JavaScript.",
-          "Engineered a <strong>custom Form Validation Engine</strong> using Regular Expressions (Regex) to handle real-time error messaging and data integrity.",
-          "Developed <strong>dynamic scroll-triggered animations</strong>, including automated counters and smart navigation elements (Go-to-top logic).",
-          "Implemented <strong>DOM manipulation patterns</strong> for state management: toggling success states and handling multi-input data structures (radios, checkboxes, text).",
-          "Built with a mobile-first approach using <strong>Bootstrap</strong>, ensuring cross-browser compatibility and optimized visual consistency.",
+          "<strong>Responsive event platform</strong> featuring a complex registration system — demonstrating UX thinking and user journey design.",
+          "Engineered a <strong>custom Form Validation Engine</strong> using Regex for real-time error messaging and data integrity.",
+          "Developed <strong>dynamic scroll-triggered animations</strong> and smart navigation elements.",
+          "Built with a mobile-first approach using <strong>Bootstrap</strong>, ensuring cross-browser compatibility.",
           "The project is part of <strong>Harvard's CS50x course</strong>.",
         ],
         icon: "material-symbols:event-available-rounded",
@@ -437,9 +460,9 @@ export function getIntroText(): string[] {
         title: "Technical Documentation Interface",
         img: "/img/portfolio/img-portfolio-doc-page.png",
         desc: [
-          "<strong>High-readability documentation portal</strong> designed for the freeCodeCamp Responsive Web Design certification.",
-          "Strict adherence to <strong>HTML5 Semantic standards</strong> and ARIA roles to ensure full compatibility with screen readers.",
-          "Engineered a <strong>dynamic CSS layout</strong> with sticky navigation and fluid typography for an optimal technical reading experience.",
+          "<strong>High-readability documentation portal</strong> — demonstrating information architecture and content structuring skills.",
+          "Strict adherence to <strong>HTML5 Semantic standards</strong> and ARIA roles for full accessibility compliance.",
+          "Engineered a <strong>dynamic CSS layout</strong> with sticky navigation and fluid typography for optimal reading experience.",
           "Certified 'Pixel Perfect' implementation, passing 100% of automated accessibility and responsiveness tests."
         ],
         icon: "mdi:file-document",
@@ -457,4 +480,4 @@ export function getIntroText(): string[] {
         ]
       }
     ]
-  }
+}
