@@ -18,6 +18,21 @@ export default defineNuxtConfig({
     '@nuxt/icon',
     '@nuxtjs/tailwindcss',
     '@pinia/nuxt',
-  ]
+    '@nuxtjs/i18n',
+  ],
+
+  i18n: {
+    locales: [
+      { code: 'fr', language: 'fr-FR', name: 'Français' },
+      { code: 'en', language: 'en-US', name: 'English' }
+    ],
+    defaultLocale: 'en', // Langue par défaut si le navigateur utilise une autre langue
+    strategy: 'no_prefix', // Ou 'prefix_except_default' si tu veux des URLs du type /en/portfolio
+    detectBrowserLanguage: {
+      useCookie: true,
+      cookieKey: 'i18n_redirected',
+      redirectOn: 'root', // Redirige automatiquement selon la langue du navigateur à l'arrivée
+    }
+  }
 
 })
