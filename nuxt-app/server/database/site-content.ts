@@ -1,5 +1,6 @@
 // server/data/site-content.ts
 
+/*
 export function getIntroText(): string[] {
     return [
         `Hello, I'm Dylan Tettarasar, a Frontend Developer specializing in Vue.js and Nuxt.js, with 7 years of experience building web applications and managing technical projects.`,
@@ -22,7 +23,27 @@ export function getIntroText(): string[] {
         This combination allows me to <strong>build applications that are not only technically excellent but also strategically aligned 
         with product goals</strong>.`,
     ]
-  }
+  }*/
+
+  export function getIntroText(locale: string): string[] {
+    
+    if (locale === 'fr') {
+
+      return [
+        `Bonjour, je suis Dylan Tettarasar, un Chef de Projet Digital...`,
+        `J'ai managé et maintenu des plateformes WordPress pour des clients d'envergure (Uber, KPMG, Politico)...`
+      ]
+
+    }
+
+    // Par défaut / FR
+
+    return [
+        `Hello, I'm Dylan Tettarasar, a Digital Project Manager...`,
+        `I managed and maintained WordPress platforms for enterprise clients (Uber, KPMG, Politico)...`
+    ]
+    
+}
 
   export function getLanguageContent() {
 
