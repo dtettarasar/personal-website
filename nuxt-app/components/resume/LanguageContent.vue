@@ -1,11 +1,10 @@
 <template>
-  
   <div class="grid grid-cols-2 gap-4 sm:gap-6 md:gap-8 text-center">
 
+    <!-- 1. AJUSTEMENT : On boucle sur "languages" (la computed) et non plus sur "store.data" -->
     <div 
-      v-for="language in languageContentStore.data" 
+      v-for="language in languages" 
       :key="language.id"
-      :language="language"
       class="language-card p-4 sm:p-6 bg-slate-800 rounded-lg border-2 border-slate-700 shadow-xl transition-shadow hover:shadow-emerald-500/50"
     >
       <img 
@@ -22,37 +21,40 @@
     </div>
 
   </div>
-
 </template>
 
-<script setup>
-
+<script setup lang="ts">
+import { computed } from 'vue'
+import { useI18n } from 'vue-i18n'
 import { useLanguageContentStore } from '@/stores/languageContentStore'
 
+// 2. AJUSTEMENT : On récupère la locale active de l'application
+const { locale } = useI18n()
 const languageContentStore = useLanguageContentStore()
 
-// Get data with SSR method
-await useAsyncData('lang-content', () => languageContentStore.fetchData())
+// 3. AJUSTEMENT : On passe la locale à l'action et on active le "watch" de Nuxt
+await useAsyncData('lang-content', () => languageContentStore.fetchData(locale.value), {
+  watch: [locale]
+})
+
+// 4. AJUSTEMENT : La propriété calculée qui va chercher le bon tableau dans le dictionnaire Pinia
+const languages = computed(() => languageContentStore.dataByLocale[locale.value] || [])
 
 // Séparateur fin pour l'esthétique
 const languageSeparatorClasses = [
     'w-[50%]',
     'h-[2px]',
     'rounded-full',
-    'bg-emerald-400', // 💥 COULEUR AJUSTÉE pour mieux ressortir sur bg-slate-800
+    'bg-emerald-400', 
     'mx-auto',
     'my-2',
 ]
-
 </script>
 
 <style scoped>
-/* Le style CSS reste très simple et n'a pas besoin de modifications majeures */
 .language-card {
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* padding: 1rem; (géré par p-4 sm:p-6 dans le template) */
 }
-
 </style>

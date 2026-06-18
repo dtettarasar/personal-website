@@ -67,25 +67,43 @@ export function getIntroText(): string[] {
 
 }
 
-  export function getLanguageContent() {
+  export function getLanguageContent(locale: string): { name: string; level: string; img: string }[] {
 
-    return [
+  // 1. On définit la structure technique et les clés de traduction
+  const languagesBase = [
+    {
+      id: 'fr',
+      img: '/img/language/france-croissant.png',
+      translations: {
+        fr: { name: 'Français', level: 'Langue maternelle' },
+        en: { name: 'French', level: 'Native Language' }
+      }
+    },
+    {
+      id: 'en',
+      img: '/img/language/uk-afternoon-tea.png',
+      translations: {
+        fr: { name: 'Anglais', level: 'Niveau professionnel' },
+        en: { name: 'English', level: 'Business Level' }
+      }
+    }
+  ]
 
-        {
-            name: 'French',
-            level: 'Native Language',
-            img: '/img/language/france-croissant.png'
-        },
+  // 2. On transforme le tableau pour renvoyer exactement le format attendu
+  return languagesBase.map(lang => {
 
-        {
-            name: 'English',
-            level: 'Business Level',
-            img: '/img/language/uk-afternoon-tea.png'
-        },
+    // On récupère la traduction correspondante, ou on se rabat sur l'anglais au cas où
+    const text = lang.translations[locale as 'fr' | 'en'] || lang.translations['en']
+    
+    return {
+      name: text.name,
+      level: text.level,
+      img: lang.img
+    }
+    
+  })
 
-    ]
-
-  }
+}
 
   export function getExperiences() {
 
