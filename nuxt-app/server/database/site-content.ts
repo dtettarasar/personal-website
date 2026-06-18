@@ -36,13 +36,35 @@ export function getIntroText(): string[] {
 
     }
 
-    // Par défaut / FR
+    // Par défaut / EN
 
     return [
         `Hello, I'm Dylan Tettarasar, a Digital Project Manager...`,
         `I managed and maintained WordPress platforms for enterprise clients (Uber, KPMG, Politico)...`
     ]
     
+}
+
+  export function getResumeIntroText(locale: string): string[] {
+
+    if (locale === 'fr') {
+
+      return [
+        `resume intro text in French`,
+        `Bonjour, je suis Dylan Tettarasar, un Chef de Projet Digital...`,
+        `J'ai managé et maintenu des plateformes WordPress pour des clients d'envergure (Uber, KPMG, Politico)...`
+      ]
+
+    }
+
+    // Par défaut / EN
+
+    return [
+        `resume intro text in English`,
+        `Hello, I'm Dylan Tettarasar, a Digital Project Manager...`,
+        `I managed and maintained WordPress platforms for enterprise clients (Uber, KPMG, Politico)...`
+    ]
+
 }
 
   export function getLanguageContent() {
