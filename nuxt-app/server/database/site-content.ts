@@ -50,7 +50,7 @@ export function getIntroText(): string[] {
     if (locale === 'fr') {
 
       return [
-        `resume intro text in French`,
+        `resume intro text in <strong>French</strong>`,
         `Bonjour, je suis Dylan Tettarasar, un Chef de Projet Digital...`,
         `J'ai managé et maintenu des plateformes WordPress pour des clients d'envergure (Uber, KPMG, Politico)...`
       ]
@@ -60,7 +60,7 @@ export function getIntroText(): string[] {
     // Par défaut / EN
 
     return [
-        `resume intro text in English`,
+        `resume intro text in <strong>English</strong>`,
         `Hello, I'm Dylan Tettarasar, a Digital Project Manager...`,
         `I managed and maintained WordPress platforms for enterprise clients (Uber, KPMG, Politico)...`
     ]
