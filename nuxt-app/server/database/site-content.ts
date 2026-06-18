@@ -105,6 +105,7 @@ export function getIntroText(): string[] {
 
 }
 
+  /*
   export function getExperiences() {
 
     return [
@@ -161,6 +162,70 @@ export function getIntroText(): string[] {
         }
     
     ]
+
+  }*/
+
+  export function getExperiences(locale: string): { companyName: string; companyVenue: string; jobTitle: string; period: string; companyLogoSrc: string; jobMissions: string[] }[] {
+
+    // 1. On définit la structure technique et les clés de traduction
+    const experiencesBase = [
+
+        {
+
+          companyName: "DII / POLITICO",
+          companyVenue: "Paris, France",
+          jobTitle: "Project Manager Web & CRM",
+          period: "Jan 2018 - Dec 2024",
+          companyLogoSrc: "/img/resume/experiences/company-logo-dii.png",
+          jobMissions: [
+            "<strong>Frontend Development & Integration:</strong> Developed and maintained 15+ WordPress sites for enterprise clients (Uber, KPMG, Politico). Responsible for responsive HTML5/CSS3/JavaScript integration from Figma mockups and performance optimization (Core Web Vitals).",
+            "<strong>Salesforce Component Development:</strong> Modified and maintained Lightning Web Components (Salesforce): HTML/CSS/JavaScript adjustments, UI fixes, and logic updates. Managed the full development lifecycle: Git branching, testing, and deployments (staging/production).",
+            "<strong>Technical Project Management:</strong> Collaborated with development teams to bridge business needs and technical execution. Wrote technical specifications, managed Jira workflows, and led Quality Assurance (QA) testing.",
+            "<strong>Performance & Accessibility:</strong> Optimized web performance (Core Web Vitals) and implemented accessibility standards (WCAG) across all projects.",
+            "<strong>Infrastructure & DevOps:</strong> Managed domain lifecycles and DNS configurations via Gandi.net, and coordinated with hosting providers for deployment and maintenance of client websites."
+          ],
+          translations: {
+            fr: {
+              jobTitle: "Chef de Projet Web & CRM",
+              jobMissions: [
+                "<strong>Développement Frontend & Intégration :</strong> Développé et maintenu plus de 15 sites WordPress pour des clients d'entreprise (Uber, KPMG, Politico). Responsable de l'intégration HTML5/CSS3/JavaScript responsive à partir de maquettes Figma et de l'optimisation des performances (Core Web Vitals).",
+                "<strong>Développement de Composants Salesforce :</strong> Modifié et maintenu des composants Lightning Web (Salesforce) : ajustements HTML/CSS/JavaScript, corrections d'interface utilisateur et mises à jour logiques. Gestion du cycle complet de développement : branchement Git, tests et déploiements (staging/production).",
+                "<strong>Gestion Technique de Projet :</strong> Collaboré avec les équipes de développement pour relier les besoins métier à l'exécution technique. Rédaction de spécifications techniques, gestion des flux Jira et direction des tests d'assurance qualité (QA).",
+                "<strong>Performance & Accessibilité :</strong> Optimisé les performances web (Core Web Vitals) et mis en œuvre des normes d'accessibilité (WCAG) sur tous les projets.",
+                "<strong>Infrastructure & DevOps :</strong> Géré les cycles de vie des domaines et les configurations DNS via Gandi.net, et coordonné avec les fournisseurs d'hébergement pour le déploiement et la maintenance des sites clients."
+              ]
+            },
+            en: {
+              jobTitle: "Project Manager Web & CRM",
+              jobMissions: [
+                "<strong>Frontend Development & Integration:</strong> Developed and maintained 15+ WordPress sites for enterprise clients (Uber, KPMG, Politico). Responsible for responsive HTML5/CSS3/JavaScript integration from Figma mockups and performance optimization (Core Web Vitals).",
+                "<strong>Salesforce Component Development:</strong> Modified and maintained Lightning Web Components (Salesforce): HTML/CSS/JavaScript adjustments, UI fixes, and logic updates. Managed the full development lifecycle: Git branching, testing, and deployments (staging/production).",
+                "<strong>Technical Project Management:</strong> Collaborated with development teams to bridge business needs and technical execution. Wrote technical specifications, managed Jira workflows, and led Quality Assurance (QA) testing.",
+                "<strong>Performance & Accessibility:</strong> Optimized web performance (Core Web Vitals) and implemented accessibility standards (WCAG) across all projects.",
+                "<strong>Infrastructure & DevOps:</strong> Managed domain lifecycles and DNS configurations via Gandi.net, and coordinated with hosting providers for deployment and maintenance of client websites."
+              ]
+            }
+          }
+        },
+
+    ]
+
+    // 2. On transforme le tableau pour renvoyer exactement le format attendu
+    return experiencesBase.map(exp => {
+
+      // On récupère la traduction correspondante, ou on se rabat sur l'anglais au cas où
+      const text = exp.translations[locale as 'fr' | 'en'] || exp.translations['en']
+      
+      return {
+        companyName: exp.companyName,
+        companyVenue: exp.companyVenue,
+        jobTitle: text.jobTitle,
+        period: exp.period,
+        companyLogoSrc: exp.companyLogoSrc,
+        jobMissions: text.jobMissions
+      }
+      
+    })
 
   }
 
