@@ -297,7 +297,7 @@ export function getIntroText(): string[] {
   }
     */
 
-  export function getSkills(locale: string) {
+  export function getSkills(locale: string): { title: string; icon: string; items: { icon: string; label: string }[] }[] {
   
     const skillsBase = [
       {
@@ -353,7 +353,7 @@ export function getIntroText(): string[] {
 }
 
 
-
+  /*
   export function getEducations() {
     return [
       {
@@ -414,7 +414,63 @@ export function getIntroText(): string[] {
         ]
       }
     ]
-  }
+  }*/
+
+   export function getEducations(locale: string): { educationLogoSrc: string; title: string; issuer: string; year: string; certificationLink?: string }[] {
+
+    // 1. On définit la structure technique et les clés de traduction
+    const educationsBase = [
+      {
+        educationLogoSrc: "/img/resume/educations/harvard-university-logo-0.png",
+        year: "2025",
+        certificationLink: "https://certificates.cs50.io/eed08f81-a764-4e60-b861-87bb616aacff.pdf?size=letter",
+        translations: {
+          fr: {
+            title: "Introduction à la Programmation avec Python",
+            issuer: "Université Harvard"
+          },
+          en: {
+            title: "Introduction to Programming with Python",
+            issuer: "Harvard University"
+          }
+        }
+      },
+
+      {
+        educationLogoSrc: "/img/resume/educations/fcc_logo.png",
+        year: "2023",
+        certificationLink: "https://www.freecodecamp.org/certification/fcc9e0cf531/back-end-development-and-apis",
+        translations: {
+          fr: {
+            title: "Développement Backend et APIs",
+            issuer: "freeCodeCamp"
+          },
+          en: {
+            title: "Back End Development and APIs",
+            issuer: "freeCodeCamp"
+          }
+        }
+      },
+
+    ]
+
+    // 2. On transforme le tableau pour renvoyer exactement le format attendu
+    return educationsBase.map(edu => {
+
+      // On récupère la traduction correspondante, ou on se rabat sur l'anglais au cas où
+      const text = edu.translations[locale as 'fr' | 'en'] || edu.translations['en']
+      
+      return {
+        educationLogoSrc: edu.educationLogoSrc,
+        title: text.title,
+        issuer: text.issuer,
+        year: edu.year,
+        certificationLink: edu.certificationLink
+      }
+      
+    })
+
+   }
 
   export function getProjects() {
     return [
