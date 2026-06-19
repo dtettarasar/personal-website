@@ -56,7 +56,7 @@ export const useSkillsStore = defineStore('skills', () => {
     const sections = dataByLocale.value[locale] || []
     for (const section of sections) {
       const skill = section.items.find(
-        (item) => item.label.toLowerCase() === label.toLowerCase()
+        (item: SkillItem) => item.label.toLowerCase() === label.toLowerCase()
       )
       if (skill) return skill
     }
@@ -65,7 +65,7 @@ export const useSkillsStore = defineStore('skills', () => {
 
   function getSkillCount(locale: string): number {
     const sections = dataByLocale.value[locale] || []
-    return sections.reduce((total, section) => total + section.items.length, 0)
+    return sections.reduce((total: number, section: SkillSection) => total + section.items.length, 0)
   }
 
   function getSectionByTitle(title: string, locale: string): SkillSection | undefined {

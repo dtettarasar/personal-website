@@ -1,5 +1,6 @@
 // stores/experienceStore.ts
 import { defineStore } from 'pinia'
+import { ref } from 'vue'
 
 export interface ExperienceItem {
   companyName: string
@@ -10,51 +11,64 @@ export interface ExperienceItem {
   jobMissions: string[]
 }
 
-export const useExperienceStore = defineStore('experience', {
+export const useExperienceStore = defineStore('experience',() => {
 
-  state: () => ({
-    // Même pattern dictionnaire que pour les langues !
-    dataByLocale: {} as Record<string, ExperienceItem[]>,
-    loading: false,
-    error: null as string | null,
-  }),
+  //STATE (références réactives)
+  // ===== STATE (références réactives) =====
+    const dataByLocale = ref<Record<string, ExperienceItem[]>>({})
+    const loading = ref(false)
+    const error = ref<string | null>(null)
 
-  actions: {
-    async fetchData(locale: string) {
+  //ACTIONS (fonctions)
+  async function fetchData(locale: string): Promise<ExperienceItem[]> {
+    // 1. Système de cache par langue
+    if (dataByLocale.value[locale]) { 
+      return dataByLocale.value[locale]
+    }
+  
+    loading.value = true
+    error.value = null
+  
+    try {
+
+      // 2. Appel API avec la locale en paramètre de requête
+      const response = await $fetch<ExperienceItem[]>('/api/experience', {
+        query: { locale }
+      })
       
-      // 1. Système de cache par langue
-      if (this.dataByLocale[locale]) { 
-        return this.dataByLocale[locale]
-      }
-    
-      this.loading = true
-      this.error = null
-    
-      try {
+      // 3. Stockage dans le bon tiroir
+      dataByLocale.value[locale] = response
 
-        // 2. Appel API avec la locale en paramètre de requête
-        const response = await $fetch<ExperienceItem[]>('/api/experience', {
+      return response
+  
+    } catch (err: any) {
 
-          query: { locale }
+      error.value = err?.statusMessage ?? err?.message ?? 'Erreur lors du chargement des expériences'
 
-        })
-        
-        // 3. Stockage dans le bon tiroir
-        this.dataByLocale[locale] = response
+      return []
 
-        return response
-    
-      } catch (err: any) {
+    } finally {
 
-        this.error = err?.statusMessage ?? err?.message ?? 'Erreur lors du chargement des expériences'
+      loading.value = false
 
-        return []
+    }
+  }
 
-      } finally {
+  //GETTERS (fonctions personnalisées avec paramètres)
+  function getExperienceByCompany(companyName: string, locale: string): ExperienceItem | undefined {
+    const experiences = dataByLocale.value[locale] || []
+    return experiences.find(
+      (item: ExperienceItem) => item.companyName.toLowerCase() === companyName.toLowerCase()
+    )
+  }
 
-        this.loading = false
 
-      }
-    },
-  },
+  return {
+    dataByLocale,
+    loading,
+    error,
+    fetchData,
+    getExperienceByCompany
+  }
+
 })
