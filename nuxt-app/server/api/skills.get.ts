@@ -1,22 +1,12 @@
 import { getSkills } from '../database/site-content'
 
 export default defineEventHandler(async (event) => {
-  try {
-    const skillsData = getSkills()
-    
-    return {
-      status: 'success',
-      data: skillsData,
-      timestamp: new Date().toISOString()
-    }
-  } catch (error) {
-    console.error('Error fetching skills:', error)
-    
-    return {
-      status: 'error',
-      message: 'Failed to fetch skills',
-      code: 'SKILLS_FETCH_ERROR',
-      timestamp: new Date().toISOString()
-    }
-  }
+    // 1. On récupère les paramètres de l'URL (ex: { locale: 'fr' })
+    const query = getQuery(event)
+
+    // 2. On extrait la locale, et on met une valeur par défaut ('en') au cas où
+    const locale = (query.locale as string) || 'en'
+
+    // 3. On passe cette locale à ta fonction de données
+    return getSkills(locale as string)
 })

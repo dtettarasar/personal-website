@@ -177,13 +177,6 @@ export function getIntroText(): string[] {
           jobTitle: "Project Manager Web & CRM",
           period: "Jan 2018 - Dec 2024",
           companyLogoSrc: "/img/resume/experiences/company-logo-dii.png",
-          jobMissions: [
-            "<strong>Frontend Development & Integration:</strong> Developed and maintained 15+ WordPress sites for enterprise clients (Uber, KPMG, Politico). Responsible for responsive HTML5/CSS3/JavaScript integration from Figma mockups and performance optimization (Core Web Vitals).",
-            "<strong>Salesforce Component Development:</strong> Modified and maintained Lightning Web Components (Salesforce): HTML/CSS/JavaScript adjustments, UI fixes, and logic updates. Managed the full development lifecycle: Git branching, testing, and deployments (staging/production).",
-            "<strong>Technical Project Management:</strong> Collaborated with development teams to bridge business needs and technical execution. Wrote technical specifications, managed Jira workflows, and led Quality Assurance (QA) testing.",
-            "<strong>Performance & Accessibility:</strong> Optimized web performance (Core Web Vitals) and implemented accessibility standards (WCAG) across all projects.",
-            "<strong>Infrastructure & DevOps:</strong> Managed domain lifecycles and DNS configurations via Gandi.net, and coordinated with hosting providers for deployment and maintenance of client websites."
-          ],
           translations: {
             fr: {
               jobTitle: "Chef de Projet Web & CRM",
@@ -229,6 +222,7 @@ export function getIntroText(): string[] {
 
   }
 
+  /*
   export function getSkills() {
     return [
       {
@@ -301,6 +295,64 @@ export function getIntroText(): string[] {
       }
     ]
   }
+    */
+
+  export function getSkills(locale: string) {
+  
+    const skillsBase = [
+      {
+        // Pour les titres de catégories, comme ils changent toujours, un petit objet direct { fr, en } est super propre
+        title: { fr: "Frontend – Stack Principale", en: "Frontend – Main Stack" },
+        icon: "mdi:star-four-points",
+        items: [
+          { icon: "mdi:vuejs", label: "Vue.js" }, // Chaîne simple = identique pour tout le monde
+          { icon: "lineicons:nuxt", label: "Nuxt.js" },
+          { icon: "mdi:tailwind", label: "Tailwind CSS" }
+        ]
+      },
+      {
+        title: { fr: "Gestion de Projet & Produit", en: "Project & Product Management" },
+        icon: "ion:color-palette",
+        items: [
+          // Objet de traduction = s'adapte selon la locale !
+          { 
+            icon: "mdi:account-group", 
+            label: { 
+              fr: "Gestion des parties prenantes", 
+              en: "Stakeholder Management" 
+            } 
+          },
+          { icon: "mdi:microsoft-azure-devops", label: "Azure DevOps" }, // Outil fixe
+          { icon: "mdi:jira", label: "Jira / Confluence" } // Outil fixe
+        ]
+      }
+    ]
+
+    // 2. On transforme le tableau avec le double niveau de map
+    return skillsBase.map(category => {
+      return {
+        // On récupère le titre de la catégorie traduit
+        title: category.title[locale as 'fr' | 'en'] || category.title['en'],
+        icon: category.icon,
+        
+        // On passe au crible chaque compétence de la catégorie
+        items: category.items.map(item => {
+          
+          // LE TWIST MAGIQUE : On vérifie le type du label
+          const resolvedLabel = typeof item.label === 'string'
+            ? item.label // Si c'est du texte brut, on le renvoie tel quel
+            : (item.label[locale as 'fr' | 'en'] || item.label['en']) // Si c'est un objet, on cherche la langue
+
+          return {
+            icon: item.icon,
+            label: resolvedLabel
+          }
+        })
+      }
+    })
+}
+
+
 
   export function getEducations() {
     return [

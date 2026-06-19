@@ -3,53 +3,58 @@ import { defineStore } from 'pinia'
 import { ref } from 'vue'
 
 // ===== INTERFACES TYPESCRIPT =====
-interface SkillItem {
+export interface SkillItem {
   icon: string
   label: string
 }
 
-interface SkillSection {
+export interface SkillSection {
   title: string
   icon: string
   items: SkillItem[]
 }
 
-// ===== STORE =====
+// ===== STORE (STYLE SETUP) =====
 export const useSkillsStore = defineStore('skills', () => {
-  // ===== STATE =====
-  const data = ref<SkillSection[]>([])
-  const loading = ref<boolean>(false)
+
+  // ===== STATE (références réactives) =====
+  const dataByLocale = ref<Record<string, SkillSection[]>>({})
+  const loading = ref(false)
   const error = ref<string | null>(null)
 
-  // ===== ACTIONS =====
-  async function fetchData(): Promise<SkillSection[]> {
-    // Avoid re-fetch if data already loaded
-    if (data.value.length > 0) {
-      return data.value
+  // ===== ACTIONS (fonctions) =====
+  async function fetchData(locale: string): Promise<SkillSection[]> {
+    // Système de cache : si la langue est déjà chargée, on renvoie les données
+    if (dataByLocale.value[locale]) {
+      return dataByLocale.value[locale]
     }
 
     loading.value = true
     error.value = null
 
     try {
-      const response = await $fetch<{ status: string; data: SkillSection[] }>(
-        '/api/skills'
-      )
-      data.value = response.data
-      return data.value
+      const response = await $fetch<SkillSection[]>('/api/skills', {
+        query: { locale }
+      })
+      
+      // On range la réponse dans le bon tiroir de langue
+      dataByLocale.value[locale] = response
+      return response
+      
     } catch (err: any) {
       console.error('Failed to fetch skills:', err)
-      error.value =
-        err?.statusMessage ?? err?.message ?? 'Error loading skills'
+      error.value = err?.statusMessage ?? err?.message ?? 'Error loading skills'
       return []
     } finally {
       loading.value = false
     }
   }
 
-  // ===== GETTERS =====
-  function getSkillByLabel(label: string): SkillItem | undefined {
-    for (const section of data.value) {
+  // ===== GETTERS (fonctions personnalisées avec paramètres) =====
+  
+  function getSkillByLabel(label: string, locale: string): SkillItem | undefined {
+    const sections = dataByLocale.value[locale] || []
+    for (const section of sections) {
       const skill = section.items.find(
         (item) => item.label.toLowerCase() === label.toLowerCase()
       )
@@ -58,29 +63,31 @@ export const useSkillsStore = defineStore('skills', () => {
     return undefined
   }
 
-  function getSkillCount(): number {
-    return data.value.reduce((total, section) => total + section.items.length, 0)
+  function getSkillCount(locale: string): number {
+    const sections = dataByLocale.value[locale] || []
+    return sections.reduce((total, section) => total + section.items.length, 0)
   }
 
-  function getSectionByTitle(title: string): SkillSection | undefined {
-    return data.value.find((section) =>
+  function getSectionByTitle(title: string, locale: string): SkillSection | undefined {
+    const sections = dataByLocale.value[locale] || []
+    return sections.find((section) =>
       section.title.toLowerCase().includes(title.toLowerCase())
     )
   }
 
-  // ===== RETURN =====
+  // ===== TOUT CE QU'ON REND ACCESSIBLE =====
   return {
     // State
-    data,
+    dataByLocale,
     loading,
     error,
-
+    
     // Actions
     fetchData,
-
+    
     // Getters
     getSkillByLabel,
     getSkillCount,
-    getSectionByTitle,
+    getSectionByTitle
   }
 })
