@@ -13,7 +13,6 @@ export interface ExperienceItem {
 
 export const useExperienceStore = defineStore('experience',() => {
 
-  //STATE (références réactives)
   // ===== STATE (références réactives) =====
     const dataByLocale = ref<Record<string, ExperienceItem[]>>({})
     const loading = ref(false)
