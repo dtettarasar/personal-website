@@ -472,6 +472,7 @@ export function getIntroText(): string[] {
 
    }
 
+   /*
   export function getProjects() {
     return [
       {
@@ -692,3 +693,307 @@ export function getIntroText(): string[] {
       }
     ]
   }
+
+  */ 
+
+  // database/site-content.ts
+
+export function getProjects(locale: string) {
+  const projectsBase = [
+    {
+      title: { fr: "Architecture du Portfolio Personnel", en: "Personal Portfolio Architecture" },
+      img: "/img/portfolio/img-portfolio-personal-homepage.png",
+      icon: "material-symbols:person-pin-rounded",
+      stack: [
+        "mdi:language-html5",
+        "mdi:language-css3",
+        "mdi:language-javascript",
+        "mdi:tailwind",
+        "mdi:vuejs",
+        "lineicons:nuxt",
+        "devicon-plain:vitest",
+        "fa7-brands:node-js",
+        "lineicons:mongodb",
+        "mdi:docker",
+        "simple-icons:caddy"
+      ],
+      desc: {
+        fr: [
+          "Une <strong>application Fullstack SSR</strong> construite avec Nuxt 4, intégrant une API personnalisée pour la gestion dynamique du contenu.",
+          "Conçue comme un <strong>Starter Kit générique</strong>, disponible en Open Source sur GitHub sous licence MIT.",
+          "Orchestrée avec <strong>Docker</strong> (environnement multi-services) incluant des configurations distinctes pour le développement et la production.",
+          "Automatisation des flux de travail via un <strong>Makefile</strong> pour standardiser les commandes de déploiement et de maintenance.",
+          "Infrastructure sécurisée utilisant <strong>Caddy</strong> comme reverse proxy avec certificats HTTPS/SSL automatisés."
+        ],
+        en: [
+          "A <strong>Fullstack SSR application</strong> built with Nuxt 4, featuring a custom API for dynamic content management.",
+          "Engineered as a <strong>Generic Starter Kit</strong>, available as Open Source on GitHub under MIT license.",
+          "Orchestrated with <strong>Docker</strong> (multi-service environment) including separate Dev and Production configurations.",
+          "Automated workflows via <strong>Makefile</strong> to standardize deployment and maintenance commands.",
+          "Secure infrastructure using <strong>Caddy</strong> as a reverse proxy with automated HTTPS/SSL certificates."
+        ]
+      },
+      links: [
+        {
+          label: { fr: "Voir le code source", en: "View source code" }, 
+          url: "https://github.com/dtettarasar/personal-website",
+          icon: "material-symbols:code-blocks"
+        }
+      ]
+    },
+    {
+      title: { fr: "Otis AI – Plateforme SaaS d'I.A.", en: "Otis AI – AI SaaS Platform" },
+      img: "/img/portfolio/otis-ai-homepage.png",
+      icon: "material-symbols:edit-note-rounded",
+      stack: [
+        "mdi:language-html5",
+        "mdi:language-css3",
+        "mdi:language-javascript",
+        "mdi:bootstrap",
+        "mdi:vuejs",
+        "fa7-brands:node-js",
+        "devicon-plain:vitest",
+        "lineicons:mongodb",
+        "bi:stripe",
+        "simple-icons:openai"
+      ],
+      desc: {
+        fr: [
+          "Un <strong>SaaS de génération de contenu assisté par I.A.</strong> intégrant les modèles d'OpenAI via de l'ingénierie de prompt dynamique.",
+          "Implémentation complète d'un <strong>système de monétisation</strong> utilisant l'API Stripe avec un modèle économique basé sur des crédits.",
+          "Système d'<strong>authentification robuste basé sur JWT</strong> sécurisant les échanges entre le frontend Vue.js et le backend Node.js.",
+          "Éditeur de contenu enrichi permettant la mise en forme post-génération et des mises à jour de la base de données en temps réel.",
+          "Suite de tests complète (Unitaires & Intégration) avec <strong>Vitest</strong> pour garantir la stabilité de l'API et de l'interface utilisateur."
+        ],
+        en: [
+          "An <strong>AI-assisted content generation SaaS</strong> integrating OpenAI models via dynamic prompt engineering.",
+          "Full implementation of a <strong>monetization system</strong> using the Stripe API with a credit-based business model.",
+          "Robust <strong>JWT-based authentication</strong> system securing exchanges between the Vue.js frontend and Node.js backend.",
+          "Rich content editor allowing post-generation formatting and real-time database updates.",
+          "Comprehensive test suite (Unit & Integration) with <strong>Vitest</strong> to ensure API and UI stability."
+        ]
+      },
+      links: [
+        { 
+          label: { fr: "Code source (Application Vue)", en: "View source code (Vue app)" }, 
+          url: "https://github.com/dtettarasar/otis-ai-frontend",
+          icon: "material-symbols:code-blocks", 
+        },
+        { 
+          label: { fr: "Code source (Backend Node.js)", en: "View source code (Node JS Backend)" }, 
+          url: "https://github.com/dtettarasar/otis-ai-backend",
+          icon: "material-symbols:code-blocks", 
+        },
+        {
+          label: { fr: "Regarder la vidéo de démo", en: "Watch demo video" },
+          url: "https://www.youtube.com/watch?v=4xhqBR_Kues",
+          icon: "material-symbols:video-library",
+        }
+      ]
+    },
+    {
+      title: { fr: "AI Art Shield – Protégez votre Art", en: "AI Art Shield – Protect Your Art" },
+      img: "/img/portfolio/cs50.jpg",
+      icon: "ic:round-terminal",
+      stack: [
+        "mdi:language-python",
+      ],
+      desc: {
+        fr: [
+          "Un <strong>outil de sécurité avancé basé sur Python</strong> conçu pour protéger les œuvres d'art visuelles contre l'entraînement non autorisé des I.A. et le scraping.",
+          "Implémente des <strong>perturbations invisibles</strong> (Transformation en Cosinus Discrète - DCT) pour perturber la reconnaissance de style par les I.A. sans altérer la perception humaine.",
+          "Comprend un <strong>système d'évaluation de la protection</strong> qui mesure et compare les niveaux d'altération entre les versions originales et sécurisées.",
+          "Développé avec <strong>Pillow, OpenCV et NumPy</strong> pour un traitement d'image haute performance et une manipulation au niveau du pixel.",
+          "Architecture prête pour le futur : conçue pour un refactoring modulaire et l'intégration de <strong>perturbations contradictoires</strong> (adversarial perturbations) et de <strong>signatures signées par Blockchain</strong>.",
+          "Ce projet fait partie du cours <strong>CS50P de l'Université Harvard</strong>."
+        ],
+        en: [
+          "A <strong>Advanced Python-based security tool</strong> designed to protect visual artworks from unauthorized AI training and scraping.",
+          "Implements <strong>invisible perturbations</strong> (Discrete Cosine Transform - DCT) to disrupt AI style recognition without altering human perception.",
+          "Features a <strong>Protection Evaluation System</strong> that measures and compares alteration levels between original and secured versions.",
+          "Engineered with <strong>Pillow, OpenCV, and NumPy</strong> for high-performance image processing and pixel-level manipulation.",
+          "Future-ready architecture: Designed for modular refactoring and integration of <strong>Adversarial Perturbations</strong> and <strong>Blockchain-signed signatures</strong>.",
+          "The project is part of <strong>Harvard's CS50P course</strong>."
+        ]
+      },
+      links: [
+        { 
+          label: { fr: "Voir le code source", en: "View source code" }, 
+          url: "https://github.com/dtettarasar/CS50P-final-project",
+          icon: "material-symbols:code-blocks", 
+        },
+        { 
+          label: { fr: "Regarder la vidéo de démo", en: "Watch demo video" }, 
+          url: "https://www.youtube.com/watch?v=fzHck-rlLZ0",
+          icon: "material-symbols:video-library", 
+        }
+      ]
+    },
+    {
+      title: { fr: "Tic Tac Toe I.A. – Maîtrise Algorithmique", en: "Tic Tac Toe AI – Algorithm Mastery" },
+      img: "/img/portfolio/img-portfolio-cs50x-final.png",
+      icon: "hugeicons:tic-tac-toe",
+      stack: [
+        "mdi:language-html5",
+        "mdi:language-css3",
+        "mdi:language-javascript",
+      ],
+      video: "https://youtu.be/O13g7CtV2bI",
+      desc: {
+        fr: [
+          "Un <strong>jeu sur navigateur avancé</strong> doté d'une I.A. imbattable propulsée par l'<strong>algorithme Minimax</strong>.",
+          "Conception de trois modes de jeu distincts : Humain vs Humain, I.A. Facile (logique aléatoire) et I.A. Impossible (prise de décision récursive).",
+          "Implémentation d'un <strong>arbre de recherche récursif</strong> pour évaluer tous les mouvements possibles et garantir le résultat optimal pour l'I.A.",
+          "Développement d'un <strong>suivi des scores et statistiques</strong> en temps réel gérant les états de session sur plusieurs manches.",
+          "Accent mis sur une UI/UX soignée avec un design responsive et une iconographie SVG intégrée pour un rendu visuel 'Pixel Perfect'.",
+          "Ce projet fait partie du cours <strong>CS50x de l'Université Harvard</strong>."
+        ],
+        en: [
+          "An <strong>Advanced Browser-based Game</strong> featuring an unbeatable AI powered by the <strong>Minimax Algorithm</strong>.",
+          "Engineered three distinct game modes: Human vs. Human, Easy AI (Randomized logic), and Impossible AI (Recursive decision-making).",
+          "Implemented a <strong>recursive search tree</strong> to evaluate all possible moves and guarantee the optimal outcome for the AI.",
+          "Developed a real-time <strong>Score & Statistics Tracker</strong> managing session states across multiple game rounds.",
+          "Focus on clean UI/UX with responsive design and integrated SVG iconography for a 'Pixel Perfect' visual rendering.",
+          "The project is part of <strong>Harvard's CS50x course</strong>."
+        ]
+      },
+      links: [
+        { 
+          label: { fr: "Voir le code source", en: "View source code" }, 
+          url: "https://github.com/dtettarasar/CS50-tic-tac-toe",
+          icon: "material-symbols:code-blocks", 
+        },
+        { 
+          label: { fr: "Regarder la vidéo de démo", en: "Watch demo video" }, 
+          url: "https://youtu.be/O13g7CtV2bI",
+          icon: "material-symbols:video-library", 
+        }
+      ]
+    },
+    {
+      title: { fr: "News Ipsum", en: "News Ipsum" }, // Les noms de marque restent identiques
+      img: "/img/portfolio/news-ipsum-homepage.png",
+      icon: "material-symbols:newspaper-rounded",
+      stack: [
+        "mdi:language-typescript",
+        "mdi:vuejs",
+        "lineicons:nuxt",
+        "devicon-plain:vitest",
+        "fa7-brands:node-js",
+        "mdi:tailwind",
+        "lineicons:mongodb",
+        "mdi:docker",
+        "simple-icons:caddy",
+      ],
+      desc: {
+        fr: [
+          "<strong>Plateforme d'actualités haute performance</strong> développée avec une architecture moderne Nuxt 4/3 et TypeScript.",
+          "Mise en œuvre d'une approche de <strong>Développement Dirigé par les Tests (TDD)</strong> avec Vitest pour garantir une logique métier fiable dès le premier jour.",
+          "Accent mis sur l'<strong>Accessibilité Web (a11y)</strong>, visant la conformité WCAG pour offrir une expérience de lecture optimale.",
+          "Développement d'outils internes personnalisés en <strong>CLI</strong> pour une gestion efficace de l'environnement Docker et l'initialisation de l'administrateur.",
+          "Déploiement automatisé via une stack <strong>Docker & Caddy</strong> avec gestion native du SSL sur un VPS."
+        ],
+        en: [
+          "<strong>High-performance News Platform</strong> built with a modern Nuxt 4/3 and TypeScript architecture.",
+          "Implemented a <strong>Test-Driven Development (TDD)</strong> approach with Vitest to ensure reliable business logic from day one.",
+          "Focus on <strong>Web Accessibility (a11y)</strong>, aiming for WCAG compliance to provide an optimal reading experience.",
+          "Developed custom <strong>CLI internal tools</strong> for efficient Docker environment management and admin initialization.",
+          "Automated deployment using a <strong>Docker & Caddy</strong> stack with native SSL management on a VPS."
+        ]
+      },
+      links: [
+        { 
+          label: { fr: "Voir le code source", en: "View source code" }, 
+          url: "https://github.com/dtettarasar/news-ipsum", 
+          icon: "material-symbols:code-blocks" 
+        },
+      ]
+    },
+    {
+      title: { fr: "Plateforme de Conférence d'Affaires", en: "Business Conference Platform" },
+      img: "/img/portfolio/img-portfolio-cs50-homepage.png",
+      icon: "material-symbols:event-available-rounded",
+      stack: [
+        "mdi:language-javascript",
+        "mdi:language-html5",
+        "mdi:language-css3",
+        "mdi:bootstrap"
+      ],
+      desc: {
+        fr: [
+          "<strong>Plateforme événementielle responsive</strong> dotée d'un système d'inscription complexe et de composants UI interactifs développés en JavaScript Vanilla.",
+          "Conception d'un <strong>moteur de validation de formulaire personnalisé</strong> à l'aide d'expressions régulières (Regex) pour gérer les messages d'erreur en temps réel et l'intégrité des données.",
+          "Développement d'<strong>animations dynamiques basées sur le défilement</strong> (scroll), incluant des compteurs automatisés et des éléments de navigation intelligents (logique de retour en haut).",
+          "Implémentation de <strong>patterns de manipulation du DOM</strong> pour la gestion d'état : basculement des états de succès et gestion de structures de données multi-saisies (boutons radio, cases à cocher, texte).",
+          "Construit avec une approche mobile-first via <strong>Bootstrap</strong>, garantissant la compatibilité multi-navigateurs et une cohérence visuelle optimisée.",
+          "Ce projet fait partie du cours <strong>CS50x de l'Université Harvard</strong>."
+        ],
+        en: [
+          "<strong>Responsive event platform</strong> featuring a complex registration system and interactive UI components built with Vanilla JavaScript.",
+          "Engineered a <strong>custom Form Validation Engine</strong> using Regular Expressions (Regex) to handle real-time error messaging and data integrity.",
+          "Developed <strong>dynamic scroll-triggered animations</strong>, including automated counters and smart navigation elements (Go-to-top logic).",
+          "Implemented <strong>DOM manipulation patterns</strong> for state management: toggling success states and handling multi-input data structures (radios, checkboxes, text).",
+          "Built with a mobile-first approach using <strong>Bootstrap</strong>, ensuring cross-browser compatibility and optimized visual consistency.",
+          "The project is part of <strong>Harvard's CS50x course</strong>."
+        ]
+      },
+      links: [
+        { 
+          label: { fr: "Voir le code source", en: "View source code" }, 
+          url: "https://github.com/dtettarasar/cs50x-homepage",
+          icon: "material-symbols:code-blocks" 
+        }
+      ]
+    },
+    {
+      title: { fr: "Interface de Documentation Technique", en: "Technical Documentation Interface" },
+      img: "/img/portfolio/img-portfolio-doc-page.png",
+      icon: "mdi:file-document",
+      stack: [
+        "mdi:language-html5",
+        "mdi:language-css3",
+        "mdi:language-javascript",
+      ],
+      desc: {
+        fr: [
+          "<strong>Portail de documentation haute lisibilité</strong> conçu pour la certification Responsive Web Design de freeCodeCamp.",
+          "Respect strict des <strong>standards sémantiques HTML5</strong> et des rôles ARIA pour garantir une compatibilité totale avec les lecteurs d'écran.",
+          "Conception d'une <strong>mise en page CSS dynamique</strong> avec navigation collante (sticky) et typographie fluide pour une expérience de lecture technique optimale.",
+          "Implémentation certifiée 'Pixel Perfect', validant 100 % des tests automatisés d'accessibilité et de réactivité."
+        ],
+        en: [
+          "<strong>High-readability documentation portal</strong> designed for the freeCodeCamp Responsive Web Design certification.",
+          "Strict adherence to <strong>HTML5 Semantic standards</strong> and ARIA roles to ensure full compatibility with screen readers.",
+          "Engineered a <strong>dynamic CSS layout</strong> with sticky navigation and fluid typography for an optimal technical reading experience.",
+          "Certified 'Pixel Perfect' implementation, passing 100% of automated accessibility and responsiveness tests."
+        ]
+      },
+      links: [
+        { 
+          label: { fr: "Voir le code sur CodePen", en: "View code on CodePen" }, 
+          url: "https://codepen.io/dtettarasar/pen/rNNemwV",
+          icon: "material-symbols:code-blocks" 
+        }
+      ]
+    }
+  ]
+
+  // 2. On transforme le tableau pour extraire dynamiquement la bonne langue
+  return projectsBase.map(project => {
+    const lang = (locale === 'fr' || locale === 'en') ? locale : 'en'
+
+    return {
+      title: project.title[lang],
+      img: project.img,
+      icon: project.icon,
+      stack: project.stack,
+      video: project.video, // Sera undefined s'il n'existe pas (parfait pour JS)
+      desc: project.desc[lang],
+      links: project.links.map(link => ({
+        url: link.url,
+        icon: link.icon,
+        label: link.label[lang]
+      }))
+    }
+  })
+}
