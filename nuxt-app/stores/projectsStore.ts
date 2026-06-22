@@ -9,7 +9,7 @@ interface ProjectLink {
   icon: string
 }
 
-interface Project {
+interface ProjectItem {
   title: string
   img: string
   desc: string[]
@@ -23,42 +23,59 @@ interface Project {
 export const useProjectsStore = defineStore('projects', () => {
 
   // State
-  const data = ref<Project[]>([])
+  //const data = ref<Project[]>([])
+  const dataByLocale = ref<Record<string, ProjectItem[]>>({})
   const loading = ref(false)
   const error = ref<string | null>(null)
 
   // Actions
-  async function fetchData() {
-    if (data.value.length > 0) return data.value
+  async function fetchData(locale: string): Promise<ProjectItem[]> {
+    // 1. Système de cache par langue
+    if (dataByLocale.value[locale]) { 
+      return dataByLocale.value[locale]
+    }
 
     loading.value = true
     error.value = null
 
     try {
-      const response = await $fetch<{ data: Project[] }>('/api/projects')
-      data.value = response.data
+      const response = await $fetch<ProjectItem[]>('/api/projects', {
+        query: { locale }
+      })
+
+
+      // 3. Stockage dans le bon tiroir
+      dataByLocale.value[locale] = response
+
+      return response
+
     } catch (err: any) {
+
       error.value = err.message || 'Failed to fetch projects'
       console.error('Error fetching projects:', err)
+
+      return []
+
     } finally {
+
       loading.value = false
+
     }
 
-    return data.value
   }
 
   // Getters
-  function getProjectByTitle(title: string) {
-    return data.value.find(p => p.title === title)
+  function getProjectByTitle(locale: string,title: string) {
+    return dataByLocale.value[locale]?.find((p: ProjectItem) => p.title === title)
   }
 
-  function getProjectCount() {
-    return data.value.length
+  function getProjectCount(locale: string) {
+    return dataByLocale.value[locale]?.length || 0
   }
 
-  function getProjectsByStackIcon(icon: string) {
-    return data.value.filter(p => p.stack.includes(icon))
+  function getProjectsByStackIcon(locale: string,icon: string) {
+    return dataByLocale.value[locale]?.filter((p: ProjectItem) => p.stack.includes(icon))
   }
 
-  return { data, loading, error, fetchData, getProjectByTitle, getProjectCount, getProjectsByStackIcon }
+  return { dataByLocale, loading, error, fetchData, getProjectByTitle, getProjectCount, getProjectsByStackIcon }
 })
