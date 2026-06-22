@@ -41,7 +41,7 @@ defineProps({
           <img
             :src="project.img"
             class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-            alt="project.title"
+            :alt="project.title"
           />
         </div>
 

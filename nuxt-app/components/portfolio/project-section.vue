@@ -1,12 +1,20 @@
-<script setup>
+<script setup lang="ts">
 
-  import { ref } from 'vue'
+  import { ref, computed } from 'vue'
+  import { useI18n } from 'vue-i18n'
+  import { useProjectsStore } from '@/stores/projectsStore'
 
+
+  const { locale } = useI18n()
   const projectsStore = useProjectsStore()
-  await useAsyncData('projects', () => projectsStore.fetchData())
+  await useAsyncData('projects', () => projectsStore.fetchData(locale.value), {
+    watch: [locale]
+  })
 
   const active = ref(null)
   const toggle = (i) => active.value = active.value === i ? null : i
+
+  const projects = computed(() => projectsStore.dataByLocale[locale.value] || []) 
   
 </script>
 
@@ -17,7 +25,7 @@
     <div class="max-w-5xl mx-auto space-y-6 px-4">
 
       <PortfolioProjectCard
-        v-for="(p, index) in projectsStore.data"
+        v-for="(p, index) in projects"
         :key="index"
         :project="p"
         :index="index"
