@@ -55,38 +55,19 @@
 
 import { computed } from 'vue'
 import { useI18n } from 'vue-i18n'
+import { resumeSectionTitles } from '~/constants/ui-labels'
 
 const { locale } = useI18n()
-
-// Objet qui stocke les textes de chaque titre en français et anglais
-const sectionTitles = {
-  experiences: {
-    fr: 'Expériences',
-    en: 'Experiences',
-  },
-  education: {
-    fr: 'Éducation & Certifications',
-    en: 'Education & Certifications',
-  },
-  skills: {
-    fr: 'Compétences',
-    en: 'Skills',
-  },
-  languages: {
-    fr: 'Langues',
-    en: 'Language',
-  },
-}
 
 // 🛠️ FIX TYPESCRIPT : En écrivant 'fr' : 'en', TS infère le type strict 'fr' | 'en'
 const currentTitles = computed(() => {
   const lang = locale.value === 'fr' ? 'fr' : 'en'
   
   return {
-    experiences: sectionTitles.experiences[lang],
-    education: sectionTitles.education[lang],
-    skills: sectionTitles.skills[lang],
-    languages: sectionTitles.languages[lang],
+    experiences: resumeSectionTitles.experiences[lang],
+    education: resumeSectionTitles.education[lang],
+    skills: resumeSectionTitles.skills[lang],
+    languages: resumeSectionTitles.languages[lang],
   }
 })
 
