@@ -1119,3 +1119,10 @@ describe('SkillSection', () => {
 *This backlog is a living document. Update regularly as priorities change.*  
 *Last Sprint Review: 2026-02-28*  
 *Next Sprint Planning: 2026-03-14*
+
+
+--- 
+Other topics
+Here are topics that we'll need to be covered here in the documents
+- added translations features using i18n package. This needs to be detailed in the backlog and documentation
+- features idea : build a back office with the ability to edit the colors for every element (hero animated gradients, text, button etc...) + add options for prebuild color sets
