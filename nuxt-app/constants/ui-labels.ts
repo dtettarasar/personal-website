@@ -18,3 +18,10 @@ export const resumeSectionTitles = {
     en: 'Language',
   },
 }
+
+export const homeLabels = {
+  aboutMeTitle: {
+    fr: 'À propos de moi',
+    en: 'About me',
+  },
+}
