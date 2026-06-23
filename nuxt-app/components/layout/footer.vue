@@ -1,25 +1,25 @@
+<!-- components/layout/the-footer.vue -->
 <template>
-
   <div class="bg-slate-800 py-4">
 
     <!-- Text & owner -->
     <div class="container py-4 mx-auto flex justify-center">
-      <p class="text-emerald-400 drop-shadow-[0_0_15px_rgba(74,222,128,0.4)] md:text-xl">
-        Website created by Dylan Tettarasar © 2025
+      <p class="text-emerald-400 drop-shadow-[0_0_15px_rgba(74,222,128,0.4)] md:text-xl text-center">
+        {{ currentLabels.createdBy }}
       </p>
     </div>
 
     <!-- Built with -->
     <div class="flex flex-col pt-2 pb-4 justify-center items-center">
-      <p class="text-center text-gray-400 mb-2">Built with</p>
+      <p class="text-center text-gray-400 mb-2">{{ currentLabels.builtWith }}</p>
       <a target="_blank" href="https://nuxt.com/">
-        <img class="w-[120px]" src="/nuxt-logo-green-white.svg" />
+        <img class="w-[120px]" src="/nuxt-logo-green-white.svg" alt="Nuxt Logo" />
       </a>
     </div>
 
     <!-- Icon credits -->
     <div class="pb-6 px-6 text-center text-xs text-gray-500 leading-relaxed">
-      <p class="mb-1">Icon Credits:</p>
+      <p class="mb-1">{{ currentLabels.iconCredits }}</p>
 
       <p>
         <a 
@@ -28,7 +28,7 @@
           class="underline hover:text-emerald-400"
           target="_blank"
         >
-          Bakery icon  created by cahụụngung – Flaticon
+          Bakery icon created by cahụụngung – Flaticon
         </a>
       </p>
 
@@ -44,7 +44,7 @@
       </p>
 
       <p class="mt-2">
-        Other icons provided by 
+        {{ currentLabels.otherIcons }}
         <a 
           href="https://icones.js.org/" 
           target="_blank" 
@@ -56,5 +56,23 @@
     </div>
 
   </div>
-
 </template>
+
+<script setup lang="ts">
+import { computed } from 'vue'
+import { useI18n } from 'vue-i18n'
+import { footerLabels } from '~/constants/ui-labels'
+
+const { locale } = useI18n()
+
+const currentLabels = computed(() => {
+  const lang = locale.value === 'fr' ? 'fr' : 'en'
+  
+  return {
+    createdBy: footerLabels.createdBy[lang],
+    builtWith: footerLabels.builtWith[lang],
+    iconCredits: footerLabels.iconCredits[lang],
+    otherIcons: footerLabels.otherIcons[lang],
+  }
+})
+</script>

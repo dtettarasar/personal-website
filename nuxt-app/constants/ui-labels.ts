@@ -33,3 +33,22 @@ export const homeLabels = {
     en: 'Portfolio',
   },
 }
+
+export const footerLabels = {
+  createdBy: {
+    fr: 'Site web créé par Dylan Tettarasar © 2025',
+    en: 'Website created by Dylan Tettarasar © 2025',
+  },
+  builtWith: {
+    fr: 'Construit avec',
+    en: 'Built with',
+  },
+  iconCredits: {
+    fr: 'Crédits des icônes :',
+    en: 'Icon Credits:',
+  },
+  otherIcons: {
+    fr: 'Autres icônes fournies par',
+    en: 'Other icons provided by',
+  }
+}
