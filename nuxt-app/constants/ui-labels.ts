@@ -24,4 +24,12 @@ export const homeLabels = {
     fr: 'À propos de moi',
     en: 'About me',
   },
+  resumeBtn: {
+    fr: 'Mon CV',
+    en: 'Resume',
+  },
+  portfolioBtn: {
+    fr: 'Portfolio',
+    en: 'Portfolio',
+  },
 }

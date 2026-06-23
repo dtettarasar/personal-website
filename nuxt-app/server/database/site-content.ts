@@ -1,30 +1,5 @@
 // server/database/site-content.ts
 
-/*
-export function getIntroText(): string[] {
-    return [
-        `Hello, I'm Dylan Tettarasar, a Frontend Developer specializing in Vue.js and Nuxt.js, with 7 years of experience building web applications and managing technical projects.`,
-
-        `I started my career in web development and digital project management, working across design, integration, and deployment. 
-        For several years, <strong>I developed and maintained WordPress platforms for enterprise clients (Uber, KPMG, Politico), 
-        built custom interfaces with HTML/CSS/JavaScript, and managed the complete development lifecycle from conception to production</strong>.`,
-        
-        `<strong>This gave me a comprehensive understanding of how modern web applications are built, deployed, and scaled</strong> both 
-        from a technical architecture perspective and a product/business impact angle. I developed expertise in frontend development, 
-        responsive design, performance optimization, and crucially the ability to collaborate effectively with cross-functional teams 
-        as I understand both the technical and business sides.`,
-
-        `Over time, <strong>I decided to deepen my technical skills on modern frameworks and full-stack architectures</strong>. 
-        That's when I mastered Vue.js, Nuxt.js, Node.js, and modern DevOps workflows (Docker, Git, CI/CD). 
-        I built several production-ready applications to consolidate this expertise.`,
-       
-        `Today, I position myself as a <strong>Frontend Developer with strong product sense</strong>. I combine technical skills 
-        (Vue.js, Nuxt.js, JavaScript, HTML/CSS, performance optimization) with an understanding of user needs and business metrics. 
-        This combination allows me to <strong>build applications that are not only technically excellent but also strategically aligned 
-        with product goals</strong>.`,
-    ]
-  }*/
-
   export function getIntroText(locale: string): string[] {
     
     if (locale === 'fr') {
