@@ -1,45 +1,46 @@
+<!-- components/sections/hero-big.vue -->
 <template>
   <section
     id="hero"
     class="relative flex flex-col justify-center items-center h-screen text-center overflow-hidden animate-gradient-move"
   >
-
-    <!-- Contenu principal -->
-    <div class="space-y-8 z-10 flex flex-col items-center px-4">
+    <!-- Contenu principal (Affiché uniquement si les données sont prêtes) -->
+    <div v-if="heroData" class="space-y-8 z-10 flex flex-col items-center px-4">
       
-      <!-- Photo avec effet néon vert -->
+      <!-- Photo dynamique avec effet néon vert -->
       <div class="relative">
         <img
-          src="/img/profile_pic_square.jpg"
+          :src="heroData.img"
           class="w-32 lg:w-48 rounded-full border-4 border-emerald-400 shadow-[0_0_25px_rgba(74,222,128,0.5)] animate-borderPulse"
+          :alt="heroData.imgAlt"
         />
       </div>
 
-      <!-- Titre principal -->
+      <!-- Titre principal dynamique -->
       <h1
-        class="font-mono tracking-[0.3em] text-emerald-400 text-4xl md:text-6xl uppercase drop-shadow-[0_0_15px_rgba(74,222,128,0.4)]"
+        class="font-mono tracking-[0.3em] text-emerald-400 text-3xl md:text-5xl lg:text-6xl uppercase drop-shadow-[0_0_15px_rgba(74,222,128,0.4)]"
       >
-        Hello World! I’m Dylan<span class="animate-pulse">_</span>
+        {{ heroData.title }}<span class="animate-pulse">_</span>
       </h1>
 
-      <!-- Sous-titre -->
+      <!-- Sous-titre dynamique -->
       <p class="text-lg md:text-2xl lg:text-3xl font-light text-gray-200">
-        Frontend Developer
-        <span class="block md:inline">· Vue.js / Nuxt.js Specialist</span>
+        {{ heroData.subtitle }}
+        <span class="block md:inline"> · {{ heroData.specialty }}</span>
       </p>
 
-      <!-- Icônes -->
+      <!-- Icônes dynamiques -->
       <div class="flex justify-center items-center gap-8 pt-6">
 
-        <a href="mailto:dtettarasar@gmail.com">
+        <a :href="heroData.links.email">
           <Icon name="mdi:mail-ru" class="w-10 h-10 text-gray-200 hover:text-emerald-400 transition-colors" />
         </a>
 
-        <a href="https://www.linkedin.com/in/dylan-tettarasar-a89a0865/" target="_blank">
+        <a :href="heroData.links.linkedin" target="_blank">
           <Icon name="fa7-brands:linkedin" class="w-10 h-10 text-gray-200 hover:text-emerald-400 transition-colors" />
         </a>
 
-        <a href="https://github.com/dtettarasar" target="_blank">
+        <a :href="heroData.links.github" target="_blank">
           <Icon name="fa7-brands:github" class="w-10 h-10 text-gray-200 hover:text-emerald-400 transition-colors" />
         </a>
         
@@ -47,6 +48,25 @@
     </div>
   </section>
 </template>
+
+<script setup lang="ts">
+
+  import { computed } from 'vue'
+  import { useI18n } from 'vue-i18n'
+  import { useHeroStore } from '~/stores/heroStore'
+
+  const { locale } = useI18n()
+  const heroStore = useHeroStore()
+
+  // Récupération SSR avec écoute du changement de langue
+  await useAsyncData('hero-data', () => heroStore.fetchData(locale.value), {
+    watch: [locale]
+  })
+
+  // Raccourci calculé pour l'affichage dans le template
+  const heroData = computed(() => heroStore.dataByLocale[locale.value])
+
+</script>
 
 <style scoped>
 

@@ -1,5 +1,43 @@
 // server/database/site-content.ts
 
+export function getHeroData(locale: string) {
+  const heroBase = {
+    img: "/img/profile_pic_square.jpg",
+    imgAlt: {
+      fr: "Photo de Dylan Tettarasar",
+      en: "Dylan Tettarasar's profile picture"
+    },
+    title: {
+      fr: "Hello World! Je suis Dylan",
+      en: "Hello World! I’m Dylan"
+    },
+    subtitle: {
+      fr: "Chef de Projet Web · Product Owner",
+      en: "Web Project Manager · Product Owner"
+    },
+    specialty: {
+      fr: "Spécialiste Vue.js / Nuxt.js",
+      en: "Vue.js / Nuxt.js Specialist"
+    },
+    links: {
+      email: "mailto:dtettarasar@gmail.com",
+      linkedin: "https://www.linkedin.com/in/dylan-tettarasar-a89a0865/",
+      github: "https://github.com/dtettarasar"
+    }
+  }
+
+  const lang = (locale === 'fr' || locale === 'en') ? locale : 'en'
+
+  return {
+    img: heroBase.img,
+    imgAlt: heroBase.imgAlt[lang],
+    title: heroBase.title[lang],
+    subtitle: heroBase.subtitle[lang],
+    specialty: heroBase.specialty[lang],
+    links: heroBase.links
+  }
+}
+
   export function getIntroText(locale: string): string[] {
     
     if (locale === 'fr') {
