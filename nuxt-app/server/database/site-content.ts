@@ -1,5 +1,11 @@
 // server/database/site-content.ts
 
+export function getGlobalConfig() {
+  return {
+    ownerName: "Dylan Tettarasar"
+  }
+}
+
 export function getHeroData(locale: string) {
   const heroBase = {
     img: "/img/profile_pic_square.jpg",

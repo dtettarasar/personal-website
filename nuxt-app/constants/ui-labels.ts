@@ -52,3 +52,10 @@ export const footerLabels = {
     en: 'Other icons provided by',
   }
 }
+
+export const navLabels = {
+  home: { fr: 'Accueil', en: 'Home' },
+  resume: { fr: 'CV', en: 'Resume' },
+  portfolio: { fr: 'Portfolio', en: 'Portfolio' },
+  contact: { fr: 'Contact', en: 'Contact' },
+}
