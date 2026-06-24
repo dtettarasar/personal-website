@@ -33,6 +33,10 @@ export default defineNuxtConfig({
       cookieKey: 'i18n_redirected',
       redirectOn: 'root', // Redirige automatiquement selon la langue du navigateur à l'arrivée
     }
-  }
+  },
+
+  ignore: [
+    'pages/contact.vue' // to temporarily ignore the contact page until it's ready
+  ]
 
 })

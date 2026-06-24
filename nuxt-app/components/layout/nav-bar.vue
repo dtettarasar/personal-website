@@ -129,7 +129,7 @@ const menuItems = computed(() => {
     { label: navLabels.home[lang], to: '/' },
     { label: navLabels.resume[lang], to: '/resume' },
     { label: navLabels.portfolio[lang], to: '/portfolio' },
-    { label: navLabels.contact[lang], to: '/contact' },
+    // { label: navLabels.contact[lang], to: '/contact' },
   ]
 })
 </script>
