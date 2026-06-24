@@ -2,9 +2,7 @@
 
     <div>
 
-        <div class="bg-slate-800">
-            <layout-nav-bar></layout-nav-bar>
-        </div>
+        <layout-nav-bar></layout-nav-bar>
 
         <main>
             <slot></slot>
