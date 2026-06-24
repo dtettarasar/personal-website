@@ -74,7 +74,8 @@ export const useProjectsStore = defineStore('projects', () => {
   }
 
   function getProjectsByStackIcon(locale: string,icon: string) {
-    return dataByLocale.value[locale]?.filter((p: ProjectItem) => p.stack.includes(icon))
+    // return an empty array if the locale is not found or if no projects match the icon (to avoid returning undefined)
+    return dataByLocale.value[locale]?.filter((p: ProjectItem) => p.stack.includes(icon)) || []
   }
 
   return { dataByLocale, loading, error, fetchData, getProjectByTitle, getProjectCount, getProjectsByStackIcon }
