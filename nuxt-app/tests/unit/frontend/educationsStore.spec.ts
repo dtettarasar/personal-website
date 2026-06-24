@@ -1,8 +1,10 @@
+// tests/unit/frontend/educationsStore.spec.ts
 import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest'
 import { setActivePinia, createPinia } from 'pinia'
 import { useEducationsStore } from '~/stores/educationsStore'
 
 // ===== MOCK DATA =====
+// Le store attend directement un tableau d'éléments pour la locale demandée
 const mockEducationsData = [
   {
     educationLogoSrc: '/img/resume/educations/harvard-university-logo-0.png',
@@ -49,11 +51,7 @@ const mockEducationsData = [
   },
 ]
 
-const mockApiResponse = {
-  status: 'success',
-  data: mockEducationsData,
-  timestamp: '2026-03-02T12:00:00.000Z',
-}
+const testLocale = 'en'
 
 // ===== TESTS =====
 describe('educationsStore', () => {
@@ -68,9 +66,9 @@ describe('educationsStore', () => {
 
   // ----- Initial State -----
   describe('initial state', () => {
-    it('has empty data array', () => {
+    it('has empty dataByLocale object', () => {
       const store = useEducationsStore()
-      expect(store.data).toEqual([])
+      expect(store.dataByLocale).toEqual({})
     })
 
     it('has loading set to false', () => {
@@ -86,14 +84,14 @@ describe('educationsStore', () => {
 
   // ----- fetchData -----
   describe('fetchData', () => {
-    it('calls $fetch with /api/educations and populates data', async () => {
+    it('calls $fetch with /api/educations and populates data for the current locale', async () => {
       const store = useEducationsStore()
-      vi.mocked($fetch).mockResolvedValueOnce(mockApiResponse)
+      vi.mocked($fetch).mockResolvedValueOnce(mockEducationsData)
 
-      const result = await store.fetchData()
+      const result = await store.fetchData(testLocale)
 
-      expect($fetch).toHaveBeenCalledWith('/api/educations')
-      expect(store.data).toEqual(mockEducationsData)
+      expect($fetch).toHaveBeenCalledWith('/api/educations', { query: { locale: testLocale } })
+      expect(store.dataByLocale[testLocale]).toEqual(mockEducationsData)
       expect(result).toEqual(mockEducationsData)
     })
 
@@ -103,23 +101,24 @@ describe('educationsStore', () => {
       let loadingDuringFetch = false
       vi.mocked($fetch).mockImplementationOnce(() => {
         loadingDuringFetch = store.loading
-        return Promise.resolve(mockApiResponse)
+        return Promise.resolve(mockEducationsData)
       })
 
       expect(store.loading).toBe(false)
-      await store.fetchData()
+      await store.fetchData(testLocale)
       expect(loadingDuringFetch).toBe(true)
       expect(store.loading).toBe(false)
     })
 
-    it('does not re-fetch if data is already loaded (caching)', async () => {
+    it('does not re-fetch if data is already loaded for that locale (caching)', async () => {
       const store = useEducationsStore()
-      vi.mocked($fetch).mockResolvedValueOnce(mockApiResponse)
+      vi.mocked($fetch).mockResolvedValueOnce(mockEducationsData)
 
-      await store.fetchData()
+      await store.fetchData(testLocale)
       expect($fetch).toHaveBeenCalledTimes(1)
 
-      const result = await store.fetchData()
+      // Deuxième appel sur la même locale : utilise le cache
+      const result = await store.fetchData(testLocale)
       expect($fetch).toHaveBeenCalledTimes(1)
       expect(result).toEqual(mockEducationsData)
     })
@@ -128,10 +127,10 @@ describe('educationsStore', () => {
       const store = useEducationsStore()
       vi.mocked($fetch).mockRejectedValueOnce(new Error('Network error'))
 
-      const result = await store.fetchData()
+      const result = await store.fetchData(testLocale)
 
       expect(store.error).toBe('Network error')
-      expect(store.data).toEqual([])
+      expect(store.dataByLocale[testLocale]).toBeUndefined()
       expect(result).toEqual([])
     })
 
@@ -142,7 +141,7 @@ describe('educationsStore', () => {
         message: 'Something went wrong',
       })
 
-      await store.fetchData()
+      await store.fetchData(testLocale)
 
       expect(store.error).toBe('Internal Server Error')
     })
@@ -151,7 +150,7 @@ describe('educationsStore', () => {
       const store = useEducationsStore()
       vi.mocked($fetch).mockRejectedValueOnce({})
 
-      await store.fetchData()
+      await store.fetchData(testLocale)
 
       expect(store.error).toBe('Error loading educations')
     })
@@ -160,11 +159,11 @@ describe('educationsStore', () => {
       const store = useEducationsStore()
 
       vi.mocked($fetch).mockRejectedValueOnce(new Error('fail'))
-      await store.fetchData()
+      await store.fetchData(testLocale)
       expect(store.error).toBe('fail')
 
-      vi.mocked($fetch).mockResolvedValueOnce(mockApiResponse)
-      await store.fetchData()
+      vi.mocked($fetch).mockResolvedValueOnce(mockEducationsData)
+      await store.fetchData(testLocale)
       expect(store.error).toBeNull()
     })
 
@@ -172,7 +171,7 @@ describe('educationsStore', () => {
       const store = useEducationsStore()
       vi.mocked($fetch).mockRejectedValueOnce(new Error('fail'))
 
-      await store.fetchData()
+      await store.fetchData(testLocale)
 
       expect(store.loading).toBe(false)
     })
@@ -182,10 +181,10 @@ describe('educationsStore', () => {
   describe('getEducationByTitle', () => {
     it('returns the correct education by exact title', async () => {
       const store = useEducationsStore()
-      vi.mocked($fetch).mockResolvedValueOnce(mockApiResponse)
-      await store.fetchData()
+      vi.mocked($fetch).mockResolvedValueOnce(mockEducationsData)
+      await store.fetchData(testLocale)
 
-      const result = store.getEducationByTitle('CS50x - Introduction to Computer Science')
+      const result = store.getEducationByTitle('CS50x - Introduction to Computer Science', testLocale)
 
       expect(result).toBeDefined()
       expect(result?.issuer).toBe('Harvard University')
@@ -194,10 +193,10 @@ describe('educationsStore', () => {
 
     it('matches partial title (uses includes)', async () => {
       const store = useEducationsStore()
-      vi.mocked($fetch).mockResolvedValueOnce(mockApiResponse)
-      await store.fetchData()
+      vi.mocked($fetch).mockResolvedValueOnce(mockEducationsData)
+      await store.fetchData(testLocale)
 
-      const result = store.getEducationByTitle('Python')
+      const result = store.getEducationByTitle('Python', testLocale)
 
       expect(result).toBeDefined()
       expect(result?.title).toContain('Python')
@@ -205,10 +204,10 @@ describe('educationsStore', () => {
 
     it('is case-insensitive', async () => {
       const store = useEducationsStore()
-      vi.mocked($fetch).mockResolvedValueOnce(mockApiResponse)
-      await store.fetchData()
+      vi.mocked($fetch).mockResolvedValueOnce(mockEducationsData)
+      await store.fetchData(testLocale)
 
-      const result = store.getEducationByTitle('responsive web design')
+      const result = store.getEducationByTitle('responsive web design', testLocale)
 
       expect(result).toBeDefined()
       expect(result?.title).toBe('Responsive Web Design')
@@ -216,10 +215,10 @@ describe('educationsStore', () => {
 
     it('returns undefined for non-existent education', async () => {
       const store = useEducationsStore()
-      vi.mocked($fetch).mockResolvedValueOnce(mockApiResponse)
-      await store.fetchData()
+      vi.mocked($fetch).mockResolvedValueOnce(mockEducationsData)
+      await store.fetchData(testLocale)
 
-      const result = store.getEducationByTitle('PhD in Quantum Computing')
+      const result = store.getEducationByTitle('PhD in Quantum Computing', testLocale)
 
       expect(result).toBeUndefined()
     })
@@ -227,7 +226,7 @@ describe('educationsStore', () => {
     it('returns undefined when data is empty', () => {
       const store = useEducationsStore()
 
-      const result = store.getEducationByTitle('CS50x')
+      const result = store.getEducationByTitle('CS50x', testLocale)
 
       expect(result).toBeUndefined()
     })
@@ -237,22 +236,21 @@ describe('educationsStore', () => {
   describe('getEducationsByYear', () => {
     it('returns all educations for a given year', async () => {
       const store = useEducationsStore()
-      vi.mocked($fetch).mockResolvedValueOnce(mockApiResponse)
-      await store.fetchData()
+      vi.mocked($fetch).mockResolvedValueOnce(mockEducationsData)
+      await store.fetchData(testLocale)
 
-      const result = store.getEducationsByYear('2020')
+      const result = store.getEducationsByYear('2020', testLocale)
 
-      // Only "Responsive Web Design" is in 2020
       expect(result).toHaveLength(1)
       expect(result[0].title).toBe('Responsive Web Design')
     })
 
     it('returns empty array for year with no educations', async () => {
       const store = useEducationsStore()
-      vi.mocked($fetch).mockResolvedValueOnce(mockApiResponse)
-      await store.fetchData()
+      vi.mocked($fetch).mockResolvedValueOnce(mockEducationsData)
+      await store.fetchData(testLocale)
 
-      const result = store.getEducationsByYear('1999')
+      const result = store.getEducationsByYear('1999', testLocale)
 
       expect(result).toEqual([])
     })
@@ -260,7 +258,7 @@ describe('educationsStore', () => {
     it('returns empty array when data is empty', () => {
       const store = useEducationsStore()
 
-      const result = store.getEducationsByYear('2025')
+      const result = store.getEducationsByYear('2025', testLocale)
 
       expect(result).toEqual([])
     })
@@ -270,16 +268,16 @@ describe('educationsStore', () => {
   describe('getEducationCount', () => {
     it('returns total number of educations', async () => {
       const store = useEducationsStore()
-      vi.mocked($fetch).mockResolvedValueOnce(mockApiResponse)
-      await store.fetchData()
+      vi.mocked($fetch).mockResolvedValueOnce(mockEducationsData)
+      await store.fetchData(testLocale)
 
-      expect(store.getEducationCount()).toBe(6)
+      expect(store.getEducationCount(testLocale)).toBe(6)
     })
 
     it('returns 0 when data is empty', () => {
       const store = useEducationsStore()
 
-      expect(store.getEducationCount()).toBe(0)
+      expect(store.getEducationCount(testLocale)).toBe(0)
     })
   })
 
@@ -287,10 +285,10 @@ describe('educationsStore', () => {
   describe('getEducationsByIssuer', () => {
     it('returns all educations from Harvard', async () => {
       const store = useEducationsStore()
-      vi.mocked($fetch).mockResolvedValueOnce(mockApiResponse)
-      await store.fetchData()
+      vi.mocked($fetch).mockResolvedValueOnce(mockEducationsData)
+      await store.fetchData(testLocale)
 
-      const result = store.getEducationsByIssuer('Harvard')
+      const result = store.getEducationsByIssuer('Harvard', testLocale)
 
       expect(result).toHaveLength(2)
       expect(result.every(e => e.issuer.includes('Harvard'))).toBe(true)
@@ -298,30 +296,30 @@ describe('educationsStore', () => {
 
     it('returns all educations from freeCodeCamp', async () => {
       const store = useEducationsStore()
-      vi.mocked($fetch).mockResolvedValueOnce(mockApiResponse)
-      await store.fetchData()
+      vi.mocked($fetch).mockResolvedValueOnce(mockEducationsData)
+      await store.fetchData(testLocale)
 
-      const result = store.getEducationsByIssuer('freeCodeCamp')
+      const result = store.getEducationsByIssuer('freeCodeCamp', testLocale)
 
       expect(result).toHaveLength(2)
     })
 
     it('is case-insensitive', async () => {
       const store = useEducationsStore()
-      vi.mocked($fetch).mockResolvedValueOnce(mockApiResponse)
-      await store.fetchData()
+      vi.mocked($fetch).mockResolvedValueOnce(mockEducationsData)
+      await store.fetchData(testLocale)
 
-      const result = store.getEducationsByIssuer('harvard')
+      const result = store.getEducationsByIssuer('harvard', testLocale)
 
       expect(result).toHaveLength(2)
     })
 
     it('matches partial issuer name (uses includes)', async () => {
       const store = useEducationsStore()
-      vi.mocked($fetch).mockResolvedValueOnce(mockApiResponse)
-      await store.fetchData()
+      vi.mocked($fetch).mockResolvedValueOnce(mockEducationsData)
+      await store.fetchData(testLocale)
 
-      const result = store.getEducationsByIssuer('INSEEC')
+      const result = store.getEducationsByIssuer('INSEEC', testLocale)
 
       expect(result).toHaveLength(1)
       expect(result[0].issuer).toContain('INSEEC')
@@ -329,10 +327,10 @@ describe('educationsStore', () => {
 
     it('returns empty array for non-existent issuer', async () => {
       const store = useEducationsStore()
-      vi.mocked($fetch).mockResolvedValueOnce(mockApiResponse)
-      await store.fetchData()
+      vi.mocked($fetch).mockResolvedValueOnce(mockEducationsData)
+      await store.fetchData(testLocale)
 
-      const result = store.getEducationsByIssuer('MIT')
+      const result = store.getEducationsByIssuer('MIT', testLocale)
 
       expect(result).toEqual([])
     })
@@ -340,7 +338,7 @@ describe('educationsStore', () => {
     it('returns empty array when data is empty', () => {
       const store = useEducationsStore()
 
-      const result = store.getEducationsByIssuer('Harvard')
+      const result = store.getEducationsByIssuer('Harvard', testLocale)
 
       expect(result).toEqual([])
     })
@@ -350,20 +348,20 @@ describe('educationsStore', () => {
   describe('hasCredential', () => {
     it('returns true when education has a certificationLink', async () => {
       const store = useEducationsStore()
-      vi.mocked($fetch).mockResolvedValueOnce(mockApiResponse)
-      await store.fetchData()
+      vi.mocked($fetch).mockResolvedValueOnce(mockEducationsData)
+      await store.fetchData(testLocale)
 
-      const harvard = store.getEducationByTitle('CS50x')!
+      const harvard = store.getEducationByTitle('CS50x', testLocale)!
 
       expect(store.hasCredential(harvard)).toBe(true)
     })
 
     it('returns false when education has no certificationLink', async () => {
       const store = useEducationsStore()
-      vi.mocked($fetch).mockResolvedValueOnce(mockApiResponse)
-      await store.fetchData()
+      vi.mocked($fetch).mockResolvedValueOnce(mockEducationsData)
+      await store.fetchData(testLocale)
 
-      const inseec = store.getEducationByTitle("Master's degree")!
+      const inseec = store.getEducationByTitle("Master's degree", testLocale)!
 
       expect(store.hasCredential(inseec)).toBe(false)
     })
@@ -392,7 +390,6 @@ describe('educationsStore', () => {
         certificationLink: '',
       }
 
-      // Empty string is falsy → hasCredential returns false
       expect(store.hasCredential(edu)).toBe(false)
     })
   })
