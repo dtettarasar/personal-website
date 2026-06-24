@@ -460,46 +460,7 @@ export function getProjects(locale: string) {
         }
       ]
     },
-    {
-      title: { fr: "News Ipsum", en: "News Ipsum" }, // Les noms de marque restent identiques
-      img: "/img/portfolio/news-ipsum-homepage.png",
-      icon: "material-symbols:newspaper-rounded",
-      stack: [
-        "mdi:language-typescript",
-        "mdi:vuejs",
-        "lineicons:nuxt",
-        "devicon-plain:vitest",
-        "fa7-brands:node-js",
-        "mdi:tailwind",
-        "lineicons:mongodb",
-        "mdi:docker",
-        "simple-icons:caddy",
-      ],
-      desc: {
-        fr: [
-          "<strong>Plateforme d'actualités haute performance</strong> développée avec une architecture moderne Nuxt 4/3 et TypeScript.",
-          "Mise en œuvre d'une approche de <strong>Développement Dirigé par les Tests (TDD)</strong> avec Vitest pour garantir une logique métier fiable dès le premier jour.",
-          "Accent mis sur l'<strong>Accessibilité Web (a11y)</strong>, visant la conformité WCAG pour offrir une expérience de lecture optimale.",
-          "Développement d'outils internes personnalisés en <strong>CLI</strong> pour une gestion efficace de l'environnement Docker et l'initialisation de l'administrateur.",
-          "Déploiement automatisé via une stack <strong>Docker & Caddy</strong> avec gestion native du SSL sur un VPS."
-        ],
-        en: [
-          "<strong>High-performance News Platform</strong> built with a modern Nuxt 4/3 and TypeScript architecture.",
-          "Implemented a <strong>Test-Driven Development (TDD)</strong> approach with Vitest to ensure reliable business logic from day one.",
-          "Focus on <strong>Web Accessibility (a11y)</strong>, aiming for WCAG compliance to provide an optimal reading experience.",
-          "Developed custom <strong>CLI internal tools</strong> for efficient Docker environment management and admin initialization.",
-          "Automated deployment using a <strong>Docker & Caddy</strong> stack with native SSL management on a VPS."
-        ]
-      },
-      links: [
-        { 
-          label: { fr: "Voir le code source", en: "View source code" }, 
-          url: "https://github.com/dtettarasar/news-ipsum", 
-          icon: "material-symbols:code-blocks" 
-        },
-      ]
-    },
-    {
+   {
       title: { fr: "Plateforme de Conférence d'Affaires", en: "Business Conference Platform" },
       img: "/img/portfolio/img-portfolio-cs50-homepage.png",
       icon: "material-symbols:event-available-rounded",
