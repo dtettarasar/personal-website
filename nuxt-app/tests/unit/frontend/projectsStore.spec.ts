@@ -1,3 +1,4 @@
+// tests/unit/frontend/projectsStore.spec.ts
 import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest'
 import { setActivePinia, createPinia } from 'pinia'
 import { useProjectsStore } from '~/stores/projectsStore'
@@ -59,11 +60,7 @@ const mockProjectsData = [
   },
 ]
 
-const mockApiResponse = {
-  status: 'success',
-  data: mockProjectsData,
-  timestamp: '2026-03-02T12:00:00.000Z',
-}
+const testLocale = 'en'
 
 // ===== TESTS =====
 describe('projectsStore', () => {
@@ -78,9 +75,9 @@ describe('projectsStore', () => {
 
   // ----- Initial State -----
   describe('initial state', () => {
-    it('has empty data array', () => {
+    it('has empty dataByLocale object', () => {
       const store = useProjectsStore()
-      expect(store.data).toEqual([])
+      expect(store.dataByLocale).toEqual({})
     })
 
     it('has loading set to false', () => {
@@ -98,12 +95,12 @@ describe('projectsStore', () => {
   describe('fetchData', () => {
     it('calls $fetch with /api/projects and populates data', async () => {
       const store = useProjectsStore()
-      vi.mocked($fetch).mockResolvedValueOnce(mockApiResponse)
+      vi.mocked($fetch).mockResolvedValueOnce(mockProjectsData)
 
-      const result = await store.fetchData()
+      const result = await store.fetchData(testLocale)
 
-      expect($fetch).toHaveBeenCalledWith('/api/projects')
-      expect(store.data).toEqual(mockProjectsData)
+      expect($fetch).toHaveBeenCalledWith('/api/projects', { query: { locale: testLocale } })
+      expect(store.dataByLocale[testLocale]).toEqual(mockProjectsData)
       expect(result).toEqual(mockProjectsData)
     })
 
@@ -113,23 +110,23 @@ describe('projectsStore', () => {
       let loadingDuringFetch = false
       vi.mocked($fetch).mockImplementationOnce(() => {
         loadingDuringFetch = store.loading
-        return Promise.resolve(mockApiResponse)
+        return Promise.resolve(mockProjectsData)
       })
 
       expect(store.loading).toBe(false)
-      await store.fetchData()
+      await store.fetchData(testLocale)
       expect(loadingDuringFetch).toBe(true)
       expect(store.loading).toBe(false)
     })
 
     it('does not re-fetch if data is already loaded (caching)', async () => {
       const store = useProjectsStore()
-      vi.mocked($fetch).mockResolvedValueOnce(mockApiResponse)
+      vi.mocked($fetch).mockResolvedValueOnce(mockProjectsData)
 
-      await store.fetchData()
+      await store.fetchData(testLocale)
       expect($fetch).toHaveBeenCalledTimes(1)
 
-      const result = await store.fetchData()
+      const result = await store.fetchData(testLocale)
       expect($fetch).toHaveBeenCalledTimes(1)
       expect(result).toEqual(mockProjectsData)
     })
@@ -138,10 +135,10 @@ describe('projectsStore', () => {
       const store = useProjectsStore()
       vi.mocked($fetch).mockRejectedValueOnce(new Error('Network error'))
 
-      const result = await store.fetchData()
+      const result = await store.fetchData(testLocale)
 
       expect(store.error).toBe('Network error')
-      expect(store.data).toEqual([])
+      expect(store.dataByLocale[testLocale]).toBeUndefined()
       expect(result).toEqual([])
     })
 
@@ -149,7 +146,7 @@ describe('projectsStore', () => {
       const store = useProjectsStore()
       vi.mocked($fetch).mockRejectedValueOnce({})
 
-      await store.fetchData()
+      await store.fetchData(testLocale)
 
       expect(store.error).toBe('Failed to fetch projects')
     })
@@ -158,11 +155,11 @@ describe('projectsStore', () => {
       const store = useProjectsStore()
 
       vi.mocked($fetch).mockRejectedValueOnce(new Error('fail'))
-      await store.fetchData()
+      await store.fetchData(testLocale)
       expect(store.error).toBe('fail')
 
-      vi.mocked($fetch).mockResolvedValueOnce(mockApiResponse)
-      await store.fetchData()
+      vi.mocked($fetch).mockResolvedValueOnce(mockProjectsData)
+      await store.fetchData(testLocale)
       expect(store.error).toBeNull()
     })
 
@@ -170,7 +167,7 @@ describe('projectsStore', () => {
       const store = useProjectsStore()
       vi.mocked($fetch).mockRejectedValueOnce(new Error('fail'))
 
-      await store.fetchData()
+      await store.fetchData(testLocale)
 
       expect(store.loading).toBe(false)
     })
@@ -180,10 +177,10 @@ describe('projectsStore', () => {
   describe('getProjectByTitle', () => {
     it('returns the correct project by exact title', async () => {
       const store = useProjectsStore()
-      vi.mocked($fetch).mockResolvedValueOnce(mockApiResponse)
-      await store.fetchData()
+      vi.mocked($fetch).mockResolvedValueOnce(mockProjectsData)
+      await store.fetchData(testLocale)
 
-      const result = store.getProjectByTitle('News Ipsum')
+      const result = store.getProjectByTitle(testLocale, 'News Ipsum')
 
       expect(result).toBeDefined()
       expect(result?.title).toBe('News Ipsum')
@@ -192,10 +189,10 @@ describe('projectsStore', () => {
 
     it('returns undefined for non-existent project', async () => {
       const store = useProjectsStore()
-      vi.mocked($fetch).mockResolvedValueOnce(mockApiResponse)
-      await store.fetchData()
+      vi.mocked($fetch).mockResolvedValueOnce(mockProjectsData)
+      await store.fetchData(testLocale)
 
-      const result = store.getProjectByTitle('Non Existent Project')
+      const result = store.getProjectByTitle(testLocale, 'Non Existent Project')
 
       expect(result).toBeUndefined()
     })
@@ -203,27 +200,27 @@ describe('projectsStore', () => {
     it('returns undefined when data is empty', () => {
       const store = useProjectsStore()
 
-      const result = store.getProjectByTitle('News Ipsum')
+      const result = store.getProjectByTitle(testLocale, 'News Ipsum')
 
       expect(result).toBeUndefined()
     })
 
     it('returns project with video field when present', async () => {
       const store = useProjectsStore()
-      vi.mocked($fetch).mockResolvedValueOnce(mockApiResponse)
-      await store.fetchData()
+      vi.mocked($fetch).mockResolvedValueOnce(mockProjectsData)
+      await store.fetchData(testLocale)
 
-      const result = store.getProjectByTitle('Otis AI – AI SaaS Platform')
+      const result = store.getProjectByTitle(testLocale, 'Otis AI – AI SaaS Platform')
 
       expect(result?.video).toBe('https://www.youtube.com/watch?v=4xhqBR_Kues')
     })
 
     it('returns project without video field when absent', async () => {
       const store = useProjectsStore()
-      vi.mocked($fetch).mockResolvedValueOnce(mockApiResponse)
-      await store.fetchData()
+      vi.mocked($fetch).mockResolvedValueOnce(mockProjectsData)
+      await store.fetchData(testLocale)
 
-      const result = store.getProjectByTitle('AI Art Shield')
+      const result = store.getProjectByTitle(testLocale, 'AI Art Shield')
 
       expect(result?.video).toBeUndefined()
     })
@@ -233,16 +230,16 @@ describe('projectsStore', () => {
   describe('getProjectCount', () => {
     it('returns total number of projects', async () => {
       const store = useProjectsStore()
-      vi.mocked($fetch).mockResolvedValueOnce(mockApiResponse)
-      await store.fetchData()
+      vi.mocked($fetch).mockResolvedValueOnce(mockProjectsData)
+      await store.fetchData(testLocale)
 
-      expect(store.getProjectCount()).toBe(3)
+      expect(store.getProjectCount(testLocale)).toBe(3)
     })
 
     it('returns 0 when data is empty', () => {
       const store = useProjectsStore()
 
-      expect(store.getProjectCount()).toBe(0)
+      expect(store.getProjectCount(testLocale)).toBe(0)
     })
   })
 
@@ -250,10 +247,10 @@ describe('projectsStore', () => {
   describe('getProjectsByStackIcon', () => {
     it('returns projects that use a specific stack icon', async () => {
       const store = useProjectsStore()
-      vi.mocked($fetch).mockResolvedValueOnce(mockApiResponse)
-      await store.fetchData()
+      vi.mocked($fetch).mockResolvedValueOnce(mockProjectsData)
+      await store.fetchData(testLocale)
 
-      const vueProjects = store.getProjectsByStackIcon('mdi:vuejs')
+      const vueProjects = store.getProjectsByStackIcon(testLocale, 'mdi:vuejs')
 
       expect(vueProjects).toHaveLength(2)
       expect(vueProjects.map(p => p.title)).toContain('News Ipsum')
@@ -262,10 +259,10 @@ describe('projectsStore', () => {
 
     it('returns only projects matching the icon', async () => {
       const store = useProjectsStore()
-      vi.mocked($fetch).mockResolvedValueOnce(mockApiResponse)
-      await store.fetchData()
+      vi.mocked($fetch).mockResolvedValueOnce(mockProjectsData)
+      await store.fetchData(testLocale)
 
-      const pythonProjects = store.getProjectsByStackIcon('mdi:language-python')
+      const pythonProjects = store.getProjectsByStackIcon(testLocale, 'mdi:language-python')
 
       expect(pythonProjects).toHaveLength(1)
       expect(pythonProjects[0].title).toBe('AI Art Shield')
@@ -273,10 +270,10 @@ describe('projectsStore', () => {
 
     it('returns empty array for non-existent stack icon', async () => {
       const store = useProjectsStore()
-      vi.mocked($fetch).mockResolvedValueOnce(mockApiResponse)
-      await store.fetchData()
+      vi.mocked($fetch).mockResolvedValueOnce(mockProjectsData)
+      await store.fetchData(testLocale)
 
-      const result = store.getProjectsByStackIcon('mdi:ruby')
+      const result = store.getProjectsByStackIcon(testLocale, 'mdi:ruby')
 
       expect(result).toEqual([])
     })
@@ -284,17 +281,17 @@ describe('projectsStore', () => {
     it('returns empty array when data is empty', () => {
       const store = useProjectsStore()
 
-      const result = store.getProjectsByStackIcon('mdi:vuejs')
+      const result = store.getProjectsByStackIcon(testLocale, 'mdi:vuejs')
 
       expect(result).toEqual([])
     })
 
     it('finds projects with shared stack icons (vitest)', async () => {
       const store = useProjectsStore()
-      vi.mocked($fetch).mockResolvedValueOnce(mockApiResponse)
-      await store.fetchData()
+      vi.mocked($fetch).mockResolvedValueOnce(mockProjectsData)
+      await store.fetchData(testLocale)
 
-      const vitestProjects = store.getProjectsByStackIcon('devicon-plain:vitest')
+      const vitestProjects = store.getProjectsByStackIcon(testLocale, 'devicon-plain:vitest')
 
       expect(vitestProjects).toHaveLength(2)
     })
