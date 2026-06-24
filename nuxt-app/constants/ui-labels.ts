@@ -29,7 +29,7 @@ export const homeLabels = {
     en: 'Resume',
   },
   portfolioBtn: {
-    fr: 'Portfolio',
+    fr: 'Mes projets',
     en: 'Portfolio',
   },
 }
@@ -55,7 +55,7 @@ export const footerLabels = {
 
 export const navLabels = {
   home: { fr: 'Accueil', en: 'Home' },
-  resume: { fr: 'CV', en: 'Resume' },
-  portfolio: { fr: 'Portfolio', en: 'Portfolio' },
-  contact: { fr: 'Contact', en: 'Contact' },
+  resume: { fr: 'Mon CV', en: 'Resume' },
+  portfolio: { fr: 'Mes projets', en: 'Portfolio' },
+  contact: { fr: 'Contactez moi', en: 'Contact me' },
 }
