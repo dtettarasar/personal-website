@@ -1,9 +1,6 @@
 <template>
-  <div class="bg-slate-800">
-    
-    <sections-hero-small icon="mdi:card-account-details" title="Resume" ></sections-hero-small>
 
-  </div>
+  <sections-hero-small icon="mdi:card-account-details" :title="pageTitle" ></sections-hero-small>
 
   <div class="mt-4" :class="containerStyleClasses">
 
@@ -55,7 +52,7 @@
 
 import { computed } from 'vue'
 import { useI18n } from 'vue-i18n'
-import { resumeSectionTitles } from '~/constants/ui-labels'
+import { resumeSectionTitles, navLabels } from '~/constants/ui-labels'
 
 const { locale } = useI18n()
 
@@ -69,6 +66,11 @@ const currentTitles = computed(() => {
     skills: resumeSectionTitles.skills[lang],
     languages: resumeSectionTitles.languages[lang],
   }
+})
+
+const pageTitle = computed(() => {
+  const lang = locale.value === 'fr' ? 'fr' : 'en'
+  return navLabels.resume[lang]
 })
 
 const containerStyleClasses = [
