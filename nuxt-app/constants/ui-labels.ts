@@ -2,11 +2,11 @@
 
 export const resumeSectionTitles = {
   experiences: {
-    fr: 'Expériences',
+    fr: 'Expériences professionnelles',
     en: 'Experiences',
   },
   education: {
-    fr: 'Éducation & Certifications',
+    fr: 'Formation & Certifications',
     en: 'Education & Certifications',
   },
   skills: {
