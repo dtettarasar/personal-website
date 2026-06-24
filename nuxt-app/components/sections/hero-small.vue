@@ -22,10 +22,13 @@
 
 <script setup lang="ts">
 // Typage strict des props en TypeScript
-defineProps<{
+// Dans le script de HeroSmall.vue
+const props = withDefaults(defineProps<{
   title: string
-  icon?: string // Optionnelle, prendra la valeur par défaut dans le template si absente
-}>()
+  icon?: string
+}>(), {
+  icon: 'material-symbols:info-outline' // Ton icône par défaut ici
+})
 
 // Classes CSS centralisées
 const titleClasses = [
