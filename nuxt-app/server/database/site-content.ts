@@ -186,18 +186,18 @@ export function getHeroData(locale: string) {
             jobTitle: "Chargé de Marketing Digital & Référent Web",
             period: "Février 2016 - Juin 2017",
             jobMissions: [
-              "<strong>Interface Technique Internationale :</strong> Point de contact unique de l'équipe de développement basée au siège allemand (suivi des bugs sur la plateforme interne, cadrage et remontée des demandes d’évolution).",
-              "<strong>Administration CMS & SEO technique :</strong> Gestion et mise à jour structurelle du catalogue produits sur le marché français via le CMS eZ Publish et optimisation du référencement naturel.",
-              "<strong>Intégration & Création graphique :</strong> Développement et stylisation de landing pages personnalisées (HTML5/CSS3) et conception d'infographies complexes pour l'identité visuelle de la marque."
+              "<strong>Interface Technique Internationale :</strong> Point de contact unique de l'équipe de développement basée au <strong>siège allemand</strong> (<strong>suivi des bugs</strong> sur la plateforme interne, cadrage et remontée des <strong>demandes d’évolution</strong>).",
+              "<strong>Administration CMS & SEO technique :</strong> Gestion et mise à jour structurelle du <strong>catalogue produits</strong> sur le marché français via le CMS <strong>eZ Publish</strong> et optimisation du <strong>référencement naturel</strong>.",
+              "<strong>Intégration & Création graphique :</strong> Développement et stylisation de <strong>landing pages personnalisées</strong> (<strong>HTML5/CSS3</strong>) et conception d'infographies complexes pour l'<strong>identité visuelle</strong> de la marque."
             ]
           },
           en: {
             jobTitle: "Digital Marketing Manager & Web Referent",
             period: "February 2016 - June 2017",
             jobMissions: [
-              "<strong>International Technical Interface:</strong> Single point of contact for the core development team based at the German headquarters (bug tracking on the internal platform, scoping, and escalating technical evolution requests).",
-              "<strong>CMS Administration & Technical SEO:</strong> Structural management and updates of the product catalog for the French market via the eZ Publish CMS, driving search engine optimization.",
-              "<strong>Integration & Graphic Design:</strong> Developed and styled responsive custom landing pages (HTML5/CSS3) and designed complex infographics for the brand's visual identity."
+              "<strong>International Technical Interface:</strong> Single point of contact for the core development team based at the <strong>German headquarters</strong> (<strong>bug tracking</strong> on the internal platform, scoping, and escalating <strong>technical evolution requests</strong>).",
+              "<strong>CMS Administration & Technical SEO:</strong> Structural management and updates of the <strong>product catalog</strong> for the French market via the <strong>eZ Publish CMS</strong>, driving <strong>search engine optimization</strong>.",
+              "<strong>Integration & Graphic Design:</strong> Developed and styled <strong>responsive custom landing pages</strong> (<strong>HTML5/CSS3</strong>) and designed complex infographics for the brand's <strong>visual identity</strong>."
             ]
           }
         }
