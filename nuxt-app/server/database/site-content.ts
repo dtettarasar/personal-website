@@ -126,12 +126,11 @@ export function getHeroData(locale: string) {
       {
         companyName: "Lab R&D / Projets Personnels",
         companyVenue: "Remote, France",
-        jobTitle: "Product Owner & Solo Conceptor",
-        period: "2024 - Present",
         companyLogoSrc: "/img/resume/experiences/research-and-development.png",
         translations: {
           fr: {
             jobTitle: "Product Owner & Concepteur Solo",
+            period: "2024 - Présent",
             jobMissions: [
               "<strong>2025 : Cursus Harvard CS50P (Python) & Protection Créative :</strong> Approfondissement de la programmation orientée objet. Conception d’<em>AI Art Shield</em> (Projet final Harvard) : un MVP algorithmique en ligne de commande (CLI) dédié à la protection des œuvres des illustrateurs (Cadrage, PRD, logique POO).",
               "<strong>2025 : Architecture & DevOps (Site Portfolio) :</strong> Déploiement et maintenance en production du site portfolio (dylan-tettarasar.dev) développé sous <strong>Nuxt.js</strong>. Conteneurisation complète via <strong>Docker</strong> et configuration d'un reverse-proxy <strong>Caddy</strong> sur serveur VPS (gestion automatisée du HTTPS/DNS).",
@@ -140,6 +139,7 @@ export function getHeroData(locale: string) {
           },
           en: {
             jobTitle: "Product Owner & Solo Developer",
+            period: "2024 - Present",
             jobMissions: [
               "<strong>2025: Harvard CS50P (Python) & Creative Protection:</strong> Deep dive into Object-Oriented Programming. Conceived <em>AI Art Shield</em> (Harvard Final Project): an algorithmic Command Line Interface (CLI) MVP dedicated to protecting artists' artwork (Scoping, PRD, OOP logic).",
               "<strong>2025: Architecture & DevOps (Portfolio Site):</strong> Deployment and production maintenance of the portfolio website (dylan-tettarasar.dev) built with <strong>Nuxt.js</strong>. Full containerization via <strong>Docker</strong> and setup of a <strong>Caddy</strong> reverse-proxy on a VPS server (automated HTTPS/DNS management).",
@@ -151,12 +151,11 @@ export function getHeroData(locale: string) {
       {
         companyName: "DII / POLITICO",
         companyVenue: "Paris, France",
-        jobTitle: "Product Owner Web & CRM",
-        period: "Jan 2018 - Dec 2024",
         companyLogoSrc: "/img/resume/experiences/company-logo-dii.png",
         translations: {
           fr: {
             jobTitle: "Product Owner Web & CRM",
+            period: "Janvier 2018 - Décembre 2024",
             jobMissions: [
               "<strong>Gestion & Évolution du Parc CMS :</strong> Pilotage global de l’architecture WordPress Multisite pour l'ensemble des conférences de l'agence (marques propres et Grands Comptes : <em>Uber, KPMG, Le Figaro, Politico...</em>). Gestion des déploiements et des configurations DNS/HTTPS avec les prestataires.",
               "<strong>Intégration Frontend & Support Interne :</strong> Intégration complète des contenus événementiels (programmes, intervenants, modules de vidéos et livestreams) et adaptation responsive des interfaces (HTML5/CSS3/JS). Support technique auprès des équipes marketing (pics à 1000+ visites uniques/jour).",
@@ -167,6 +166,7 @@ export function getHeroData(locale: string) {
           },
           en: {
             jobTitle: "Web & CRM Product Owner",
+            period: "January 2018 - December 2024",
             jobMissions: [
               "<strong>CMS Fleet Management & Evolution:</strong> Global management of the WordPress Multisite architecture for all agency conferences (own brands and key accounts: <em>Uber, KPMG, Le Figaro, Politico...</em>). Handled custom domain deployments and DNS/HTTPS configurations.",
               "<strong>Frontend Integration & Internal Support:</strong> Full integration of event content (agendas, speakers, video modules, and livestreams) and responsive adaptation of interfaces (HTML5/CSS3/JS). Provided technical troubleshooting for marketing teams (traffic peaks at 1000+ unique visits/day).",
@@ -180,12 +180,11 @@ export function getHeroData(locale: string) {
       {
         companyName: "ABUS France",
         companyVenue: "Villeneuve-le-Roi, France",
-        jobTitle: "Digital Marketing Manager & Web Referent",
-        period: "Feb 2016 - Jun 2017",
         companyLogoSrc: "/img/resume/experiences/company-logo-abus.png",
         translations: {
           fr: {
             jobTitle: "Chargé de Marketing Digital & Référent Web",
+            period: "Février 2016 - Juin 2017",
             jobMissions: [
               "<strong>Interface Technique Internationale :</strong> Point de contact unique de l'équipe de développement basée au siège allemand (suivi des bugs sur la plateforme interne, cadrage et remontée des demandes d’évolution).",
               "<strong>Administration CMS & SEO technique :</strong> Gestion et mise à jour structurelle du catalogue produits sur le marché français via le CMS eZ Publish et optimisation du référencement naturel.",
@@ -194,6 +193,7 @@ export function getHeroData(locale: string) {
           },
           en: {
             jobTitle: "Digital Marketing Manager & Web Referent",
+            period: "February 2016 - June 2017",
             jobMissions: [
               "<strong>International Technical Interface:</strong> Single point of contact for the core development team based at the German headquarters (bug tracking on the internal platform, scoping, and escalating technical evolution requests).",
               "<strong>CMS Administration & Technical SEO:</strong> Structural management and updates of the product catalog for the French market via the eZ Publish CMS, driving search engine optimization.",
@@ -205,12 +205,11 @@ export function getHeroData(locale: string) {
       {
         companyName: "Pierre & Vacances Center Parcs",
         companyVenue: "Paris, France",
-        jobTitle: "Assistant Digital Manager",
-        period: "Feb 2015 - Aug 2015",
         companyLogoSrc: "/img/resume/experiences/company-logo-pvcp.png",
         translations: {
           fr: {
             jobTitle: "Assistant Responsable Digital",
+            period: "Février 2015 - Août 2015",
             jobMissions: [
               "<strong>SEO & Stratégie de Contenu :</strong> Optimisation du contenu éditorial pour les portails web du groupe afin d'accroître la visibilité et le trafic organique.",
               "<strong>Gestion des Actifs Numériques :</strong> Production de contenus visuels pour les réseaux sociaux et gestion des contenus de la chaîne YouTube de l'entreprise.",
@@ -219,6 +218,7 @@ export function getHeroData(locale: string) {
           },
           en: {
             jobTitle: "Assistant Digital Manager",
+            period: "February 2015 - August 2015",
             jobMissions: [
               "<strong>SEO & Content Strategy:</strong> Optimized editorial content for the group's web portals to increase organic reach.",
               "<strong>Digital Asset Management:</strong> Produced visual content for social media and managed the corporate YouTube channel content.",
@@ -230,12 +230,11 @@ export function getHeroData(locale: string) {
       {
         companyName: "Btown Ltd",
         companyVenue: "New Delhi, India",
-        jobTitle: "Web Content Specialist",
-        period: "Apr 2014 - Aug 2014",
         companyLogoSrc: "/img/resume/experiences/company-logo-btown.png",
         translations: {
           fr: {
             jobTitle: "Spécialiste Contenu Web",
+            period: "Avril 2014 - Août 2014",
             jobMissions: [
               "<strong>SEO International :</strong> Création et optimisation de contenu textuel via WordPress et Yoast SEO.",
               "<strong>Storytelling Visuel :</strong> Conception d'infographies et de visuels digitaux pour soutenir la croissance de l'audience éditoriale."
@@ -243,6 +242,7 @@ export function getHeroData(locale: string) {
           },
           en: {
             jobTitle: "Web Content Specialist",
+            period: "April 2014 - August 2014",
             jobMissions: [
               "<strong>International SEO:</strong> Content creation and optimization using WordPress/Yoast SEO.",
               "<strong>Visual Storytelling:</strong> Designed infographics and digital assets to support editorial growth."
@@ -262,14 +262,13 @@ export function getHeroData(locale: string) {
         companyName: exp.companyName,
         companyVenue: exp.companyVenue,
         jobTitle: text.jobTitle,
-        period: exp.period,
+        period: text.period,
         companyLogoSrc: exp.companyLogoSrc,
         jobMissions: text.jobMissions
       }
       
     })
-
-  }
+}
 
 
   export function getSkills(locale: string): { title: string; icon: string; items: { icon: string; label: string }[] }[] {
