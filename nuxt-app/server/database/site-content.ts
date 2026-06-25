@@ -271,51 +271,113 @@ export function getHeroData(locale: string) {
 }
 
 
-  export function getSkills(locale: string): { title: string; icon: string; items: { icon: string; label: string }[] }[] {
+ export function getSkills(locale: string): { title: string; icon: string; items: { icon: string; label: string }[] }[] {
   
+    // 1. Définition de la base de données des compétences
     const skillsBase = [
       {
-        // Pour les titres de catégories, comme ils changent toujours, un petit objet direct { fr, en } est super propre
-        title: { fr: "Frontend – Stack Principale", en: "Frontend – Main Stack" },
-        icon: "mdi:star-four-points",
+        title: { fr: "Gestion de Projet", en: "Project Management" },
+        icon: "mdi:clipboard-check",
         items: [
-          { icon: "mdi:vuejs", label: "Vue.js" }, // Chaîne simple = identique pour tout le monde
-          { icon: "lineicons:nuxt", label: "Nuxt.js" },
-          { icon: "mdi:tailwind", label: "Tailwind CSS" }
+          { icon: "mdi:jira", label: "Jira" },
+          { icon: "mdi:atlassian", label: "Confluence" },
+          { icon: "bi:kanban-fill", label: "Agile / Kanban" },
+          { 
+            icon: "mdi:file-document-edit", 
+            label: { fr: "Spécifications fonctionnelles", en: "Functional Specs" } 
+          },
+          { 
+            icon: "mdi:account-group", 
+            label: { fr: "Gestion des parties prenantes", en: "Stakeholder Management" } 
+          }
         ]
       },
       {
-        title: { fr: "Gestion de Projet & Produit", en: "Project & Product Management" },
+        title: { fr: "CRM & Plateformes Business", en: "CRM & Business Platforms" },
+        icon: "lsicon:marketing-filled",
+        items: [
+          { icon: "mdi:salesforce", label: "Salesforce" },
+          { icon: "ic:baseline-wordpress", label: "WordPress" },
+          { icon: "mdi:google-analytics", label: "Google Analytics" },
+          { 
+            icon: "mdi:microsoft-office", 
+            label: { fr: "Suite Office", en: "Office Suite" } 
+          }
+        ]
+      },
+      {
+        title: { fr: "SEO & Performance", en: "SEO & Performance" },
+        icon: "mdi:magnify",
+        items: [
+          { 
+            icon: "mdi:search-web", 
+            label: { fr: "SEO technique", en: "Technical SEO" } 
+          },
+          { icon: "mdi:speedometer", label: "Core Web Vitals" },
+          { 
+            icon: "mdi:eye-check", 
+            label: { fr: "Accessibilité (WCAG)", en: "Accessibility (WCAG)" } 
+          }
+        ]
+      },
+      {
+        title: { fr: "Web & Digital", en: "Web & Digital" },
+        icon: "mdi:web",
+        items: [
+          { icon: "mdi:language-html5", label: "HTML5" },
+          { icon: "mdi:language-css3", label: "CSS3" },
+          { icon: "mdi:language-javascript", label: "JavaScript" },
+          { icon: "mdi:tailwind", label: "Tailwind CSS" },
+          { icon: "mdi:bootstrap", label: "Bootstrap" },
+          { icon: "mdi:vuejs", label: "Vue.js" },
+          { icon: "lineicons:nuxt", label: "Nuxt.js" }
+        ]
+      },
+      {
+        title: { fr: "Outils & Workflow", en: "Tools & Workflow" },
+        icon: "carbon:tools-alt",
+        items: [
+          { icon: "mdi:git", label: "Git" },
+          { icon: "mdi:docker", label: "Docker" },
+          { icon: "simple-icons:caddy", label: "Caddy" },
+          { icon: "mdi:github", label: "GitHub" },
+          { icon: "ri:copilot-fill", label: "GitHub Copilot" },
+          { icon: "ri:claude-fill", label: "Claude Code" },
+          { icon: "devicon-plain:vitest", label: "Vitest" }
+        ]
+      },
+      {
+        title: { fr: "Backend & Bases de données", en: "Backend & Databases" },
+        icon: "mdi:server-network",
+        items: [
+          { icon: "mdi:nodejs", label: "Node.js / Express" },
+          { icon: "lineicons:mongodb", label: "MongoDB" },
+          { icon: "mdi:language-python", label: "Python" },
+          { icon: "mdi:database", label: "SQL" }
+        ]
+      },
+      {
+        title: { fr: "Outils Créatifs", en: "Creative Tools" },
         icon: "ion:color-palette",
         items: [
-          // Objet de traduction = s'adapte selon la locale !
-          { 
-            icon: "mdi:account-group", 
-            label: { 
-              fr: "Gestion des parties prenantes", 
-              en: "Stakeholder Management" 
-            } 
-          },
-          { icon: "mdi:microsoft-azure-devops", label: "Azure DevOps" }, // Outil fixe
-          { icon: "mdi:jira", label: "Jira / Confluence" } // Outil fixe
+          { icon: "file-icons:gimp", label: "GIMP" },
+          { icon: "simple-icons:krita", label: "Krita" },
+          { icon: "solar:figma-bold", label: "Figma" }
         ]
       }
-    ]
+    ];
 
-    // 2. On transforme le tableau avec le double niveau de map
+    // 2. Transformation dynamique du tableau selon la langue active
     return skillsBase.map(category => {
       return {
-        // On récupère le titre de la catégorie traduit
         title: category.title[locale as 'fr' | 'en'] || category.title['en'],
         icon: category.icon,
         
-        // On passe au crible chaque compétence de la catégorie
         items: category.items.map(item => {
-          
-          // LE TWIST MAGIQUE : On vérifie le type du label
+          // Résolution intelligente du label (string vs objet bilingue)
           const resolvedLabel = typeof item.label === 'string'
-            ? item.label // Si c'est du texte brut, on le renvoie tel quel
-            : (item.label[locale as 'fr' | 'en'] || item.label['en']) // Si c'est un objet, on cherche la langue
+            ? item.label
+            : (item.label[locale as 'fr' | 'en'] || item.label['en'])
 
           return {
             icon: item.icon,
