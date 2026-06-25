@@ -21,29 +21,19 @@
     <div class="pb-6 px-6 text-center text-xs text-gray-500 leading-relaxed">
       <p class="mb-1">{{ currentLabels.iconCredits }}</p>
 
-      <p>
+      <!-- Boucle dynamique sur les crédits Flaticon externalisés -->
+      <p v-for="(credit, index) in currentLabels.flaticonCredits" :key="index" class="mt-1">
         <a 
-          href="https://www.flaticon.com/free-icons/bakery"
-          title="bakery icons"
+          :href="credit.href"
+          :title="credit.title"
           class="underline hover:text-emerald-400"
           target="_blank"
         >
-          Bakery icon created by cahụụngung – Flaticon
+          {{ credit.text }}
         </a>
       </p>
 
-      <p>
-        <a 
-          href="https://www.flaticon.com/free-icons/cup-of-tea" 
-          title="cup of tea icons"
-          class="underline hover:text-emerald-400"
-          target="_blank"
-        >
-          Cup of tea icons created by Icon Home – Flaticon
-        </a>
-      </p>
-
-      <p class="mt-2">
+      <p class="mt-3">
         {{ currentLabels.otherIcons }}
         <a 
           href="https://icones.js.org/" 
@@ -73,6 +63,7 @@ const currentLabels = computed(() => {
     builtWith: footerLabels.builtWith[lang],
     iconCredits: footerLabels.iconCredits[lang],
     otherIcons: footerLabels.otherIcons[lang],
+    flaticonCredits: footerLabels.flaticonCredits[lang] // Injecté ici !
   }
 })
 </script>
