@@ -67,21 +67,16 @@ export function getHeroData(locale: string) {
   export function getResumeIntroText(locale: string): string[] {
 
     if (locale === 'fr') {
-
       return [
-        `resume intro text in <strong>French</strong>`,
-        `Bonjour, je suis Dylan Tettarasar, un Chef de Projet Digital...`,
-        `J'ai managé et maintenu des plateformes WordPress pour des clients d'envergure (Uber, KPMG, Politico)...`
+        `Product Owner technico-fonctionnel avec 7 ans d'expérience, j'évolue à la croisée de la gestion de projet web, des plateformes CRM et du développement technique. J'ai notamment piloté des écosystèmes CMS (WordPress Multisite) pour des clients d'envergure (Uber, KPMG, Politico), managé des projets Salesforce de bout en bout et coordonné des équipes de delivery de la spécification à la mise en production.`,
+        `Expert dans la traduction de besoins business en spécifications fonctionnelles (PRD, User Stories) et l'animation de backlogs (Jira), j'allie cette expérience terrain à un solide bagage technique renforcé par des cursus intensifs (Harvard CS50, freeCodeCamp). Cette double compétence me permet de garantir un dialogue d'égal à égal avec les développeurs et d'assurer une synchronisation parfaite avec les parties prenantes.`
       ]
-
     }
 
     // Par défaut / EN
-
     return [
-        `resume intro text in <strong>English</strong>`,
-        `Hello, I'm Dylan Tettarasar, a Digital Project Manager...`,
-        `I managed and maintained WordPress platforms for enterprise clients (Uber, KPMG, Politico)...`
+      `As a technico-functional Product Owner with 7 years of experience, I operate at the crossroads of web project management, CRM platforms, and technical development. My track record includes piloting CMS ecosystems (WordPress Multisite) for enterprise clients (Uber, KPMG, Politico), managing Salesforce projects end-to-end, and leading delivery teams from initial specifications to production.`,
+      `Expert in translating business needs into functional requirements (PRDs, User Stories) and managing backlogs (Jira), I combine hands-on product management with a strong technical background reinforced by intensive programs (Harvard CS50, freeCodeCamp). This dual expertise allows me to speak the same language as developers and bridge the gap with business stakeholders with confidence.`
     ]
 
 }
