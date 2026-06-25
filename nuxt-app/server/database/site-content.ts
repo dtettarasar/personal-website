@@ -124,8 +124,8 @@ export function getHeroData(locale: string) {
     // 1. On définit la structure technique et les clés de traduction
     const experiencesBase = [
       {
-        companyName: "Lab R&D / Projets Personnels",
-        companyVenue: "Remote, France",
+        companyName: "R&D Lab / Side Projects",
+        companyVenue: "Rambouillet, France",
         companyLogoSrc: "/img/resume/experiences/research-and-development.png",
         translations: {
           fr: {
