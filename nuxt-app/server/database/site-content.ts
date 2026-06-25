@@ -326,7 +326,13 @@ export function getHeroData(locale: string) {
     })
 }
 
-   export function getEducations(locale: string): { educationLogoSrc: string; title: string; issuer: string; year: string; certificationLink?: string }[] {
+export function getEducations(locale: string): { 
+  educationLogoSrc: string; 
+  year: string; 
+  certificationLink?: string; // Optionnel car les diplômes n'ont pas de lien
+  title: string; 
+  issuer: string; 
+}[] {
 
     // 1. On définit la structure technique et les clés de traduction
     const educationsBase = [
@@ -345,7 +351,6 @@ export function getHeroData(locale: string) {
           }
         }
       },
-
       {
         educationLogoSrc: "/img/resume/educations/fcc_logo.png",
         year: "2023",
@@ -361,26 +366,96 @@ export function getHeroData(locale: string) {
           }
         }
       },
-
-    ]
+      {
+        educationLogoSrc: "/img/resume/educations/harvard-university-logo-0.png",
+        year: "2021",
+        certificationLink: "https://courses.edx.org/certificates/8c91c4feaae048159aab19a913c47924",
+        translations: {
+          fr: {
+            title: "CS50x - Introduction à l'Informatique",
+            issuer: "Université Harvard"
+          },
+          en: {
+            title: "CS50x - Introduction to Computer Science",
+            issuer: "Harvard University"
+          }
+        }
+      },
+      {
+        educationLogoSrc: "/img/resume/educations/fcc_logo.png",
+        year: "2020",
+        certificationLink: "https://www.freecodecamp.org/certification/fcc9e0cf531/javascript-algorithms-and-data-structures",
+        translations: {
+          fr: {
+            title: "Algorithmes JavaScript et Structures de Données",
+            issuer: "freeCodeCamp"
+          },
+          en: {
+            title: "JavaScript Algorithms and Data Structures",
+            issuer: "freeCodeCamp"
+          }
+        }
+      },
+      {
+        educationLogoSrc: "/img/resume/educations/fcc_logo.png",
+        year: "2020",
+        certificationLink: "https://www.freecodecamp.org/certification/fcc9e0cf531/responsive-web-design",
+        translations: {
+          fr: {
+            title: "Conception Web Responsive",
+            issuer: "freeCodeCamp"
+          },
+          en: {
+            title: "Responsive Web Design",
+            issuer: "freeCodeCamp"
+          }
+        }
+      },
+      {
+        educationLogoSrc: "/img/resume/educations/diploma-logo-inseec.png",
+        year: "2015",
+        // Pas de certificationLink ici
+        translations: {
+          fr: {
+            title: "Master en Marketing Digital",
+            issuer: "INSEEC Business School Paris"
+          },
+          en: {
+            title: "Master's Degree - Digital Marketing",
+            issuer: "INSEEC Business School Paris"
+          }
+        }
+      },
+      {
+        educationLogoSrc: "/img/resume/educations/diploma-logo-uvsq.png",
+        year: "2012",
+        // Nettoyage de courseDetails : on injecte directement la bonne valeur selon la langue
+        translations: {
+          fr: {
+            title: "DUT Techniques de Commercialisation (Spécialisation Marketing)",
+            issuer: "Université de Versailles Saint-Quentin-en-Yvelines (UVSQ)"
+          },
+          en: {
+            title: "BTEC Higher National Diploma (Specialized in Marketing)",
+            issuer: "Versailles Saint-Quentin-en-Yvelines University"
+          }
+        }
+      }
+    ];
 
     // 2. On transforme le tableau pour renvoyer exactement le format attendu
     return educationsBase.map(edu => {
-
-      // On récupère la traduction correspondante, ou on se rabat sur l'anglais au cas où
       const text = edu.translations[locale as 'fr' | 'en'] || edu.translations['en']
       
       return {
         educationLogoSrc: edu.educationLogoSrc,
-        title: text.title,
-        issuer: text.issuer,
         year: edu.year,
-        certificationLink: edu.certificationLink
+        certificationLink: edu.certificationLink, // Sera transmis (ou undefined pour les diplômes)
+        title: text.title,
+        issuer: text.issuer
       }
-      
     })
-
-   }
+}
 
 
 export function getProjects(locale: string) {
