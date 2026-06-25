@@ -201,6 +201,54 @@ export function getHeroData(locale: string) {
             ]
           }
         }
+      },
+      {
+        companyName: "Pierre & Vacances Center Parcs",
+        companyVenue: "Paris, France",
+        jobTitle: "Assistant Digital Manager",
+        period: "Feb 2015 - Aug 2015",
+        companyLogoSrc: "/img/resume/experiences/company-logo-pvcp.png",
+        translations: {
+          fr: {
+            jobTitle: "Assistant Responsable Digital",
+            jobMissions: [
+              "<strong>SEO & Stratégie de Contenu :</strong> Optimisation du contenu éditorial pour les portails web du groupe afin d'accroître la visibilité et le trafic organique.",
+              "<strong>Gestion des Actifs Numériques :</strong> Production de contenus visuels pour les réseaux sociaux et gestion des contenus de la chaîne YouTube de l'entreprise.",
+              "<strong>Reporting de Performance :</strong> Suivi des indicateurs clés d'engagement (KPIs) et fourniture d'analyses basées sur les données pour orienter les campagnes de marketing digital."
+            ]
+          },
+          en: {
+            jobTitle: "Assistant Digital Manager",
+            jobMissions: [
+              "<strong>SEO & Content Strategy:</strong> Optimized editorial content for the group's web portals to increase organic reach.",
+              "<strong>Digital Asset Management:</strong> Produced visual content for social media and managed the corporate YouTube channel content.",
+              "<strong>Performance Reporting:</strong> Monitored key engagement metrics and provided data-driven insights for digital marketing campaigns."
+            ]
+          }
+        }
+      },
+      {
+        companyName: "Btown Ltd",
+        companyVenue: "New Delhi, India",
+        jobTitle: "Web Content Specialist",
+        period: "Apr 2014 - Aug 2014",
+        companyLogoSrc: "/img/resume/experiences/company-logo-btown.png",
+        translations: {
+          fr: {
+            jobTitle: "Spécialiste Contenu Web",
+            jobMissions: [
+              "<strong>SEO International :</strong> Création et optimisation de contenu textuel via WordPress et Yoast SEO.",
+              "<strong>Storytelling Visuel :</strong> Conception d'infographies et de visuels digitaux pour soutenir la croissance de l'audience éditoriale."
+            ]
+          },
+          en: {
+            jobTitle: "Web Content Specialist",
+            jobMissions: [
+              "<strong>International SEO:</strong> Content creation and optimization using WordPress/Yoast SEO.",
+              "<strong>Visual Storytelling:</strong> Designed infographics and digital assets to support editorial growth."
+            ]
+          }
+        }
       }
     ];
 
