@@ -123,39 +123,86 @@ export function getHeroData(locale: string) {
 
     // 1. On définit la structure technique et les clés de traduction
     const experiencesBase = [
-
-        {
-
-          companyName: "DII / POLITICO",
-          companyVenue: "Paris, France",
-          jobTitle: "Project Manager Web & CRM",
-          period: "Jan 2018 - Dec 2024",
-          companyLogoSrc: "/img/resume/experiences/company-logo-dii.png",
-          translations: {
-            fr: {
-              jobTitle: "Chef de Projet Web & CRM",
-              jobMissions: [
-                "<strong>Développement Frontend & Intégration :</strong> Développé et maintenu plus de 15 sites WordPress pour des clients d'entreprise (Uber, KPMG, Politico). Responsable de l'intégration HTML5/CSS3/JavaScript responsive à partir de maquettes Figma et de l'optimisation des performances (Core Web Vitals).",
-                "<strong>Développement de Composants Salesforce :</strong> Modifié et maintenu des composants Lightning Web (Salesforce) : ajustements HTML/CSS/JavaScript, corrections d'interface utilisateur et mises à jour logiques. Gestion du cycle complet de développement : branchement Git, tests et déploiements (staging/production).",
-                "<strong>Gestion Technique de Projet :</strong> Collaboré avec les équipes de développement pour relier les besoins métier à l'exécution technique. Rédaction de spécifications techniques, gestion des flux Jira et direction des tests d'assurance qualité (QA).",
-                "<strong>Performance & Accessibilité :</strong> Optimisé les performances web (Core Web Vitals) et mis en œuvre des normes d'accessibilité (WCAG) sur tous les projets.",
-                "<strong>Infrastructure & DevOps :</strong> Géré les cycles de vie des domaines et les configurations DNS via Gandi.net, et coordonné avec les fournisseurs d'hébergement pour le déploiement et la maintenance des sites clients."
-              ]
-            },
-            en: {
-              jobTitle: "Project Manager Web & CRM",
-              jobMissions: [
-                "<strong>Frontend Development & Integration:</strong> Developed and maintained 15+ WordPress sites for enterprise clients (Uber, KPMG, Politico). Responsible for responsive HTML5/CSS3/JavaScript integration from Figma mockups and performance optimization (Core Web Vitals).",
-                "<strong>Salesforce Component Development:</strong> Modified and maintained Lightning Web Components (Salesforce): HTML/CSS/JavaScript adjustments, UI fixes, and logic updates. Managed the full development lifecycle: Git branching, testing, and deployments (staging/production).",
-                "<strong>Technical Project Management:</strong> Collaborated with development teams to bridge business needs and technical execution. Wrote technical specifications, managed Jira workflows, and led Quality Assurance (QA) testing.",
-                "<strong>Performance & Accessibility:</strong> Optimized web performance (Core Web Vitals) and implemented accessibility standards (WCAG) across all projects.",
-                "<strong>Infrastructure & DevOps:</strong> Managed domain lifecycles and DNS configurations via Gandi.net, and coordinated with hosting providers for deployment and maintenance of client websites."
-              ]
-            }
+      {
+        companyName: "Lab R&D / Projets Personnels",
+        companyVenue: "Remote, France",
+        jobTitle: "Product Owner & Solo Conceptor",
+        period: "2024 - Present",
+        companyLogoSrc: "/img/resume/experiences/company-logo-dii.png",
+        translations: {
+          fr: {
+            jobTitle: "Product Owner & Concepteur Solo",
+            jobMissions: [
+              "<strong>2025 : Cursus Harvard CS50P (Python) & Protection Créative :</strong> Approfondissement de la programmation orientée objet. Conception d’<em>AI Art Shield</em> (Projet final Harvard) : un MVP algorithmique en ligne de commande (CLI) dédié à la protection des œuvres des illustrateurs (Cadrage, PRD, logique POO).",
+              "<strong>2025 : Architecture & DevOps (Site Portfolio) :</strong> Déploiement et maintenance en production du site portfolio (dylan-tettarasar.dev) développé sous <strong>Nuxt.js</strong>. Conteneurisation complète via <strong>Docker</strong> et configuration d'un reverse-proxy <strong>Caddy</strong> sur serveur VPS (gestion automatisée du HTTPS/DNS).",
+              "<strong>Fin 2024 : Conception du SaaS <em>Otis AI</em> :</strong> Pilotage produit complet d'une application de génération de contenu IA. Cadrage des spécifications et déploiement d'une <strong>architecture découplée</strong> (Frontend Vue.js / Backend Node.js-Express) avec intégration des API OpenAI et Stripe. Mise en place de tests avec l’outil Vitest."
+            ]
+          },
+          en: {
+            jobTitle: "Product Owner & Solo Developer",
+            jobMissions: [
+              "<strong>2025: Harvard CS50P (Python) & Creative Protection:</strong> Deep dive into Object-Oriented Programming. Conceived <em>AI Art Shield</em> (Harvard Final Project): an algorithmic Command Line Interface (CLI) MVP dedicated to protecting artists' artwork (Scoping, PRD, OOP logic).",
+              "<strong>2025: Architecture & DevOps (Portfolio Site):</strong> Deployment and production maintenance of the portfolio website (dylan-tettarasar.dev) built with <strong>Nuxt.js</strong>. Full containerization via <strong>Docker</strong> and setup of a <strong>Caddy</strong> reverse-proxy on a VPS server (automated HTTPS/DNS management).",
+              "<strong>Late 2024: SaaS Conception - <em>Otis AI</em>:</strong> Full product management of an AI content generation application. Scoped functional specifications and deployed a <strong>decoupled architecture</strong> (Vue.js Frontend / Node.js-Express Backend) integrated with OpenAI and Stripe APIs. Implemented testing with Vitest."
+            ]
           }
-        },
-
-    ]
+        }
+      },
+      {
+        companyName: "DII / POLITICO",
+        companyVenue: "Paris, France",
+        jobTitle: "Product Owner Web & CRM",
+        period: "Jan 2018 - Dec 2024",
+        companyLogoSrc: "/img/resume/experiences/company-logo-dii.png",
+        translations: {
+          fr: {
+            jobTitle: "Product Owner Web & CRM",
+            jobMissions: [
+              "<strong>Gestion & Évolution du Parc CMS :</strong> Pilotage global de l’architecture WordPress Multisite pour l'ensemble des conférences de l'agence (marques propres et Grands Comptes : <em>Uber, KPMG, Le Figaro, Politico...</em>). Gestion des déploiements et des configurations DNS/HTTPS avec les prestataires.",
+              "<strong>Intégration Frontend & Support Interne :</strong> Intégration complète des contenus événementiels (programmes, intervenants, modules de vidéos et livestreams) et adaptation responsive des interfaces (HTML5/CSS3/JS). Support technique auprès des équipes marketing (pics à 1000+ visites uniques/jour).",
+              "<strong>Migration & Administration Salesforce :</strong> Acteur clé de la transition critique en 3 mois d’un CRM legacy vers Salesforce. Administration quotidienne de la plateforme (gouvernance, droits d'accès, profils, Permission Sets, mapping d'objets et gestion des champs).",
+              "<strong>Product Ownership & Delivery Technique :</strong> Conception fonctionnelle et pilotage du cycle de vie de features complexes (parcours de membership, formulaires dynamiques via iframes connectées à Salesforce). Rédaction des cahiers des charges et des User Stories (Jira), modélisation des flux de données et tests de recette (UAT).",
+              "<strong>Build & Code CRM :</strong> Optimisation frontend (HTML/CSS) directement sur des composants LWC (Lightning Web Components) et gestion des déploiements via pull-requests sur GitHub."
+            ]
+          },
+          en: {
+            jobTitle: "Web & CRM Product Owner",
+            jobMissions: [
+              "<strong>CMS Fleet Management & Evolution:</strong> Global management of the WordPress Multisite architecture for all agency conferences (own brands and key accounts: <em>Uber, KPMG, Le Figaro, Politico...</em>). Handled custom domain deployments and DNS/HTTPS configurations.",
+              "<strong>Frontend Integration & Internal Support:</strong> Full integration of event content (agendas, speakers, video modules, and livestreams) and responsive adaptation of interfaces (HTML5/CSS3/JS). Provided technical troubleshooting for marketing teams (traffic peaks at 1000+ unique visits/day).",
+              "<strong>Salesforce CRM Migration & Administration:</strong> Key player in the critical 3-month transition from a legacy CRM to Salesforce. Managed daily platform administration (governance, access rights, profiles, Permission Sets, object mapping, and field management).",
+              "<strong>Product Ownership & Technical Delivery:</strong> Functional design and lifecycle management of complex features (membership paths, dynamic iframe forms connected to Salesforce). Wrote technical specifications and User Stories (Jira), modeled data flows, and executed User Acceptance Testing (UAT).",
+              "<strong>CRM Build & Code:</strong> Optimized frontend layouts (HTML/CSS) directly within Lightning Web Components (LWC) and managed delivery via GitHub pull-requests."
+            ]
+          }
+        }
+      },
+      {
+        companyName: "ABUS France",
+        companyVenue: "Villeneuve-le-Roi, France",
+        jobTitle: "Digital Marketing Manager & Web Referent",
+        period: "Feb 2016 - Jun 2017",
+        companyLogoSrc: "/img/resume/experiences/company-logo-abus.png",
+        translations: {
+          fr: {
+            jobTitle: "Chargé de Marketing Digital & Référent Web",
+            jobMissions: [
+              "<strong>Interface Technique Internationale :</strong> Point de contact unique de l'équipe de développement basée au siège allemand (suivi des bugs sur la plateforme interne, cadrage et remontée des demandes d’évolution).",
+              "<strong>Administration CMS & SEO technique :</strong> Gestion et mise à jour structurelle du catalogue produits sur le marché français via le CMS eZ Publish et optimisation du référencement naturel.",
+              "<strong>Intégration & Création graphique :</strong> Développement et stylisation de landing pages personnalisées (HTML5/CSS3) et conception d'infographies complexes pour l'identité visuelle de la marque."
+            ]
+          },
+          en: {
+            jobTitle: "Digital Marketing Manager & Web Referent",
+            jobMissions: [
+              "<strong>International Technical Interface:</strong> Single point of contact for the core development team based at the German headquarters (bug tracking on the internal platform, scoping, and escalating technical evolution requests).",
+              "<strong>CMS Administration & Technical SEO:</strong> Structural management and updates of the product catalog for the French market via the eZ Publish CMS, driving search engine optimization.",
+              "<strong>Integration & Graphic Design:</strong> Developed and styled responsive custom landing pages (HTML5/CSS3) and designed complex infographics for the brand's visual identity."
+            ]
+          }
+        }
+      }
+    ];
 
     // 2. On transforme le tableau pour renvoyer exactement le format attendu
     return experiencesBase.map(exp => {
