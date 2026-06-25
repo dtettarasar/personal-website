@@ -128,7 +128,7 @@ export function getHeroData(locale: string) {
         companyVenue: "Remote, France",
         jobTitle: "Product Owner & Solo Conceptor",
         period: "2024 - Present",
-        companyLogoSrc: "/img/resume/experiences/company-logo-dii.png",
+        companyLogoSrc: "/img/resume/experiences/research-and-development.png",
         translations: {
           fr: {
             jobTitle: "Product Owner & Concepteur Solo",
