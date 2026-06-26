@@ -2,15 +2,15 @@
 
   <sections-hero-small icon="mdi:card-account-details" :title="pageTitle" ></sections-hero-small>
 
-  <div class="mt-4" :class="containerStyleClasses">
-
-    <TextSectionTitleAlt icon="mdi:briefcase" :title="currentTitles.experiences"/>
-
-  </div>
-
   <div :class="containerStyleClasses">
 
     <resume-intro-section></resume-intro-section>
+
+  </div>
+
+  <div class="mt-4" :class="containerStyleClasses">
+
+    <TextSectionTitleAlt icon="mdi:briefcase" :title="currentTitles.experiences"/>
 
   </div>
 
