@@ -18,12 +18,12 @@ export function getHeroData(locale: string) {
       en: "Hello World! I’m Dylan"
     },
     subtitle: {
-      fr: "Chef de Projet Web · Product Owner",
-      en: "Web Project Manager · Product Owner"
+      fr: "Chef de Projet Digital & Product Owner Technique",
+      en: "Digital Project Manager & Technical Product Owner"
     },
     specialty: {
-      fr: "Spécialiste Vue.js / Nuxt.js",
-      en: "Vue.js / Nuxt.js Specialist"
+      fr: "Web, CRM & Plateformes Digitales",
+      en: "Web, CRM & Digital Platforms"
     },
     links: {
       email: "mailto:dtettarasar@gmail.com",
