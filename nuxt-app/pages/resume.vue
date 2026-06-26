@@ -52,7 +52,7 @@
 
 import { computed } from 'vue'
 import { useI18n } from 'vue-i18n'
-import { resumeSectionTitles, navLabels } from '~/constants/ui-labels'
+import { resumeLabels, navLabels } from '~/constants/ui-labels'
 
 const { locale } = useI18n()
 
@@ -61,10 +61,10 @@ const currentTitles = computed(() => {
   const lang = locale.value === 'fr' ? 'fr' : 'en'
   
   return {
-    experiences: resumeSectionTitles.experiences[lang],
-    education: resumeSectionTitles.education[lang],
-    skills: resumeSectionTitles.skills[lang],
-    languages: resumeSectionTitles.languages[lang],
+    experiences: resumeLabels.titleExperiences[lang],
+    education: resumeLabels.titleEducation[lang],
+    skills: resumeLabels.titleSkills[lang],
+    languages: resumeLabels.titleLanguages[lang],
   }
 })
 

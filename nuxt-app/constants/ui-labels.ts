@@ -1,21 +1,28 @@
 // constants/ui-labels.ts
 
-export const resumeSectionTitles = {
-  experiences: {
+export const resumeLabels = {
+  // Titres des sections
+  titleExperiences: {
     fr: 'Expériences professionnelles',
     en: 'Experiences',
   },
-  education: {
+  titleEducation: {
     fr: 'Formation & Certifications',
     en: 'Education & Certifications',
   },
-  skills: {
+  titleSkills: {
     fr: 'Compétences',
     en: 'Skills',
   },
-  languages: {
+  titleLanguages: {
     fr: 'Langues',
     en: 'Language',
+  },
+  
+  // Boutons et actions spécifiques au CV
+  showCredential: {
+    fr: 'Voir la certification',
+    en: 'Show credential',
   },
 }
 
