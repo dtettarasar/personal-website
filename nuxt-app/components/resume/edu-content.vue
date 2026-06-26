@@ -2,6 +2,14 @@
 
     // Component used to display one education (diploma or certification)
 
+    import { resumeLabels } from '~/constants/ui-labels'
+    import { computed } from 'vue'
+    import { useI18n } from 'vue-i18n'
+
+    const { locale } = useI18n()
+    const lang = computed(() => locale.value === 'fr' ? 'fr' : 'en')
+
+
     const separatorClasses = [
         'w-[70%]',
         'h-[4px]',
@@ -81,7 +89,7 @@
                     target="_blank" 
                     class="inline-flex items-center justify-center gap-2 px-6 py-3 bg-emerald-500 text-white font-bold rounded-full transition-colors hover:bg-emerald-600 shadow-lg"
                 >
-                    Show credential
+                    {{ resumeLabels.showCredential[lang] }}
                     <Icon name="mdi:open-in-new" class="size-[20px]" />
                 </a>
             </div>
