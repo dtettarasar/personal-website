@@ -35,14 +35,17 @@ import { homeLabels } from '~/constants/ui-labels'
 const { locale } = useI18n()
 const introStore = useIntroStore()
 
-// Récupération SSR du contenu de l'API
-await useAsyncData('intro-text', () => introStore.fetchData(locale.value), {
+// 🛡️ Récupération SSR sécurisée : on garantit à Nuxt un retour quoi qu'il arrive
+await useAsyncData('intro-text', async () => {
+  const result = await introStore.fetchData(locale.value)
+  return result ?? true
+}, {
   watch: [locale]
 })
 
 const paragraphs = computed(() => introStore.dataByLocale[locale.value] || [])
 
-// 🆕 Centralisation de TOUS les labels de l'interface pour cette section
+// Centralisation de TOUS les labels de l'interface pour cette section
 const currentLabels = computed(() => {
   const lang = locale.value === 'fr' ? 'fr' : 'en'
   

@@ -50,7 +50,6 @@
 </template>
 
 <script setup lang="ts">
-
   import { computed } from 'vue'
   import { useI18n } from 'vue-i18n'
   import { useHeroStore } from '~/stores/heroStore'
@@ -59,13 +58,17 @@
   const heroStore = useHeroStore()
 
   // Récupération SSR avec écoute du changement de langue
-  await useAsyncData('hero-data', () => heroStore.fetchData(locale.value), {
+  await useAsyncData('hero-data', async () => {
+    const result = await heroStore.fetchData(locale.value)
+    // Si le store renvoie les données, Nuxt les package dans le SSR.
+    // Si le store renvoie undefined (à cause du catch), on renvoie true pour valider la tâche auprès de Nuxt.
+    return result ?? true
+  }, {
     watch: [locale]
   })
 
   // Raccourci calculé pour l'affichage dans le template
   const heroData = computed(() => heroStore.dataByLocale[locale.value])
-
 </script>
 
 <style scoped>

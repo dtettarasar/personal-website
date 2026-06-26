@@ -116,7 +116,17 @@ const { locale, setLocale } = useI18n()
 
 // Initialisation du store global config
 const configStore = useConfigStore()
-await useAsyncData('global-config', () => configStore.fetchConfig())
+
+await useAsyncData('global-config', async () => {
+  const data = await configStore.fetchConfig()
+  
+  if (!data && process.server) {
+    // Optionnel : tu peux ici loguer une alerte spécifique au serveur
+    console.warn("⚠️ Le SSR n'a pas pu récupérer la config")
+  }
+  
+  return data // 👈 Si c'est 'null', Nuxt affichera le warning, et c'est BIEN.
+})
 
 const toggleMenu = () => {
   isMenuOpen.value = !isMenuOpen.value
