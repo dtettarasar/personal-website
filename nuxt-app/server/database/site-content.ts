@@ -47,21 +47,49 @@ export function getHeroData(locale: string) {
   export function getIntroText(locale: string): string[] {
     
     if (locale === 'fr') {
-
       return [
-        `Bonjour, je suis Dylan Tettarasar, un Chef de Projet Digital...`,
-        `J'ai managé et maintenu des plateformes WordPress pour des clients d'envergure (Uber, KPMG, Politico)...`
-      ]
+        `Bonjour, je suis Dylan Tettarasar, Chef de Projet Digital & Product Owner Technique avec 7 ans d'expérience dans les environnements web, 
+        faisant le lien entre les besoins business et l'exécution technique.`,
 
+        `J'ai commencé ma carrière dans le développement web et la gestion de projets digitaux, en intervenant sur le design, l'intégration et le déploiement. 
+        Pendant plusieurs années, <strong>j'ai managé et maintenu des plateformes WordPress pour des clients Grands Comptes (Uber, KPMG, Politico), coordonné des équipes de développement, 
+        rédigé des spécifications techniques et supervisé le cycle de vie complet des projets, de la conception à la mise en production</strong>.`,
+        
+        `<strong>Cela m'a apporté une compréhension globale de la manière dont les applications web modernes sont construites, déployées et scalées</strong> — tant du point de vue de l'architecture technique que de l'impact produit et business. 
+        J'ai développé une solide expertise en gestion de projets digitaux, plateformes CRM (Salesforce), optimisation des performances, ainsi qu'une capacité à collaborer efficacement avec des équipes pluridisciplinaires grâce à ma double vision technique et business.`,
+
+        `Au fil du temps, <strong>j'ai approfondi mes compétences techniques sur les frameworks modernes et les architectures full-stack</strong>. 
+        J'ai maîtrisé Vue.js, Nuxt.js, Node.js ainsi que les workflows DevOps modernes (Docker, Git, CI/CD), et j'ai construit plusieurs applications prêtes pour la production. <strong>Cette expérience concrète du développement fait de moi un gestionnaire de projet plus efficace</strong> : je parle le même langage que les développeurs et je peux évaluer les solutions techniques avec assurance.`,
+       
+        `Aujourd'hui, je me positionne comme un <strong>Product Owner Technique avec une forte expertise web concrète</strong>. 
+        J'associe des compétences en gestion de projet (gestion du backlog, spécifications, coordination des parties prenantes) à une réelle compréhension des contraintes techniques et de la stratégie produit digitale. 
+        Cette combinaison me permet de <strong>livrer des projets qui sont non seulement bien exécutés, mais aussi stratégiquement alignés sur les objectifs business</strong>.`,
+      ]
     }
 
-    // Par défaut / EN
-
+    // Par défaut / Version EN
     return [
-        `Hello, I'm Dylan Tettarasar, a Digital Project Manager...`,
-        `I managed and maintained WordPress platforms for enterprise clients (Uber, KPMG, Politico)...`
+        `Hello, I'm Dylan Tettarasar, a Digital Project Manager & Technical Product Owner with 7 years of experience in web environments, bridging the gap between business needs and technical execution.`,
+
+        `I started my career in web development and digital project management, working across design, integration, and deployment. 
+        For several years, <strong>I managed and maintained WordPress platforms for enterprise clients (Uber, KPMG, Politico), 
+        coordinated development teams, wrote technical specifications, and oversaw the complete project lifecycle from conception to production</strong>.`,
+        
+        `<strong>This gave me a comprehensive understanding of how modern web applications are built, deployed, and scaled</strong> — 
+        both from a technical architecture perspective and a product/business impact angle. I developed strong expertise in 
+        digital project management, CRM platforms (Salesforce), performance optimization, and the ability to collaborate 
+        effectively with cross-functional teams as I understand both the technical and business sides.`,
+
+        `Over time, <strong>I deepened my technical skills on modern frameworks and full-stack architectures</strong>. 
+        I mastered Vue.js, Nuxt.js, Node.js, and modern DevOps workflows (Docker, Git, CI/CD), 
+        and built several production-ready applications. <strong>This hands-on development experience makes me a more effective 
+        project manager</strong> — I speak the same language as developers and can evaluate technical solutions with confidence.`,
+       
+        `Today, I position myself as a <strong>Technical Product Owner with strong hands-on web expertise</strong>. I combine 
+        project management skills (backlog management, specs, stakeholder coordination) with a genuine understanding of 
+        technical constraints and digital product strategy. This combination allows me to <strong>deliver projects that are 
+        not only well-executed but also strategically aligned with business goals</strong>.`,
     ]
-    
 }
 
   export function getResumeIntroText(locale: string): string[] {
