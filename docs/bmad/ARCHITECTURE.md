@@ -1,9 +1,9 @@
 # 🏗️ Architecture Document
 ## Personal Site 25 - System Design & Technical Structure
 
-**Version:** 1.0  
+**Version:** 1.1  
 **Status:** Active Development  
-**Last Updated:** 2026-02-28  
+**Last Updated:** 2026-06-27  
 **Owner:** Dylan Tettarasar
 
 ---
@@ -65,6 +65,7 @@
 | **Vue 3** | 3.5+ | Reactive component framework, Composition API, smaller bundle than React |
 | **Tailwind CSS** | Latest | Utility-first design, rapid styling, small production bundle |
 | **Pinia** | 3.0+ | Lightweight state management, Vue 3 native, TypeScript-friendly |
+| **@nuxtjs/i18n** | 10.0+ | Locale detection, runtime locale switching, SSR-safe multilingual rendering |
 | **Nuxt Icon** | 2.1+ | Icon library integration, optimized SVG loading |
 
 **Alternative Considered:**
@@ -166,9 +167,13 @@
 
 | Endpoint | Method | Purpose | Auth | Cache |
 |----------|--------|---------|------|-------|
-| `/api/intro-text` | GET | Fetch intro paragraphs | None | 3600s |
-| `/api/experience` | GET | Fetch work history | None | 3600s |
-| `/api/lang-content` | GET | Fetch languages & skills | None | 3600s |
+| `/api/intro-text?locale=fr|en` | GET | Fetch localized intro paragraphs | None | 3600s |
+| `/api/experience?locale=fr|en` | GET | Fetch localized work history | None | 3600s |
+| `/api/lang-content?locale=fr|en` | GET | Fetch localized language section | None | 3600s |
+| `/api/skills?locale=fr|en` | GET | Fetch localized skill sections | None | 3600s |
+| `/api/educations?locale=fr|en` | GET | Fetch localized education/certifications | None | 3600s |
+| `/api/projects?locale=fr|en` | GET | Fetch localized portfolio projects | None | 3600s |
+| `/api/hero?locale=fr|en` | GET | Fetch localized hero content | None | 3600s |
 | `/api/contact` | POST | Submit contact form | Rate Limit | None |
 | `/api/contact` | GET | List messages (admin) | JWT | None |
 
@@ -199,22 +204,46 @@
 ```
 1. User requests page (e.g., /resume)
 2. SSR server receives request
-3. API routes fetch data from MongoDB
-4. Data hydrated into Nuxt page component
-5. HTML sent to browser with initial state
-6. Browser hydrates Vue.js component
-7. Subsequent interactions handled client-side
+3. Nuxt i18n resolves active locale (browser detection/cookie/manual switch)
+4. useAsyncData triggers Pinia store fetchData(locale)
+5. API routes fetch localized content from site-content.ts (and future MongoDB layer)
+6. Store caches localized payload in dataByLocale[locale]
+7. HTML sent to browser with initial localized state
+8. Browser hydrates Vue.js component
+9. Subsequent interactions handled client-side
 ```
 
 #### Client-Side Data Flow
 ```
 1. Component mounts
-2. Composable calls API route
-3. Response stored in Pinia store
-4. Component reactivity updates UI
-5. User interacts with component
-6. State updates trigger re-render
+2. Locale is read from i18n runtime
+3. Store fetchData(locale) checks locale cache
+4. Missing locale data triggers API call with locale query
+5. Response stored in Pinia dataByLocale[locale]
+6. Component reactivity updates UI
+7. User interacts with component
+8. State updates trigger re-render
 ```
+
+### 3.4 Localization Architecture (Implemented)
+
+#### i18n Strategy
+- **Locales:** `fr`, `en`
+- **Routing Strategy:** `no_prefix` (same route path, content switches by runtime locale)
+- **Locale Detection:** Browser language detection + i18n cookie persistence
+- **Manual Switch:** Language selector in navigation (`setLocale('fr'|'en')`)
+
+#### Localized Data Contracts
+- Content providers in `server/database/site-content.ts` accept `locale` and fallback to English when needed
+- API handlers read `locale` from query and delegate locale-aware data retrieval
+- Pinia stores cache localized responses by key: `dataByLocale[locale]`
+- UI labels are centralized in `constants/ui-labels.ts` with `{ fr, en }` structures
+
+#### SSR Reliability Contract
+- `useAsyncData` callbacks must return store fetch results explicitly
+- Store fetch methods return `data` on success or `null` on failure
+- Avoid `result ?? true` fallback patterns that can hide real SSR failures
+- This contract prevents duplicated client fetch behavior caused by undefined async returns
 
 ---
 
@@ -601,6 +630,7 @@ Future API versions:
 | Version | Date | Changes | Author |
 |---------|------|---------|--------|
 | 1.0 | 2026-02-28 | Initial architecture documentation | Dylan Tettarasar |
+| 1.1 | 2026-06-27 | Added implemented i18n architecture, localized SSR/data-flow, and updated API contracts | Dylan Tettarasar |
 
 ---
 

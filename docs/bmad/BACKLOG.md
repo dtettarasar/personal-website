@@ -1,9 +1,9 @@
 # 🛠️ Development Backlog & Roadmap
 ## Personal Site 25 - Implementation Plan
 
-**Version:** 1.0  
+**Version:** 1.1  
 **Status:** Active Development  
-**Last Updated:** 2026-03-02  
+**Last Updated:** 2026-06-27  
 **Owner:** Dylan Tettarasar
 
 ---
@@ -144,6 +144,37 @@ The backlog is a prioritized list of work items organized by:
 - All 6 data stores now use Composition API pattern
 - Phase 2 (MongoDB) will come later
 - Admin dashboard comes after Phase 2
+
+---
+
+#### Story: Bilingual Content Delivery with i18n (🟢 Done)
+**Priority:** High  
+**Points:** 20  
+**Sprint Goal:** Deliver FR/EN content end-to-end across UI labels, API payloads, and store-driven SSR rendering
+**Completed:** 2026-06-27
+
+**Context:** The site now supports French and English content from a single codebase using Nuxt i18n + locale-aware data retrieval. This includes localization of static labels, API-driven content, and locale caching in Pinia stores.
+
+**Completed Tasks:**
+- [x] 🟢 Integrated Nuxt i18n module in app configuration (locales: fr/en, `no_prefix` strategy, browser language detection)
+- [x] 🟢 Added language switcher in navigation (desktop + mobile)
+- [x] 🟢 Centralized translated UI labels in `constants/ui-labels.ts`
+- [x] 🟢 Updated `site-content.ts` to serve localized content (`getHeroData`, `getIntroText`, `getResumeIntroText`, `getLanguageContent`, `getExperiences`, `getSkills`, `getEducations`, `getProjects`)
+- [x] 🟢 Updated API routes to accept `locale` query parameter and pass locale to content provider layer
+- [x] 🟢 Updated Pinia stores to cache by locale (`dataByLocale`) and fetch per selected language
+- [x] 🟢 Updated key page/section components to re-fetch on locale change with `useAsyncData(..., { watch: [locale] })`
+- [x] 🟢 SSR consistency pass: removed `result ?? true` fallback pattern and normalized store fetch contracts (`data | null`) to avoid hidden SSR failures
+
+**Acceptance Criteria:**
+- [x] Visitors see FR or EN content based on browser detection and manual language switch
+- [x] Locale switch updates labels and server-provided content consistently
+- [x] API responses vary by locale for content endpoints
+- [x] Stores preserve per-locale cache and avoid redundant fetches
+- [x] SSR path uses explicit async returns and no duplicated client fetch warning
+
+**Notes:**
+- Current routing strategy is `no_prefix` (single URL per page)
+- International SEO enhancements (prefixed URLs, hreflang) are tracked separately as a future optimization
 
 ---
 
@@ -300,7 +331,7 @@ The backlog is a prioritized list of work items organized by:
 6. **Analytics & Monitoring (Q2 - MEDIUM):** Plausible, Sentry integration
 7. **Blog Platform (Q2-Q3 - LOW):** Nice-to-have for content marketing
 8. **Admin Dashboard (Q2-Q3 - LOW-PRIORITY):** Depends on MongoDB completion
-9. **Advanced Features (Q4+ - FUTURE):** Dark mode, i18n, E-commerce
+9. **Advanced Features (Q4+ - FUTURE):** Dark mode, international SEO enhancements, E-commerce
 
 **Why This Order?**
 - Data consolidation must come first (unblocks everything downstream)
@@ -772,22 +803,19 @@ describe('SkillSection', () => {
 
 ---
 
-#### User Story: Multi-Language Support (i18n)
+#### User Story: International SEO Enhancements
 **Status:** 🔴 Not Started  
-**Points:** 20
+**Points:** 8
 
-- [ ] Implement Vue i18n
-- [ ] Create French translations
-- [ ] Language switcher component
-- [ ] URL locale routing (/en, /fr)
-- [ ] SEO for multi-language
+- [ ] Evaluate `no_prefix` vs prefixed locale routing (`/fr`, `/en`) strategy
+- [ ] Add `hreflang` tags per localized page metadata
+- [ ] Add canonical URL rules per locale page version
+- [ ] Validate multilingual indexing in Search Console
 
 **Acceptance Criteria:**
-- [ ] Both languages render correctly
-- [ ] Language switcher functional
-- [ ] URLs reflect language choice
-- [ ] Translations complete
-- [ ] hreflang tags for SEO
+- [ ] SEO metadata clearly declares language variants
+- [ ] Search engines index FR/EN pages without duplicate content penalty
+- [ ] Routing strategy documented and validated in production
 
 ---
 
@@ -1105,6 +1133,7 @@ describe('SkillSection', () => {
 | Version | Date | Changes | Author |
 |---------|------|---------|--------|
 | 1.0 | 2026-02-28 | Initial backlog creation | Dylan Tettarasar |
+| 1.1 | 2026-06-27 | Added completed i18n story, SSR consistency notes, and updated future roadmap item | Dylan Tettarasar |
 
 ---
 
@@ -1117,12 +1146,5 @@ describe('SkillSection', () => {
 ---
 
 *This backlog is a living document. Update regularly as priorities change.*  
-*Last Sprint Review: 2026-02-28*  
-*Next Sprint Planning: 2026-03-14*
-
-
---- 
-Other topics
-Here are topics that we'll need to be covered here in the documents
-- added translations features using i18n package. This needs to be detailed in the backlog and documentation
-- features idea : build a back office with the ability to edit the colors for every element (hero animated gradients, text, button etc...) + add options for prebuild color sets
+*Last Sprint Review: 2026-06-27*  
+*Next Sprint Planning: TBD*
