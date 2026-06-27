@@ -37,8 +37,7 @@ const introStore = useIntroStore()
 
 // 🛡️ Récupération SSR sécurisée : on garantit à Nuxt un retour quoi qu'il arrive
 await useAsyncData('intro-text', async () => {
-  const result = await introStore.fetchData(locale.value)
-  return result ?? true
+  return await introStore.fetchData(locale.value)
 }, {
   watch: [locale]
 })

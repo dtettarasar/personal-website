@@ -59,10 +59,7 @@
 
   // Récupération SSR avec écoute du changement de langue
   await useAsyncData('hero-data', async () => {
-    const result = await heroStore.fetchData(locale.value)
-    // Si le store renvoie les données, Nuxt les package dans le SSR.
-    // Si le store renvoie undefined (à cause du catch), on renvoie true pour valider la tâche auprès de Nuxt.
-    return result ?? true
+    return await heroStore.fetchData(locale.value)
   }, {
     watch: [locale]
   })

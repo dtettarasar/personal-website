@@ -21,7 +21,7 @@ export const useHeroStore = defineStore('hero', () => {
     const dataByLocale = ref<Record<string, HeroData>>({})
     const error = ref<string | null>(null)
 
-    async function fetchData(locale: string) {
+    async function fetchData(locale: string): Promise<HeroData | null> {
 
         if (dataByLocale.value[locale]) return dataByLocale.value[locale]
 
@@ -41,6 +41,7 @@ export const useHeroStore = defineStore('hero', () => {
 
             error.value = "Erreur lors du chargement de la bannière principale"
             console.error(err)
+            return null
 
         }
 
