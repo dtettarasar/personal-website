@@ -29,7 +29,7 @@ export const useProjectsStore = defineStore('projects', () => {
   const error = ref<string | null>(null)
 
   // Actions
-  async function fetchData(locale: string): Promise<ProjectItem[]> {
+  async function fetchData(locale: string): Promise<ProjectItem[] | null> {
     // 1. Système de cache par langue
     if (dataByLocale.value[locale]) { 
       return dataByLocale.value[locale]
@@ -54,7 +54,7 @@ export const useProjectsStore = defineStore('projects', () => {
       error.value = err.message || 'Failed to fetch projects'
       console.error('Error fetching projects:', err)
 
-      return []
+      return null
 
     } finally {
 

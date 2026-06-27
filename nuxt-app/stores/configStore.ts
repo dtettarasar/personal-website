@@ -5,7 +5,7 @@ import { ref } from 'vue'
 export const useConfigStore = defineStore('config', () => {
   const ownerName = ref<string>('')
 
-  async function fetchConfig() {
+  async function fetchConfig(): Promise<{ ownerName: string } | null> {
     if (ownerName.value) return { ownerName: ownerName.value } // On renvoie l'existant
     try {
         const response = await $fetch<{ ownerName: string }>('/api/config')

@@ -23,7 +23,7 @@ export const useSkillsStore = defineStore('skills', () => {
   const error = ref<string | null>(null)
 
   // ===== ACTIONS (fonctions) =====
-  async function fetchData(locale: string): Promise<SkillSection[]> {
+  async function fetchData(locale: string): Promise<SkillSection[] | null> {
     // Système de cache : si la langue est déjà chargée, on renvoie les données
     if (dataByLocale.value[locale]) {
       return dataByLocale.value[locale]
@@ -44,7 +44,7 @@ export const useSkillsStore = defineStore('skills', () => {
     } catch (err: any) {
       console.error('Failed to fetch skills:', err)
       error.value = err?.statusMessage ?? err?.message ?? 'Error loading skills'
-      return []
+      return null
     } finally {
       loading.value = false
     }

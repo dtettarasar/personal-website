@@ -11,7 +11,7 @@ export const useIntroStore = defineStore('intro', {
   }),
 
   actions: {
-    async fetchData(locale: string) {
+    async fetchData(locale: string): Promise<string[] | null> {
       // Si on a déjà les données pour CETTE langue, on utilise le cache
       if (this.dataByLocale[locale]) {
         return this.dataByLocale[locale]
@@ -32,7 +32,7 @@ export const useIntroStore = defineStore('intro', {
 
       } catch (err: any) {
         this.error = err?.statusMessage ?? err?.message ?? 'Erreur lors du chargement de l’intro'
-        return []
+        return null
         
       } finally {
         this.loading = false

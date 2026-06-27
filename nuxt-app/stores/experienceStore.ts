@@ -20,7 +20,7 @@ export const useExperienceStore = defineStore('experience',() => {
     const error = ref<string | null>(null)
 
   //ACTIONS (fonctions)
-  async function fetchData(locale: string): Promise<ExperienceItem[]> {
+  async function fetchData(locale: string): Promise<ExperienceItem[] | null> {
     // 1. Système de cache par langue
     if (dataByLocale.value[locale]) { 
       return dataByLocale.value[locale]
@@ -45,7 +45,7 @@ export const useExperienceStore = defineStore('experience',() => {
 
       error.value = err?.statusMessage ?? err?.message ?? 'Erreur lors du chargement des expériences'
 
-      return []
+      return null
 
     } finally {
 

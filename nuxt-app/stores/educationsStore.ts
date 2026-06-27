@@ -21,7 +21,7 @@ export const useEducationsStore = defineStore('educations', () => {
   const error = ref<string | null>(null)
 
   // ===== ACTIONS =====
-  async function fetchData(locale: string): Promise<EducationItem[]> {
+  async function fetchData(locale: string): Promise<EducationItem[] | null> {
     // Avoid re-fetch if data already loaded
     if (dataByLocale.value[locale]?.length > 0) {
       return dataByLocale.value[locale]
@@ -47,7 +47,7 @@ export const useEducationsStore = defineStore('educations', () => {
 
         error.value = err?.statusMessage ?? err?.message ?? 'Error loading educations'
 
-        return []
+        return null
 
     } finally {
 

@@ -17,7 +17,7 @@ export const useLanguageContentStore = defineStore('languageContent', {
   }),
 
   actions: {
-    async fetchData(locale: string) {
+    async fetchData(locale: string): Promise<LanguageItem[] | null> {
       // 1. Si les données pour CETTE langue sont déjà en cache, on les renvoie direct
       if (this.dataByLocale[locale]) {
         return this.dataByLocale[locale]
@@ -38,7 +38,7 @@ export const useLanguageContentStore = defineStore('languageContent', {
     
       } catch (err: any) {
         this.error = err?.statusMessage ?? err?.message ?? 'Erreur lors du chargement des langues'
-        return []
+        return null
       } finally {
         this.loading = false
       }
