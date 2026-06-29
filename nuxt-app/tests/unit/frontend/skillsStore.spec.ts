@@ -111,7 +111,7 @@ describe('skillsStore', () => {
 
       expect(store.error).toBe(errorMessage)
       expect(store.dataByLocale[testLocale]).toBeUndefined()
-      expect(result).toEqual([])
+      expect(result).toBeNull()
     })
 
     it('sets error from statusMessage when available', async () => {

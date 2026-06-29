@@ -139,7 +139,7 @@ describe('projectsStore', () => {
 
       expect(store.error).toBe('Network error')
       expect(store.dataByLocale[testLocale]).toBeUndefined()
-      expect(result).toEqual([])
+      expect(result).toBeNull()
     })
 
     it('sets fallback error when no message is available', async () => {
