@@ -1,7 +1,7 @@
 # 🛠️ Development Backlog & Roadmap
 ## Personal Site 25 - Implementation Plan
 
-**Version:** 1.2  
+**Version:** 1.3  
 **Status:** Active Development  
 **Last Updated:** 2026-06-30  
 **Owner:** Dylan Tettarasar
@@ -282,6 +282,37 @@ The print layout should include a short profile summary placed above the experie
 **Technical Note:**
 The implementation should rely on CSS Paged Media rules (`@media print`, `@page`, `page-break-*`, `break-inside`) rather than an external PDF engine. The main product tradeoff is overflow management: unlike desktop publishing software, HTML/CSS print layouts will not automatically stop content from flowing past the page boundary. To keep the result controlled, the CV model should support print-specific content shaping (for example a shorter summary field like `cvShort` and section visibility flags such as `displayOnPrint`).
 
+For data architecture, the print feature should follow the same proven flow used by existing sections: `site-content.ts` -> API route -> Pinia store -> page/component consumption. No print-specific hardcoded data should be introduced directly in UI components.
+
+**Print Header Scope Note (Draft):**
+- Header identity should reuse existing data providers:
+  - `getGlobalConfig()` for owner name
+  - `getHeroData(locale)` for title, email, LinkedIn, and GitHub
+- Print-specific header fields should be modeled explicitly for CV usage:
+  - phone
+  - residence area (prefer generic format, e.g. `Yvelines (IDF)`)
+  - availability text
+  - portfolio label + URL
+- Given current public CV strategy, these fields are treated as intentionally public for the print route.
+
+**Example Header Payload (FR draft):**
+```ts
+{
+  ownerName: "Dylan Tettarasar",
+  title: "Chef de Projet Digital & Product Owner Technique",
+  email: "dtettarasar@gmail.com",
+  linkedin: "https://www.linkedin.com/in/dylan-tettarasar-a89a0865/",
+  github: "https://github.com/dtettarasar",
+  phone: "+33 X XX XX XX XX",
+  residence: "Yvelines (IDF)",
+  availability: "Disponible immediatement | Metros/RER : Paris & IDF",
+  portfolio: {
+    label: "Portfolio",
+    url: "https://dylan-tettarasar.dev"
+  }
+}
+```
+
 #### User Story 1: Create Print-Dedicated Route
 **Status:** 🔴 Not Started  
 **Priority:** High  
@@ -343,6 +374,8 @@ As a maintainer, I want the print CV to reuse existing content sources so that u
 - [ ] Introduce a print-specific content shape (example: `cvShort`, `displayOnPrint`, shorter bullet sets)
 - [ ] Define experience print payload with `companyName`, `companyVenue`, `jobTitle`, `period`, `jobMissionsShort`, and `displayOnPrint`; keep `companyLogoSrc` digital-only
 - [ ] Define a short print profile summary above experience, with either a dedicated `getResumePrintIntroText` or a shortened print-only variant of `getResumeIntroText`
+- [ ] Define print header payload by combining `getGlobalConfig()` + `getHeroData(locale)` + print-specific fields (`phone`, `residence`, `availability`, `portfolio`)
+- [ ] Add explicit API/store pipeline for print header data (no direct component hardcoding)
 
 **Acceptance Criteria:**
 - [ ] Print page displays the same up-to-date content as current data layer
@@ -352,6 +385,8 @@ As a maintainer, I want the print CV to reuse existing content sources so that u
 - [ ] Experience blocks on print use a shorter mission list and remain within the single-page budget
 - [ ] Company logos are excluded from the print version to preserve space for content
 - [ ] A short profile summary appears above the experience section and remains concise enough to fit the one-page layout
+- [ ] Header includes identity/contact fields required for applications (name, title, email, LinkedIn, GitHub, phone, residence, availability, portfolio)
+- [ ] Header uses existing data-flow architecture (`site-content.ts` -> API -> store -> component)
 
 ---
 
@@ -1284,6 +1319,7 @@ describe('SkillSection', () => {
 | 1.0 | 2026-02-28 | Initial backlog creation | Dylan Tettarasar |
 | 1.1 | 2026-06-27 | Added completed i18n story, SSR consistency notes, and updated future roadmap item | Dylan Tettarasar |
 | 1.2 | 2026-06-30 | Added draft Sprint 25.2 (Resume Print A4) with 6 structured user stories | Dylan Tettarasar |
+| 1.3 | 2026-06-30 | Added print header scope (fields + example payload) and explicit technical data-flow note for resume-print | Dylan Tettarasar |
 
 ---
 
