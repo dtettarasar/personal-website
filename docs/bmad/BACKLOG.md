@@ -376,6 +376,11 @@ As a maintainer, I want the print CV to reuse existing content sources so that u
 - [ ] Define a short print profile summary above experience, with either a dedicated `getResumePrintIntroText` or a shortened print-only variant of `getResumeIntroText`
 - [ ] Define print header payload by combining `getGlobalConfig()` + `getHeroData(locale)` + print-specific fields (`phone`, `residence`, `availability`, `portfolio`)
 - [ ] Add explicit API/store pipeline for print header data (no direct component hardcoding)
+- [ ] Define education print payload with only `issuer` (school/institution), `title` (diploma/certification), and `year`
+- [ ] Add a print-focused projection/getter strategy in store layer to return only fields needed by CV print sections
+- [ ] Update store interfaces/types to include print-oriented fields where needed (example: `displayOnPrint`, `jobMissionsShort`)
+- [ ] Add dedicated Pinia getters for CV print projections (header, experience, education, and summary)
+- [ ] Ensure print components consume getters directly, with no filtering/mapping logic in template markup
 
 **Acceptance Criteria:**
 - [ ] Print page displays the same up-to-date content as current data layer
@@ -387,6 +392,10 @@ As a maintainer, I want the print CV to reuse existing content sources so that u
 - [ ] A short profile summary appears above the experience section and remains concise enough to fit the one-page layout
 - [ ] Header includes identity/contact fields required for applications (name, title, email, LinkedIn, GitHub, phone, residence, availability, portfolio)
 - [ ] Header uses existing data-flow architecture (`site-content.ts` -> API -> store -> component)
+- [ ] Education section after experiences uses only institution, diploma title, and graduation year
+- [ ] Print page consumes a store-level projected model (no direct field filtering inside template markup)
+- [ ] Print filtering rules are implemented in API/store/model layer, not in page/component templates
+- [ ] Store interface contracts cover print-specific data needs without breaking existing non-print views
 
 ---
 
