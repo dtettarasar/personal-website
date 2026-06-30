@@ -1,7 +1,7 @@
 # 🛠️ Development Backlog & Roadmap
 ## Personal Site 25 - Implementation Plan
 
-**Version:** 1.4  
+**Version:** 1.5  
 **Status:** Active Development  
 **Last Updated:** 2026-06-30  
 **Owner:** Dylan Tettarasar
@@ -469,12 +469,20 @@ As a product owner, I want validated print quality across major browsers so that
 - [ ] Regression check on existing resume page
 - [ ] Document known limitations and fallback recommendations
 - [ ] Validate print color contrast and icon rendering quality (screen vs paper/PDF)
+- [ ] Add unit tests for print-oriented store getters/projections (header, experience, education, skills, languages)
+- [ ] Add tests for print filtering rules (`displayOnPrint`, `jobMissionsShort`, one-page-oriented subset selection)
+- [ ] Add component tests for print sections rendering (header, experience, education, skills, languages) with projected store data
+- [ ] Add locale coverage tests (FR/EN) for print data mapping and section content
+- [ ] Add non-regression tests to ensure existing digital resume route behavior remains unchanged
 
 **Acceptance Criteria:**
 - [ ] Print output passes visual QA checklist on target browsers
 - [ ] No regression introduced on current resume route
 - [ ] Known print constraints documented for future iterations
 - [ ] Brand coherence preserved (colors/icons/typography) with print-safe adjustments documented
+- [ ] Automated test suite validates print store projections and section rendering behavior
+- [ ] Print filtering logic is covered by tests and does not rely on template-level conditions
+- [ ] FR/EN print rendering paths pass tests with expected localized content
 
 ---
 
@@ -1345,6 +1353,7 @@ describe('SkillSection', () => {
 | 1.2 | 2026-06-30 | Added draft Sprint 25.2 (Resume Print A4) with 6 structured user stories | Dylan Tettarasar |
 | 1.3 | 2026-06-30 | Added print header scope (fields + example payload) and explicit technical data-flow note for resume-print | Dylan Tettarasar |
 | 1.4 | 2026-06-30 | Confirmed print content strategy: no dedicated Projects section, unified Education block, and editorial positioning guidance for R&D Lab experience | Dylan Tettarasar |
+| 1.5 | 2026-06-30 | Added explicit automated test scope for CV print stores/getters/components, locale coverage, and non-regression checks | Dylan Tettarasar |
 
 ---
 
