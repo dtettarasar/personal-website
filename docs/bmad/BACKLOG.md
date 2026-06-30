@@ -1,9 +1,9 @@
 # 🛠️ Development Backlog & Roadmap
 ## Personal Site 25 - Implementation Plan
 
-**Version:** 1.1  
+**Version:** 1.2  
 **Status:** Active Development  
-**Last Updated:** 2026-06-27  
+**Last Updated:** 2026-06-30  
 **Owner:** Dylan Tettarasar
 
 ---
@@ -267,6 +267,135 @@ The backlog is a prioritized list of work items organized by:
 - [ ] < 2s load time on 4G
 
 **Blocked By:** None
+
+---
+
+### 2.2 Next Sprint Draft (Sprint 25.2) - Resume Print (A4)
+**Duration:** TBD (proposed: 1 week)  
+**Goal:** Add a printable CV experience directly in the Nuxt app, with an A4-ready layout for job applications and a simple user flow from Resume page to browser print/download.
+
+**Description (Draft):**
+This sprint introduces a new print-focused CV version inside the personal website. The objective is to avoid external design tools for final CV export by generating a clean A4 document directly from site content. The feature should remain easy to maintain, reuse existing data sources, and provide a smooth candidate workflow: open print version -> print to PDF/download from browser.
+
+#### User Story 1: Create Print-Dedicated Route
+**Status:** 🔴 Not Started  
+**Priority:** High  
+**Points:** 3
+
+**User Story:**
+As a candidate, I want a dedicated print CV route so that I can open a version specifically optimized for A4 output.
+
+**Tasks:**
+- [ ] Create a new page route (draft: `/resume-print-version`)
+- [ ] Add page metadata/title for print context
+- [ ] Keep route isolated from main responsive CV layout
+
+**Acceptance Criteria:**
+- [ ] Route is accessible directly by URL
+- [ ] Route renders without breaking existing resume page
+- [ ] Page title clearly indicates print CV view
+
+---
+
+#### User Story 2: Build A4 Print Layout System
+**Status:** 🔴 Not Started  
+**Priority:** High  
+**Points:** 8
+
+**User Story:**
+As a recruiter/candidate, I want a clean A4 layout with proper print rules so that the CV is professional on paper/PDF.
+
+**Tasks:**
+- [ ] Define print CSS (`@page`, margins, print-safe typography)
+- [ ] Build A4 container and section spacing rules
+- [ ] Add page-break controls for major sections
+- [ ] Remove non-print UI artifacts (navigation effects, animations, shadows if needed)
+
+**Acceptance Criteria:**
+- [ ] Output fits A4 format without clipped content
+- [ ] Content remains readable in print and PDF
+- [ ] Major sections do not break awkwardly across pages
+
+---
+
+#### User Story 3: Reuse Existing Resume Data in Print Page
+**Status:** 🔴 Not Started  
+**Priority:** High  
+**Points:** 5
+
+**User Story:**
+As a maintainer, I want the print CV to reuse existing content sources so that updates stay synchronized with the main site.
+
+**Tasks:**
+- [ ] Reuse current stores/APIs for intro, experience, skills, education, languages
+- [ ] Ensure locale compatibility (FR/EN behavior aligned with current i18n strategy)
+- [ ] Define print-safe subset/order of resume content
+
+**Acceptance Criteria:**
+- [ ] Print page displays the same up-to-date content as current data layer
+- [ ] No duplicate hardcoded data introduced for print version
+- [ ] Locale-specific content is respected
+
+---
+
+#### User Story 4: Add Entry Point from Main Resume Page
+**Status:** 🔴 Not Started  
+**Priority:** Medium  
+**Points:** 3
+
+**User Story:**
+As a user, I want a visible action on the resume page so that I can quickly open the print CV version.
+
+**Tasks:**
+- [ ] Add CTA button/link on main resume page
+- [ ] Ensure accessibility label and clear microcopy
+- [ ] Open print page in expected context (same tab or new tab decision documented)
+
+**Acceptance Criteria:**
+- [ ] CTA is visible and understandable on desktop/mobile
+- [ ] Navigation to print route works reliably
+- [ ] UX wording communicates print/download intent
+
+---
+
+#### User Story 5: Trigger Browser Print/Download Flow
+**Status:** 🔴 Not Started  
+**Priority:** High  
+**Points:** 5
+
+**User Story:**
+As a candidate, I want to trigger browser print from the print page so that I can save my CV as PDF for applications.
+
+**Tasks:**
+- [ ] Add print action (button + `window.print()` flow)
+- [ ] Hide print controls in printed result
+- [ ] Validate behavior with browser native “Save as PDF”
+
+**Acceptance Criteria:**
+- [ ] User can print/save as PDF in one clear flow
+- [ ] Print controls are not visible in final printed output
+- [ ] No blocking UI issues during print action
+
+---
+
+#### User Story 6: Print QA & Cross-Browser Validation
+**Status:** 🔴 Not Started  
+**Priority:** Medium  
+**Points:** 5
+
+**User Story:**
+As a product owner, I want validated print quality across major browsers so that the generated CV is reliable for real-world applications.
+
+**Tasks:**
+- [ ] QA pass on Chrome + Firefox (desktop)
+- [ ] Validate A4 rendering, margins, page breaks, and text hierarchy
+- [ ] Regression check on existing resume page
+- [ ] Document known limitations and fallback recommendations
+
+**Acceptance Criteria:**
+- [ ] Print output passes visual QA checklist on target browsers
+- [ ] No regression introduced on current resume route
+- [ ] Known print constraints documented for future iterations
 
 ---
 
@@ -1134,6 +1263,7 @@ describe('SkillSection', () => {
 |---------|------|---------|--------|
 | 1.0 | 2026-02-28 | Initial backlog creation | Dylan Tettarasar |
 | 1.1 | 2026-06-27 | Added completed i18n story, SSR consistency notes, and updated future roadmap item | Dylan Tettarasar |
+| 1.2 | 2026-06-30 | Added draft Sprint 25.2 (Resume Print A4) with 6 structured user stories | Dylan Tettarasar |
 
 ---
 
@@ -1147,4 +1277,4 @@ describe('SkillSection', () => {
 
 *This backlog is a living document. Update regularly as priorities change.*  
 *Last Sprint Review: 2026-06-27*  
-*Next Sprint Planning: TBD*
+*Next Sprint Planning: 2026-06-30 (drafted Sprint 25.2)*
