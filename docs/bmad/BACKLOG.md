@@ -275,7 +275,7 @@ The backlog is a prioritized list of work items organized by:
 **Goal:** Add a printable CV experience directly in the Nuxt app, with an A4-ready layout for job applications and a simple user flow from Resume page to browser print/download.
 
 **Description (Draft):**
-This sprint introduces a new print-focused CV version inside the personal website. The objective is to avoid external design tools for final CV export by generating a clean A4 document directly from site content. The feature should remain easy to maintain, reuse existing data sources, and provide a smooth candidate workflow: open print version -> print to PDF/download from browser.
+This sprint introduces a new print-focused CV version inside the personal website. The objective is to avoid external design tools for final CV export by generating a clean A4 document directly from site content. The feature should remain easy to maintain, reuse existing data sources, and provide a smooth candidate workflow: open print version -> print to PDF/download from browser. The visual direction should stay aligned with the site's existing brand language (color palette, iconography, visual hierarchy), while adapting choices to print constraints (readability, available fonts, ink-friendly contrast).
 
 #### User Story 1: Create Print-Dedicated Route
 **Status:** 🔴 Not Started  
@@ -310,11 +310,14 @@ As a recruiter/candidate, I want a clean A4 layout with proper print rules so th
 - [ ] Build A4 container and section spacing rules
 - [ ] Add page-break controls for major sections
 - [ ] Remove non-print UI artifacts (navigation effects, animations, shadows if needed)
+- [ ] Align print visual style with existing site branding (colors, spacing rhythm, section headers)
+- [ ] Define icon/picto usage rules for print using existing Nuxt Icon set only where it improves readability
 
 **Acceptance Criteria:**
 - [ ] Output fits A4 format without clipped content
 - [ ] Content remains readable in print and PDF
 - [ ] Major sections do not break awkwardly across pages
+- [ ] Final print page is visually consistent with site identity without reducing print legibility
 
 ---
 
@@ -370,6 +373,7 @@ As a candidate, I want to trigger browser print from the print page so that I ca
 - [ ] Add print action (button + `window.print()` flow)
 - [ ] Hide print controls in printed result
 - [ ] Validate behavior with browser native “Save as PDF”
+- [ ] Ensure print action works with current route branding (print view remains clean and application-ready)
 
 **Acceptance Criteria:**
 - [ ] User can print/save as PDF in one clear flow
@@ -391,11 +395,13 @@ As a product owner, I want validated print quality across major browsers so that
 - [ ] Validate A4 rendering, margins, page breaks, and text hierarchy
 - [ ] Regression check on existing resume page
 - [ ] Document known limitations and fallback recommendations
+- [ ] Validate print color contrast and icon rendering quality (screen vs paper/PDF)
 
 **Acceptance Criteria:**
 - [ ] Print output passes visual QA checklist on target browsers
 - [ ] No regression introduced on current resume route
 - [ ] Known print constraints documented for future iterations
+- [ ] Brand coherence preserved (colors/icons/typography) with print-safe adjustments documented
 
 ---
 
