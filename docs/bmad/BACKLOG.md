@@ -277,6 +277,8 @@ The backlog is a prioritized list of work items organized by:
 **Description (Draft):**
 This sprint introduces a new print-focused CV version inside the personal website. The objective is to avoid external design tools for final CV export by generating a clean A4 document directly from site content. The feature should remain easy to maintain, reuse existing data sources, and provide a smooth candidate workflow: open print version -> print to PDF/download from browser. The visual direction should stay aligned with the site's existing brand language (color palette, iconography, visual hierarchy), while adapting choices to print constraints (readability, available fonts, ink-friendly contrast). The target format is a single-page A4 CV; content must be shaped to fit that constraint rather than spilling onto a second page.
 
+The print layout should include a short profile summary placed above the experience section, inspired by the current resume intro but optimized for the CV print format. This summary can reuse the same structural approach as `getResumeIntroText`, but it may need a dedicated shorter print-only version if the content density requires it.
+
 **Technical Note:**
 The implementation should rely on CSS Paged Media rules (`@media print`, `@page`, `page-break-*`, `break-inside`) rather than an external PDF engine. The main product tradeoff is overflow management: unlike desktop publishing software, HTML/CSS print layouts will not automatically stop content from flowing past the page boundary. To keep the result controlled, the CV model should support print-specific content shaping (for example a shorter summary field like `cvShort` and section visibility flags such as `displayOnPrint`).
 
@@ -340,6 +342,7 @@ As a maintainer, I want the print CV to reuse existing content sources so that u
 - [ ] Define print-safe subset/order of resume content
 - [ ] Introduce a print-specific content shape (example: `cvShort`, `displayOnPrint`, shorter bullet sets)
 - [ ] Define experience print payload with `companyName`, `companyVenue`, `jobTitle`, `period`, `jobMissionsShort`, and `displayOnPrint`; keep `companyLogoSrc` digital-only
+- [ ] Define a short print profile summary above experience, with either a dedicated `getResumePrintIntroText` or a shortened print-only variant of `getResumeIntroText`
 
 **Acceptance Criteria:**
 - [ ] Print page displays the same up-to-date content as current data layer
@@ -348,6 +351,7 @@ As a maintainer, I want the print CV to reuse existing content sources so that u
 - [ ] Print page has a controlled content density so A4 overflow remains predictable
 - [ ] Experience blocks on print use a shorter mission list and remain within the single-page budget
 - [ ] Company logos are excluded from the print version to preserve space for content
+- [ ] A short profile summary appears above the experience section and remains concise enough to fit the one-page layout
 
 ---
 
