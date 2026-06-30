@@ -277,6 +277,9 @@ The backlog is a prioritized list of work items organized by:
 **Description (Draft):**
 This sprint introduces a new print-focused CV version inside the personal website. The objective is to avoid external design tools for final CV export by generating a clean A4 document directly from site content. The feature should remain easy to maintain, reuse existing data sources, and provide a smooth candidate workflow: open print version -> print to PDF/download from browser. The visual direction should stay aligned with the site's existing brand language (color palette, iconography, visual hierarchy), while adapting choices to print constraints (readability, available fonts, ink-friendly contrast).
 
+**Technical Note:**
+The implementation should rely on CSS Paged Media rules (`@media print`, `@page`, `page-break-*`, `break-inside`) rather than an external PDF engine. The main product tradeoff is overflow management: unlike desktop publishing software, HTML/CSS print layouts will not automatically stop content from flowing past the page boundary. To keep the result controlled, the CV model should support print-specific content shaping (for example a shorter summary field like `cvShort` and section visibility flags such as `displayOnPrint`).
+
 #### User Story 1: Create Print-Dedicated Route
 **Status:** 🔴 Not Started  
 **Priority:** High  
@@ -312,12 +315,14 @@ As a recruiter/candidate, I want a clean A4 layout with proper print rules so th
 - [ ] Remove non-print UI artifacts (navigation effects, animations, shadows if needed)
 - [ ] Align print visual style with existing site branding (colors, spacing rhythm, section headers)
 - [ ] Define icon/picto usage rules for print using existing Nuxt Icon set only where it improves readability
+- [ ] Add CSS Paged Media guardrails (`break-inside: avoid`, section overflow rules)
 
 **Acceptance Criteria:**
 - [ ] Output fits A4 format without clipped content
 - [ ] Content remains readable in print and PDF
 - [ ] Major sections do not break awkwardly across pages
 - [ ] Final print page is visually consistent with site identity without reducing print legibility
+- [ ] Overflow strategy is explicitly controlled by data shaping rules, not left to browser defaults
 
 ---
 
@@ -333,11 +338,13 @@ As a maintainer, I want the print CV to reuse existing content sources so that u
 - [ ] Reuse current stores/APIs for intro, experience, skills, education, languages
 - [ ] Ensure locale compatibility (FR/EN behavior aligned with current i18n strategy)
 - [ ] Define print-safe subset/order of resume content
+- [ ] Introduce a print-specific content shape (example: `cvShort`, `displayOnPrint`, shorter bullet sets)
 
 **Acceptance Criteria:**
 - [ ] Print page displays the same up-to-date content as current data layer
 - [ ] No duplicate hardcoded data introduced for print version
 - [ ] Locale-specific content is respected
+- [ ] Print page has a controlled content density so A4 overflow remains predictable
 
 ---
 
