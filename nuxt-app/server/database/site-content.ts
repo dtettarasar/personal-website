@@ -147,6 +147,9 @@ export function getHeroData(locale: string) {
 
 }
 
+  // Editorial note for CV print:
+  // Keep "R&D Lab / Side Projects" framed as a serious professional experience with concrete outcomes.
+  // Revisit wording after final print CV iteration and advisor feedback if needed.
   export function getExperiences(locale: string): { companyName: string; companyVenue: string; jobTitle: string; period: string; companyLogoSrc: string; jobMissions: string[] }[] {
 
     // 1. On définit la structure technique et les clés de traduction

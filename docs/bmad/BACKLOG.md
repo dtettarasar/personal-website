@@ -1,7 +1,7 @@
 # 🛠️ Development Backlog & Roadmap
 ## Personal Site 25 - Implementation Plan
 
-**Version:** 1.3  
+**Version:** 1.4  
 **Status:** Active Development  
 **Last Updated:** 2026-06-30  
 **Owner:** Dylan Tettarasar
@@ -371,8 +371,12 @@ As a maintainer, I want the print CV to reuse existing content sources so that u
 - [ ] Reuse current stores/APIs for intro, experience, skills, education, languages
 - [ ] Ensure locale compatibility (FR/EN behavior aligned with current i18n strategy)
 - [ ] Define print-safe subset/order of resume content
+- [ ] Confirm no dedicated Projects section in print CV; project depth is delegated to Portfolio/GitHub links in header
+- [ ] Confirm unified Education section (degrees + Harvard/freeCodeCamp certifications in the same block)
 - [ ] Introduce a print-specific content shape (example: `cvShort`, `displayOnPrint`, shorter bullet sets)
 - [ ] Define experience print payload with `companyName`, `companyVenue`, `jobTitle`, `period`, `jobMissionsShort`, and `displayOnPrint`; keep `companyLogoSrc` digital-only
+- [ ] Position `R&D Lab / Side Projects` as a full experience block carrying recent project/training narrative for 2024-present period
+- [ ] Add editorial calibration pass for `R&D Lab / Side Projects` wording so it reads as serious professional experience (not a casual personal-project bucket)
 - [ ] Define a short print profile summary above experience, with either a dedicated `getResumePrintIntroText` or a shortened print-only variant of `getResumeIntroText`
 - [ ] Define print header payload by combining `getGlobalConfig()` + `getHeroData(locale)` + print-specific fields (`phone`, `residence`, `availability`, `portfolio`)
 - [ ] Add explicit API/store pipeline for print header data (no direct component hardcoding)
@@ -392,12 +396,15 @@ As a maintainer, I want the print CV to reuse existing content sources so that u
 - [ ] No duplicate hardcoded data introduced for print version
 - [ ] Locale-specific content is respected
 - [ ] Print page has a controlled content density so A4 overflow remains predictable
+- [ ] Print CV excludes a dedicated Projects section while still providing project depth through portfolio links
 - [ ] Experience blocks on print use a shorter mission list and remain within the single-page budget
 - [ ] Company logos are excluded from the print version to preserve space for content
 - [ ] A short profile summary appears above the experience section and remains concise enough to fit the one-page layout
 - [ ] Header includes identity/contact fields required for applications (name, title, email, LinkedIn, GitHub, phone, residence, availability, portfolio)
 - [ ] Header uses existing data-flow architecture (`site-content.ts` -> API -> store -> component)
 - [ ] Education section after experiences uses only institution, diploma title, and graduation year
+- [ ] Education remains a unified section including degrees and certifications (no split Certifications block for print)
+- [ ] `R&D Lab / Side Projects` is presented with calibrated wording and concrete missions to support role credibility
 - [ ] Languages section uses existing localized data with language name and proficiency level; icons remain optional based on print-space validation
 - [ ] Skills section uses grouped subsections with selective visibility at category and item level to preserve one-page readability
 - [ ] Skill pills may reuse existing Nuxt Icon identifiers and remain visually aligned with site branding
@@ -1337,6 +1344,7 @@ describe('SkillSection', () => {
 | 1.1 | 2026-06-27 | Added completed i18n story, SSR consistency notes, and updated future roadmap item | Dylan Tettarasar |
 | 1.2 | 2026-06-30 | Added draft Sprint 25.2 (Resume Print A4) with 6 structured user stories | Dylan Tettarasar |
 | 1.3 | 2026-06-30 | Added print header scope (fields + example payload) and explicit technical data-flow note for resume-print | Dylan Tettarasar |
+| 1.4 | 2026-06-30 | Confirmed print content strategy: no dedicated Projects section, unified Education block, and editorial positioning guidance for R&D Lab experience | Dylan Tettarasar |
 
 ---
 
