@@ -377,6 +377,7 @@ As a maintainer, I want the print CV to reuse existing content sources so that u
 - [ ] Define print header payload by combining `getGlobalConfig()` + `getHeroData(locale)` + print-specific fields (`phone`, `residence`, `availability`, `portfolio`)
 - [ ] Add explicit API/store pipeline for print header data (no direct component hardcoding)
 - [ ] Define education print payload with only `issuer` (school/institution), `title` (diploma/certification), and `year`
+- [ ] Define languages print payload with `name` and `level`, plus optional `img`/icon usage if space allows
 - [ ] Define skills print payload with sectioned categories and skill items, reusing existing resume skill structure
 - [ ] Add `displayOnPrint` at both skill-category and individual skill-item level to allow one-page content selection
 - [ ] Add a print-focused projection/getter strategy in store layer to return only fields needed by CV print sections
@@ -384,6 +385,7 @@ As a maintainer, I want the print CV to reuse existing content sources so that u
 - [ ] Add dedicated Pinia getters for CV print projections (header, experience, education, skills, and summary)
 - [ ] Ensure print components consume getters directly, with no filtering/mapping logic in template markup
 - [ ] Define design direction for print skills inspired by current site resume section + Figma draft: grouped subsections, pill-style skill items, existing Nuxt Icon identifiers, dark background tokens, white text
+- [ ] Validate whether language icons can be kept in print layout without harming one-page density; fallback to text-only rendering if space is too constrained
 
 **Acceptance Criteria:**
 - [ ] Print page displays the same up-to-date content as current data layer
@@ -396,6 +398,7 @@ As a maintainer, I want the print CV to reuse existing content sources so that u
 - [ ] Header includes identity/contact fields required for applications (name, title, email, LinkedIn, GitHub, phone, residence, availability, portfolio)
 - [ ] Header uses existing data-flow architecture (`site-content.ts` -> API -> store -> component)
 - [ ] Education section after experiences uses only institution, diploma title, and graduation year
+- [ ] Languages section uses existing localized data with language name and proficiency level; icons remain optional based on print-space validation
 - [ ] Skills section uses grouped subsections with selective visibility at category and item level to preserve one-page readability
 - [ ] Skill pills may reuse existing Nuxt Icon identifiers and remain visually aligned with site branding
 - [ ] Print page consumes a store-level projected model (no direct field filtering inside template markup)
