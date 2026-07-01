@@ -1,7 +1,7 @@
 # 🛠️ Development Backlog & Roadmap
 ## Personal Site 25 - Implementation Plan
 
-**Version:** 1.7  
+**Version:** 1.8  
 **Status:** Active Development  
 **Last Updated:** 2026-07-01  
 **Owner:** Dylan Tettarasar
@@ -325,11 +325,13 @@ As a candidate, I want a dedicated print CV route so that I can open a version s
 - [ ] Create a new page route (draft: `/resume-print-version`)
 - [ ] Add page metadata/title for print context
 - [ ] Keep route isolated from main responsive CV layout
+- [ ] Ensure print route does not render global site layout chrome (navbar/footer hidden for print page context)
 
 **Acceptance Criteria:**
 - [ ] Route is accessible directly by URL
 - [ ] Route renders without breaking existing resume page
 - [ ] Page title clearly indicates print CV view
+- [ ] Global site navbar/footer are not displayed on the print route UI
 
 ---
 
@@ -349,6 +351,9 @@ As a recruiter/candidate, I want a clean A4 layout with proper print rules so th
 - [ ] Align print visual style with existing site branding (colors, spacing rhythm, section headers)
 - [ ] Define icon/picto usage rules for print using existing Nuxt Icon set only where it improves readability
 - [ ] Add CSS Paged Media guardrails (`break-inside: avoid`, section overflow rules)
+- [ ] Prevent mobile responsive breakpoints from applying in print (keep intended two-column A4 grid)
+- [ ] Force print grid for header/body layout so PDF keeps left/right column structure
+- [ ] Enable print color preservation (`print-color-adjust`) for accents and skill pills
 
 **Acceptance Criteria:**
 - [ ] Output fits A4 format without clipped content
@@ -356,6 +361,8 @@ As a recruiter/candidate, I want a clean A4 layout with proper print rules so th
 - [ ] Major sections do not break awkwardly across pages
 - [ ] Final print page is visually consistent with site identity without reducing print legibility
 - [ ] Overflow strategy is explicitly controlled by data shaping rules, not left to browser defaults
+- [ ] PDF output preserves same structural layout as on-screen preview (header split + two-column body)
+- [ ] Skills pills retain intended visual style in generated PDF
 
 ---
 
@@ -447,11 +454,13 @@ As a candidate, I want to trigger browser print from the print page so that I ca
 - [ ] Hide print controls in printed result
 - [ ] Validate behavior with browser native “Save as PDF”
 - [ ] Ensure print action works with current route branding (print view remains clean and application-ready)
+- [ ] Document browser setting requirement for final export (`Headers and footers` disabled)
 
 **Acceptance Criteria:**
 - [ ] User can print/save as PDF in one clear flow
 - [ ] Print controls are not visible in final printed output
 - [ ] No blocking UI issues during print action
+- [ ] Export guide notes that browser-generated header/footer metadata must be disabled in print dialog settings
 
 ---
 
@@ -1385,6 +1394,7 @@ describe('SkillSection', () => {
 | 1.5 | 2026-06-30 | Added explicit automated test scope for CV print stores/getters/components, locale coverage, and non-regression checks | Dylan Tettarasar |
 | 1.6 | 2026-07-01 | Expanded test story with detailed store/component cases and explicit CTA + print-trigger interaction coverage | Dylan Tettarasar |
 | 1.7 | 2026-07-01 | Added detailed test files planning matrix listing existing specs to update and new print-focused specs to create | Dylan Tettarasar |
+| 1.8 | 2026-07-01 | Documented first working print prototype constraints (layout isolation, print grid preservation, color-adjust behavior, and browser header/footer export setting) | Dylan Tettarasar |
 
 ---
 
