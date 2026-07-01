@@ -10,38 +10,7 @@
     <article class="a4-sheet">
       <div class="accent-bar" />
 
-      <header class="sheet-header">
-        <div>
-          <h1 class="candidate-name">News Ipsum Candidate</h1>
-          <p class="candidate-title">Technical Product Owner · Web Project Lead</p>
-        </div>
-
-        <div class="contact-block">
-          <p>
-            <a href="mailto:news.ipsum@example.com">news.ipsum@example.com</a>
-          </p>
-          <p>
-            <a href="tel:+33600000000">+33 6 00 00 00 00</a>
-          </p>
-          <p class="availability-line">Disponible immédiatement | Métros/RER : Paris & IDF</p>
-          <p>Rambouillet, Ile-de-France</p>
-          <p>
-            <a href="https://portfolio.news-ipsum.dev" target="_blank" rel="noopener noreferrer">
-              portfolio.news-ipsum.dev
-            </a>
-          </p>
-          <p>
-            <a href="https://linkedin.com/in/news-ipsum" target="_blank" rel="noopener noreferrer">
-              linkedin.com/in/news-ipsum
-            </a>
-          </p>
-          <p>
-            <a href="https://github.com/news-ipsum" target="_blank" rel="noopener noreferrer">
-              github.com/news-ipsum
-            </a>
-          </p>
-        </div>
-      </header>
+      <ResumePrintVersionHeader />
 
       <section class="sheet-body">
         <div class="main-column">
