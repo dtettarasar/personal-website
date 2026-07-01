@@ -1,9 +1,9 @@
 # 🛠️ Development Backlog & Roadmap
 ## Personal Site 25 - Implementation Plan
 
-**Version:** 1.5  
+**Version:** 1.6  
 **Status:** Active Development  
-**Last Updated:** 2026-06-30  
+**Last Updated:** 2026-07-01  
 **Owner:** Dylan Tettarasar
 
 ---
@@ -470,9 +470,22 @@ As a product owner, I want validated print quality across major browsers so that
 - [ ] Document known limitations and fallback recommendations
 - [ ] Validate print color contrast and icon rendering quality (screen vs paper/PDF)
 - [ ] Add unit tests for print-oriented store getters/projections (header, experience, education, skills, languages)
+  - [ ] Header getter returns required fields and print-specific values
+  - [ ] Experience getter enforces `displayOnPrint` and prefers `jobMissionsShort` for print
+  - [ ] Education getter returns only issuer/title/year for print projection
+  - [ ] Skills getter filters categories/items by `displayOnPrint`
+  - [ ] Languages getter returns name/level with optional icon field
 - [ ] Add tests for print filtering rules (`displayOnPrint`, `jobMissionsShort`, one-page-oriented subset selection)
+  - [ ] Hidden entries (`displayOnPrint: false`) never reach print component props
+  - [ ] Print-projected arrays preserve expected ordering for CV readability
 - [ ] Add component tests for print sections rendering (header, experience, education, skills, languages) with projected store data
+  - [ ] Sections render correctly from getter output without template-level filtering
+  - [ ] Skills pill rendering remains stable with and without icons
 - [ ] Add locale coverage tests (FR/EN) for print data mapping and section content
+- [ ] Add interaction tests for print user flow
+  - [ ] Resume page CTA opens print route reliably
+  - [ ] Print button triggers `window.print()`
+  - [ ] Print controls are excluded from print media snapshot/DOM checks
 - [ ] Add non-regression tests to ensure existing digital resume route behavior remains unchanged
 
 **Acceptance Criteria:**
@@ -483,6 +496,8 @@ As a product owner, I want validated print quality across major browsers so that
 - [ ] Automated test suite validates print store projections and section rendering behavior
 - [ ] Print filtering logic is covered by tests and does not rely on template-level conditions
 - [ ] FR/EN print rendering paths pass tests with expected localized content
+- [ ] CTA-to-print navigation and print action trigger are covered by automated interaction tests
+- [ ] Stores and print components have dedicated test coverage for all print-specific data contracts
 
 ---
 
@@ -1354,6 +1369,7 @@ describe('SkillSection', () => {
 | 1.3 | 2026-06-30 | Added print header scope (fields + example payload) and explicit technical data-flow note for resume-print | Dylan Tettarasar |
 | 1.4 | 2026-06-30 | Confirmed print content strategy: no dedicated Projects section, unified Education block, and editorial positioning guidance for R&D Lab experience | Dylan Tettarasar |
 | 1.5 | 2026-06-30 | Added explicit automated test scope for CV print stores/getters/components, locale coverage, and non-regression checks | Dylan Tettarasar |
+| 1.6 | 2026-07-01 | Expanded test story with detailed store/component cases and explicit CTA + print-trigger interaction coverage | Dylan Tettarasar |
 
 ---
 
