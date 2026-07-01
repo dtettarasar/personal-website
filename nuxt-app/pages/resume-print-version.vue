@@ -174,7 +174,7 @@ function handlePrint() {
 }
 </script>
 
-<style>
+<style scoped>
 .resume-print-page {
   min-height: 100vh;
   background: linear-gradient(145deg, #f6f7fb 0%, #eceff5 100%);
@@ -227,55 +227,6 @@ function handlePrint() {
   height: 3px;
   width: 100%;
   background: #0f766e;
-}
-
-.sheet-header {
-  display: grid;
-  grid-template-columns: 1fr auto;
-  gap: 12px;
-  padding: 26px 28px 16px;
-  border-bottom: 1px solid #e2e8f0;
-}
-
-.candidate-name {
-  margin: 0 0 6px;
-  font-size: 2rem;
-  line-height: 1.1;
-  font-family: Georgia, "Times New Roman", serif;
-  color: #0f172a;
-}
-
-.candidate-title {
-  margin: 0;
-  font-size: 0.78rem;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-  color: #475569;
-}
-
-.contact-block {
-  text-align: right;
-  font-size: 0.72rem;
-  color: #334155;
-  line-height: 1.5;
-}
-
-.contact-block p {
-  margin: 0;
-}
-
-.contact-block a {
-  color: inherit;
-  text-decoration: none;
-}
-
-.contact-block a:hover {
-  text-decoration: underline;
-}
-
-.availability-line {
-  font-weight: 600;
-  color: #0f766e;
 }
 
 .sheet-body {
@@ -436,14 +387,6 @@ function handlePrint() {
     border-right: none;
     border-bottom: 1px solid #e2e8f0;
   }
-
-  .sheet-header {
-    grid-template-columns: 1fr;
-  }
-
-  .contact-block {
-    text-align: left;
-  }
 }
 
 @page {
@@ -476,18 +419,9 @@ function handlePrint() {
     margin: 0;
   }
 
-  .sheet-header {
-    display: grid !important;
-    grid-template-columns: 1fr auto !important;
-  }
-
   .sheet-body {
     display: grid !important;
     grid-template-columns: 2fr 1fr !important;
-  }
-
-  .sheet-header {
-    padding: 18px 20px 12px;
   }
 
   .main-column {
@@ -514,10 +448,6 @@ function handlePrint() {
     background: #1e293b !important;
     color: #ffffff !important;
     border: 1px solid #1e293b !important;
-  }
-
-  .contact-block a {
-    text-decoration: none !important;
   }
 
   .no-print {
