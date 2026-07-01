@@ -1,7 +1,7 @@
 # 🛠️ Development Backlog & Roadmap
 ## Personal Site 25 - Implementation Plan
 
-**Version:** 1.9  
+**Version:** 1.10  
 **Status:** Active Development  
 **Last Updated:** 2026-07-01  
 **Owner:** Dylan Tettarasar
@@ -539,6 +539,38 @@ As a product owner, I want validated print quality across major browsers so that
 - [ ] FR/EN print rendering paths pass tests with expected localized content
 - [ ] CTA-to-print navigation and print action trigger are covered by automated interaction tests
 - [ ] Stores and print components have dedicated test coverage for all print-specific data contracts
+
+---
+
+#### User Story 7: Optimize Print Page Structure (Tailwind + Components)
+**Status:** 🔴 Not Started  
+**Priority:** Medium  
+**Points:** 5
+
+**User Story:**
+As a maintainer, I want the print CV page to be refactored from prototype-style CSS to reusable component architecture and Tailwind utilities so that the codebase stays consistent, lighter, and easier to evolve.
+
+**Tasks:**
+- [ ] Convert static CSS blocks in `pages/resume-print-version.vue` into Tailwind utility classes where relevant
+- [ ] Keep only print-critical custom CSS (`@page`, print overrides, `break-inside`, print-color-adjust) in scoped style blocks
+- [ ] Define and implement reusable print components:
+  - [ ] `ResumePrintHeader`
+  - [ ] `ResumePrintProfile`
+  - [ ] `ResumePrintExperience`
+  - [ ] `ResumePrintEducation`
+  - [ ] `ResumePrintSkills`
+  - [ ] `ResumePrintLanguages`
+- [ ] Create a reusable `ResumePrintSectionTitle` component for title row pattern (`title + rule`) with optional icon support
+- [ ] Reuse icon patterns aligned with the digital resume page where it improves readability
+- [ ] Extract repeatable entry markup (example: experience entry block) into dedicated subcomponents when it reduces duplication
+- [ ] Validate final output parity between on-screen rendering and PDF print rendering after refactor
+
+**Acceptance Criteria:**
+- [ ] `resume-print-version.vue` is simplified and orchestrates section components rather than owning all markup/CSS
+- [ ] Tailwind-first styling is applied for general layout/spacing/typography
+- [ ] Print layout behavior remains stable after refactor (A4, two-column grid, pills rendering, color preservation)
+- [ ] Section title pattern is reusable and supports optional icons
+- [ ] No regression on current print route UX (CTA, print button, and print media behavior)
 
 ---
 
@@ -1414,6 +1446,7 @@ describe('SkillSection', () => {
 | 1.7 | 2026-07-01 | Added detailed test files planning matrix listing existing specs to update and new print-focused specs to create | Dylan Tettarasar |
 | 1.8 | 2026-07-01 | Documented first working print prototype constraints (layout isolation, print grid preservation, color-adjust behavior, and browser header/footer export setting) | Dylan Tettarasar |
 | 1.9 | 2026-07-01 | Added incremental section-based sub-stories for Resume Print dataflow and design delivery (header -> languages) | Dylan Tettarasar |
+| 1.10 | 2026-07-01 | Added optimization user story for Tailwind conversion and componentization of Resume Print sections/title pattern | Dylan Tettarasar |
 
 ---
 
