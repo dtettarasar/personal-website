@@ -1,7 +1,7 @@
 # 🛠️ Development Backlog & Roadmap
 ## Personal Site 25 - Implementation Plan
 
-**Version:** 1.8  
+**Version:** 1.9  
 **Status:** Active Development  
 **Last Updated:** 2026-07-01  
 **Owner:** Dylan Tettarasar
@@ -373,6 +373,24 @@ As a recruiter/candidate, I want a clean A4 layout with proper print rules so th
 
 **User Story:**
 As a maintainer, I want the print CV to reuse existing content sources so that updates stay synchronized with the main site.
+
+**Section-by-section delivery strategy (incremental):**
+
+| Sub-Story | Scope | Delivery focus |
+|-----------|-------|----------------|
+| US3.1 | Header | End-to-end dataflow (`site-content.ts` -> API -> store getter -> component) + print layout alignment |
+| US3.2 | Profile | Summary data projection + compact print typography |
+| US3.3 | Experience | `displayOnPrint`, `jobMissionsShort`, and one-page density rules |
+| US3.4 | Education | Unified Education rendering (degrees + certifications) |
+| US3.5 | Skills | Category/item visibility + pills visual behavior in print |
+| US3.6 | Languages | Name/level rendering, optional icon based on space budget |
+
+Each sub-story should follow the same cycle:
+- Data contract update
+- API/store getter integration
+- Component rendering
+- Visual adjustment for A4 print
+- Targeted tests (store + component)
 
 **Tasks:**
 - [ ] Reuse current stores/APIs for intro, experience, skills, education, languages
@@ -1395,6 +1413,7 @@ describe('SkillSection', () => {
 | 1.6 | 2026-07-01 | Expanded test story with detailed store/component cases and explicit CTA + print-trigger interaction coverage | Dylan Tettarasar |
 | 1.7 | 2026-07-01 | Added detailed test files planning matrix listing existing specs to update and new print-focused specs to create | Dylan Tettarasar |
 | 1.8 | 2026-07-01 | Documented first working print prototype constraints (layout isolation, print grid preservation, color-adjust behavior, and browser header/footer export setting) | Dylan Tettarasar |
+| 1.9 | 2026-07-01 | Added incremental section-based sub-stories for Resume Print dataflow and design delivery (header -> languages) | Dylan Tettarasar |
 
 ---
 
