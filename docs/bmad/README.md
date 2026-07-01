@@ -143,5 +143,23 @@ Review & Iterate
 
 ---
 
-*Last Updated: 2026-02-28*
-*Next Review: 2026-03-28*
+## 🌍 Global Team Documents (FR/EN)
+
+These two documents are project-wide working standards and are available in French and English for international collaboration.
+
+### Agent workflow guide
+- French: [AGENTS.fr.md](AGENTS.fr.md)
+- English: [AGENTS.en.md](AGENTS.en.md)
+
+### AI tutoring prompt (manual coding mode)
+- French: [AI-Mentor-Prompt.fr.md](AI-Mentor-Prompt.fr.md)
+- English: [AI-Mentor-Prompt.en.md](AI-Mentor-Prompt.en.md)
+
+Notes:
+- The AGENTS guide is optional if you prefer a single-chat workflow.
+- The AI Mentor prompt is a reusable standard document recommended across projects.
+
+---
+
+*Last Updated: 2026-07-01*
+*Next Review: 2026-07-15*
