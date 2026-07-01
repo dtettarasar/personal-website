@@ -17,11 +17,29 @@
         </div>
 
         <div class="contact-block">
-          <p>news.ipsum@example.com</p>
-          <p>+33 6 00 00 00 00</p>
-          <p>Ile-de-France</p>
-          <p>portfolio.news-ipsum.dev</p>
-          <p>linkedin.com/in/news-ipsum</p>
+          <p>
+            <a href="mailto:news.ipsum@example.com">news.ipsum@example.com</a>
+          </p>
+          <p>
+            <a href="tel:+33600000000">+33 6 00 00 00 00</a>
+          </p>
+          <p class="availability-line">Disponible immédiatement | Métros/RER : Paris & IDF</p>
+          <p>Rambouillet, Ile-de-France</p>
+          <p>
+            <a href="https://portfolio.news-ipsum.dev" target="_blank" rel="noopener noreferrer">
+              portfolio.news-ipsum.dev
+            </a>
+          </p>
+          <p>
+            <a href="https://linkedin.com/in/news-ipsum" target="_blank" rel="noopener noreferrer">
+              linkedin.com/in/news-ipsum
+            </a>
+          </p>
+          <p>
+            <a href="https://github.com/news-ipsum" target="_blank" rel="noopener noreferrer">
+              github.com/news-ipsum
+            </a>
+          </p>
         </div>
       </header>
 
@@ -277,6 +295,20 @@ function handlePrint() {
   margin: 0;
 }
 
+.contact-block a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.contact-block a:hover {
+  text-decoration: underline;
+}
+
+.availability-line {
+  font-weight: 600;
+  color: #0f766e;
+}
+
 .sheet-body {
   display: grid;
   grid-template-columns: 2fr 1fr;
@@ -513,6 +545,10 @@ function handlePrint() {
     background: #1e293b !important;
     color: #ffffff !important;
     border: 1px solid #1e293b !important;
+  }
+
+  .contact-block a {
+    text-decoration: none !important;
   }
 
   .no-print {
