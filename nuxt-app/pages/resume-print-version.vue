@@ -426,7 +426,7 @@ function handlePrint() {
   color: #64748b;
 }
 
-@media (max-width: 900px) {
+@media screen and (max-width: 900px) {
   .sheet-body {
     grid-template-columns: 1fr;
   }
@@ -451,6 +451,11 @@ function handlePrint() {
 }
 
 @media print {
+  * {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
   html,
   body {
     margin: 0 !important;
@@ -468,6 +473,16 @@ function handlePrint() {
     border: none;
     box-shadow: none;
     margin: 0;
+  }
+
+  .sheet-header {
+    display: grid !important;
+    grid-template-columns: 1fr auto !important;
+  }
+
+  .sheet-body {
+    display: grid !important;
+    grid-template-columns: 2fr 1fr !important;
   }
 
   .sheet-header {
@@ -492,6 +507,12 @@ function handlePrint() {
 
   .entry-block ul {
     line-height: 1.4;
+  }
+
+  .pill {
+    background: #1e293b !important;
+    color: #ffffff !important;
+    border: 1px solid #1e293b !important;
   }
 
   .no-print {
