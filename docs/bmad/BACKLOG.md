@@ -1,7 +1,7 @@
 # 🛠️ Development Backlog & Roadmap
 ## Personal Site 25 - Implementation Plan
 
-**Version:** 1.6  
+**Version:** 1.7  
 **Status:** Active Development  
 **Last Updated:** 2026-07-01  
 **Owner:** Dylan Tettarasar
@@ -487,6 +487,20 @@ As a product owner, I want validated print quality across major browsers so that
   - [ ] Print button triggers `window.print()`
   - [ ] Print controls are excluded from print media snapshot/DOM checks
 - [ ] Add non-regression tests to ensure existing digital resume route behavior remains unchanged
+
+**Test Files Planning Matrix (Print CV):**
+
+| Scope | File Path | Status | Test Work to Add / Update |
+|------|-----------|--------|-----------------------------|
+| Store tests (skills) | `tests/unit/frontend/skillsStore.spec.ts` | Update existing | Add getter/projection assertions for print payload (`displayOnPrint` at category/item level, ordering, icon optionality). |
+| Store tests (education) | `tests/unit/frontend/educationsStore.spec.ts` | Update existing | Add print projection checks for unified Education block (`issuer`, `title`, `year`) and regression checks for existing behavior. |
+| UI CTA tests | `tests/unit/frontend/button-link.spec.ts` | Update existing | Add assertions for CV print CTA semantics/microcopy and navigation target to print route. |
+| Store tests (experience) | `tests/unit/frontend/experienceStore.spec.ts` | Create | Validate print getter behavior (`displayOnPrint`, `jobMissionsShort` priority, one-page-oriented ordering). |
+| Store tests (languages) | `tests/unit/frontend/languageContentStore.spec.ts` | Create | Validate language projection for print (`name`, `level`, optional `img`) and FR/EN mapping. |
+| Store tests (print orchestration) | `tests/unit/frontend/resumePrintStore.spec.ts` | Create | Validate aggregated getters for header/experience/education/skills/languages and no template-level filtering assumptions. |
+| Component tests (print page) | `tests/unit/frontend/resume-print-page.spec.ts` | Create | Validate section rendering from projected store data (header, experience, education, skills, languages). |
+| Component tests (skills print) | `tests/unit/frontend/resume-print-skills.spec.ts` | Create | Validate pills rendering with and without icons, category visibility, and compact layout assumptions. |
+| Integration flow tests | `tests/integration/resume-print-flow.spec.ts` | Create | Validate end-to-end flow: CTA opens print route, print action triggers `window.print()`, print controls hidden in print mode. |
 
 **Acceptance Criteria:**
 - [ ] Print output passes visual QA checklist on target browsers
@@ -1370,6 +1384,7 @@ describe('SkillSection', () => {
 | 1.4 | 2026-06-30 | Confirmed print content strategy: no dedicated Projects section, unified Education block, and editorial positioning guidance for R&D Lab experience | Dylan Tettarasar |
 | 1.5 | 2026-06-30 | Added explicit automated test scope for CV print stores/getters/components, locale coverage, and non-regression checks | Dylan Tettarasar |
 | 1.6 | 2026-07-01 | Expanded test story with detailed store/component cases and explicit CTA + print-trigger interaction coverage | Dylan Tettarasar |
+| 1.7 | 2026-07-01 | Added detailed test files planning matrix listing existing specs to update and new print-focused specs to create | Dylan Tettarasar |
 
 ---
 
