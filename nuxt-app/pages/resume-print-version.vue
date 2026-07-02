@@ -2,9 +2,32 @@
   <div class="resume-print-page">
     <div class="resume-toolbar no-print">
       <h1>Resume Print Prototype</h1>
-      <button type="button" class="print-btn" @click="handlePrint">
-        Print / Save PDF
-      </button>
+
+      <div class="toolbar-actions">
+        <div class="lang-switch" role="group" aria-label="Print resume language">
+          <button
+            type="button"
+            class="lang-btn"
+            :class="{ active: locale === 'fr' }"
+            @click="setLocale('fr')"
+          >
+            FR
+          </button>
+          <span class="lang-separator">|</span>
+          <button
+            type="button"
+            class="lang-btn"
+            :class="{ active: locale === 'en' }"
+            @click="setLocale('en')"
+          >
+            EN
+          </button>
+        </div>
+
+        <button type="button" class="print-btn" @click="handlePrint">
+          Print / Save PDF
+        </button>
+      </div>
     </div>
 
     <article class="a4-sheet">
@@ -108,6 +131,8 @@ useHead({
   title: 'Resume Print Prototype'
 })
 
+const { locale, setLocale } = useI18n()
+
 const jobs = [
   {
     id: 1,
@@ -198,6 +223,41 @@ function handlePrint() {
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: #334155;
+}
+
+.toolbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.lang-switch {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  border-radius: 999px;
+  border: 1px solid #cbd5e1;
+  background: #ffffff;
+  padding: 4px 8px;
+}
+
+.lang-btn {
+  border: none;
+  background: transparent;
+  color: #64748b;
+  font-size: 0.73rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  cursor: pointer;
+}
+
+.lang-btn.active {
+  color: #0f766e;
+}
+
+.lang-separator {
+  color: #94a3b8;
+  font-size: 0.72rem;
 }
 
 .print-btn {
@@ -379,6 +439,16 @@ function handlePrint() {
 }
 
 @media screen and (max-width: 900px) {
+  .resume-toolbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .toolbar-actions {
+    width: 100%;
+    justify-content: space-between;
+  }
+
   .sheet-body {
     grid-template-columns: 1fr;
   }
