@@ -161,7 +161,16 @@ export function getHeroData(locale: string) {
   // Editorial note for CV print:
   // Keep "R&D Lab / Side Projects" framed as a serious professional experience with concrete outcomes.
   // Revisit wording after final print CV iteration and advisor feedback if needed.
-  export function getExperiences(locale: string): { companyName: string; companyVenue: string; jobTitle: string; period: string; companyLogoSrc: string; jobMissions: string[] }[] {
+  export function getExperiences(locale: string): {
+    companyName: string
+    companyVenue: string
+    jobTitle: string
+    period: string
+    companyLogoSrc: string
+    jobMissions: string[]
+    jobMissionsShort: string[]
+    displayOnPrint: boolean
+  }[] {
 
     // 1. On définit la structure technique et les clés de traduction
     const experiencesBase = [
@@ -169,6 +178,7 @@ export function getHeroData(locale: string) {
         companyName: "R&D Lab / Side Projects",
         companyVenue: "Rambouillet, France",
         companyLogoSrc: "/img/resume/experiences/research-and-development.png",
+        displayOnPrint: true,
         translations: {
           fr: {
             jobTitle: "Product Owner & Concepteur Solo",
@@ -177,6 +187,10 @@ export function getHeroData(locale: string) {
               "<strong>2025 : Cursus Harvard CS50P (Python) & Protection Créative :</strong> Approfondissement de la programmation orientée objet. Conception d’<em>AI Art Shield</em> (Projet final Harvard) : un MVP algorithmique en ligne de commande (CLI) dédié à la protection des œuvres des illustrateurs (Cadrage, PRD, logique POO).",
               "<strong>2025 : Architecture & DevOps (Site Portfolio) :</strong> Déploiement et maintenance en production du site portfolio (dylan-tettarasar.dev) développé sous <strong>Nuxt.js</strong>. Conteneurisation complète via <strong>Docker</strong> et configuration d'un reverse-proxy <strong>Caddy</strong> sur serveur VPS (gestion automatisée du HTTPS/DNS).",
               "<strong>Fin 2024 : Conception du SaaS <em>Otis AI</em> :</strong> Pilotage produit complet d'une application de génération de contenu IA. Cadrage des spécifications et déploiement d'une <strong>architecture découplée</strong> (Frontend Vue.js / Backend Node.js-Express) avec intégration des API OpenAI et Stripe. Mise en place de tests avec l’outil Vitest."
+            ],
+            jobMissionsShort: [
+              "Conception de AI Art Shield (projet final Harvard CS50P) avec cadrage produit et logique orientee objet.",
+              "Mise en production du portfolio Nuxt.js avec Docker, Caddy et exploitation VPS en autonomie."
             ]
           },
           en: {
@@ -186,6 +200,10 @@ export function getHeroData(locale: string) {
               "<strong>2025: Harvard CS50P (Python) & Creative Protection:</strong> Deep dive into Object-Oriented Programming. Conceived <em>AI Art Shield</em> (Harvard Final Project): an algorithmic Command Line Interface (CLI) MVP dedicated to protecting artists' artwork (Scoping, PRD, OOP logic).",
               "<strong>2025: Architecture & DevOps (Portfolio Site):</strong> Deployment and production maintenance of the portfolio website (dylan-tettarasar.dev) built with <strong>Nuxt.js</strong>. Full containerization via <strong>Docker</strong> and setup of a <strong>Caddy</strong> reverse-proxy on a VPS server (automated HTTPS/DNS management).",
               "<strong>Late 2024: SaaS Conception - <em>Otis AI</em>:</strong> Full product management of an AI content generation application. Scoped functional specifications and deployed a <strong>decoupled architecture</strong> (Vue.js Frontend / Node.js-Express Backend) integrated with OpenAI and Stripe APIs. Implemented testing with Vitest."
+            ],
+            jobMissionsShort: [
+              "Built AI Art Shield (Harvard CS50P final project) with product scoping and OOP architecture.",
+              "Deployed and operated the Nuxt.js portfolio in production with Docker, Caddy, and VPS infrastructure."
             ]
           }
         }
@@ -194,6 +212,7 @@ export function getHeroData(locale: string) {
         companyName: "DII / POLITICO",
         companyVenue: "Paris, France",
         companyLogoSrc: "/img/resume/experiences/company-logo-dii.png",
+        displayOnPrint: true,
         translations: {
           fr: {
             jobTitle: "Product Owner Web & CRM",
@@ -204,6 +223,10 @@ export function getHeroData(locale: string) {
               "<strong>Migration & Administration Salesforce :</strong> Acteur clé de la transition critique en 3 mois d’un CRM legacy vers <strong>Salesforce</strong>. Administration quotidienne de la plateforme (gouvernance, droits d'accès, profils, <strong>Permission Sets</strong>, mapping d'objets et gestion des champs).",
               "<strong>Product Ownership & Delivery Technique :</strong> Conception fonctionnelle et pilotage du cycle de vie de <strong>features complexes</strong> (parcours de membership, formulaires dynamiques via iframes connectées à Salesforce). Rédaction des cahiers des charges et des User Stories (<strong>Jira</strong>), modélisation des flux de données et tests de recette (<strong>UAT</strong>).",
               "<strong>Build & Code CRM :</strong> Optimisation frontend (HTML/CSS) directement sur des composants <strong>LWC</strong> (Lightning Web Components) et gestion des déploiements via pull-requests sur <strong>GitHub</strong>."
+            ],
+            jobMissionsShort: [
+              "Pilotage de l'ecosysteme WordPress Multisite et des operations DNS/HTTPS pour des conferences grands comptes.",
+              "Transition CRM vers Salesforce, administration quotidienne et delivery de features metier avec User Stories Jira."
             ]
           },
           en: {
@@ -215,6 +238,10 @@ export function getHeroData(locale: string) {
               "<strong>Salesforce CRM Migration & Administration:</strong> Key player in the critical 3-month transition from a legacy CRM to <strong>Salesforce</strong>. Managed daily platform administration (governance, access rights, profiles, <strong>Permission Sets</strong>, object mapping, and field management).",
               "<strong>Product Ownership & Technical Delivery:</strong> Functional design and lifecycle management of <strong>complex features</strong> (membership paths, dynamic iframe forms connected to Salesforce). Wrote technical specifications and User Stories (<strong>Jira</strong>), modeled data flows, and executed User Acceptance Testing (<strong>UAT</strong>).",
               "<strong>CRM Build & Code:</strong> Optimized frontend layouts (HTML/CSS) directly within <strong>LWC</strong> (Lightning Web Components) and managed delivery via GitHub <strong>pull-requests</strong>."
+            ],
+            jobMissionsShort: [
+              "Led WordPress Multisite operations and DNS/HTTPS setup for high-visibility conference websites.",
+              "Drove Salesforce migration and daily administration while delivering complex product features through Jira workflows."
             ]
           }
         }
@@ -223,6 +250,7 @@ export function getHeroData(locale: string) {
         companyName: "ABUS France",
         companyVenue: "Villeneuve-le-Roi, France",
         companyLogoSrc: "/img/resume/experiences/company-logo-abus.png",
+        displayOnPrint: true,
         translations: {
           fr: {
             jobTitle: "Chargé de Marketing Digital & Référent Web",
@@ -231,6 +259,10 @@ export function getHeroData(locale: string) {
               "<strong>Interface Technique Internationale :</strong> Point de contact unique de l'équipe de développement basée au <strong>siège allemand</strong> (<strong>suivi des bugs</strong> sur la plateforme interne, cadrage et remontée des <strong>demandes d’évolution</strong>).",
               "<strong>Administration CMS & SEO technique :</strong> Gestion et mise à jour structurelle du <strong>catalogue produits</strong> sur le marché français via le CMS <strong>eZ Publish</strong> et optimisation du <strong>référencement naturel</strong>.",
               "<strong>Intégration & Création graphique :</strong> Développement et stylisation de <strong>landing pages personnalisées</strong> (<strong>HTML5/CSS3</strong>) et conception d'infographies complexes pour l'<strong>identité visuelle</strong> de la marque."
+            ],
+            jobMissionsShort: [
+              "Interface technique avec le siege allemand pour le suivi des bugs et la priorisation des evolutions web.",
+              "Administration eZ Publish, optimisation SEO et integration de pages marketing responsive."
             ]
           },
           en: {
@@ -240,6 +272,10 @@ export function getHeroData(locale: string) {
               "<strong>International Technical Interface:</strong> Single point of contact for the core development team based at the <strong>German headquarters</strong> (<strong>bug tracking</strong> on the internal platform, scoping, and escalating <strong>technical evolution requests</strong>).",
               "<strong>CMS Administration & Technical SEO:</strong> Structural management and updates of the <strong>product catalog</strong> for the French market via the <strong>eZ Publish CMS</strong>, driving <strong>search engine optimization</strong>.",
               "<strong>Integration & Graphic Design:</strong> Developed and styled <strong>responsive custom landing pages</strong> (<strong>HTML5/CSS3</strong>) and designed complex infographics for the brand's <strong>visual identity</strong>."
+            ],
+            jobMissionsShort: [
+              "Acted as technical liaison with the German HQ development team for bug follow-up and evolution requests.",
+              "Managed eZ Publish content operations, technical SEO, and responsive marketing page integration."
             ]
           }
         }
@@ -248,6 +284,7 @@ export function getHeroData(locale: string) {
         companyName: "Pierre & Vacances Center Parcs",
         companyVenue: "Paris, France",
         companyLogoSrc: "/img/resume/experiences/company-logo-pvcp.png",
+        displayOnPrint: false,
         translations: {
           fr: {
             jobTitle: "Assistant Responsable Digital",
@@ -256,6 +293,10 @@ export function getHeroData(locale: string) {
               "<strong>SEO & Stratégie de Contenu :</strong> Optimisation du contenu éditorial pour les portails web du groupe afin d'accroître la visibilité et le trafic organique.",
               "<strong>Gestion des Actifs Numériques :</strong> Production de contenus visuels pour les réseaux sociaux et gestion des contenus de la chaîne YouTube de l'entreprise.",
               "<strong>Reporting de Performance :</strong> Suivi des indicateurs clés d'engagement (KPIs) et fourniture d'analyses basées sur les données pour orienter les campagnes de marketing digital."
+            ],
+            jobMissionsShort: [
+              "Optimisation SEO editoriale et contribution au pilotage des campagnes digitales du groupe.",
+              "Production de contenus social media avec suivi des KPI de performance."
             ]
           },
           en: {
@@ -265,6 +306,10 @@ export function getHeroData(locale: string) {
               "<strong>SEO & Content Strategy:</strong> Optimized editorial content for the group's web portals to increase organic reach.",
               "<strong>Digital Asset Management:</strong> Produced visual content for social media and managed the corporate YouTube channel content.",
               "<strong>Performance Reporting:</strong> Monitored key engagement metrics and provided data-driven insights for digital marketing campaigns."
+            ],
+            jobMissionsShort: [
+              "Contributed to SEO content strategy and digital campaign execution across group web properties.",
+              "Produced social content and reported key engagement KPIs for marketing optimization."
             ]
           }
         }
@@ -273,6 +318,7 @@ export function getHeroData(locale: string) {
         companyName: "Btown Ltd",
         companyVenue: "New Delhi, India",
         companyLogoSrc: "/img/resume/experiences/company-logo-btown.png",
+        displayOnPrint: false,
         translations: {
           fr: {
             jobTitle: "Spécialiste Contenu Web",
@@ -280,6 +326,10 @@ export function getHeroData(locale: string) {
             jobMissions: [
               "<strong>SEO International :</strong> Création et optimisation de contenu textuel via WordPress et Yoast SEO.",
               "<strong>Storytelling Visuel :</strong> Conception d'infographies et de visuels digitaux pour soutenir la croissance de l'audience éditoriale."
+            ],
+            jobMissionsShort: [
+              "Creation et optimisation de contenus SEO sur WordPress avec Yoast dans un contexte international.",
+              "Conception de visuels editoriaux pour soutenir la croissance de l'audience."
             ]
           },
           en: {
@@ -288,6 +338,10 @@ export function getHeroData(locale: string) {
             jobMissions: [
               "<strong>International SEO:</strong> Content creation and optimization using WordPress/Yoast SEO.",
               "<strong>Visual Storytelling:</strong> Designed infographics and digital assets to support editorial growth."
+            ],
+            jobMissionsShort: [
+              "Created and optimized SEO content in WordPress with Yoast for international campaigns.",
+              "Designed visual storytelling assets to support editorial audience growth."
             ]
           }
         }
@@ -306,7 +360,9 @@ export function getHeroData(locale: string) {
         jobTitle: text.jobTitle,
         period: text.period,
         companyLogoSrc: exp.companyLogoSrc,
-        jobMissions: text.jobMissions
+        jobMissions: text.jobMissions,
+        jobMissionsShort: text.jobMissionsShort,
+        displayOnPrint: exp.displayOnPrint !== false
       }
       
     })

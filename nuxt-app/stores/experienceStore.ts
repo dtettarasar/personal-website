@@ -9,6 +9,8 @@ export interface ExperienceItem {
   period: string
   companyLogoSrc: string
   jobMissions: string[]
+  jobMissionsShort?: string[]
+  displayOnPrint?: boolean
 }
 
 export const useExperienceStore = defineStore('experience',() => {

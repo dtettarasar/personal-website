@@ -14,14 +14,7 @@
 </template>
 
 <script setup lang="ts">
-import { computed } from 'vue'
-import { useI18n } from 'vue-i18n'
 import { useExperienceStore, type ExperienceItem } from '~/stores/experienceStore'
-
-interface PrintExperienceItem extends ExperienceItem {
-  displayOnPrint?: boolean
-  jobMissionsShort?: string[]
-}
 
 const { locale } = useI18n()
 const experienceStore = useExperienceStore()
@@ -32,10 +25,10 @@ await useAsyncData('resume-print-experience', async () => {
   watch: [locale]
 })
 
-const printableExperiences = computed<PrintExperienceItem[]>(() => {
+const printableExperiences = computed<ExperienceItem[]>(() => {
   const experiences = experienceStore.dataByLocale[locale.value] ?? []
 
-  return (experiences as PrintExperienceItem[]).filter((experience) => {
+  return experiences.filter((experience: ExperienceItem) => {
     return experience.displayOnPrint !== false
   })
 })
