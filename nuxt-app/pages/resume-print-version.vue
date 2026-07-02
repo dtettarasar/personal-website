@@ -50,21 +50,7 @@
           </section>
 
           <section class="section-block">
-            <div class="section-title-row">
-              <h2>Experience</h2>
-              <span class="rule" />
-            </div>
-
-            <article v-for="job in jobs" :key="job.id" class="entry-block">
-              <div class="entry-header">
-                <h3>{{ job.role }}</h3>
-                <span>{{ job.period }}</span>
-              </div>
-              <p class="entry-meta">{{ job.company }} · {{ job.location }}</p>
-              <ul>
-                <li v-for="bullet in job.bullets" :key="bullet">{{ bullet }}</li>
-              </ul>
-            </article>
+            <ResumePrintVersionExperienceSection />
           </section>
 
           <section class="section-block">
@@ -132,32 +118,6 @@ useHead({
 })
 
 const { locale, setLocale } = useI18n()
-
-const jobs = [
-  {
-    id: 1,
-    role: 'Lead Web Project Manager',
-    period: '2023 - Present',
-    company: 'News Ipsum Studio',
-    location: 'Paris, France',
-    bullets: [
-      'News ipsum roadmap alignment across product, design, and engineering teams.',
-      'Defined release governance and delivery cadence for multi-site initiatives.',
-      'Structured backlog priorities with measurable impact and technical feasibility.'
-    ]
-  },
-  {
-    id: 2,
-    role: 'Product Owner (Web Platforms)',
-    period: '2019 - 2023',
-    company: 'Daily Placeholder Group',
-    location: 'Ile-de-France',
-    bullets: [
-      'Led platform redesign streams with UX and performance goals.',
-      'Coordinated QA and acceptance strategy for high-traffic event websites.'
-    ]
-  }
-]
 
 const education = [
   {

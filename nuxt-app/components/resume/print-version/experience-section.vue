@@ -1,9 +1,9 @@
 <template>
   <section class="section-block">
-    <div class="section-title-row">
-      <h2>Experience</h2>
-      <span class="rule" />
-    </div>
+    <ResumePrintVersionSectionTitle
+      title="Experience"
+      :icon="ResumePrintVersionIconsGlobeIcon"
+    />
 
     <ResumePrintVersionExperienceContent
       v-for="experience in printableExperiences"
@@ -14,6 +14,7 @@
 </template>
 
 <script setup lang="ts">
+import ResumePrintVersionIconsGlobeIcon from './icons/globe-icon.vue'
 import { useExperienceStore, type ExperienceItem } from '~/stores/experienceStore'
 
 const { locale } = useI18n()
@@ -37,28 +38,6 @@ const printableExperiences = computed<ExperienceItem[]>(() => {
 <style scoped>
 .section-block {
   margin-bottom: 18px;
-}
-
-.section-title-row {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  margin-bottom: 10px;
-}
-
-.section-title-row h2 {
-  margin: 0;
-  font-size: 0.66rem;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-  font-weight: 700;
-  color: #0f766e;
-}
-
-.rule {
-  height: 1px;
-  flex: 1;
-  background: #e2e8f0;
 }
 
 @media print {
