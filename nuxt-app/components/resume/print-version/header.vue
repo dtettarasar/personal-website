@@ -6,6 +6,11 @@
       <p class="candidate-title candidate-subtitle">{{ heroData?.subtitle }}</p>
       <p class="candidate-title candidate-specialty">{{ heroData?.specialty }}</p>
 
+      <div class="identity-meta">
+        <p class="identity-meta-line">{{ availabilityText }}</p>
+        <p class="identity-meta-line">{{ transportText }}</p>
+      </div>
+
     </div>
 
     <div class="contact-block">
@@ -48,12 +53,6 @@
         >
           {{ githubLabel }}
         </a>
-      </p>
-      <p class="contact-item availability-line">
-        {{ availabilityText }}
-      </p>
-      <p class="contact-item availability-line">
-        {{ transportText }}
       </p>
     </div>
   </header>
@@ -159,6 +158,22 @@ const githubLabel = computed(() => {
   color: #64748b;
 }
 
+.identity-meta {
+  margin-top: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+
+.identity-meta-line {
+  margin: 0;
+  font-size: 0.68rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #0f766e;
+  font-weight: 600;
+}
+
 .contact-block {
   flex: 0 0 auto;
   width: fit-content;
@@ -196,11 +211,6 @@ const githubLabel = computed(() => {
 
 .contact-block a:hover {
   text-decoration: underline;
-}
-
-.availability-line {
-  font-weight: 600;
-  color: #0f766e;
 }
 
 @media screen and (max-width: 900px) {
