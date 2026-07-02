@@ -1,7 +1,7 @@
 <template>
   <header class="sheet-header">
     <div class="identity-block">
-      <h1 class="candidate-name">{{ headerData.name }}</h1>
+      <h1 class="candidate-name">{{ configStore.ownerName }}</h1>
       <p class="candidate-title">{{ headerData.title }}</p>
     </div>
 
@@ -47,6 +47,13 @@
 </template>
 
 <script setup lang="ts">
+import { useConfigStore } from '~/stores/configStore'
+
+const configStore = useConfigStore()
+
+await useAsyncData('resume-print-config', async () => {
+  return await configStore.fetchConfig()
+})
 
 interface HeaderLink {
   label: string
