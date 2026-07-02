@@ -9,41 +9,51 @@
     </div>
 
     <div class="contact-block">
-      <p class="contact-item">
+      <p v-if="heroData?.links.email" class="contact-item">
         <ResumePrintVersionIconsMailIcon class="contact-icon" />
-        <a :href="`mailto:${headerData.email}`">{{ headerData.email }}</a>
+        <a :href="heroData.links.email">{{ emailLabel }}</a>
       </p>
       <p class="contact-item">
         <ResumePrintVersionIconsPhoneIcon class="contact-icon" />
-        <a :href="`tel:${headerData.phoneHref}`">{{ headerData.phone }}</a>
+        <a :href="phoneHref">{{ configStore.phone }}</a>
       </p>
       <p class="contact-item">
         <ResumePrintVersionIconsLocationIcon class="contact-icon" />
-        <span>{{ headerData.residence }}</span>
+        <span>{{ configStore.venue }}</span>
       </p>
       <p class="contact-item">
         <ResumePrintVersionIconsGlobeIcon class="contact-icon" />
-        <a :href="headerData.portfolio.url" target="_blank" rel="noopener noreferrer">
-          {{ headerData.portfolio.label }}
+        <a :href="configStore.website" target="_blank" rel="noopener noreferrer">
+          {{ websiteLabel }}
         </a>
       </p>
       <p class="contact-item">
         <ResumePrintVersionIconsLinkedinIcon class="contact-icon" />
-        <a :href="headerData.linkedin.url" target="_blank" rel="noopener noreferrer">
-          {{ headerData.linkedin.label }}
+        <a
+          v-if="heroData?.links.linkedin"
+          :href="heroData.links.linkedin"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          {{ linkedinLabel }}
         </a>
       </p>
       <p class="contact-item">
         <ResumePrintVersionIconsGithubIcon class="contact-icon" />
-        <a :href="headerData.github.url" target="_blank" rel="noopener noreferrer">
-          {{ headerData.github.label }}
+        <a
+          v-if="heroData?.links.github"
+          :href="heroData.links.github"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          {{ githubLabel }}
         </a>
       </p>
       <p class="contact-item availability-line">
-        Disponible immédiatement
+        {{ availabilityText }}
       </p>
       <p class="contact-item availability-line">
-        Métros/RER : Paris & IDF
+        {{ transportText }}
       </p>
     </div>
   </header>
@@ -68,44 +78,41 @@ await useAsyncData('resume-print-hero', async () => {
 })
 
 const heroData = computed(() => heroStore.dataByLocale[locale.value])
+const activeLocale = computed<'fr' | 'en'>(() => {
+  return locale.value === 'fr' ? 'fr' : 'en'
+})
 
-interface HeaderLink {
-  label: string
-  url: string
-}
+const emailLabel = computed(() => {
+  const rawEmail = heroData.value?.links.email ?? ''
+  return rawEmail.replace(/^mailto:/, '')
+})
 
-interface ResumePrintHeaderData {
-  name: string
-  email: string
-  phone: string
-  phoneHref: string
-  availability: string
-  residence: string
-  portfolio: HeaderLink
-  linkedin: HeaderLink
-  github: HeaderLink
-}
+const phoneHref = computed(() => {
+  return `tel:${configStore.phone.replace(/\s+/g, '')}`
+})
 
-const headerData: ResumePrintHeaderData = {
-  name: 'News Ipsum Candidate',
-  email: 'news.ipsum@example.com',
-  phone: '+33 6 00 00 00 00',
-  phoneHref: '+33600000000',
-  availability: 'Disponible immédiatement | Métros/RER : Paris & IDF',
-  residence: 'Rambouillet, Ile-de-France',
-  portfolio: {
-    label: 'portfolio.news-ipsum.dev',
-    url: 'https://portfolio.news-ipsum.dev'
-  },
-  linkedin: {
-    label: 'linkedin.com/in/news-ipsum',
-    url: 'https://linkedin.com/in/news-ipsum'
-  },
-  github: {
-    label: 'github.com/news-ipsum',
-    url: 'https://github.com/news-ipsum'
-  }
-}
+const websiteLabel = computed(() => {
+  return configStore.website.replace(/^https?:\/\/(www\.)?/, '')
+})
+
+const availabilityText = computed(() => {
+  return configStore.availability[activeLocale.value]
+})
+
+const transportText = computed(() => {
+  return configStore.transport[activeLocale.value]
+})
+
+const linkedinLabel = computed(() => {
+  const linkedInUrl = heroData.value?.links.linkedin ?? ''
+  return linkedInUrl.replace(/^https?:\/\/(www\.)?/, '')
+})
+
+const githubLabel = computed(() => {
+  const gitHubUrl = heroData.value?.links.github ?? ''
+  return gitHubUrl.replace(/^https?:\/\/(www\.)?/, '')
+})
+
 </script>
 
 <style scoped>

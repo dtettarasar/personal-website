@@ -2,7 +2,18 @@
 
 export function getGlobalConfig() {
   return {
-    ownerName: "Dylan Tettarasar"
+    ownerName: "Dylan Tettarasar",
+    phone: "+33 6 51 21 48 06",
+    venue: "Rambouillet, France",
+    website: "https://dylan-tettarasar.dev",
+    availability: {
+      fr: "Disponible immédiatement",
+      en: "Available immediately"
+    },
+    transport: {
+      fr: "Permis B, véhicule personnel - Métros/RER : Paris & IDF",
+      en: "Driving license B, personal vehicle - Metro/RER : Paris & IDF" 
+    }
   }
 }
 
