@@ -87,6 +87,12 @@
               </div>
             </div>
           </section>
+
+          <!-- Layout test: keep this block to quickly move Education to sidebar if needed.
+          <section class="section-block">
+            <ResumePrintVersionEducationSection />
+          </section>
+          -->
         </aside>
       </section>
 
