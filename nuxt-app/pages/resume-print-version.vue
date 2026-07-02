@@ -38,15 +38,7 @@
       <section class="sheet-body">
         <div class="main-column">
           <section class="section-block">
-            <div class="section-title-row">
-              <h2>Profile</h2>
-              <span class="rule" />
-            </div>
-            <p class="profile-text">
-              News ipsum dolor sit amet, product strategy and delivery signals in a
-              multi-stakeholder environment. This placeholder summary is intentionally
-              short to simulate one-page A4 density constraints.
-            </p>
+            <ResumePrintVersionProfileSection />
           </section>
 
           <section class="section-block">
@@ -267,13 +259,6 @@ function handlePrint() {
   height: 1px;
   flex: 1;
   background: #e2e8f0;
-}
-
-.profile-text {
-  margin: 0;
-  font-size: 0.83rem;
-  line-height: 1.6;
-  color: #1e293b;
 }
 
 .entry-block {
