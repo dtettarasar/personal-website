@@ -32,6 +32,7 @@ const mockEducationsData = [
     title: 'Responsive Web Design',
     issuer: 'freeCodeCamp',
     year: '2020',
+    displayOnPrint: false,
   },
   {
     educationLogoSrc: '/img/resume/educations/diploma-logo-inseec.png',
@@ -391,6 +392,25 @@ describe('educationsStore', () => {
       }
 
       expect(store.hasCredential(edu)).toBe(false)
+    })
+  })
+
+  // ----- getPrintEducations -----
+  describe('getPrintEducations', () => {
+    it('returns print-ready educations and excludes items with displayOnPrint=false', async () => {
+      const store = useEducationsStore()
+      vi.mocked($fetch).mockResolvedValueOnce(mockEducationsData)
+      await store.fetchData(testLocale)
+
+      const result = store.getPrintEducations(testLocale)
+
+      expect(result).toHaveLength(5)
+      expect(result.some((edu) => edu.title === 'Responsive Web Design')).toBe(false)
+      expect(result[0]).toEqual({
+        title: 'Introduction to Programming with Python',
+        issuer: 'Harvard University',
+        year: '2025',
+      })
     })
   })
 })

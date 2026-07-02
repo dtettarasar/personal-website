@@ -489,6 +489,7 @@ export function getHeroData(locale: string) {
 export function getEducations(locale: string): { 
   educationLogoSrc: string; 
   year: string; 
+  displayOnPrint: boolean;
   certificationLink?: string; // Optionnel car les diplômes n'ont pas de lien
   title: string; 
   issuer: string; 
@@ -499,6 +500,7 @@ export function getEducations(locale: string): {
       {
         educationLogoSrc: "/img/resume/educations/harvard-university-logo-0.png",
         year: "2025",
+        displayOnPrint: true,
         certificationLink: "https://certificates.cs50.io/eed08f81-a764-4e60-b861-87bb616aacff.pdf?size=letter",
         translations: {
           fr: {
@@ -514,6 +516,7 @@ export function getEducations(locale: string): {
       {
         educationLogoSrc: "/img/resume/educations/fcc_logo.png",
         year: "2023",
+        displayOnPrint: true,
         certificationLink: "https://www.freecodecamp.org/certification/fcc9e0cf531/back-end-development-and-apis",
         translations: {
           fr: {
@@ -529,6 +532,7 @@ export function getEducations(locale: string): {
       {
         educationLogoSrc: "/img/resume/educations/harvard-university-logo-0.png",
         year: "2021",
+        displayOnPrint: true,
         certificationLink: "https://courses.edx.org/certificates/8c91c4feaae048159aab19a913c47924",
         translations: {
           fr: {
@@ -544,6 +548,7 @@ export function getEducations(locale: string): {
       {
         educationLogoSrc: "/img/resume/educations/fcc_logo.png",
         year: "2020",
+        displayOnPrint: true,
         certificationLink: "https://www.freecodecamp.org/certification/fcc9e0cf531/javascript-algorithms-and-data-structures",
         translations: {
           fr: {
@@ -559,6 +564,7 @@ export function getEducations(locale: string): {
       {
         educationLogoSrc: "/img/resume/educations/fcc_logo.png",
         year: "2020",
+        displayOnPrint: false,
         certificationLink: "https://www.freecodecamp.org/certification/fcc9e0cf531/responsive-web-design",
         translations: {
           fr: {
@@ -574,6 +580,7 @@ export function getEducations(locale: string): {
       {
         educationLogoSrc: "/img/resume/educations/diploma-logo-inseec.png",
         year: "2015",
+        displayOnPrint: true,
         // Pas de certificationLink ici
         translations: {
           fr: {
@@ -589,6 +596,7 @@ export function getEducations(locale: string): {
       {
         educationLogoSrc: "/img/resume/educations/diploma-logo-uvsq.png",
         year: "2012",
+        displayOnPrint: true,
         // Nettoyage de courseDetails : on injecte directement la bonne valeur selon la langue
         translations: {
           fr: {
@@ -610,6 +618,7 @@ export function getEducations(locale: string): {
       return {
         educationLogoSrc: edu.educationLogoSrc,
         year: edu.year,
+        displayOnPrint: edu.displayOnPrint !== false,
         certificationLink: edu.certificationLink, // Sera transmis (ou undefined pour les diplômes)
         title: text.title,
         issuer: text.issuer

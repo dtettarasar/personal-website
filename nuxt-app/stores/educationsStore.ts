@@ -3,13 +3,20 @@ import { defineStore } from 'pinia'
 import { ref } from 'vue'
 
 // ===== INTERFACES TYPESCRIPT =====
-interface EducationItem {
+export interface EducationItem {
   educationLogoSrc: string
   title: string
   issuer: string
   year: string
+  displayOnPrint?: boolean
   certificationLink?: string
   courseDetails?: string[]
+}
+
+export interface PrintEducationItem {
+  title: string
+  issuer: string
+  year: string
 }
 
 // ===== STORE =====
@@ -61,7 +68,7 @@ export const useEducationsStore = defineStore('educations', () => {
 
     const education = dataByLocale.value[locale] || []
 
-    return education.find((edu) =>
+    return education.find((edu: EducationItem) =>
       edu.title.toLowerCase().includes(title.toLowerCase())
     )
   }
@@ -87,6 +94,20 @@ export const useEducationsStore = defineStore('educations', () => {
     return !!education.certificationLink
   }
 
+  function getPrintEducations(locale: string): PrintEducationItem[] {
+    const educations = dataByLocale.value[locale] || []
+
+    return educations
+    .filter((edu: EducationItem) => edu.displayOnPrint !== false)
+    .map((edu: EducationItem) => {
+      return {
+        title: edu.title,
+        issuer: edu.issuer,
+        year: edu.year
+      }
+    })
+  }
+
   // ===== RETURN =====
   return {
     // State
@@ -103,5 +124,6 @@ export const useEducationsStore = defineStore('educations', () => {
     getEducationCount,
     getEducationsByIssuer,
     hasCredential,
+    getPrintEducations,
   }
 })

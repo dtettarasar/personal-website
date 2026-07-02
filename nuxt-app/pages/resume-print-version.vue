@@ -54,18 +54,7 @@
           </section>
 
           <section class="section-block">
-            <div class="section-title-row">
-              <h2>Education</h2>
-              <span class="rule" />
-            </div>
-
-            <article v-for="edu in education" :key="edu.id" class="entry-block">
-              <div class="entry-header">
-                <h3>{{ edu.title }}</h3>
-                <span>{{ edu.year }}</span>
-              </div>
-              <p class="entry-meta">{{ edu.issuer }}</p>
-            </article>
+            <ResumePrintVersionEducationSection />
           </section>
         </div>
 
@@ -118,21 +107,6 @@ useHead({
 })
 
 const { locale, setLocale } = useI18n()
-
-const education = [
-  {
-    id: 1,
-    title: 'Certificate in Web Product Delivery',
-    issuer: 'News Ipsum Academy',
-    year: '2025'
-  },
-  {
-    id: 2,
-    title: 'Master in Digital Marketing',
-    issuer: 'Placeholder Business School',
-    year: '2015'
-  }
-]
 
 const skills = [
   {
