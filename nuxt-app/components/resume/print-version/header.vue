@@ -2,7 +2,10 @@
   <header class="sheet-header">
     <div class="identity-block">
       <h1 class="candidate-name">{{ configStore.ownerName }}</h1>
-      <p class="candidate-title">{{ headerData.title }}</p>
+
+      <p class="candidate-title candidate-subtitle">{{ heroData?.subtitle }}</p>
+      <p class="candidate-title candidate-specialty">{{ heroData?.specialty }}</p>
+
     </div>
 
     <div class="contact-block">
@@ -48,12 +51,23 @@
 
 <script setup lang="ts">
 import { useConfigStore } from '~/stores/configStore'
+import { useHeroStore } from '~/stores/heroStore'
 
 const configStore = useConfigStore()
+const heroStore = useHeroStore()
+const { locale } = useI18n()
 
 await useAsyncData('resume-print-config', async () => {
   return await configStore.fetchConfig()
 })
+
+await useAsyncData('resume-print-hero', async () => {
+  return await heroStore.fetchData(locale.value)
+}, {
+  watch: [locale]
+})
+
+const heroData = computed(() => heroStore.dataByLocale[locale.value])
 
 interface HeaderLink {
   label: string
@@ -62,7 +76,6 @@ interface HeaderLink {
 
 interface ResumePrintHeaderData {
   name: string
-  title: string
   email: string
   phone: string
   phoneHref: string
@@ -75,7 +88,6 @@ interface ResumePrintHeaderData {
 
 const headerData: ResumePrintHeaderData = {
   name: 'News Ipsum Candidate',
-  title: 'Technical Product Owner · Web Project Lead',
   email: 'news.ipsum@example.com',
   phone: '+33 6 00 00 00 00',
   phoneHref: '+33600000000',
@@ -123,9 +135,21 @@ const headerData: ResumePrintHeaderData = {
 .candidate-title {
   margin: 0;
   font-size: 0.78rem;
-  letter-spacing: 0.15em;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
   color: #475569;
+}
+
+.candidate-subtitle {
+  font-weight: 700;
+  color: #334155;
+}
+
+.candidate-specialty {
+  margin-top: 2px;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  color: #64748b;
 }
 
 .contact-block {
