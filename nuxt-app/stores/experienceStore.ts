@@ -10,7 +10,7 @@ export interface ExperienceItem {
   companyLogoSrc: string
   jobMissions: string[]
   jobMissionsShort?: string[]
-  displayOnPrint?: boolean
+  displayOnPrint: boolean
 }
 
 export const useExperienceStore = defineStore('experience',() => {

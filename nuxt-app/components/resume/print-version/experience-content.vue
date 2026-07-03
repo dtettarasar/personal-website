@@ -23,10 +23,10 @@ const props = defineProps<{
   period: string
   jobMissions?: string[]
   jobMissionsShort?: string[]
-  displayOnPrint?: boolean
+  displayOnPrint: boolean
 }>()
 
-const shouldRender = computed(() => props.displayOnPrint !== false)
+const shouldRender = computed(() => props.displayOnPrint)
 
 const companyMeta = computed(() => {
   return props.companyVenue

@@ -370,7 +370,7 @@ export function getResumePrintProfileText(locale: string): string {
         companyLogoSrc: exp.companyLogoSrc,
         jobMissions: text.jobMissions,
         jobMissionsShort: text.jobMissionsShort,
-        displayOnPrint: exp.displayOnPrint !== false
+        displayOnPrint: exp.displayOnPrint
       }
       
     })
@@ -661,7 +661,7 @@ export function getEducations(locale: string): {
       return {
         educationLogoSrc: edu.educationLogoSrc,
         year: edu.year,
-        displayOnPrint: edu.displayOnPrint !== false,
+        displayOnPrint: edu.displayOnPrint,
         certificationLink: edu.certificationLink, // Sera transmis (ou undefined pour les diplômes)
         title: text.title,
         issuer: text.issuer

@@ -6,13 +6,13 @@ import { ref } from 'vue'
 export interface SkillItem {
   icon: string
   label: string
-  displayOnPrint?: boolean
+  displayOnPrint: boolean
 }
 
 export interface SkillSection {
   title: string
   icon: string
-  displayOnPrint?: boolean
+  displayOnPrint: boolean
   items: SkillItem[]
 }
 
@@ -81,7 +81,7 @@ export const useSkillsStore = defineStore('skills', () => {
 
   function getSectionByTitle(title: string, locale: string): SkillSection | undefined {
     const sections = dataByLocale.value[locale] || []
-    return sections.find((section) =>
+    return sections.find((section: SkillSection) =>
       section.title.toLowerCase().includes(title.toLowerCase())
     )
   }
@@ -90,10 +90,10 @@ export const useSkillsStore = defineStore('skills', () => {
     const sections = dataByLocale.value[locale] || []
 
     return sections
-      .filter((section: SkillSection) => section.displayOnPrint !== false)
+      .filter((section: SkillSection) => section.displayOnPrint)
       .map((section: SkillSection) => {
         const items = section.items
-          .filter((item: SkillItem) => item.displayOnPrint !== false)
+          .filter((item: SkillItem) => item.displayOnPrint)
           .map((item: SkillItem) => {
             return { label: item.label }
           })

@@ -11,6 +11,7 @@ const mockEducationsData = [
     title: 'Introduction to Programming with Python',
     issuer: 'Harvard University',
     year: '2025',
+    displayOnPrint: true,
     certificationLink: 'https://certificates.cs50.io/eed08f81.pdf',
   },
   {
@@ -18,6 +19,7 @@ const mockEducationsData = [
     title: 'Back End Development and APIs',
     issuer: 'freeCodeCamp',
     year: '2023',
+    displayOnPrint: true,
     certificationLink: 'https://www.freecodecamp.org/certification/fcc9e0cf531/back-end-development-and-apis',
   },
   {
@@ -25,6 +27,7 @@ const mockEducationsData = [
     title: 'CS50x - Introduction to Computer Science',
     issuer: 'Harvard University',
     year: '2021',
+    displayOnPrint: true,
     certificationLink: 'https://courses.edx.org/certificates/8c91c4feaae048159aab19a913c47924',
   },
   {
@@ -39,12 +42,14 @@ const mockEducationsData = [
     title: "Master's degree - Digital Marketing",
     issuer: 'INSEEC Business School Paris',
     year: '2015',
+    displayOnPrint: true,
   },
   {
     educationLogoSrc: '/img/resume/educations/diploma-logo-uvsq.png',
     title: 'BTEC Higher National Diploma',
     issuer: 'Versailles Saint-Quentin-en-Yvelines University',
     year: '2012',
+    displayOnPrint: true,
     courseDetails: [
       'French Title : DUT Techniques de Commercialisation',
       'Specialized in Marketing',
@@ -375,6 +380,7 @@ describe('educationsStore', () => {
         title: 'Test',
         issuer: 'Test University',
         year: '2024',
+        displayOnPrint: true,
       }
 
       expect(store.hasCredential(edu)).toBe(false)
@@ -388,6 +394,7 @@ describe('educationsStore', () => {
         title: 'Test',
         issuer: 'Test University',
         year: '2024',
+        displayOnPrint: true,
         certificationLink: '',
       }
 

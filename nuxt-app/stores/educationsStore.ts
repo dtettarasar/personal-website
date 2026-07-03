@@ -8,7 +8,7 @@ export interface EducationItem {
   title: string
   issuer: string
   year: string
-  displayOnPrint?: boolean
+  displayOnPrint: boolean
   certificationLink?: string
   courseDetails?: string[]
 }
@@ -98,7 +98,7 @@ export const useEducationsStore = defineStore('educations', () => {
     const educations = dataByLocale.value[locale] || []
 
     return educations
-    .filter((edu: EducationItem) => edu.displayOnPrint !== false)
+    .filter((edu: EducationItem) => edu.displayOnPrint)
     .map((edu: EducationItem) => {
       return {
         title: edu.title,

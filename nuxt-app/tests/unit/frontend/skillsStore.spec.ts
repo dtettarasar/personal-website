@@ -8,18 +8,20 @@ const mockSkillsData = [
   {
     title: 'Frontend',
     icon: 'mdi:vuejs',
+    displayOnPrint: true,
     items: [
-      { icon: 'mdi:vuejs', label: 'Vue.js' },
-      { icon: 'lineicons:nuxt', label: 'Nuxt' },
-      { icon: 'mdi:language-typescript', label: 'TypeScript' },
+      { icon: 'mdi:vuejs', label: 'Vue.js', displayOnPrint: true },
+      { icon: 'lineicons:nuxt', label: 'Nuxt', displayOnPrint: true },
+      { icon: 'mdi:language-typescript', label: 'TypeScript', displayOnPrint: true },
     ],
   },
   {
     title: 'Tools & Workflow',
     icon: 'carbon:tools-alt',
+    displayOnPrint: true,
     items: [
-      { icon: 'mdi:git', label: 'Git' },
-      { icon: 'mdi:docker', label: 'Docker' },
+      { icon: 'mdi:git', label: 'Git', displayOnPrint: true },
+      { icon: 'mdi:docker', label: 'Docker', displayOnPrint: true },
     ],
   },
   {
@@ -27,12 +29,13 @@ const mockSkillsData = [
     icon: 'mdi:server-network',
     displayOnPrint: false,
     items: [
-      { icon: 'mdi:nodejs', label: 'Node.js / Express' },
+      { icon: 'mdi:nodejs', label: 'Node.js / Express', displayOnPrint: false },
     ],
   },
   {
     title: 'Tools & Workflow (print subset)',
     icon: 'carbon:tools-alt',
+    displayOnPrint: true,
     items: [
       { icon: 'mdi:github', label: 'GitHub', displayOnPrint: true },
       { icon: 'ri:claude-fill', label: 'Claude Code', displayOnPrint: false },
@@ -175,7 +178,7 @@ describe('skillsStore', () => {
 
       const result = store.getSkillByLabel('Vue.js', testLocale)
 
-      expect(result).toEqual({ icon: 'mdi:vuejs', label: 'Vue.js' })
+      expect(result).toEqual({ icon: 'mdi:vuejs', label: 'Vue.js', displayOnPrint: true })
     })
 
     it('is case-insensitive', async () => {

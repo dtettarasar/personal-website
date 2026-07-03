@@ -30,7 +30,7 @@ const printableExperiences = computed<ExperienceItem[]>(() => {
   const experiences = experienceStore.dataByLocale[locale.value] ?? []
 
   return experiences.filter((experience: ExperienceItem) => {
-    return experience.displayOnPrint !== false
+    return experience.displayOnPrint
   })
 })
 </script>
