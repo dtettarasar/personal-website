@@ -23,7 +23,7 @@ await useAsyncData('resume-print-profile-text', async () => {
 })
 
 const profileText = computed(() => {
-  return profileStore.dataByLocale[locale.value] ?? ''
+  return profileStore.getPrintProfileText(locale.value)
 })
 </script>
 

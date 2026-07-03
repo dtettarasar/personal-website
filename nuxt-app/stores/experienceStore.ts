@@ -13,6 +13,16 @@ export interface ExperienceItem {
   displayOnPrint: boolean
 }
 
+export interface PrintExperienceItem {
+  companyName: string
+  companyVenue: string
+  jobTitle: string
+  period: string
+  jobMissions: string[]
+  jobMissionsShort?: string[]
+  displayOnPrint: boolean
+}
+
 export const useExperienceStore = defineStore('experience',() => {
 
   // ===== STATE (références réactives) =====
@@ -64,13 +74,32 @@ export const useExperienceStore = defineStore('experience',() => {
     )
   }
 
+  function getPrintExperiences(locale: string): PrintExperienceItem[] {
+    const experiences = dataByLocale.value[locale] || []
+
+    return experiences
+      .filter((item: ExperienceItem) => item.displayOnPrint)
+      .map((item: ExperienceItem) => {
+        return {
+          companyName: item.companyName,
+          companyVenue: item.companyVenue,
+          jobTitle: item.jobTitle,
+          period: item.period,
+          jobMissions: item.jobMissions,
+          jobMissionsShort: item.jobMissionsShort,
+          displayOnPrint: item.displayOnPrint
+        }
+      })
+  }
+
 
   return {
     dataByLocale,
     loading,
     error,
     fetchData,
-    getExperienceByCompany
+    getExperienceByCompany,
+    getPrintExperiences
   }
 
 })

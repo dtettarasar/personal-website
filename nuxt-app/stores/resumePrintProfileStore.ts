@@ -38,4 +38,10 @@ export const useResumePrintProfileStore = defineStore('resumePrintProfile', {
     },
   },
 
+  getters: {
+    getPrintProfileText: (state: { dataByLocale: Record<string, string> }) => (locale: string): string => {
+      return state.dataByLocale[locale] ?? ''
+    }
+  }
+
 })

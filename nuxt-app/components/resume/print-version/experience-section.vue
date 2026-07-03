@@ -15,7 +15,7 @@
 
 <script setup lang="ts">
 import ResumePrintVersionIconsGlobeIcon from './icons/globe-icon.vue'
-import { useExperienceStore, type ExperienceItem } from '~/stores/experienceStore'
+import { useExperienceStore, type PrintExperienceItem } from '~/stores/experienceStore'
 
 const { locale } = useI18n()
 const experienceStore = useExperienceStore()
@@ -26,12 +26,8 @@ await useAsyncData('resume-print-experience', async () => {
   watch: [locale]
 })
 
-const printableExperiences = computed<ExperienceItem[]>(() => {
-  const experiences = experienceStore.dataByLocale[locale.value] ?? []
-
-  return experiences.filter((experience: ExperienceItem) => {
-    return experience.displayOnPrint
-  })
+const printableExperiences = computed<PrintExperienceItem[]>(() => {
+  return experienceStore.getPrintExperiences(locale.value)
 })
 </script>
 
