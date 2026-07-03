@@ -2,7 +2,7 @@
   <section class="section-block">
     <ResumePrintVersionSectionTitle
       :title="sectionTitle"
-      :icon="ResumePrintVersionIconsGlobeIcon"
+      :icon="ResumePrintVersionIconsLanguagesIcon"
     />
 
     <div class="lang-list">
@@ -15,7 +15,7 @@
 </template>
 
 <script setup lang="ts">
-import ResumePrintVersionIconsGlobeIcon from './icons/globe-icon.vue'
+import ResumePrintVersionIconsLanguagesIcon from './icons/languages-icon.vue'
 import { useLanguageContentStore, type PrintLanguageItem } from '~/stores/languageContentStore'
 import { resumeLabels } from '~/constants/ui-labels'
 

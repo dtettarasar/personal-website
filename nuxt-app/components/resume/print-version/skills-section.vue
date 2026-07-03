@@ -2,7 +2,7 @@
   <section class="section-block">
     <ResumePrintVersionSectionTitle
       :title="sectionTitle"
-      :icon="ResumePrintVersionIconsGlobeIcon"
+      :icon="ResumePrintVersionIconsSkillsIcon"
     />
 
     <div v-for="group in printSkills" :key="group.title" class="skill-group">
@@ -17,7 +17,7 @@
 </template>
 
 <script setup lang="ts">
-import ResumePrintVersionIconsGlobeIcon from './icons/globe-icon.vue'
+import ResumePrintVersionIconsSkillsIcon from './icons/skills-icon.vue'
 import { useSkillsStore, type PrintSkillSection } from '~/stores/skillsStore'
 import { resumeLabels } from '~/constants/ui-labels'
 

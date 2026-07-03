@@ -2,7 +2,7 @@
   <section class="section-block">
     <ResumePrintVersionSectionTitle
       :title="sectionTitle"
-      :icon="ResumePrintVersionIconsGlobeIcon"
+      :icon="ResumePrintVersionIconsExperienceIcon"
     />
 
     <ResumePrintVersionExperienceContent
@@ -14,7 +14,7 @@
 </template>
 
 <script setup lang="ts">
-import ResumePrintVersionIconsGlobeIcon from './icons/globe-icon.vue'
+import ResumePrintVersionIconsExperienceIcon from './icons/experience-icon.vue'
 import { useExperienceStore, type PrintExperienceItem } from '~/stores/experienceStore'
 import { resumeLabels } from '~/constants/ui-labels'
 

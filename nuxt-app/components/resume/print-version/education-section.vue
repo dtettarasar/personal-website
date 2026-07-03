@@ -2,7 +2,7 @@
   <section class="section-block">
     <ResumePrintVersionSectionTitle
       :title="sectionTitle"
-      :icon="ResumePrintVersionIconsGlobeIcon"
+      :icon="ResumePrintVersionIconsEducationIcon"
     />
 
     <ResumePrintVersionEducationContent
@@ -14,7 +14,7 @@
 </template>
 
 <script setup lang="ts">
-import ResumePrintVersionIconsGlobeIcon from './icons/globe-icon.vue'
+import ResumePrintVersionIconsEducationIcon from './icons/education-icon.vue'
 import { useEducationsStore, type PrintEducationItem } from '~/stores/educationsStore'
 import { resumeLabels } from '~/constants/ui-labels'
 
