@@ -58,16 +58,7 @@
           </section>
 
           <section class="section-block">
-            <div class="section-title-row">
-              <h2>Languages</h2>
-              <span class="rule" />
-            </div>
-            <div class="lang-list">
-              <div v-for="lang in languages" :key="lang.name" class="lang-row">
-                <span>{{ lang.name }}</span>
-                <span>{{ lang.level }}</span>
-              </div>
-            </div>
+            <ResumePrintVersionLanguageSection />
           </section>
 
           <section class="section-block">
@@ -93,11 +84,6 @@ useHead({
 })
 
 const { locale, setLocale } = useI18n()
-
-const languages = [
-  { name: 'French', level: 'Native' },
-  { name: 'English', level: 'Professional' }
-]
 
 function handlePrint() {
   window.print()

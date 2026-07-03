@@ -7,6 +7,11 @@ interface LanguageItem {
   img: string
 }
 
+export interface PrintLanguageItem {
+  name: string
+  level: string
+}
+
 export const useLanguageContentStore = defineStore('languageContent', {
 
   state: () => ({
@@ -44,4 +49,17 @@ export const useLanguageContentStore = defineStore('languageContent', {
       }
     },
   },
+
+  getters: {
+    getPrintLanguages: (state: { dataByLocale: Record<string, LanguageItem[]> }) => (locale: string): PrintLanguageItem[] => {
+      const languages = state.dataByLocale[locale] || []
+
+      return languages.map((language: LanguageItem) => {
+        return {
+          name: language.name,
+          level: language.level
+        }
+      })
+    }
+  }
 })
