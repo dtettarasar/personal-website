@@ -555,11 +555,11 @@ export function getEducations(locale: string): {
         certificationLink: "https://certificates.cs50.io/eed08f81-a764-4e60-b861-87bb616aacff.pdf?size=letter",
         translations: {
           fr: {
-            title: "Introduction à la Programmation avec Python",
+            title: "CS50P - Introduction à la Programmation avec Python",
             issuer: "Université Harvard"
           },
           en: {
-            title: "Introduction to Programming with Python",
+            title: "CS50P - Introduction to Programming with Python",
             issuer: "Harvard University"
           }
         }
