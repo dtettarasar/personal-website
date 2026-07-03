@@ -2,7 +2,7 @@
   <section class="section-block">
     <ResumePrintVersionSectionTitle
       :title="sectionTitle"
-      :icon="ResumePrintVersionIconsGlobeIcon"
+      :icon="ResumePrintVersionIconsProfileIcon"
     />
 
     <p class="profile-text">{{ profileText }}</p>
@@ -10,7 +10,7 @@
 </template>
 
 <script setup lang="ts">
-import ResumePrintVersionIconsGlobeIcon from './icons/globe-icon.vue'
+import ResumePrintVersionIconsProfileIcon from './icons/profile-icon.vue'
 import { useResumePrintProfileStore } from '~/stores/resumePrintProfileStore'
 
 const { locale } = useI18n()
