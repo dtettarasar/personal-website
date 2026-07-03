@@ -7,8 +7,8 @@ export const resumeLabels = {
     en: 'Experiences',
   },
   titleEducation: {
-    fr: 'Formation & Certifications',
-    en: 'Education & Certifications',
+    fr: 'Formation',
+    en: 'Education',
   },
   titleSkills: {
     fr: 'Compétences',
