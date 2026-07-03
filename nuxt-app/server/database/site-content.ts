@@ -197,9 +197,9 @@ export function getResumePrintProfileText(locale: string): string {
               "<strong>Fin 2024 : Conception du SaaS <em>Otis AI</em> :</strong> Pilotage produit complet d'une application de génération de contenu IA. Cadrage des spécifications et déploiement d'une <strong>architecture découplée</strong> (Frontend Vue.js / Backend Node.js-Express) avec intégration des API OpenAI et Stripe. Mise en place de tests avec l’outil Vitest."
             ],
             jobMissionsShort: [
-              "Conception de <strong>AI Art Shield</strong> (projet final Harvard CS50P) avec <strong>cadrage produit</strong>, PRD et logique orientee objet.",
+              "Conception de <strong>AI Art Shield</strong> (projet final Harvard CS50P) avec <strong>cadrage produit</strong>, PRD et logique orientée objet.",
               "Mise en production du portfolio <strong>Nuxt.js</strong> avec Docker, Caddy, gestion <strong>HTTPS/DNS</strong> et exploitation VPS en autonomie.",
-              "Pilotage de la conception du SaaS <strong>Otis AI</strong> avec architecture decouplee Vue.js / Node.js, integrations <strong>OpenAI + Stripe</strong> et tests Vitest."
+              "Pilotage de la conception du SaaS <strong>Otis AI</strong> avec architecture découpée Vue.js / Node.js, intégrations <strong>OpenAI + Stripe</strong> et tests Vitest."
             ]
           },
           en: {
