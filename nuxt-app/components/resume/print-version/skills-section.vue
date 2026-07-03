@@ -57,7 +57,7 @@ const sectionTitle = computed(() => {
   font-size: 0.64rem;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: #64748b;
+  color: #5f6e86;
 }
 
 .pills {

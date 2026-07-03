@@ -25,13 +25,13 @@ defineProps<{
 
 .section-icon {
   color: #0f766e;
-  font-size: 0.92rem;
+  font-size: 0.82rem;
   flex-shrink: 0;
 }
 
 h2 {
   margin: 0;
-  font-size: 0.74rem;
+  font-size: 0.66rem;
   letter-spacing: 0.16em;
   text-transform: uppercase;
   font-weight: 700;

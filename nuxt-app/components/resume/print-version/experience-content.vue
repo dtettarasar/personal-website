@@ -64,7 +64,7 @@ const missionsToRender = computed(() => {
 
 .entry-header span {
   font-size: 0.68rem;
-  color: #64748b;
+  color: #5f6e86;
 }
 
 .entry-meta {

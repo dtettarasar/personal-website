@@ -60,7 +60,7 @@ const sectionTitle = computed(() => {
 }
 
 .lang-row span:last-child {
-  color: #64748b;
+  color: #5f6e86;
 }
 
 @media print {

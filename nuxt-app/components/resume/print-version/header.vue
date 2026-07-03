@@ -155,7 +155,7 @@ const githubLabel = computed(() => {
   margin-top: 2px;
   font-weight: 500;
   letter-spacing: 0.1em;
-  color: #64748b;
+  color: #5f6e86;
 }
 
 .identity-meta {
