@@ -413,12 +413,12 @@ export function getSkills(locale: string): {
           { 
             icon: "mdi:file-document-edit", 
             label: { fr: "Spécifications fonctionnelles", en: "Functional Specs" },
-            displayOnPrint: true
+            displayOnPrint: false
           },
           { 
             icon: "mdi:account-group", 
             label: { fr: "Gestion des parties prenantes", en: "Stakeholder Management" },
-            displayOnPrint: true
+            displayOnPrint: false
           }
         ]
       },
@@ -433,7 +433,7 @@ export function getSkills(locale: string): {
           { 
             icon: "mdi:microsoft-office", 
             label: { fr: "Suite Office", en: "Office Suite" },
-            displayOnPrint: true
+            displayOnPrint: false
           }
         ]
       },
@@ -460,8 +460,8 @@ export function getSkills(locale: string): {
         icon: "mdi:web",
         displayOnPrint: true,
         items: [
-          { icon: "mdi:language-html5", label: "HTML5", displayOnPrint: true },
-          { icon: "mdi:language-css3", label: "CSS3", displayOnPrint: true },
+          { icon: "mdi:language-html5", label: "HTML5", displayOnPrint: false },
+          { icon: "mdi:language-css3", label: "CSS3", displayOnPrint: false },
           { icon: "mdi:language-javascript", label: "JavaScript", displayOnPrint: true },
           { icon: "mdi:tailwind", label: "Tailwind CSS", displayOnPrint: true },
           { icon: "mdi:bootstrap", label: "Bootstrap", displayOnPrint: true },
@@ -477,9 +477,9 @@ export function getSkills(locale: string): {
           { icon: "mdi:git", label: "Git", displayOnPrint: true },
           { icon: "mdi:docker", label: "Docker", displayOnPrint: true },
           { icon: "simple-icons:caddy", label: "Caddy", displayOnPrint: true },
-          { icon: "mdi:github", label: "GitHub", displayOnPrint: true },
+          { icon: "mdi:github", label: "GitHub", displayOnPrint: false },
           { icon: "ri:copilot-fill", label: "GitHub Copilot", displayOnPrint: true },
-          { icon: "ri:claude-fill", label: "Claude Code", displayOnPrint: true },
+          { icon: "ri:claude-fill", label: "Claude Code", displayOnPrint: false },
           { icon: "devicon-plain:vitest", label: "Vitest", displayOnPrint: true }
         ]
       },
@@ -491,7 +491,7 @@ export function getSkills(locale: string): {
           { icon: "mdi:nodejs", label: "Node.js / Express", displayOnPrint: true },
           { icon: "lineicons:mongodb", label: "MongoDB", displayOnPrint: true },
           { icon: "mdi:language-python", label: "Python", displayOnPrint: true },
-          { icon: "mdi:database", label: "SQL", displayOnPrint: true }
+          { icon: "mdi:database", label: "SQL", displayOnPrint: false }
         ]
       },
       {
