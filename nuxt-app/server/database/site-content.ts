@@ -391,12 +391,12 @@ export function getSkills(locale: string): {
     type SkillBaseItem = {
       icon: string
       label: LocalizedSkillLabel
-      displayOnPrint?: boolean
+      displayOnPrint: boolean
     }
     type SkillBaseCategory = {
       title: { fr: string; en: string }
       icon: string
-      displayOnPrint?: boolean
+      displayOnPrint: boolean
       items: SkillBaseItem[]
     }
   
@@ -405,30 +405,35 @@ export function getSkills(locale: string): {
       {
         title: { fr: "Gestion de Projet", en: "Project Management" },
         icon: "mdi:clipboard-check",
+        displayOnPrint: true,
         items: [
-          { icon: "mdi:jira", label: "Jira" },
-          { icon: "mdi:atlassian", label: "Confluence" },
-          { icon: "bi:kanban-fill", label: "Agile / Kanban" },
+          { icon: "mdi:jira", label: "Jira", displayOnPrint: true },
+          { icon: "mdi:atlassian", label: "Confluence", displayOnPrint: true },
+          { icon: "bi:kanban-fill", label: "Agile / Kanban", displayOnPrint: true },
           { 
             icon: "mdi:file-document-edit", 
-            label: { fr: "Spécifications fonctionnelles", en: "Functional Specs" } 
+            label: { fr: "Spécifications fonctionnelles", en: "Functional Specs" },
+            displayOnPrint: true
           },
           { 
             icon: "mdi:account-group", 
-            label: { fr: "Gestion des parties prenantes", en: "Stakeholder Management" } 
+            label: { fr: "Gestion des parties prenantes", en: "Stakeholder Management" },
+            displayOnPrint: true
           }
         ]
       },
       {
         title: { fr: "CRM & Plateformes Business", en: "CRM & Business Platforms" },
         icon: "lsicon:marketing-filled",
+        displayOnPrint: true,
         items: [
-          { icon: "mdi:salesforce", label: "Salesforce" },
-          { icon: "ic:baseline-wordpress", label: "WordPress" },
-          { icon: "mdi:google-analytics", label: "Google Analytics" },
+          { icon: "mdi:salesforce", label: "Salesforce", displayOnPrint: true },
+          { icon: "ic:baseline-wordpress", label: "WordPress", displayOnPrint: true },
+          { icon: "mdi:google-analytics", label: "Google Analytics", displayOnPrint: true },
           { 
             icon: "mdi:microsoft-office", 
-            label: { fr: "Suite Office", en: "Office Suite" } 
+            label: { fr: "Suite Office", en: "Office Suite" },
+            displayOnPrint: true
           }
         ]
       },
@@ -439,49 +444,54 @@ export function getSkills(locale: string): {
         items: [
           { 
             icon: "mdi:search-web", 
-            label: { fr: "SEO technique", en: "Technical SEO" } 
+            label: { fr: "SEO technique", en: "Technical SEO" },
+            displayOnPrint: false
           },
-          { icon: "mdi:speedometer", label: "Core Web Vitals" },
+          { icon: "mdi:speedometer", label: "Core Web Vitals", displayOnPrint: false },
           { 
             icon: "mdi:eye-check", 
-            label: { fr: "Accessibilité (WCAG)", en: "Accessibility (WCAG)" } 
+            label: { fr: "Accessibilité (WCAG)", en: "Accessibility (WCAG)" },
+            displayOnPrint: false
           }
         ]
       },
       {
         title: { fr: "Web & Digital", en: "Web & Digital" },
         icon: "mdi:web",
+        displayOnPrint: true,
         items: [
-          { icon: "mdi:language-html5", label: "HTML5" },
-          { icon: "mdi:language-css3", label: "CSS3" },
-          { icon: "mdi:language-javascript", label: "JavaScript" },
-          { icon: "mdi:tailwind", label: "Tailwind CSS" },
-          { icon: "mdi:bootstrap", label: "Bootstrap" },
-          { icon: "mdi:vuejs", label: "Vue.js" },
-          { icon: "lineicons:nuxt", label: "Nuxt.js" }
+          { icon: "mdi:language-html5", label: "HTML5", displayOnPrint: true },
+          { icon: "mdi:language-css3", label: "CSS3", displayOnPrint: true },
+          { icon: "mdi:language-javascript", label: "JavaScript", displayOnPrint: true },
+          { icon: "mdi:tailwind", label: "Tailwind CSS", displayOnPrint: true },
+          { icon: "mdi:bootstrap", label: "Bootstrap", displayOnPrint: true },
+          { icon: "mdi:vuejs", label: "Vue.js", displayOnPrint: true },
+          { icon: "lineicons:nuxt", label: "Nuxt.js", displayOnPrint: true }
         ]
       },
       {
         title: { fr: "Outils & Workflow", en: "Tools & Workflow" },
         icon: "carbon:tools-alt",
+        displayOnPrint: true,
         items: [
-          { icon: "mdi:git", label: "Git" },
-          { icon: "mdi:docker", label: "Docker" },
-          { icon: "simple-icons:caddy", label: "Caddy" },
-          { icon: "mdi:github", label: "GitHub" },
-          { icon: "ri:copilot-fill", label: "GitHub Copilot" },
-          { icon: "ri:claude-fill", label: "Claude Code" },
-          { icon: "devicon-plain:vitest", label: "Vitest" }
+          { icon: "mdi:git", label: "Git", displayOnPrint: true },
+          { icon: "mdi:docker", label: "Docker", displayOnPrint: true },
+          { icon: "simple-icons:caddy", label: "Caddy", displayOnPrint: true },
+          { icon: "mdi:github", label: "GitHub", displayOnPrint: true },
+          { icon: "ri:copilot-fill", label: "GitHub Copilot", displayOnPrint: true },
+          { icon: "ri:claude-fill", label: "Claude Code", displayOnPrint: true },
+          { icon: "devicon-plain:vitest", label: "Vitest", displayOnPrint: true }
         ]
       },
       {
         title: { fr: "Backend & Bases de données", en: "Backend & Databases" },
         icon: "mdi:server-network",
+        displayOnPrint: true,
         items: [
-          { icon: "mdi:nodejs", label: "Node.js / Express" },
-          { icon: "lineicons:mongodb", label: "MongoDB" },
-          { icon: "mdi:language-python", label: "Python" },
-          { icon: "mdi:database", label: "SQL" }
+          { icon: "mdi:nodejs", label: "Node.js / Express", displayOnPrint: true },
+          { icon: "lineicons:mongodb", label: "MongoDB", displayOnPrint: true },
+          { icon: "mdi:language-python", label: "Python", displayOnPrint: true },
+          { icon: "mdi:database", label: "SQL", displayOnPrint: true }
         ]
       },
       {
@@ -489,9 +499,9 @@ export function getSkills(locale: string): {
         icon: "ion:color-palette",
         displayOnPrint: false,
         items: [
-          { icon: "file-icons:gimp", label: "GIMP" },
-          { icon: "simple-icons:krita", label: "Krita" },
-          { icon: "solar:figma-bold", label: "Figma" }
+          { icon: "file-icons:gimp", label: "GIMP", displayOnPrint: false },
+          { icon: "simple-icons:krita", label: "Krita", displayOnPrint: false },
+          { icon: "solar:figma-bold", label: "Figma", displayOnPrint: false }
         ]
       }
     ];
@@ -501,7 +511,7 @@ export function getSkills(locale: string): {
       return {
         title: category.title[locale as 'fr' | 'en'] || category.title['en'],
         icon: category.icon,
-        displayOnPrint: category.displayOnPrint !== false,
+        displayOnPrint: category.displayOnPrint,
         
         items: category.items.map(item => {
           // Résolution intelligente du label (string vs objet bilingue)
@@ -512,7 +522,7 @@ export function getSkills(locale: string): {
           return {
             icon: item.icon,
             label: resolvedLabel,
-            displayOnPrint: item.displayOnPrint !== false
+            displayOnPrint: item.displayOnPrint
           }
         })
       }
