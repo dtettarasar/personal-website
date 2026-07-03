@@ -45,9 +45,11 @@
             <ResumePrintVersionExperienceSection />
           </section>
 
+          <!-- Layout test: keep this block to quickly move Education back under Experience if needed.
           <section class="section-block">
             <ResumePrintVersionEducationSection />
           </section>
+          -->
         </div>
 
         <aside class="side-column">
@@ -68,11 +70,9 @@
             </div>
           </section>
 
-          <!-- Layout test: keep this block to quickly move Education to sidebar if needed.
           <section class="section-block">
             <ResumePrintVersionEducationSection />
           </section>
-          -->
         </aside>
       </section>
 
@@ -196,16 +196,16 @@ function handlePrint() {
 
 .sheet-body {
   display: grid;
-  grid-template-columns: 2fr 1fr;
+  grid-template-columns: 1.9fr 1.1fr;
 }
 
 .main-column {
   border-right: 1px solid #e2e8f0;
-  padding: 16px 18px 8px 28px;
+  padding: 16px 16px 8px 26px;
 }
 
 .side-column {
-  padding: 16px 28px 8px 18px;
+  padding: 16px 26px 8px 16px;
 }
 
 .section-block {
@@ -360,16 +360,26 @@ function handlePrint() {
   }
 
   .sheet-body {
-    display: grid !important;
-    grid-template-columns: 2fr 1fr !important;
+    display: flex !important;
+    align-items: stretch !important;
+    break-inside: auto;
+    page-break-inside: auto;
   }
 
   .main-column {
-    padding: 12px 14px 6px 20px;
+    width: 63%;
+    flex: 0 0 63%;
+    padding: 12px 12px 6px 18px;
   }
 
   .side-column {
-    padding: 12px 20px 6px 14px;
+    width: 37%;
+    flex: 0 0 37%;
+    padding: 12px 18px 6px 12px;
+  }
+
+  .sheet-footer {
+    padding: 4px 18px 2px;
   }
 
   .section-block {

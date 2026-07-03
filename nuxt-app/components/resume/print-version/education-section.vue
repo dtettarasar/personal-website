@@ -38,9 +38,9 @@ const printEducations = computed<PrintEducationItem[]>(() => {
 
 @media print {
   .section-block {
-    margin-bottom: 12px;
-    break-inside: avoid;
-    page-break-inside: avoid;
+    margin-bottom: 8px;
+    break-inside: auto;
+    page-break-inside: auto;
   }
 }
 </style>

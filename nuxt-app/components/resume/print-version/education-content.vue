@@ -51,9 +51,13 @@ defineProps<{
 
 @media print {
   .entry-block {
-    margin-bottom: 8px;
+    margin-bottom: 5px;
     break-inside: avoid;
     page-break-inside: avoid;
+  }
+
+  .entry-meta {
+    margin: 1px 0 2px;
   }
 }
 </style>

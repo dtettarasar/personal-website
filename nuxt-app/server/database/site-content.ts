@@ -595,11 +595,11 @@ export function getEducations(locale: string): {
         certificationLink: "https://www.freecodecamp.org/certification/fcc9e0cf531/javascript-algorithms-and-data-structures",
         translations: {
           fr: {
-            title: "Algorithmes JavaScript et Structures de Données",
+            title: "Algorithmes JavaScript",
             issuer: "freeCodeCamp"
           },
           en: {
-            title: "JavaScript Algorithms and Data Structures",
+            title: "JavaScript Algorithms",
             issuer: "freeCodeCamp"
           }
         }
@@ -643,11 +643,11 @@ export function getEducations(locale: string): {
         // Nettoyage de courseDetails : on injecte directement la bonne valeur selon la langue
         translations: {
           fr: {
-            title: "DUT Techniques de Commercialisation (Spécialisation Marketing)",
+            title: "DUT Techniques de Commercialisation",
             issuer: "Université de Versailles Saint-Quentin-en-Yvelines (UVSQ)"
           },
           en: {
-            title: "BTEC Higher National Diploma (Specialized in Marketing)",
+            title: "BTEC Higher National Diploma",
             issuer: "Versailles Saint-Quentin-en-Yvelines University"
           }
         }
