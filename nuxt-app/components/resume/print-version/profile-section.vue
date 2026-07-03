@@ -1,7 +1,7 @@
 <template>
   <section class="section-block">
     <ResumePrintVersionSectionTitle
-      title="Profile"
+      :title="sectionTitle"
       :icon="ResumePrintVersionIconsGlobeIcon"
     />
 
@@ -24,6 +24,10 @@ await useAsyncData('resume-print-profile-text', async () => {
 
 const profileText = computed(() => {
   return profileStore.getPrintProfileText(locale.value)
+})
+
+const sectionTitle = computed(() => {
+  return locale.value === 'fr' ? 'Profil' : 'Profile'
 })
 </script>
 

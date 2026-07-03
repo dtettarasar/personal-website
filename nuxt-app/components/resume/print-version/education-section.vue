@@ -1,7 +1,7 @@
 <template>
   <section class="section-block">
     <ResumePrintVersionSectionTitle
-      title="Education"
+      :title="sectionTitle"
       :icon="ResumePrintVersionIconsGlobeIcon"
     />
 
@@ -16,6 +16,7 @@
 <script setup lang="ts">
 import ResumePrintVersionIconsGlobeIcon from './icons/globe-icon.vue'
 import { useEducationsStore, type PrintEducationItem } from '~/stores/educationsStore'
+import { resumeLabels } from '~/constants/ui-labels'
 
 const { locale } = useI18n()
 const educationsStore = useEducationsStore()
@@ -29,6 +30,17 @@ await useAsyncData('resume-print-educations', async () => {
 const printEducations = computed<PrintEducationItem[]>(() => {
   return educationsStore.getPrintEducations(locale.value)
 })
+
+const activeLocale = computed<'fr' | 'en'>(() => {
+  return locale.value === 'fr' ? 'fr' : 'en'
+})
+
+const sectionTitle = computed(() => {
+  return activeLocale.value === 'fr'
+    ? resumeLabels.titleEducation.fr
+    : resumeLabels.titleEducation.en
+})
+
 </script>
 
 <style scoped>

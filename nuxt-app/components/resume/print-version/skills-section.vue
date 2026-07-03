@@ -1,7 +1,7 @@
 <template>
   <section class="section-block">
     <ResumePrintVersionSectionTitle
-      title="Skills"
+      :title="sectionTitle"
       :icon="ResumePrintVersionIconsGlobeIcon"
     />
 
@@ -19,6 +19,7 @@
 <script setup lang="ts">
 import ResumePrintVersionIconsGlobeIcon from './icons/globe-icon.vue'
 import { useSkillsStore, type PrintSkillSection } from '~/stores/skillsStore'
+import { resumeLabels } from '~/constants/ui-labels'
 
 const { locale } = useI18n()
 const skillsStore = useSkillsStore()
@@ -31,6 +32,14 @@ await useAsyncData('resume-print-skills', async () => {
 
 const printSkills = computed<PrintSkillSection[]>(() => {
   return skillsStore.getPrintSkills(locale.value)
+})
+
+const activeLocale = computed<'fr' | 'en'>(() => {
+  return locale.value === 'fr' ? 'fr' : 'en'
+})
+
+const sectionTitle = computed(() => {
+  return resumeLabels.titleSkills[activeLocale.value]
 })
 </script>
 

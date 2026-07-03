@@ -1,7 +1,7 @@
 <template>
   <section class="section-block">
     <ResumePrintVersionSectionTitle
-      title="Languages"
+      :title="sectionTitle"
       :icon="ResumePrintVersionIconsGlobeIcon"
     />
 
@@ -17,6 +17,7 @@
 <script setup lang="ts">
 import ResumePrintVersionIconsGlobeIcon from './icons/globe-icon.vue'
 import { useLanguageContentStore, type PrintLanguageItem } from '~/stores/languageContentStore'
+import { resumeLabels } from '~/constants/ui-labels'
 
 const { locale } = useI18n()
 const languageContentStore = useLanguageContentStore()
@@ -29,6 +30,14 @@ await useAsyncData('resume-print-languages', async () => {
 
 const printLanguages = computed<PrintLanguageItem[]>(() => {
   return languageContentStore.getPrintLanguages(locale.value)
+})
+
+const activeLocale = computed<'fr' | 'en'>(() => {
+  return locale.value === 'fr' ? 'fr' : 'en'
+})
+
+const sectionTitle = computed(() => {
+  return resumeLabels.titleLanguages[activeLocale.value]
 })
 </script>
 
