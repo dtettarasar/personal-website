@@ -197,8 +197,9 @@ export function getResumePrintProfileText(locale: string): string {
               "<strong>Fin 2024 : Conception du SaaS <em>Otis AI</em> :</strong> Pilotage produit complet d'une application de génération de contenu IA. Cadrage des spécifications et déploiement d'une <strong>architecture découplée</strong> (Frontend Vue.js / Backend Node.js-Express) avec intégration des API OpenAI et Stripe. Mise en place de tests avec l’outil Vitest."
             ],
             jobMissionsShort: [
-              "Conception de AI Art Shield (projet final Harvard CS50P) avec cadrage produit et logique orientee objet.",
-              "Mise en production du portfolio Nuxt.js avec Docker, Caddy et exploitation VPS en autonomie."
+              "Conception de <strong>AI Art Shield</strong> (projet final Harvard CS50P) avec <strong>cadrage produit</strong>, PRD et logique orientee objet.",
+              "Mise en production du portfolio <strong>Nuxt.js</strong> avec Docker, Caddy, gestion <strong>HTTPS/DNS</strong> et exploitation VPS en autonomie.",
+              "Pilotage de la conception du SaaS <strong>Otis AI</strong> avec architecture decouplee Vue.js / Node.js, integrations <strong>OpenAI + Stripe</strong> et tests Vitest."
             ]
           },
           en: {
@@ -210,8 +211,9 @@ export function getResumePrintProfileText(locale: string): string {
               "<strong>Late 2024: SaaS Conception - <em>Otis AI</em>:</strong> Full product management of an AI content generation application. Scoped functional specifications and deployed a <strong>decoupled architecture</strong> (Vue.js Frontend / Node.js-Express Backend) integrated with OpenAI and Stripe APIs. Implemented testing with Vitest."
             ],
             jobMissionsShort: [
-              "Built AI Art Shield (Harvard CS50P final project) with product scoping and OOP architecture.",
-              "Deployed and operated the Nuxt.js portfolio in production with Docker, Caddy, and VPS infrastructure."
+              "Built <strong>AI Art Shield</strong> (Harvard CS50P final project) with <strong>product scoping</strong>, PRD framing, and OOP architecture.",
+              "Deployed and operated the <strong>Nuxt.js</strong> portfolio in production with Docker, Caddy, <strong>HTTPS/DNS</strong> setup, and VPS infrastructure.",
+              "Led <strong>Otis AI</strong> product conception with a decoupled Vue.js / Node.js architecture, <strong>OpenAI + Stripe</strong> integrations, and Vitest testing."
             ]
           }
         }
@@ -233,8 +235,11 @@ export function getResumePrintProfileText(locale: string): string {
               "<strong>Build & Code CRM :</strong> Optimisation frontend (HTML/CSS) directement sur des composants <strong>LWC</strong> (Lightning Web Components) et gestion des déploiements via pull-requests sur <strong>GitHub</strong>."
             ],
             jobMissionsShort: [
-              "Pilotage de l'ecosysteme WordPress Multisite et des operations DNS/HTTPS pour des conferences grands comptes.",
-              "Transition CRM vers Salesforce, administration quotidienne et delivery de features metier avec User Stories Jira."
+              "Pilotage de l'ecosysteme <strong>WordPress Multisite</strong> et des operations <strong>DNS/HTTPS</strong> pour des conferences grands comptes.",
+              "Supervision de <strong>l'integration des contenus evenementiels</strong> (agendas, speakers, livestreams) et <strong>support technique</strong> des equipes marketing sur des <strong>pics > 1 000 visites/jour</strong>.",
+              "Transition CRM vers <strong>Salesforce en 3 mois</strong>, puis administration quotidienne (gouvernance, droits, Permission Sets, mapping objets).",
+              "Conception et delivery de <strong>features metier complexes</strong> (membership, formulaires dynamiques connectes Salesforce) avec User Stories Jira et UAT.",
+              "Optimisation frontend sur composants <strong>LWC</strong> et coordination des deploiements via <strong>pull requests GitHub</strong>."
             ]
           },
           en: {
@@ -248,8 +253,11 @@ export function getResumePrintProfileText(locale: string): string {
               "<strong>CRM Build & Code:</strong> Optimized frontend layouts (HTML/CSS) directly within <strong>LWC</strong> (Lightning Web Components) and managed delivery via GitHub <strong>pull-requests</strong>."
             ],
             jobMissionsShort: [
-              "Led WordPress Multisite operations and DNS/HTTPS setup for high-visibility conference websites.",
-              "Drove Salesforce migration and daily administration while delivering complex product features through Jira workflows."
+              "Led <strong>WordPress Multisite</strong> operations and <strong>DNS/HTTPS</strong> setup for high-visibility conference websites.",
+              "Oversaw <strong>event content integration</strong> (agendas, speakers, livestream modules) and <strong>technical support</strong> for marketing teams during <strong>peaks above 1,000 daily visits</strong>.",
+              "Drove a <strong>3-month Salesforce migration</strong> and daily administration (governance, access rights, Permission Sets, object mapping).",
+              "Designed and delivered <strong>complex product features</strong> (membership journeys, dynamic Salesforce-connected forms) with Jira workflows and UAT.",
+              "Improved frontend layouts in <strong>LWC</strong> and coordinated deliveries through <strong>GitHub pull requests</strong>."
             ]
           }
         }
@@ -269,8 +277,8 @@ export function getResumePrintProfileText(locale: string): string {
               "<strong>Intégration & Création graphique :</strong> Développement et stylisation de <strong>landing pages personnalisées</strong> (<strong>HTML5/CSS3</strong>) et conception d'infographies complexes pour l'<strong>identité visuelle</strong> de la marque."
             ],
             jobMissionsShort: [
-              "Interface technique avec le siege allemand pour le suivi des bugs et la priorisation des evolutions web.",
-              "Administration eZ Publish, optimisation SEO et integration de pages marketing responsive."
+              "<strong>Interface technique</strong> avec le siege allemand pour le suivi des bugs et la priorisation des evolutions web.",
+              "Administration <strong>eZ Publish</strong>, optimisation <strong>SEO</strong> et integration de pages marketing responsive."
             ]
           },
           en: {
@@ -282,8 +290,8 @@ export function getResumePrintProfileText(locale: string): string {
               "<strong>Integration & Graphic Design:</strong> Developed and styled <strong>responsive custom landing pages</strong> (<strong>HTML5/CSS3</strong>) and designed complex infographics for the brand's <strong>visual identity</strong>."
             ],
             jobMissionsShort: [
-              "Acted as technical liaison with the German HQ development team for bug follow-up and evolution requests.",
-              "Managed eZ Publish content operations, technical SEO, and responsive marketing page integration."
+              "Acted as <strong>technical liaison</strong> with the German HQ development team for bug follow-up and evolution requests.",
+              "Managed <strong>eZ Publish</strong> content operations, <strong>technical SEO</strong>, and responsive marketing page integration."
             ]
           }
         }

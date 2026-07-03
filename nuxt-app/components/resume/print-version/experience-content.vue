@@ -8,7 +8,7 @@
     <p class="entry-meta">{{ companyMeta }}</p>
 
     <ul v-if="missionsToRender.length">
-      <li v-for="mission in missionsToRender" :key="mission">{{ mission }}</li>
+      <li v-for="mission in missionsToRender" :key="mission" v-html="mission"></li>
     </ul>
   </article>
 </template>
