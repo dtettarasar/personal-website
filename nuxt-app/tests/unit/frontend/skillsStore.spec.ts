@@ -25,8 +25,17 @@ const mockSkillsData = [
   {
     title: 'Backend (not my primary focus but operational)',
     icon: 'mdi:server-network',
+    displayOnPrint: false,
     items: [
       { icon: 'mdi:nodejs', label: 'Node.js / Express' },
+    ],
+  },
+  {
+    title: 'Tools & Workflow (print subset)',
+    icon: 'carbon:tools-alt',
+    items: [
+      { icon: 'mdi:github', label: 'GitHub', displayOnPrint: true },
+      { icon: 'ri:claude-fill', label: 'Claude Code', displayOnPrint: false },
     ],
   },
 ]
@@ -215,7 +224,7 @@ describe('skillsStore', () => {
       vi.mocked($fetch).mockResolvedValueOnce(mockSkillsData)
       await store.fetchData(testLocale)
 
-      expect(store.getSkillCount(testLocale)).toBe(6)
+      expect(store.getSkillCount(testLocale)).toBe(8)
     })
 
     it('returns 0 when data is empty', () => {
@@ -277,6 +286,23 @@ describe('skillsStore', () => {
       const result = store.getSectionByTitle('Frontend', testLocale)
 
       expect(result).toBeUndefined()
+    })
+  })
+
+  // ----- getPrintSkills -----
+  describe('getPrintSkills', () => {
+    it('filters hidden categories and hidden items for print projection', async () => {
+      const store = useSkillsStore()
+      vi.mocked($fetch).mockResolvedValueOnce(mockSkillsData)
+      await store.fetchData(testLocale)
+
+      const result = store.getPrintSkills(testLocale)
+
+      expect(result.some((section: { title: string }) => section.title.includes('Backend'))).toBe(false)
+
+      const toolsPrintSection = result.find((section: { title: string }) => section.title.includes('print subset'))
+      expect(toolsPrintSection).toBeDefined()
+      expect(toolsPrintSection?.items).toEqual([{ label: 'GitHub' }])
     })
   })
 })

@@ -6,12 +6,23 @@ import { ref } from 'vue'
 export interface SkillItem {
   icon: string
   label: string
+  displayOnPrint?: boolean
 }
 
 export interface SkillSection {
   title: string
   icon: string
+  displayOnPrint?: boolean
   items: SkillItem[]
+}
+
+export interface PrintSkillItem {
+  label: string
+}
+
+export interface PrintSkillSection {
+  title: string
+  items: PrintSkillItem[]
 }
 
 // ===== STORE (STYLE SETUP) =====
@@ -75,6 +86,26 @@ export const useSkillsStore = defineStore('skills', () => {
     )
   }
 
+  function getPrintSkills(locale: string): PrintSkillSection[] {
+    const sections = dataByLocale.value[locale] || []
+
+    return sections
+      .filter((section: SkillSection) => section.displayOnPrint !== false)
+      .map((section: SkillSection) => {
+        const items = section.items
+          .filter((item: SkillItem) => item.displayOnPrint !== false)
+          .map((item: SkillItem) => {
+            return { label: item.label }
+          })
+
+        return {
+          title: section.title,
+          items
+        }
+      })
+      .filter((section: PrintSkillSection) => section.items.length > 0)
+  }
+
   // ===== TOUT CE QU'ON REND ACCESSIBLE =====
   return {
     // State
@@ -88,6 +119,7 @@ export const useSkillsStore = defineStore('skills', () => {
     // Getters
     getSkillByLabel,
     getSkillCount,
-    getSectionByTitle
+    getSectionByTitle,
+    getPrintSkills
   }
 })

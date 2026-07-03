@@ -377,10 +377,31 @@ export function getResumePrintProfileText(locale: string): string {
 }
 
 
- export function getSkills(locale: string): { title: string; icon: string; items: { icon: string; label: string }[] }[] {
+export function getSkills(locale: string): {
+  title: string
+  icon: string
+  displayOnPrint: boolean
+  items: {
+    icon: string
+    label: string
+    displayOnPrint: boolean
+  }[]
+}[] {
+    type LocalizedSkillLabel = string | { fr: string; en: string }
+    type SkillBaseItem = {
+      icon: string
+      label: LocalizedSkillLabel
+      displayOnPrint?: boolean
+    }
+    type SkillBaseCategory = {
+      title: { fr: string; en: string }
+      icon: string
+      displayOnPrint?: boolean
+      items: SkillBaseItem[]
+    }
   
     // 1. Définition de la base de données des compétences
-    const skillsBase = [
+    const skillsBase: SkillBaseCategory[] = [
       {
         title: { fr: "Gestion de Projet", en: "Project Management" },
         icon: "mdi:clipboard-check",
@@ -414,6 +435,7 @@ export function getResumePrintProfileText(locale: string): string {
       {
         title: { fr: "SEO & Performance", en: "SEO & Performance" },
         icon: "mdi:magnify",
+        displayOnPrint: false,
         items: [
           { 
             icon: "mdi:search-web", 
@@ -465,6 +487,7 @@ export function getResumePrintProfileText(locale: string): string {
       {
         title: { fr: "Outils Créatifs", en: "Creative Tools" },
         icon: "ion:color-palette",
+        displayOnPrint: false,
         items: [
           { icon: "file-icons:gimp", label: "GIMP" },
           { icon: "simple-icons:krita", label: "Krita" },
@@ -478,6 +501,7 @@ export function getResumePrintProfileText(locale: string): string {
       return {
         title: category.title[locale as 'fr' | 'en'] || category.title['en'],
         icon: category.icon,
+        displayOnPrint: category.displayOnPrint !== false,
         
         items: category.items.map(item => {
           // Résolution intelligente du label (string vs objet bilingue)
@@ -487,7 +511,8 @@ export function getResumePrintProfileText(locale: string): string {
 
           return {
             icon: item.icon,
-            label: resolvedLabel
+            label: resolvedLabel,
+            displayOnPrint: item.displayOnPrint !== false
           }
         })
       }

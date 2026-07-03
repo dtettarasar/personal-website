@@ -52,19 +52,7 @@
 
         <aside class="side-column">
           <section class="section-block">
-            <div class="section-title-row">
-              <h2>Skills</h2>
-              <span class="rule" />
-            </div>
-
-            <div v-for="group in skills" :key="group.category" class="skill-group">
-              <h3 class="group-title">{{ group.category }}</h3>
-              <div class="pills">
-                <span v-for="item in group.items" :key="item" class="pill">
-                  {{ item }}
-                </span>
-              </div>
-            </div>
+            <ResumePrintVersionSkillsSection />
           </section>
 
           <section class="section-block">
@@ -105,21 +93,6 @@ useHead({
 })
 
 const { locale, setLocale } = useI18n()
-
-const skills = [
-  {
-    category: 'Product',
-    items: ['Backlog', 'Roadmap', 'Stakeholders', 'Delivery']
-  },
-  {
-    category: 'Web',
-    items: ['Nuxt', 'Vue', 'Node.js', 'API Design']
-  },
-  {
-    category: 'Ops',
-    items: ['Docker', 'Caddy', 'CI/CD', 'Quality Gates']
-  }
-]
 
 const languages = [
   { name: 'French', level: 'Native' },
@@ -304,34 +277,6 @@ function handlePrint() {
   margin-bottom: 2px;
 }
 
-.skill-group {
-  margin-bottom: 10px;
-}
-
-.group-title {
-  margin: 0 0 6px;
-  font-size: 0.64rem;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: #64748b;
-}
-
-.pills {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 4px;
-}
-
-.pill {
-  display: inline-flex;
-  align-items: center;
-  border-radius: 999px;
-  background: #1e293b;
-  color: #ffffff;
-  font-size: 0.68rem;
-  padding: 3px 8px;
-}
-
 .lang-list {
   display: grid;
   gap: 5px;
@@ -437,12 +382,6 @@ function handlePrint() {
 
   .entry-block ul {
     line-height: 1.4;
-  }
-
-  .pill {
-    background: #1e293b !important;
-    color: #ffffff !important;
-    border: 1px solid #1e293b !important;
   }
 
   .no-print {
