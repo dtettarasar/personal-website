@@ -235,11 +235,11 @@ export function getResumePrintProfileText(locale: string): string {
               "<strong>Build & Code CRM :</strong> Optimisation frontend (HTML/CSS) directement sur des composants <strong>LWC</strong> (Lightning Web Components) et gestion des déploiements via pull-requests sur <strong>GitHub</strong>."
             ],
             jobMissionsShort: [
-              "Pilotage de l'ecosysteme <strong>WordPress Multisite</strong> et des operations <strong>DNS/HTTPS</strong> pour des conferences grands comptes.",
-              "Supervision de <strong>l'integration des contenus evenementiels</strong> (agendas, speakers, livestreams) et <strong>support technique</strong> des equipes marketing sur des <strong>pics > 1 000 visites/jour</strong>.",
+              "Pilotage de l'écosystème <strong>WordPress Multisite</strong> et des opérations <strong>DNS/HTTPS</strong> pour des conférences grands comptes.",
+              "Supervision de <strong>l'intégration des contenus événementiels</strong> (agendas, speakers, livestreams) et <strong>support technique</strong> des équipes marketing sur des <strong>pics > 1 000 visites/jour</strong>.",
               "Transition CRM vers <strong>Salesforce en 3 mois</strong>, puis administration quotidienne (gouvernance, droits, Permission Sets, mapping objets).",
-              "Conception et delivery de <strong>features metier complexes</strong> (membership, formulaires dynamiques connectes Salesforce) avec User Stories Jira et UAT.",
-              "Optimisation frontend sur composants <strong>LWC</strong> et coordination des deploiements via <strong>pull requests GitHub</strong>."
+              "Conception et delivery de <strong>features métier complexes</strong> (membership, formulaires dynamiques connectés Salesforce) avec User Stories Jira et UAT.",
+              "Optimisation frontend sur composants <strong>LWC</strong> et coordination des déploiements via <strong>pull requests GitHub</strong>."
             ]
           },
           en: {
