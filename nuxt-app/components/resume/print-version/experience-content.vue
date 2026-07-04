@@ -84,7 +84,7 @@ ul {
 }
 
 li {
-  margin-bottom: 2px;
+  margin-bottom: 4px;
 }
 
 @media print {
@@ -96,6 +96,10 @@ li {
 
   ul {
     line-height: 1.4;
+  }
+
+  li {
+    margin-bottom: 3px;
   }
 }
 </style>

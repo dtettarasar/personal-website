@@ -197,9 +197,9 @@ export function getResumePrintProfileText(locale: string): string {
               "<strong>Fin 2024 : Conception du SaaS <em>Otis AI</em> :</strong> Pilotage produit complet d'une application de génération de contenu IA. Cadrage des spécifications et déploiement d'une <strong>architecture découplée</strong> (Frontend Vue.js / Backend Node.js-Express) avec intégration des API OpenAI et Stripe. Mise en place de tests avec l’outil Vitest."
             ],
             jobMissionsShort: [
-              "Conception de <strong>AI Art Shield</strong> (projet final Harvard CS50P) avec <strong>cadrage produit</strong>, PRD et logique orientée objet.",
-              "Mise en production du portfolio <strong>Nuxt.js</strong> avec Docker, Caddy, gestion <strong>HTTPS/DNS</strong> et exploitation VPS en autonomie.",
-              "Pilotage de la conception du SaaS <strong>Otis AI</strong> avec architecture découpée Vue.js / Node.js, intégrations <strong>OpenAI + Stripe</strong> et tests Vitest."
+              "Conception de <strong>AI Art Shield</strong> (projet final Harvard CS50P) avec <strong>cadrage produit</strong>, PRD détaillé et architecture orientée objet en Python.",
+              "Déploiement et exploitation du portfolio <strong>Nuxt.js</strong> en production (Docker, Caddy, configuration <strong>HTTPS/DNS</strong>, supervision VPS).",
+              "Pilotage de <strong>Otis AI</strong> de la spécification à la livraison: architecture découplée Vue.js / Node.js, intégrations <strong>OpenAI + Stripe</strong> et campagne de tests Vitest."
             ]
           },
           en: {
@@ -211,9 +211,9 @@ export function getResumePrintProfileText(locale: string): string {
               "<strong>Late 2024: SaaS Conception - <em>Otis AI</em>:</strong> Full product management of an AI content generation application. Scoped functional specifications and deployed a <strong>decoupled architecture</strong> (Vue.js Frontend / Node.js-Express Backend) integrated with OpenAI and Stripe APIs. Implemented testing with Vitest."
             ],
             jobMissionsShort: [
-              "Built <strong>AI Art Shield</strong> (Harvard CS50P final project) with <strong>product scoping</strong>, PRD framing, and OOP architecture.",
-              "Deployed and operated the <strong>Nuxt.js</strong> portfolio in production with Docker, Caddy, <strong>HTTPS/DNS</strong> setup, and VPS infrastructure.",
-              "Led <strong>Otis AI</strong> product conception with a decoupled Vue.js / Node.js architecture, <strong>OpenAI + Stripe</strong> integrations, and Vitest testing."
+              "Built <strong>AI Art Shield</strong> (Harvard CS50P final project) with <strong>product scoping</strong>, a detailed PRD, and Python OOP architecture.",
+              "Deployed and operated the <strong>Nuxt.js</strong> portfolio in production (Docker, Caddy, <strong>HTTPS/DNS</strong> configuration, VPS operations).",
+              "Led <strong>Otis AI</strong> from specification to delivery: decoupled Vue.js / Node.js architecture, <strong>OpenAI + Stripe</strong> integrations, and end-to-end Vitest coverage."
             ]
           }
         }
