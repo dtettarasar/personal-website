@@ -239,7 +239,7 @@ export function getResumePrintProfileText(locale: string): string {
               "Supervision de <strong>l'intégration des contenus événementiels</strong> (agendas, speakers, livestreams) et <strong>support technique</strong> des équipes marketing sur des <strong>pics > 1 000 visites/jour</strong>.",
               "Transition CRM vers <strong>Salesforce en 3 mois</strong>, puis administration quotidienne (gouvernance, droits, Permission Sets, mapping objets).",
               "Conception et delivery de <strong>features métier complexes</strong> (membership, formulaires dynamiques connectés Salesforce) avec User Stories Jira et UAT.",
-              "Optimisation frontend sur composants <strong>LWC</strong> et coordination des déploiements via <strong>pull requests GitHub</strong>."
+              "Optimisation frontend sur les <strong>composants Salesforce LWC</strong> et coordination des déploiements via <strong>pull requests GitHub</strong>."
             ]
           },
           en: {
@@ -257,7 +257,7 @@ export function getResumePrintProfileText(locale: string): string {
               "Oversaw <strong>event content integration</strong> (agendas, speakers, livestream modules) and <strong>technical support</strong> for marketing teams during <strong>peaks above 1,000 daily visits</strong>.",
               "Drove a <strong>3-month Salesforce migration</strong> and daily administration (governance, access rights, Permission Sets, object mapping).",
               "Designed and delivered <strong>complex product features</strong> (membership journeys, dynamic Salesforce-connected forms) with Jira workflows and UAT.",
-              "Improved frontend layouts in <strong>LWC</strong> and coordinated deliveries through <strong>GitHub pull requests</strong>."
+              "Improved frontend layouts in Salesforce <strong>LWC</strong> components and coordinated deliveries through <strong>GitHub pull requests</strong>."
             ]
           }
         }
