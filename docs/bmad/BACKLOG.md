@@ -1,7 +1,7 @@
 # 🛠️ Development Backlog & Roadmap
 ## Personal Site 25 - Implementation Plan
 
-**Version:** 1.11  
+**Version:** 1.13  
 **Status:** Active Development  
 **Last Updated:** 2026-07-06  
 **Owner:** Dylan Tettarasar
@@ -273,9 +273,10 @@ The backlog is a prioritized list of work items organized by:
 
 ---
 
-### 2.2 Next Sprint Draft (Sprint 25.2) - Resume Print (A4)
+### 2.2 Sprint 25.2 - Resume Print (A4)
 **Duration:** TBD (proposed: 1 week)  
 **Goal:** Add a printable CV experience directly in the Nuxt app, with an A4-ready layout for job applications and a simple user flow from Resume page to browser print/download.
+**Status:** 🟡 In Progress
 
 **Description (Draft):**
 This sprint introduces a new print-focused CV version inside the personal website. The objective is to avoid external design tools for final CV export by generating a clean A4 document directly from site content. The feature should remain easy to maintain, reuse existing data sources, and provide a smooth candidate workflow: open print version -> print to PDF/download from browser. The visual direction should stay aligned with the site's existing brand language (color palette, iconography, visual hierarchy), while adapting choices to print constraints (readability, available fonts, ink-friendly contrast). The target format is a single-page A4 CV; content must be shaped to fit that constraint rather than spilling onto a second page.
@@ -317,7 +318,7 @@ For data architecture, the print feature should follow the same proven flow used
 ```
 
 #### User Story 1: Create Print-Dedicated Route
-**Status:** 🔴 Not Started  
+**Status:** 🟣 Ready for Production  
 **Priority:** High  
 **Points:** 3
 
@@ -325,21 +326,21 @@ For data architecture, the print feature should follow the same proven flow used
 As a candidate, I want a dedicated print CV route so that I can open a version specifically optimized for A4 output.
 
 **Tasks:**
-- [ ] Create a new page route (draft: `/resume-print-version`)
-- [ ] Add page metadata/title for print context
-- [ ] Keep route isolated from main responsive CV layout
-- [ ] Ensure print route does not render global site layout chrome (navbar/footer hidden for print page context)
+- [x] Create a new page route (draft: `/resume-print-version`)
+- [x] Add page metadata/title for print context
+- [x] Keep route isolated from main responsive CV layout
+- [x] Ensure print route does not render global site layout chrome (navbar/footer hidden for print page context)
 
 **Acceptance Criteria:**
-- [ ] Route is accessible directly by URL
-- [ ] Route renders without breaking existing resume page
-- [ ] Page title clearly indicates print CV view
-- [ ] Global site navbar/footer are not displayed on the print route UI
+- [x] Route is accessible directly by URL
+- [x] Route renders without breaking existing resume page
+- [x] Page title clearly indicates print CV view
+- [x] Global site navbar/footer are not displayed on the print route UI
 
 ---
 
 #### User Story 2: Build A4 Print Layout System
-**Status:** 🔴 Not Started  
+**Status:** 🟡 In Progress  
 **Priority:** High  
 **Points:** 8
 
@@ -347,16 +348,16 @@ As a candidate, I want a dedicated print CV route so that I can open a version s
 As a recruiter/candidate, I want a clean A4 layout with proper print rules so that the CV is professional on paper/PDF.
 
 **Tasks:**
-- [ ] Define print CSS (`@page`, margins, print-safe typography)
-- [ ] Build A4 container and section spacing rules
-- [ ] Add page-break controls for major sections
-- [ ] Remove non-print UI artifacts (navigation effects, animations, shadows if needed)
-- [ ] Align print visual style with existing site branding (colors, spacing rhythm, section headers)
+- [x] Define print CSS (`@page`, margins, print-safe typography)
+- [x] Build A4 container and section spacing rules
+- [x] Add page-break controls for major sections
+- [x] Remove non-print UI artifacts (navigation effects, animations, shadows if needed)
+- [x] Align print visual style with existing site branding (colors, spacing rhythm, section headers)
 - [ ] Define icon/picto usage rules for print using existing Nuxt Icon set only where it improves readability
-- [ ] Add CSS Paged Media guardrails (`break-inside: avoid`, section overflow rules)
-- [ ] Prevent mobile responsive breakpoints from applying in print (keep intended two-column A4 grid)
-- [ ] Force print grid for header/body layout so PDF keeps left/right column structure
-- [ ] Enable print color preservation (`print-color-adjust`) for accents and skill pills
+- [x] Add CSS Paged Media guardrails (`break-inside: avoid`, section overflow rules)
+- [x] Prevent mobile responsive breakpoints from applying in print (keep intended two-column A4 grid)
+- [x] Force print grid for header/body layout so PDF keeps left/right column structure
+- [x] Enable print color preservation (`print-color-adjust`) for accents and skill pills
 
 **Acceptance Criteria:**
 - [ ] Output fits A4 format without clipped content
@@ -370,7 +371,7 @@ As a recruiter/candidate, I want a clean A4 layout with proper print rules so th
 ---
 
 #### User Story 3: Reuse Existing Resume Data in Print Page
-**Status:** 🔴 Not Started  
+**Status:** 🟡 In Progress  
 **Priority:** High  
 **Points:** 5
 
@@ -396,28 +397,28 @@ Each sub-story should follow the same cycle:
 - Targeted tests (store + component)
 
 **Tasks:**
-- [ ] Reuse current stores/APIs for intro, experience, skills, education, languages
-- [ ] Ensure locale compatibility (FR/EN behavior aligned with current i18n strategy)
-- [ ] Define print-safe subset/order of resume content
-- [ ] Confirm no dedicated Projects section in print CV; project depth is delegated to Portfolio/GitHub links in header
-- [ ] Confirm unified Education section (degrees + Harvard/freeCodeCamp certifications in the same block)
-- [ ] Introduce a print-specific content shape (example: `cvShort`, `displayOnPrint`, shorter bullet sets)
-- [ ] Define experience print payload with `companyName`, `companyVenue`, `jobTitle`, `period`, `jobMissionsShort`, and `displayOnPrint`; keep `companyLogoSrc` digital-only
-- [ ] Position `R&D Lab / Side Projects` as a full experience block carrying recent project/training narrative for 2024-present period
-- [ ] Add editorial calibration pass for `R&D Lab / Side Projects` wording so it reads as serious professional experience (not a casual personal-project bucket)
-- [ ] Define a short print profile summary above experience, with either a dedicated `getResumePrintIntroText` or a shortened print-only variant of `getResumeIntroText`
-- [ ] Define print header payload by combining `getGlobalConfig()` + `getHeroData(locale)` + print-specific fields (`phone`, `residence`, `availability`, `portfolio`)
+- [x] Reuse current stores/APIs for intro, experience, skills, education, languages
+- [x] Ensure locale compatibility (FR/EN behavior aligned with current i18n strategy)
+- [x] Define print-safe subset/order of resume content
+- [x] Confirm no dedicated Projects section in print CV; project depth is delegated to Portfolio/GitHub links in header
+- [x] Confirm unified Education section (degrees + Harvard/freeCodeCamp certifications in the same block)
+- [x] Introduce a print-specific content shape (example: `cvShort`, `displayOnPrint`, shorter bullet sets)
+- [x] Define experience print payload with `companyName`, `companyVenue`, `jobTitle`, `period`, `jobMissionsShort`, and `displayOnPrint`; keep `companyLogoSrc` digital-only
+- [x] Position `R&D Lab / Side Projects` as a full experience block carrying recent project/training narrative for 2024-present period
+- [x] Add editorial calibration pass for `R&D Lab / Side Projects` wording so it reads as serious professional experience (not a casual personal-project bucket)
+- [x] Define a short print profile summary above experience, with either a dedicated `getResumePrintIntroText` or a shortened print-only variant of `getResumeIntroText`
+- [x] Define print header payload by combining `getGlobalConfig()` + `getHeroData(locale)` + print-specific fields (`phone`, `residence`, `availability`, `portfolio`)
 - [ ] Add explicit API/store pipeline for print header data (no direct component hardcoding)
-- [ ] Define education print payload with only `issuer` (school/institution), `title` (diploma/certification), and `year`
-- [ ] Define languages print payload with `name` and `level`, plus optional `img`/icon usage if space allows
-- [ ] Define skills print payload with sectioned categories and skill items, reusing existing resume skill structure
-- [ ] Add `displayOnPrint` at both skill-category and individual skill-item level to allow one-page content selection
-- [ ] Add a print-focused projection/getter strategy in store layer to return only fields needed by CV print sections
-- [ ] Update store interfaces/types to include print-oriented fields where needed (example: `displayOnPrint`, `jobMissionsShort`)
+- [x] Define education print payload with only `issuer` (school/institution), `title` (diploma/certification), and `year`
+- [x] Define languages print payload with `name` and `level`, plus optional `img`/icon usage if space allows
+- [x] Define skills print payload with sectioned categories and skill items, reusing existing resume skill structure
+- [x] Add `displayOnPrint` at both skill-category and individual skill-item level to allow one-page content selection
+- [x] Add a print-focused projection/getter strategy in store layer to return only fields needed by CV print sections
+- [x] Update store interfaces/types to include print-oriented fields where needed (example: `displayOnPrint`, `jobMissionsShort`)
 - [ ] Add dedicated Pinia getters for CV print projections (header, experience, education, skills, and summary)
-- [ ] Ensure print components consume getters directly, with no filtering/mapping logic in template markup
-- [ ] Define design direction for print skills inspired by current site resume section + Figma draft: grouped subsections, pill-style skill items, existing Nuxt Icon identifiers, dark background tokens, white text
-- [ ] Validate whether language icons can be kept in print layout without harming one-page density; fallback to text-only rendering if space is too constrained
+- [x] Ensure print components consume getters directly, with no filtering/mapping logic in template markup
+- [x] Define design direction for print skills inspired by current site resume section + Figma draft: grouped subsections, pill-style skill items, existing Nuxt Icon identifiers, dark background tokens, white text
+- [x] Validate whether language icons can be kept in print layout without harming one-page density; fallback to text-only rendering if space is too constrained
 
 **Acceptance Criteria:**
 - [ ] Print page displays the same up-to-date content as current data layer
@@ -463,7 +464,7 @@ As a user, I want a visible action on the resume page so that I can quickly open
 ---
 
 #### User Story 5: Trigger Browser Print/Download Flow
-**Status:** 🔴 Not Started  
+**Status:** 🟡 In Progress  
 **Priority:** High  
 **Points:** 5
 
@@ -471,10 +472,10 @@ As a user, I want a visible action on the resume page so that I can quickly open
 As a candidate, I want to trigger browser print from the print page so that I can save my CV as PDF for applications.
 
 **Tasks:**
-- [ ] Add print action (button + `window.print()` flow)
-- [ ] Hide print controls in printed result
+- [x] Add print action (button + `window.print()` flow)
+- [x] Hide print controls in printed result
 - [ ] Validate behavior with browser native “Save as PDF”
-- [ ] Ensure print action works with current route branding (print view remains clean and application-ready)
+- [x] Ensure print action works with current route branding (print view remains clean and application-ready)
 - [ ] Document browser setting requirement for final export (`Headers and footers` disabled)
 
 **Acceptance Criteria:**
@@ -546,7 +547,7 @@ As a product owner, I want validated print quality across major browsers so that
 ---
 
 #### User Story 7: Optimize Print Page Structure (Tailwind + Components)
-**Status:** 🔴 Not Started  
+**Status:** 🟡 In Progress  
 **Priority:** Medium  
 **Points:** 5
 
@@ -557,22 +558,22 @@ As a maintainer, I want the print CV page to be refactored from prototype-style 
 - [ ] Convert static CSS blocks in `pages/resume-print-version.vue` into Tailwind utility classes where relevant
 - [ ] Keep only print-critical custom CSS (`@page`, print overrides, `break-inside`, print-color-adjust) in scoped style blocks
 - [ ] Define and implement reusable print components:
-  - [ ] `ResumePrintHeader`
-  - [ ] `ResumePrintProfile`
-  - [ ] `ResumePrintExperience`
-  - [ ] `ResumePrintEducation`
-  - [ ] `ResumePrintSkills`
-  - [ ] `ResumePrintLanguages`
-- [ ] Create a reusable `ResumePrintSectionTitle` component for title row pattern (`title + rule`) with optional icon support
-- [ ] Reuse icon patterns aligned with the digital resume page where it improves readability
-- [ ] Extract repeatable entry markup (example: experience entry block) into dedicated subcomponents when it reduces duplication
+  - [x] `ResumePrintHeader`
+  - [x] `ResumePrintProfile`
+  - [x] `ResumePrintExperience`
+  - [x] `ResumePrintEducation`
+  - [x] `ResumePrintSkills`
+  - [x] `ResumePrintLanguages`
+- [x] Create a reusable `ResumePrintSectionTitle` component for title row pattern (`title + rule`) with optional icon support
+- [x] Reuse icon patterns aligned with the digital resume page where it improves readability
+- [x] Extract repeatable entry markup (example: experience entry block) into dedicated subcomponents when it reduces duplication
 - [ ] Validate final output parity between on-screen rendering and PDF print rendering after refactor
 
 **Acceptance Criteria:**
-- [ ] `resume-print-version.vue` is simplified and orchestrates section components rather than owning all markup/CSS
+- [x] `resume-print-version.vue` is simplified and orchestrates section components rather than owning all markup/CSS
 - [ ] Tailwind-first styling is applied for general layout/spacing/typography
 - [ ] Print layout behavior remains stable after refactor (A4, two-column grid, pills rendering, color preservation)
-- [ ] Section title pattern is reusable and supports optional icons
+- [x] Section title pattern is reusable and supports optional icons
 - [ ] No regression on current print route UX (CTA, print button, and print media behavior)
 
 ---
@@ -1451,6 +1452,8 @@ describe('SkillSection', () => {
 | 1.9 | 2026-07-01 | Added incremental section-based sub-stories for Resume Print dataflow and design delivery (header -> languages) | Dylan Tettarasar |
 | 1.10 | 2026-07-01 | Added optimization user story for Tailwind conversion and componentization of Resume Print sections/title pattern | Dylan Tettarasar |
 | 1.11 | 2026-07-06 | Added intermediate status "Ready for Production" and clarified that "Done" requires production validation | Dylan Tettarasar |
+| 1.12 | 2026-07-06 | Status governance pass: kept already deployed work in Done and reserved Ready for Production for pre-deployment items | Dylan Tettarasar |
+| 1.13 | 2026-07-06 | Sprint 25.2 review on resume-print branch: updated User Story statuses and checked implemented tasks for print route/layout/data flow | Dylan Tettarasar |
 
 ---
 
