@@ -1,9 +1,9 @@
 # 🛠️ Development Backlog & Roadmap
 ## Personal Site 25 - Implementation Plan
 
-**Version:** 1.10  
+**Version:** 1.11  
 **Status:** Active Development  
-**Last Updated:** 2026-07-01  
+**Last Updated:** 2026-07-06  
 **Owner:** Dylan Tettarasar
 
 ---
@@ -20,8 +20,11 @@ The backlog is a prioritized list of work items organized by:
 ### Status Definitions
 - 🔴 **Not Started:** Item not yet begun
 - 🟡 **In Progress:** Currently being worked on
-- 🟢 **Done:** Completed and tested
+- 🟣 **Ready for Production:** Completed and tested on dev/test branch, ready for deployment
+- 🟢 **Done:** Validated as functional in production
 - 🔵 **Blocked:** Waiting on dependency or external factor
+
+**Workflow Rule:** Move an item to **Done** only after production validation. Use **Ready for Production** as the pre-deployment checkpoint.
 
 ---
 
@@ -1447,6 +1450,7 @@ describe('SkillSection', () => {
 | 1.8 | 2026-07-01 | Documented first working print prototype constraints (layout isolation, print grid preservation, color-adjust behavior, and browser header/footer export setting) | Dylan Tettarasar |
 | 1.9 | 2026-07-01 | Added incremental section-based sub-stories for Resume Print dataflow and design delivery (header -> languages) | Dylan Tettarasar |
 | 1.10 | 2026-07-01 | Added optimization user story for Tailwind conversion and componentization of Resume Print sections/title pattern | Dylan Tettarasar |
+| 1.11 | 2026-07-06 | Added intermediate status "Ready for Production" and clarified that "Done" requires production validation | Dylan Tettarasar |
 
 ---
 
