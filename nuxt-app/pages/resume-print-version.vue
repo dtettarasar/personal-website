@@ -1,10 +1,10 @@
 <template>
   <div class="resume-print-page">
     <div class="resume-toolbar no-print">
-      <h1>Resume Print Prototype</h1>
+      <h1>{{ pageHeading }}</h1>
 
       <div class="toolbar-actions">
-        <div class="lang-switch" role="group" aria-label="Print resume language">
+        <div class="lang-switch" role="group" :aria-label="languageSwitchAriaLabel">
           <button
             type="button"
             class="lang-btn"
@@ -25,7 +25,7 @@
         </div>
 
         <button type="button" class="print-btn" @click="handlePrint">
-          Print / Save PDF
+          {{ printButtonLabel }}
         </button>
       </div>
     </div>
@@ -79,11 +79,46 @@ definePageMeta({
   layout: false
 })
 
-useHead({
-  title: 'Resume Print Prototype'
+const { locale, setLocale } = useI18n()
+
+const localizedUi = {
+  fr: {
+    heading: 'Version imprimable du CV',
+    browserTitle: 'CV - Version imprimable',
+    printButton: 'Imprimer / Sauvegarder en PDF',
+    languageSwitchAria: 'Langue de la version imprimable du CV'
+  },
+  en: {
+    heading: 'Resume Print Version',
+    browserTitle: 'Resume - Print Version',
+    printButton: 'Print / Save PDF',
+    languageSwitchAria: 'Print resume language'
+  }
+}
+
+const localizedContent = computed(() => {
+  return locale.value === 'fr' ? localizedUi.fr : localizedUi.en
 })
 
-const { locale, setLocale } = useI18n()
+const pageHeading = computed(() => {
+  return localizedContent.value.heading
+})
+
+const printButtonLabel = computed(() => {
+  return localizedContent.value.printButton
+})
+
+const languageSwitchAriaLabel = computed(() => {
+  return localizedContent.value.languageSwitchAria
+})
+
+const browserTitle = computed(() => {
+  return localizedContent.value.browserTitle
+})
+
+useHead(() => ({
+  title: browserTitle.value
+}))
 
 function handlePrint() {
   window.print()
