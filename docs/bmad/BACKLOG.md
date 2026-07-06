@@ -544,6 +544,37 @@ As a product owner, I want validated print quality across major browsers so that
 - [ ] CTA-to-print navigation and print action trigger are covered by automated interaction tests
 - [ ] Stores and print components have dedicated test coverage for all print-specific data contracts
 
+### Sprint 25.2 Validation Checklist (E2E)
+Use this checklist to validate the print CV end to end before moving any story from 🟣 Ready for Production to 🟢 Done.
+
+#### Route and Layout
+- [ ] Open `/resume-print-version` directly in the browser
+- [ ] Confirm the page renders without the main site navbar/footer
+- [ ] Confirm the page title identifies the print CV view
+- [ ] Confirm the A4 sheet layout is centered and visually stable on desktop
+- [ ] Confirm print preview keeps the intended 2-column structure
+
+#### Data and Content Flow
+- [ ] Confirm profile text is loaded from the store/API and switches with locale
+- [ ] Confirm experience entries render from store data and use `jobMissionsShort` in print
+- [ ] Confirm `displayOnPrint: false` entries never appear in the print CV
+- [ ] Confirm education renders as a unified block with issuer, title, and year only
+- [ ] Confirm skills render as grouped sections with print-safe visible items only
+- [ ] Confirm language rows render with name and level only
+
+#### Print Action
+- [ ] Click the print button and verify `window.print()` opens the browser print dialog
+- [ ] Save as PDF from the print dialog and confirm the output stays legible
+- [ ] Confirm print controls are hidden in the final printed/PDF output
+- [ ] Confirm browser header/footer metadata can be disabled without breaking layout
+
+#### Quality Checks
+- [ ] Verify FR and EN both render correctly
+- [ ] Verify no console errors appear while opening the print page
+- [ ] Verify the page stays within the one-page budget
+- [ ] Verify visual balance after the latest content adjustments
+- [ ] Verify the final result is acceptable for advisor review and deployment
+
 ---
 
 #### User Story 7: Optimize Print Page Structure (Tailwind + Components)
@@ -1454,6 +1485,7 @@ describe('SkillSection', () => {
 | 1.11 | 2026-07-06 | Added intermediate status "Ready for Production" and clarified that "Done" requires production validation | Dylan Tettarasar |
 | 1.12 | 2026-07-06 | Status governance pass: kept already deployed work in Done and reserved Ready for Production for pre-deployment items | Dylan Tettarasar |
 | 1.13 | 2026-07-06 | Sprint 25.2 review on resume-print branch: updated User Story statuses and checked implemented tasks for print route/layout/data flow | Dylan Tettarasar |
+| 1.14 | 2026-07-06 | Added Sprint 25.2 end-to-end validation checklist for print CV user stories | Dylan Tettarasar |
 
 ---
 
