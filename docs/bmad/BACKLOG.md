@@ -1,9 +1,9 @@
 # 🛠️ Development Backlog & Roadmap
 ## Personal Site 25 - Implementation Plan
 
-**Version:** 1.13  
+**Version:** 1.15  
 **Status:** Active Development  
-**Last Updated:** 2026-07-06  
+**Last Updated:** 2026-07-08  
 **Owner:** Dylan Tettarasar
 
 ---
@@ -444,7 +444,7 @@ Each sub-story should follow the same cycle:
 ---
 
 #### User Story 4: Add Entry Point from Main Resume Page
-**Status:** 🟡 In Progress  
+**Status:** 🟣 Ready for Production  
 **Priority:** Medium  
 **Points:** 3
 
@@ -457,9 +457,9 @@ As a user, I want a visible action on the resume page so that I can quickly open
 - [x] Open print page in expected context (same tab or new tab decision documented)
 
 **Acceptance Criteria:**
-- [ ] CTA is visible and understandable on desktop/mobile
-- [ ] Navigation to print route works reliably
-- [ ] UX wording communicates print/download intent
+- [x] CTA is visible and understandable on desktop/mobile
+- [x] Navigation to print route works reliably
+- [x] UX wording communicates print/download intent
 
 ---
 
@@ -487,7 +487,7 @@ As a candidate, I want to trigger browser print from the print page so that I ca
 ---
 
 #### User Story 6: Print QA & Cross-Browser Validation
-**Status:** 🔴 Not Started  
+**Status:** 🟡 In Progress  
 **Priority:** Medium  
 **Points:** 5
 
@@ -502,20 +502,20 @@ As a product owner, I want validated print quality across major browsers so that
 - [ ] Validate print color contrast and icon rendering quality (screen vs paper/PDF)
 - [ ] Add unit tests for print-oriented store getters/projections (header, experience, education, skills, languages)
   - [ ] Header getter returns required fields and print-specific values
-  - [ ] Experience getter enforces `displayOnPrint` and prefers `jobMissionsShort` for print
-  - [ ] Education getter returns only issuer/title/year for print projection
-  - [ ] Skills getter filters categories/items by `displayOnPrint`
-  - [ ] Languages getter returns name/level with optional icon field
+  - [x] Experience getter enforces `displayOnPrint` and prefers `jobMissionsShort` for print
+  - [x] Education getter returns only issuer/title/year for print projection
+  - [x] Skills getter filters categories/items by `displayOnPrint`
+  - [x] Languages getter returns name/level with optional icon field
 - [ ] Add tests for print filtering rules (`displayOnPrint`, `jobMissionsShort`, one-page-oriented subset selection)
-  - [ ] Hidden entries (`displayOnPrint: false`) never reach print component props
+  - [x] Hidden entries (`displayOnPrint: false`) never reach print component props
   - [ ] Print-projected arrays preserve expected ordering for CV readability
 - [ ] Add component tests for print sections rendering (header, experience, education, skills, languages) with projected store data
   - [ ] Sections render correctly from getter output without template-level filtering
   - [ ] Skills pill rendering remains stable with and without icons
 - [ ] Add locale coverage tests (FR/EN) for print data mapping and section content
 - [ ] Add interaction tests for print user flow
-  - [ ] Resume page CTA opens print route reliably
-  - [ ] Print button triggers `window.print()`
+  - [x] Resume page CTA opens print route reliably
+  - [x] Print button triggers `window.print()`
   - [ ] Print controls are excluded from print media snapshot/DOM checks
 - [ ] Add non-regression tests to ensure existing digital resume route behavior remains unchanged
 
@@ -523,13 +523,13 @@ As a product owner, I want validated print quality across major browsers so that
 
 | Scope | File Path | Status | Test Work to Add / Update |
 |------|-----------|--------|-----------------------------|
-| Store tests (skills) | `tests/unit/frontend/skillsStore.spec.ts` | Update existing | Add getter/projection assertions for print payload (`displayOnPrint` at category/item level, ordering, icon optionality). |
-| Store tests (education) | `tests/unit/frontend/educationsStore.spec.ts` | Update existing | Add print projection checks for unified Education block (`issuer`, `title`, `year`) and regression checks for existing behavior. |
-| UI CTA tests | `tests/unit/frontend/button-link.spec.ts` | Update existing | Add assertions for CV print CTA semantics/microcopy and navigation target to print route. |
-| Store tests (experience) | `tests/unit/frontend/experienceStore.spec.ts` | Create | Validate print getter behavior (`displayOnPrint`, `jobMissionsShort` priority, one-page-oriented ordering). |
-| Store tests (languages) | `tests/unit/frontend/languageContentStore.spec.ts` | Create | Validate language projection for print (`name`, `level`, optional `img`) and FR/EN mapping. |
+| Store tests (skills) | `tests/unit/frontend/skillsStore.spec.ts` | Updated | Add getter/projection assertions for print payload (`displayOnPrint` at category/item level, ordering, icon optionality). |
+| Store tests (education) | `tests/unit/frontend/educationsStore.spec.ts` | Updated | Add print projection checks for unified Education block (`issuer`, `title`, `year`) and regression checks for existing behavior. |
+| UI CTA tests | `tests/unit/frontend/resume-page.spec.ts` | Created | Added assertions for CV print CTA semantics, route target, and new-tab behavior. |
+| Store tests (experience) | `tests/unit/frontend/experienceStore.spec.ts` | Created | Validate print getter behavior (`displayOnPrint`, `jobMissionsShort` priority, one-page-oriented ordering). |
+| Store tests (languages) | `tests/unit/frontend/languageContentStore.spec.ts` | Created | Validate language projection for print (`name`, `level`) and locale behavior. |
 | Store tests (print orchestration) | `tests/unit/frontend/resumePrintStore.spec.ts` | Create | Validate aggregated getters for header/experience/education/skills/languages and no template-level filtering assumptions. |
-| Component tests (print page) | `tests/unit/frontend/resume-print-page.spec.ts` | Create | Validate section rendering from projected store data (header, experience, education, skills, languages). |
+| Component tests (print page) | `tests/unit/frontend/resume-print-page.spec.ts` | Created (partial) | Added toolbar rendering and print-button trigger tests; section rendering assertions can be extended later. |
 | Component tests (skills print) | `tests/unit/frontend/resume-print-skills.spec.ts` | Create | Validate pills rendering with and without icons, category visibility, and compact layout assumptions. |
 | Integration flow tests | `tests/integration/resume-print-flow.spec.ts` | Create | Validate end-to-end flow: CTA opens print route, print action triggers `window.print()`, print controls hidden in print mode. |
 
@@ -539,9 +539,9 @@ As a product owner, I want validated print quality across major browsers so that
 - [ ] Known print constraints documented for future iterations
 - [ ] Brand coherence preserved (colors/icons/typography) with print-safe adjustments documented
 - [ ] Automated test suite validates print store projections and section rendering behavior
-- [ ] Print filtering logic is covered by tests and does not rely on template-level conditions
+- [x] Print filtering logic is covered by tests and does not rely on template-level conditions
 - [ ] FR/EN print rendering paths pass tests with expected localized content
-- [ ] CTA-to-print navigation and print action trigger are covered by automated interaction tests
+- [x] CTA-to-print navigation and print action trigger are covered by automated interaction tests
 - [ ] Stores and print components have dedicated test coverage for all print-specific data contracts
 
 ### Sprint 25.2 Validation Checklist (E2E)
@@ -1486,6 +1486,7 @@ describe('SkillSection', () => {
 | 1.12 | 2026-07-06 | Status governance pass: kept already deployed work in Done and reserved Ready for Production for pre-deployment items | Dylan Tettarasar |
 | 1.13 | 2026-07-06 | Sprint 25.2 review on resume-print branch: updated User Story statuses and checked implemented tasks for print route/layout/data flow | Dylan Tettarasar |
 | 1.14 | 2026-07-06 | Added Sprint 25.2 end-to-end validation checklist for print CV user stories | Dylan Tettarasar |
+| 1.15 | 2026-07-08 | Added print-related tests (experience/languages stores + resume/resume-print page), and updated Sprint 25.2 statuses before PR/deployment | Dylan Tettarasar |
 
 ---
 
