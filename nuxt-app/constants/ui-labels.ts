@@ -24,6 +24,10 @@ export const resumeLabels = {
     fr: 'Voir la certification',
     en: 'Show credential',
   },
+  openPrintVersion: {
+    fr: 'Ouvrir la version imprimable',
+    en: 'Open print version',
+  },
 }
 
 export const homeLabels = {
@@ -106,4 +110,11 @@ export const navLabels = {
   resume: { fr: 'Mon CV', en: 'Resume' },
   portfolio: { fr: 'Mes projets', en: 'Portfolio' },
   contact: { fr: 'Contactez moi', en: 'Contact me' },
+}
+
+export const accessibilityLabels = {
+  newTab: {
+    fr: 'nouvel onglet',
+    en: 'new tab',
+  },
 }
