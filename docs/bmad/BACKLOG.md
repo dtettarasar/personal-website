@@ -444,7 +444,7 @@ Each sub-story should follow the same cycle:
 ---
 
 #### User Story 4: Add Entry Point from Main Resume Page
-**Status:** 🔴 Not Started  
+**Status:** 🟡 In Progress  
 **Priority:** Medium  
 **Points:** 3
 
@@ -452,9 +452,9 @@ Each sub-story should follow the same cycle:
 As a user, I want a visible action on the resume page so that I can quickly open the print CV version.
 
 **Tasks:**
-- [ ] Add CTA button/link on main resume page
-- [ ] Ensure accessibility label and clear microcopy
-- [ ] Open print page in expected context (same tab or new tab decision documented)
+- [x] Add CTA button/link on main resume page
+- [x] Ensure accessibility label and clear microcopy
+- [x] Open print page in expected context (same tab or new tab decision documented)
 
 **Acceptance Criteria:**
 - [ ] CTA is visible and understandable on desktop/mobile
