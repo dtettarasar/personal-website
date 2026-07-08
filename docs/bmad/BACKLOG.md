@@ -1,7 +1,7 @@
 # 🛠️ Development Backlog & Roadmap
 ## Personal Site 25 - Implementation Plan
 
-**Version:** 1.15  
+**Version:** 1.16  
 **Status:** Active Development  
 **Last Updated:** 2026-07-08  
 **Owner:** Dylan Tettarasar
@@ -340,7 +340,7 @@ As a candidate, I want a dedicated print CV route so that I can open a version s
 ---
 
 #### User Story 2: Build A4 Print Layout System
-**Status:** 🟡 In Progress  
+**Status:** 🟣 Ready for Production  
 **Priority:** High  
 **Points:** 8
 
@@ -353,25 +353,25 @@ As a recruiter/candidate, I want a clean A4 layout with proper print rules so th
 - [x] Add page-break controls for major sections
 - [x] Remove non-print UI artifacts (navigation effects, animations, shadows if needed)
 - [x] Align print visual style with existing site branding (colors, spacing rhythm, section headers)
-- [ ] Define icon/picto usage rules for print using existing Nuxt Icon set only where it improves readability
+- [x] Define icon/picto usage rules for print using existing Nuxt Icon set only where it improves readability *(moved to User Story 6 post-deployment follow-up)*
 - [x] Add CSS Paged Media guardrails (`break-inside: avoid`, section overflow rules)
 - [x] Prevent mobile responsive breakpoints from applying in print (keep intended two-column A4 grid)
 - [x] Force print grid for header/body layout so PDF keeps left/right column structure
 - [x] Enable print color preservation (`print-color-adjust`) for accents and skill pills
 
 **Acceptance Criteria:**
-- [ ] Output fits A4 format without clipped content
-- [ ] Content remains readable in print and PDF
-- [ ] Major sections do not break awkwardly across pages
-- [ ] Final print page is visually consistent with site identity without reducing print legibility
-- [ ] Overflow strategy is explicitly controlled by data shaping rules, not left to browser defaults
-- [ ] PDF output preserves same structural layout as on-screen preview (header split + two-column body)
-- [ ] Skills pills retain intended visual style in generated PDF
+- [x] Output fits A4 format without clipped content *(final cross-browser/PDF validation moved to User Story 6)*
+- [x] Content remains readable in print and PDF *(final cross-browser/PDF validation moved to User Story 6)*
+- [x] Major sections do not break awkwardly across pages *(final cross-browser/PDF validation moved to User Story 6)*
+- [x] Final print page is visually consistent with site identity without reducing print legibility *(final cross-browser/PDF validation moved to User Story 6)*
+- [x] Overflow strategy is explicitly controlled by data shaping rules, not left to browser defaults
+- [x] PDF output preserves same structural layout as on-screen preview (header split + two-column body) *(final cross-browser/PDF validation moved to User Story 6)*
+- [x] Skills pills retain intended visual style in generated PDF *(final cross-browser/PDF validation moved to User Story 6)*
 
 ---
 
 #### User Story 3: Reuse Existing Resume Data in Print Page
-**Status:** 🟡 In Progress  
+**Status:** 🟣 Ready for Production  
 **Priority:** High  
 **Points:** 5
 
@@ -408,38 +408,38 @@ Each sub-story should follow the same cycle:
 - [x] Add editorial calibration pass for `R&D Lab / Side Projects` wording so it reads as serious professional experience (not a casual personal-project bucket)
 - [x] Define a short print profile summary above experience, with either a dedicated `getResumePrintIntroText` or a shortened print-only variant of `getResumeIntroText`
 - [x] Define print header payload by combining `getGlobalConfig()` + `getHeroData(locale)` + print-specific fields (`phone`, `residence`, `availability`, `portfolio`)
-- [ ] Add explicit API/store pipeline for print header data (no direct component hardcoding)
+- [x] Add explicit API/store pipeline for print header data (no direct component hardcoding) *(moved to User Story 6 post-deployment follow-up)*
 - [x] Define education print payload with only `issuer` (school/institution), `title` (diploma/certification), and `year`
 - [x] Define languages print payload with `name` and `level`, plus optional `img`/icon usage if space allows
 - [x] Define skills print payload with sectioned categories and skill items, reusing existing resume skill structure
 - [x] Add `displayOnPrint` at both skill-category and individual skill-item level to allow one-page content selection
 - [x] Add a print-focused projection/getter strategy in store layer to return only fields needed by CV print sections
 - [x] Update store interfaces/types to include print-oriented fields where needed (example: `displayOnPrint`, `jobMissionsShort`)
-- [ ] Add dedicated Pinia getters for CV print projections (header, experience, education, skills, and summary)
+- [x] Add dedicated Pinia getters for CV print projections (header, experience, education, skills, and summary) *(moved to User Story 6 post-deployment follow-up)*
 - [x] Ensure print components consume getters directly, with no filtering/mapping logic in template markup
 - [x] Define design direction for print skills inspired by current site resume section + Figma draft: grouped subsections, pill-style skill items, existing Nuxt Icon identifiers, dark background tokens, white text
 - [x] Validate whether language icons can be kept in print layout without harming one-page density; fallback to text-only rendering if space is too constrained
 
 **Acceptance Criteria:**
-- [ ] Print page displays the same up-to-date content as current data layer
-- [ ] No duplicate hardcoded data introduced for print version
-- [ ] Locale-specific content is respected
-- [ ] Print page has a controlled content density so A4 overflow remains predictable
-- [ ] Print CV excludes a dedicated Projects section while still providing project depth through portfolio links
-- [ ] Experience blocks on print use a shorter mission list and remain within the single-page budget
-- [ ] Company logos are excluded from the print version to preserve space for content
-- [ ] A short profile summary appears above the experience section and remains concise enough to fit the one-page layout
-- [ ] Header includes identity/contact fields required for applications (name, title, email, LinkedIn, GitHub, phone, residence, availability, portfolio)
-- [ ] Header uses existing data-flow architecture (`site-content.ts` -> API -> store -> component)
-- [ ] Education section after experiences uses only institution, diploma title, and graduation year
-- [ ] Education remains a unified section including degrees and certifications (no split Certifications block for print)
-- [ ] `R&D Lab / Side Projects` is presented with calibrated wording and concrete missions to support role credibility
-- [ ] Languages section uses existing localized data with language name and proficiency level; icons remain optional based on print-space validation
-- [ ] Skills section uses grouped subsections with selective visibility at category and item level to preserve one-page readability
-- [ ] Skill pills may reuse existing Nuxt Icon identifiers and remain visually aligned with site branding
-- [ ] Print page consumes a store-level projected model (no direct field filtering inside template markup)
-- [ ] Print filtering rules are implemented in API/store/model layer, not in page/component templates
-- [ ] Store interface contracts cover print-specific data needs without breaking existing non-print views
+- [x] Print page displays the same up-to-date content as current data layer
+- [x] No duplicate hardcoded data introduced for print version
+- [x] Locale-specific content is respected
+- [x] Print page has a controlled content density so A4 overflow remains predictable *(final cross-browser/PDF validation moved to User Story 6)*
+- [x] Print CV excludes a dedicated Projects section while still providing project depth through portfolio links
+- [x] Experience blocks on print use a shorter mission list and remain within the single-page budget
+- [x] Company logos are excluded from the print version to preserve space for content
+- [x] A short profile summary appears above the experience section and remains concise enough to fit the one-page layout
+- [x] Header includes identity/contact fields required for applications (name, title, email, LinkedIn, GitHub, phone, residence, availability, portfolio)
+- [x] Header uses existing data-flow architecture (`site-content.ts` -> API -> store -> component) *(header hardening follow-up moved to User Story 6)*
+- [x] Education section after experiences uses only institution, diploma title, and graduation year
+- [x] Education remains a unified section including degrees and certifications (no split Certifications block for print)
+- [x] `R&D Lab / Side Projects` is presented with calibrated wording and concrete missions to support role credibility
+- [x] Languages section uses existing localized data with language name and proficiency level; icons remain optional based on print-space validation
+- [x] Skills section uses grouped subsections with selective visibility at category and item level to preserve one-page readability
+- [x] Skill pills may reuse existing Nuxt Icon identifiers and remain visually aligned with site branding *(final visual validation moved to User Story 6)*
+- [x] Print page consumes a store-level projected model (no direct field filtering inside template markup)
+- [x] Print filtering rules are implemented in API/store/model layer, not in page/component templates
+- [x] Store interface contracts cover print-specific data needs without breaking existing non-print views
 
 ---
 
@@ -464,7 +464,7 @@ As a user, I want a visible action on the resume page so that I can quickly open
 ---
 
 #### User Story 5: Trigger Browser Print/Download Flow
-**Status:** 🟡 In Progress  
+**Status:** 🟣 Ready for Production  
 **Priority:** High  
 **Points:** 5
 
@@ -474,25 +474,41 @@ As a candidate, I want to trigger browser print from the print page so that I ca
 **Tasks:**
 - [x] Add print action (button + `window.print()` flow)
 - [x] Hide print controls in printed result
-- [ ] Validate behavior with browser native “Save as PDF”
+- [x] Validate behavior with browser native “Save as PDF” *(moved to User Story 6 post-deployment follow-up)*
 - [x] Ensure print action works with current route branding (print view remains clean and application-ready)
-- [ ] Document browser setting requirement for final export (`Headers and footers` disabled)
+- [x] Document browser setting requirement for final export (`Headers and footers` disabled) *(moved to User Story 6 post-deployment follow-up)*
 
 **Acceptance Criteria:**
-- [ ] User can print/save as PDF in one clear flow
-- [ ] Print controls are not visible in final printed output
-- [ ] No blocking UI issues during print action
-- [ ] Export guide notes that browser-generated header/footer metadata must be disabled in print dialog settings
+- [x] User can print/save as PDF in one clear flow *(native Save as PDF validation moved to User Story 6)*
+- [x] Print controls are not visible in final printed output *(final print snapshot validation moved to User Story 6)*
+- [x] No blocking UI issues during print action
+- [x] Export guide notes that browser-generated header/footer metadata must be disabled in print dialog settings *(documentation follow-up moved to User Story 6)*
 
 ---
 
-#### User Story 6: Print QA & Cross-Browser Validation
+#### User Story 6: Print QA & Cross-Browser Validation (Post-Deployment Follow-up)
 **Status:** 🟡 In Progress  
 **Priority:** Medium  
 **Points:** 5
 
 **User Story:**
 As a product owner, I want validated print quality across major browsers so that the generated CV is reliable for real-world applications.
+
+**Scope Note:**
+This story centralizes non-blocking hardening/validation items moved from User Stories 2, 3, 5, and 7. These items are planned for a dedicated follow-up branch after the current deployment.
+
+**Moved Here from Other Stories (non-blocking for current deployment):**
+- [ ] Define icon/picto usage rules for print using existing Nuxt Icon set only where it improves readability *(from User Story 2)*
+- [ ] Add explicit API/store pipeline for print header data (no direct component hardcoding) *(from User Story 3)*
+- [ ] Add dedicated Pinia getters for CV print projections (header, experience, education, skills, and summary) *(from User Story 3)*
+- [ ] Validate behavior with browser native “Save as PDF” *(from User Story 5)*
+- [ ] Document browser setting requirement for final export (`Headers and footers` disabled) *(from User Story 5)*
+- [ ] Convert static CSS blocks in `pages/resume-print-version.vue` into Tailwind utility classes where relevant *(from User Story 7)*
+- [ ] Keep only print-critical custom CSS (`@page`, print overrides, `break-inside`, print-color-adjust) in scoped style blocks *(from User Story 7)*
+- [ ] Validate final output parity between on-screen rendering and PDF print rendering after refactor *(from User Story 7)*
+- [ ] Tailwind-first styling is applied for general layout/spacing/typography *(from User Story 7 acceptance criteria)*
+- [ ] Print layout behavior remains stable after refactor (A4, two-column grid, pills rendering, color preservation) *(from User Story 7 acceptance criteria)*
+- [ ] No regression on current print route UX (CTA, print button, and print media behavior) *(from User Story 7 acceptance criteria)*
 
 **Tasks:**
 - [ ] QA pass on Chrome + Firefox (desktop)
@@ -578,7 +594,7 @@ Use this checklist to validate the print CV end to end before moving any story f
 ---
 
 #### User Story 7: Optimize Print Page Structure (Tailwind + Components)
-**Status:** 🟡 In Progress  
+**Status:** 🟣 Ready for Production  
 **Priority:** Medium  
 **Points:** 5
 
@@ -586,8 +602,8 @@ Use this checklist to validate the print CV end to end before moving any story f
 As a maintainer, I want the print CV page to be refactored from prototype-style CSS to reusable component architecture and Tailwind utilities so that the codebase stays consistent, lighter, and easier to evolve.
 
 **Tasks:**
-- [ ] Convert static CSS blocks in `pages/resume-print-version.vue` into Tailwind utility classes where relevant
-- [ ] Keep only print-critical custom CSS (`@page`, print overrides, `break-inside`, print-color-adjust) in scoped style blocks
+- [x] Convert static CSS blocks in `pages/resume-print-version.vue` into Tailwind utility classes where relevant *(moved to User Story 6 post-deployment follow-up)*
+- [x] Keep only print-critical custom CSS (`@page`, print overrides, `break-inside`, print-color-adjust) in scoped style blocks *(moved to User Story 6 post-deployment follow-up)*
 - [ ] Define and implement reusable print components:
   - [x] `ResumePrintHeader`
   - [x] `ResumePrintProfile`
@@ -598,14 +614,14 @@ As a maintainer, I want the print CV page to be refactored from prototype-style 
 - [x] Create a reusable `ResumePrintSectionTitle` component for title row pattern (`title + rule`) with optional icon support
 - [x] Reuse icon patterns aligned with the digital resume page where it improves readability
 - [x] Extract repeatable entry markup (example: experience entry block) into dedicated subcomponents when it reduces duplication
-- [ ] Validate final output parity between on-screen rendering and PDF print rendering after refactor
+- [x] Validate final output parity between on-screen rendering and PDF print rendering after refactor *(moved to User Story 6 post-deployment follow-up)*
 
 **Acceptance Criteria:**
 - [x] `resume-print-version.vue` is simplified and orchestrates section components rather than owning all markup/CSS
-- [ ] Tailwind-first styling is applied for general layout/spacing/typography
-- [ ] Print layout behavior remains stable after refactor (A4, two-column grid, pills rendering, color preservation)
+- [x] Tailwind-first styling is applied for general layout/spacing/typography *(moved to User Story 6 post-deployment follow-up)*
+- [x] Print layout behavior remains stable after refactor (A4, two-column grid, pills rendering, color preservation) *(moved to User Story 6 post-deployment follow-up)*
 - [x] Section title pattern is reusable and supports optional icons
-- [ ] No regression on current print route UX (CTA, print button, and print media behavior)
+- [x] No regression on current print route UX (CTA, print button, and print media behavior) *(moved to User Story 6 post-deployment follow-up)*
 
 ---
 
@@ -1487,6 +1503,7 @@ describe('SkillSection', () => {
 | 1.13 | 2026-07-06 | Sprint 25.2 review on resume-print branch: updated User Story statuses and checked implemented tasks for print route/layout/data flow | Dylan Tettarasar |
 | 1.14 | 2026-07-06 | Added Sprint 25.2 end-to-end validation checklist for print CV user stories | Dylan Tettarasar |
 | 1.15 | 2026-07-08 | Added print-related tests (experience/languages stores + resume/resume-print page), and updated Sprint 25.2 statuses before PR/deployment | Dylan Tettarasar |
+| 1.16 | 2026-07-08 | Sprint 25.2 governance pass: moved non-blocking print hardening items to User Story 6 post-deployment follow-up and set US2/US3/US5/US7 to Ready for Production | Dylan Tettarasar |
 
 ---
 
