@@ -7,8 +7,8 @@ export const resumeLabels = {
     en: 'Experiences',
   },
   titleEducation: {
-    fr: 'Formation & Certifications',
-    en: 'Education & Certifications',
+    fr: 'Formation',
+    en: 'Education',
   },
   titleSkills: {
     fr: 'Compétences',
@@ -23,6 +23,10 @@ export const resumeLabels = {
   showCredential: {
     fr: 'Voir la certification',
     en: 'Show credential',
+  },
+  openPrintVersion: {
+    fr: 'Ouvrir la version imprimable',
+    en: 'Open print version',
   },
 }
 
@@ -106,4 +110,11 @@ export const navLabels = {
   resume: { fr: 'Mon CV', en: 'Resume' },
   portfolio: { fr: 'Mes projets', en: 'Portfolio' },
   contact: { fr: 'Contactez moi', en: 'Contact me' },
+}
+
+export const accessibilityLabels = {
+  newTab: {
+    fr: 'nouvel onglet',
+    en: 'new tab',
+  },
 }

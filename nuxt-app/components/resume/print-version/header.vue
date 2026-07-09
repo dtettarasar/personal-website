@@ -1,0 +1,260 @@
+<template>
+  <header class="sheet-header">
+    <div class="identity-block">
+      <h1 class="candidate-name">{{ configStore.ownerName }}</h1>
+
+      <p class="candidate-title candidate-subtitle">{{ heroData?.subtitle }}</p>
+      <p class="candidate-title candidate-specialty">{{ heroData?.specialty }}</p>
+
+      <div class="identity-meta">
+        <p class="identity-meta-line">{{ availabilityText }}</p>
+        <p class="identity-meta-line">{{ transportText }}</p>
+      </div>
+
+    </div>
+
+    <div class="contact-block">
+      <p v-if="heroData?.links.email" class="contact-item">
+        <ResumePrintVersionIconsMailIcon class="contact-icon" />
+        <a :href="heroData.links.email">{{ emailLabel }}</a>
+      </p>
+      <p class="contact-item">
+        <ResumePrintVersionIconsPhoneIcon class="contact-icon" />
+        <a :href="phoneHref">{{ configStore.phone }}</a>
+      </p>
+      <p class="contact-item">
+        <ResumePrintVersionIconsLocationIcon class="contact-icon" />
+        <span>{{ configStore.venue }}</span>
+      </p>
+      <p class="contact-item">
+        <ResumePrintVersionIconsGlobeIcon class="contact-icon" />
+        <a :href="configStore.website" target="_blank" rel="noopener noreferrer">
+          {{ websiteLabel }}
+        </a>
+      </p>
+      <p class="contact-item">
+        <ResumePrintVersionIconsLinkedinIcon class="contact-icon" />
+        <a
+          v-if="heroData?.links.linkedin"
+          :href="heroData.links.linkedin"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          {{ linkedinLabel }}
+        </a>
+      </p>
+      <p class="contact-item">
+        <ResumePrintVersionIconsGithubIcon class="contact-icon" />
+        <a
+          v-if="heroData?.links.github"
+          :href="heroData.links.github"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          {{ githubLabel }}
+        </a>
+      </p>
+    </div>
+  </header>
+</template>
+
+<script setup lang="ts">
+import { useConfigStore } from '~/stores/configStore'
+import { useHeroStore } from '~/stores/heroStore'
+
+const configStore = useConfigStore()
+const heroStore = useHeroStore()
+const { locale } = useI18n()
+
+await useAsyncData('resume-print-config', async () => {
+  return await configStore.fetchConfig()
+})
+
+await useAsyncData('resume-print-hero', async () => {
+  return await heroStore.fetchData(locale.value)
+}, {
+  watch: [locale]
+})
+
+const heroData = computed(() => heroStore.dataByLocale[locale.value])
+const activeLocale = computed<'fr' | 'en'>(() => {
+  return locale.value === 'fr' ? 'fr' : 'en'
+})
+
+const emailLabel = computed(() => {
+  const rawEmail = heroData.value?.links.email ?? ''
+  return rawEmail.replace(/^mailto:/, '')
+})
+
+const phoneHref = computed(() => {
+  return `tel:${configStore.phone.replace(/\s+/g, '')}`
+})
+
+const websiteLabel = computed(() => {
+  return configStore.website.replace(/^https?:\/\/(www\.)?/, '')
+})
+
+const availabilityText = computed(() => {
+  return configStore.availability[activeLocale.value]
+})
+
+const transportText = computed(() => {
+  return configStore.transport[activeLocale.value]
+})
+
+const linkedinLabel = computed(() => {
+  const linkedInUrl = heroData.value?.links.linkedin ?? ''
+  return linkedInUrl.replace(/^https?:\/\/(www\.)?/, '')
+})
+
+const githubLabel = computed(() => {
+  const gitHubUrl = heroData.value?.links.github ?? ''
+  return gitHubUrl.replace(/^https?:\/\/(www\.)?/, '')
+})
+
+</script>
+
+<style scoped>
+.sheet-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 26px 28px 16px;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.identity-block {
+  flex: 1 1 auto;
+  min-width: 0;
+  max-width: 62%;
+}
+
+.candidate-name {
+  margin: 0 0 6px;
+  font-size: 2rem;
+  line-height: 1.1;
+  font-family: Georgia, "Times New Roman", serif;
+  color: #0f172a;
+}
+
+.candidate-title {
+  margin: 0;
+  font-size: 0.78rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #475569;
+}
+
+.candidate-subtitle {
+  font-weight: 700;
+  color: #334155;
+}
+
+.candidate-specialty {
+  margin-top: 2px;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  color: #5f6e86;
+}
+
+.identity-meta {
+  margin-top: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+
+.identity-meta-line {
+  margin: 0;
+  font-size: 0.68rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #0f766e;
+  font-weight: 600;
+}
+
+.contact-block {
+  flex: 0 0 auto;
+  width: fit-content;
+  max-width: 36%;
+  margin-left: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  text-align: right;
+  font-size: 0.72rem;
+  color: #334155;
+  line-height: 1.5;
+}
+
+.contact-item {
+  margin: 0;
+  display: flex;
+  width: auto;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 6px;
+  white-space: nowrap;
+}
+
+.contact-icon {
+  color: #0f766e;
+  font-size: 0.86rem;
+  flex-shrink: 0;
+}
+
+.contact-block a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.contact-block a:hover {
+  text-decoration: underline;
+}
+
+@media screen and (max-width: 900px) {
+  .sheet-header {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .identity-block {
+    max-width: none;
+  }
+
+  .contact-block {
+    max-width: none;
+    margin-left: 0;
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .contact-item {
+    width: 100%;
+    justify-content: flex-start;
+  }
+}
+
+@media print {
+  .sheet-header {
+    display: flex !important;
+    align-items: flex-start !important;
+    justify-content: space-between !important;
+    padding: 18px 20px 12px;
+  }
+
+  .identity-block {
+    max-width: 62%;
+  }
+
+  .contact-block {
+    max-width: 36%;
+  }
+
+  .contact-block a {
+    text-decoration: none !important;
+  }
+}
+</style>

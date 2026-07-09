@@ -6,12 +6,23 @@ import { ref } from 'vue'
 export interface SkillItem {
   icon: string
   label: string
+  displayOnPrint: boolean
 }
 
 export interface SkillSection {
   title: string
   icon: string
+  displayOnPrint: boolean
   items: SkillItem[]
+}
+
+export interface PrintSkillItem {
+  label: string
+}
+
+export interface PrintSkillSection {
+  title: string
+  items: PrintSkillItem[]
 }
 
 // ===== STORE (STYLE SETUP) =====
@@ -70,9 +81,29 @@ export const useSkillsStore = defineStore('skills', () => {
 
   function getSectionByTitle(title: string, locale: string): SkillSection | undefined {
     const sections = dataByLocale.value[locale] || []
-    return sections.find((section) =>
+    return sections.find((section: SkillSection) =>
       section.title.toLowerCase().includes(title.toLowerCase())
     )
+  }
+
+  function getPrintSkills(locale: string): PrintSkillSection[] {
+    const sections = dataByLocale.value[locale] || []
+
+    return sections
+      .filter((section: SkillSection) => section.displayOnPrint)
+      .map((section: SkillSection) => {
+        const items = section.items
+          .filter((item: SkillItem) => item.displayOnPrint)
+          .map((item: SkillItem) => {
+            return { label: item.label }
+          })
+
+        return {
+          title: section.title,
+          items
+        }
+      })
+      .filter((section: PrintSkillSection) => section.items.length > 0)
   }
 
   // ===== TOUT CE QU'ON REND ACCESSIBLE =====
@@ -88,6 +119,7 @@ export const useSkillsStore = defineStore('skills', () => {
     // Getters
     getSkillByLabel,
     getSkillCount,
-    getSectionByTitle
+    getSectionByTitle,
+    getPrintSkills
   }
 })
