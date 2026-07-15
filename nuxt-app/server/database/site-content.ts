@@ -277,8 +277,8 @@ export function getResumePrintProfileText(locale: string): string {
               "<strong>Intégration & Création graphique :</strong> Développement et stylisation de <strong>landing pages personnalisées</strong> (<strong>HTML5/CSS3</strong>) et conception d'infographies complexes pour l'<strong>identité visuelle</strong> de la marque."
             ],
             jobMissionsShort: [
-              "<strong>Interface technique</strong> avec le siege allemand pour le suivi des bugs et la priorisation des evolutions web.",
-              "Administration <strong>eZ Publish</strong>, optimisation <strong>SEO</strong> et integration de pages marketing responsive."
+              "<strong>Interface technique</strong> avec le siège allemand pour le suivi des bugs et la priorisation des évolutions web.",
+              "Administration <strong>eZ Publish</strong>, optimisation <strong>SEO</strong> et intégration de pages marketing responsive."
             ]
           },
           en: {
