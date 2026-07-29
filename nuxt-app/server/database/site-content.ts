@@ -122,7 +122,7 @@ export function getHeroData(locale: string) {
 
 export function getResumePrintProfileText(locale: string): string {
   if (locale === 'fr') {
-    return 'Product Owner technico-fonctionnel avec 7 ans d\'experience, je relie vision produit, execution web et coordination delivery pour transformer des enjeux business en resultats concrets.'
+    return 'Product Owner technico-fonctionnel avec 7 ans d\'expérience, je relie vision produit, exécution web et coordination delivery pour transformer des enjeux business en résultats concrets.'
   }
 
   return 'Technico-functional Product Owner with 7 years of experience, bridging product vision, web delivery, and cross-team execution to turn business goals into concrete outcomes.'
