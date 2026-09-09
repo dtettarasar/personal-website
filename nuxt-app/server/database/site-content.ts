@@ -278,10 +278,10 @@ export function getResumePrintProfileText(locale: string): string {
               "<strong>Administration CMS & SEO technique :</strong> Gestion et mise à jour structurelle du <strong>catalogue produits</strong> sur le marché français via le CMS <strong>eZ Publish</strong> et optimisation du <strong>référencement naturel</strong>.",
               "<strong>Intégration & Création graphique :</strong> Développement et stylisation de <strong>landing pages personnalisées</strong> (<strong>HTML5/CSS3</strong>) et conception d'infographies complexes pour l'<strong>identité visuelle</strong> de la marque."
             ],
-            jobMissionsShort: [
-              "<strong>Interface technique</strong> avec le siège allemand pour le suivi des bugs et la priorisation des évolutions web.",
-              "Administration <strong>eZ Publish</strong>, optimisation <strong>SEO</strong> et intégration de pages marketing responsive."
-            ]
+           jobMissionsShort: [
+            "<strong>Interface technique</strong> avec les équipes du siège allemand pour la maintenance et les évolutions du <strong>site web catalogue</strong>.",
+            "Administration du CMS <strong>eZ Publish</strong> (catalogue produits, <strong>landing pages HTML/CSS</strong>), optimisation <strong>SEO</strong> et création graphique."
+          ]
           },
           en: {
             jobTitle: "Digital Marketing Manager & Web Referent",
