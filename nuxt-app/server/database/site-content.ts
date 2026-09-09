@@ -29,8 +29,8 @@ export function getHeroData(locale: string) {
       en: "Hello World! I’m Dylan"
     },
     subtitle: {
-      fr: "Chef de Projet Digital & Product Owner Technique",
-      en: "Digital Project Manager & Technical Product Owner"
+      fr: "Product Owner / Chef de Projet",
+      en: "Product Owner / Project Manager"
     },
     specialty: {
       fr: "Web, CRM & Plateformes Digitales",
@@ -122,10 +122,10 @@ export function getHeroData(locale: string) {
 
 export function getResumePrintProfileText(locale: string): string {
   if (locale === 'fr') {
-    return 'Product Owner technico-fonctionnel avec 7 ans d\'expérience, je relie vision produit, exécution web et coordination delivery pour transformer des enjeux business en résultats concrets.'
+    return 'Product Owner technico-fonctionnel avec 7 ans d\'expérience, je fais le lien entre enjeux business, besoins utilisateurs et exécution technique pour concevoir et piloter des solutions web/CRM performantes.'
   }
 
-  return 'Technico-functional Product Owner with 7 years of experience, bridging product vision, web delivery, and cross-team execution to turn business goals into concrete outcomes.'
+  return 'Technical Product Owner with 7 years of experience, bridging business strategy, user needs, and technical delivery to build high-impact web solutions.'
 }
 
   export function getLanguageContent(locale: string): { name: string; level: string; img: string }[] {
