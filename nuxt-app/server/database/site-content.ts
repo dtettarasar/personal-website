@@ -472,7 +472,8 @@ export function getSkills(locale: string): {
         items: [
           { icon: "mdi:language-html5", label: "HTML5", displayOnPrint: false },
           { icon: "mdi:language-css3", label: "CSS3", displayOnPrint: false },
-          { icon: "mdi:language-javascript", label: "JavaScript / Web APIs", displayOnPrint: true },
+          { icon: "mdi:language-javascript", label: "JavaScript", displayOnPrint: true },
+          { icon: "icon-park-solid:api", label: "Web APIs", displayOnPrint: true },
           { icon: "mdi:tailwind", label: "Tailwind CSS", displayOnPrint: false },
           { icon: "mdi:bootstrap", label: "Bootstrap", displayOnPrint: false },
           { icon: "mdi:vuejs", label: "Vue.js", displayOnPrint: true },
