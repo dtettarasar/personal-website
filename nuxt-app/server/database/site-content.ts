@@ -183,13 +183,13 @@ export function getResumePrintProfileText(locale: string): string {
     // 1. On définit la structure technique et les clés de traduction
     const experiencesBase = [
       {
-        companyName: "Digital Product Lab (Indépendant)",
+        companyName: "Projets Applicatifs & R&D",
         companyVenue: "Rambouillet, France",
         companyLogoSrc: "/img/resume/experiences/research-and-development.png",
         displayOnPrint: true,
         translations: {
           fr: {
-            jobTitle: "Product Owner & Ingénieur Produit (R&D)",
+            jobTitle: "Product Owner & Concepteur Web (Montée en compétences)",
             period: "2024 - Présent",
             jobMissions: [
               "<strong>2025 : Cursus Harvard CS50P (Python) & Protection Créative :</strong> Approfondissement de la programmation orientée objet. Conception d’<em>AI Art Shield</em> (Projet final Harvard) : un MVP algorithmique en ligne de commande (CLI) dédié à la protection des œuvres des illustrateurs (Cadrage, PRD, logique POO).",
@@ -197,13 +197,14 @@ export function getResumePrintProfileText(locale: string): string {
               "<strong>Fin 2024 : Conception du SaaS <em>Otis AI</em> :</strong> Pilotage produit complet d'une application de génération de contenu IA. Cadrage des spécifications et déploiement d'une <strong>architecture découplée</strong> (Frontend Vue.js / Backend Node.js-Express) avec intégration des API OpenAI et Stripe. Mise en place de tests avec l’outil Vitest."
             ],
             jobMissionsShort: [
-              "Développement de <strong>AI Art Shield</strong> (projet final Harvard CS50P) : conception fonctionnelle, rédaction du PRD/README et implémentation Python orientée objet.",
-              "Conception, développement et déploiement du portfolio <strong>Nuxt.js</strong> en production : UI, conteneurisation <strong>Docker</strong>, reverse-proxy <strong>Caddy</strong> sur VPS et configuration <strong>HTTPS/DNS</strong>.",
-              "Développement du SaaS <strong>Otis AI</strong> de bout en bout : design d'interface, modélisation des données, stack Vue.js / Node.js, intégrations <strong>OpenAI + Stripe</strong>, tests Vitest et mise en production."
+              "<strong>Cadrage & Conception applicative (SaaS Otis AI) :</strong> Spécifications fonctionnelles, modélisation de données, intégration d'API (OpenAI, Stripe) et tests de recette.",
+              "<strong>Projet Harvard CS50P (AI Art Shield) :</strong> Développement d'un logiciel en Python, dédié à la protection des créations visuelles.",
+              "<strong>Architecture & Déploiement Web (Site Portfolio) :</strong> Conception UI/UX, intégration web, conteneurisation Docker, gestion de serveur VPS et configuration réseau (DNS/HTTPS).",
+              "<strong>Projets & Démonstrations :</strong> Retrouvez l'ensemble des études de cas et réalisations sur <strong>dylan-tettarasar.dev/portfolio</strong>."
             ]
           },
           en: {
-            jobTitle: "Product Owner & Product Engineer (R&D)",
+            jobTitle: "Product Owner & Web Designer (Skill Development)",
             period: "2024 - Present",
             jobMissions: [
               "<strong>2025: Harvard CS50P (Python) & Creative Protection:</strong> Deep dive into Object-Oriented Programming. Conceived <em>AI Art Shield</em> (Harvard Final Project): an algorithmic Command Line Interface (CLI) MVP dedicated to protecting artists' artwork (Scoping, PRD, OOP logic).",
@@ -213,7 +214,8 @@ export function getResumePrintProfileText(locale: string): string {
             jobMissionsShort: [
               "Built <strong>AI Art Shield</strong> (Harvard CS50P final project): functional design, PRD/README writing, and Python OOP implementation.",
               "Designed, developed, and deployed the <strong>Nuxt.js</strong> portfolio in production: UI work, <strong>Docker</strong> containerization, <strong>Caddy</strong> reverse-proxy on VPS, and <strong>HTTPS/DNS</strong> configuration.",
-              "Built the <strong>Otis AI</strong> SaaS end to end: interface design, data modeling, Vue.js / Node.js stack, <strong>OpenAI + Stripe</strong> integrations, Vitest tests, and production deployment."
+              "Built the <strong>Otis AI</strong> SaaS end to end: interface design, data modeling, Vue.js / Node.js stack, <strong>OpenAI + Stripe</strong> integrations, Vitest tests, and production deployment.",
+              "<strong>Projects & Demos:</strong> Explore all case studies and live projects at <strong>dylan-tettarasar.dev/portfolio</strong>.",
             ]
           }
         }
