@@ -29,8 +29,8 @@ export function getHeroData(locale: string) {
       en: "Hello World! I’m Dylan"
     },
     subtitle: {
-      fr: "Chef de Projet Digital & Product Owner Technique",
-      en: "Digital Project Manager & Technical Product Owner"
+      fr: "Product Owner / Chef de Projet",
+      en: "Product Owner / Project Manager"
     },
     specialty: {
       fr: "Web, CRM & Plateformes Digitales",
@@ -122,10 +122,10 @@ export function getHeroData(locale: string) {
 
 export function getResumePrintProfileText(locale: string): string {
   if (locale === 'fr') {
-    return 'Product Owner technico-fonctionnel avec 7 ans d\'expérience, je relie vision produit, exécution web et coordination delivery pour transformer des enjeux business en résultats concrets.'
+    return 'Product Owner technico-fonctionnel avec 7 ans d\'expérience, je fais le lien entre enjeux business, besoins utilisateurs et exécution technique pour concevoir et piloter des solutions web/CRM performantes.'
   }
 
-  return 'Technico-functional Product Owner with 7 years of experience, bridging product vision, web delivery, and cross-team execution to turn business goals into concrete outcomes.'
+  return 'Technical Product Owner with 7 years of experience, bridging business strategy, user needs, and technical delivery to build high-impact web solutions.'
 }
 
   export function getLanguageContent(locale: string): { name: string; level: string; img: string }[] {
@@ -183,13 +183,13 @@ export function getResumePrintProfileText(locale: string): string {
     // 1. On définit la structure technique et les clés de traduction
     const experiencesBase = [
       {
-        companyName: "Digital Product Lab (Indépendant)",
+        companyName: "Projets Applicatifs & R&D",
         companyVenue: "Rambouillet, France",
         companyLogoSrc: "/img/resume/experiences/research-and-development.png",
         displayOnPrint: true,
         translations: {
           fr: {
-            jobTitle: "Product Owner & Ingénieur Produit (R&D)",
+            jobTitle: "Product Owner & Concepteur Web (Montée en compétences)",
             period: "2024 - Présent",
             jobMissions: [
               "<strong>2025 : Cursus Harvard CS50P (Python) & Protection Créative :</strong> Approfondissement de la programmation orientée objet. Conception d’<em>AI Art Shield</em> (Projet final Harvard) : un MVP algorithmique en ligne de commande (CLI) dédié à la protection des œuvres des illustrateurs (Cadrage, PRD, logique POO).",
@@ -197,13 +197,14 @@ export function getResumePrintProfileText(locale: string): string {
               "<strong>Fin 2024 : Conception du SaaS <em>Otis AI</em> :</strong> Pilotage produit complet d'une application de génération de contenu IA. Cadrage des spécifications et déploiement d'une <strong>architecture découplée</strong> (Frontend Vue.js / Backend Node.js-Express) avec intégration des API OpenAI et Stripe. Mise en place de tests avec l’outil Vitest."
             ],
             jobMissionsShort: [
-              "Développement de <strong>AI Art Shield</strong> (projet final Harvard CS50P) : conception fonctionnelle, rédaction du PRD/README et implémentation Python orientée objet.",
-              "Conception, développement et déploiement du portfolio <strong>Nuxt.js</strong> en production : UI, conteneurisation <strong>Docker</strong>, reverse-proxy <strong>Caddy</strong> sur VPS et configuration <strong>HTTPS/DNS</strong>.",
-              "Développement du SaaS <strong>Otis AI</strong> de bout en bout : design d'interface, modélisation des données, stack Vue.js / Node.js, intégrations <strong>OpenAI + Stripe</strong>, tests Vitest et mise en production."
+              "<strong>Cadrage & Conception applicative (SaaS Otis AI) :</strong> Spécifications fonctionnelles, modélisation de données, intégration d'API (OpenAI, Stripe) et tests de recette.",
+              "<strong>Projet Harvard CS50P (AI Art Shield) :</strong> Développement d'un logiciel en Python, dédié à la protection des créations visuelles.",
+              "<strong>Architecture & Déploiement Web (Site Portfolio) :</strong> Conception UI/UX, intégration web, conteneurisation Docker, gestion de serveur VPS et configuration réseau (DNS/HTTPS).",
+              "<strong>Projets & Démonstrations :</strong> Retrouvez l'ensemble des réalisations sur <br> <strong>dylan-tettarasar.dev/portfolio</strong>."
             ]
           },
           en: {
-            jobTitle: "Product Owner & Product Engineer (R&D)",
+            jobTitle: "Product Owner & Web Designer (Skill Development)",
             period: "2024 - Present",
             jobMissions: [
               "<strong>2025: Harvard CS50P (Python) & Creative Protection:</strong> Deep dive into Object-Oriented Programming. Conceived <em>AI Art Shield</em> (Harvard Final Project): an algorithmic Command Line Interface (CLI) MVP dedicated to protecting artists' artwork (Scoping, PRD, OOP logic).",
@@ -213,7 +214,8 @@ export function getResumePrintProfileText(locale: string): string {
             jobMissionsShort: [
               "Built <strong>AI Art Shield</strong> (Harvard CS50P final project): functional design, PRD/README writing, and Python OOP implementation.",
               "Designed, developed, and deployed the <strong>Nuxt.js</strong> portfolio in production: UI work, <strong>Docker</strong> containerization, <strong>Caddy</strong> reverse-proxy on VPS, and <strong>HTTPS/DNS</strong> configuration.",
-              "Built the <strong>Otis AI</strong> SaaS end to end: interface design, data modeling, Vue.js / Node.js stack, <strong>OpenAI + Stripe</strong> integrations, Vitest tests, and production deployment."
+              "Built the <strong>Otis AI</strong> SaaS end to end: interface design, data modeling, Vue.js / Node.js stack, <strong>OpenAI + Stripe</strong> integrations, Vitest tests, and production deployment.",
+              "<strong>Projects & Demos:</strong> Explore all live projects and achievements at <br> <strong>dylan-tettarasar.dev/portfolio</strong>.",
             ]
           }
         }
@@ -231,14 +233,14 @@ export function getResumePrintProfileText(locale: string): string {
               "<strong>Gestion & Évolution du Parc CMS :</strong> Pilotage global de l’architecture <strong>WordPress Multisite</strong> pour l'ensemble des conférences de l'agence (marques propres et Grands Comptes : <em>Uber, KPMG, Le Figaro, Politico...</em>). Gestion des déploiements et des configurations <strong>DNS/HTTPS</strong> avec les prestataires.",
               "<strong>Intégration Frontend & Support Interne :</strong> Intégration complète des contenus événementiels (programmes, intervenants, modules de vidéos et livestreams) et adaptation responsive des interfaces (<strong>HTML5/CSS3/JS</strong>). Support technique auprès des équipes marketing pour des événements <strong>Grands Comptes</strong>, avec la gestion de pics dépassant <strong>1 000 visites uniques</strong> par jour.",
               "<strong>Migration & Administration Salesforce :</strong> Acteur clé de la transition critique en 3 mois d’un CRM legacy vers <strong>Salesforce</strong>. Administration quotidienne de la plateforme (gouvernance, droits d'accès, profils, <strong>Permission Sets</strong>, mapping d'objets et gestion des champs).",
-              "<strong>Product Ownership & Delivery Technique :</strong> Conception fonctionnelle et pilotage du cycle de vie de <strong>features complexes</strong> (parcours de membership, formulaires dynamiques via iframes connectées à Salesforce). Rédaction des cahiers des charges et des User Stories (<strong>Jira</strong>), modélisation des flux de données et tests de recette (<strong>UAT</strong>).",
+              "<strong>Product Ownership & Pilotage Technique :</strong> Conception fonctionnelle et pilotage du cycle de vie de <strong>features complexes</strong> (parcours de membership, formulaires dynamiques via iframes connectées à Salesforce). Rédaction des cahiers des charges et des User Stories (<strong>Jira</strong>), modélisation des flux de données, suivi des développements et tests de recette (<strong>UAT</strong>).",
               "<strong>Build & Code CRM :</strong> Optimisation frontend (HTML/CSS) directement sur des composants <strong>LWC</strong> (Lightning Web Components) et gestion des déploiements via pull-requests sur <strong>GitHub</strong>."
             ],
             jobMissionsShort: [
               "Pilotage de l'écosystème <strong>WordPress Multisite</strong> et des opérations <strong>DNS/HTTPS</strong> pour des conférences grands comptes.",
-              "Supervision de <strong>l'intégration des contenus événementiels</strong> (agendas, speakers, livestreams) et <strong>support technique</strong> des équipes marketing sur des <strong>pics > 1 000 visites/jour</strong>.",
+              "Supervision de <strong>l'intégration des contenus événementiels</strong> (agendas, speakers, livestreams) et <strong>support technique</strong> des équipes marketing sur des <strong>pics supérieurs à 1 000 visites/jour</strong>.",
               "Transition CRM vers <strong>Salesforce en 3 mois</strong>, puis administration quotidienne (gouvernance, droits, Permission Sets, mapping objets).",
-              "Conception et delivery de <strong>features métier complexes</strong> (membership, formulaires dynamiques connectés Salesforce) avec User Stories Jira et UAT.",
+              "<strong>Conception de fonctionnalités complexes</strong> (membership, formulaires Salesforce) : rédaction des User Stories Jira, suivi des développements, <strong>élaboration des plans de tests</strong> et <strong>recette fonctionnelle (UAT)</strong>.",
               "Optimisation frontend sur les <strong>composants Salesforce LWC</strong> et coordination des déploiements via <strong>pull requests GitHub</strong>."
             ]
           },
@@ -276,10 +278,10 @@ export function getResumePrintProfileText(locale: string): string {
               "<strong>Administration CMS & SEO technique :</strong> Gestion et mise à jour structurelle du <strong>catalogue produits</strong> sur le marché français via le CMS <strong>eZ Publish</strong> et optimisation du <strong>référencement naturel</strong>.",
               "<strong>Intégration & Création graphique :</strong> Développement et stylisation de <strong>landing pages personnalisées</strong> (<strong>HTML5/CSS3</strong>) et conception d'infographies complexes pour l'<strong>identité visuelle</strong> de la marque."
             ],
-            jobMissionsShort: [
-              "<strong>Interface technique</strong> avec le siège allemand pour le suivi des bugs et la priorisation des évolutions web.",
-              "Administration <strong>eZ Publish</strong>, optimisation <strong>SEO</strong> et intégration de pages marketing responsive."
-            ]
+           jobMissionsShort: [
+            "<strong>Interface technique</strong> avec les équipes du siège allemand pour la maintenance et les évolutions du <strong>site web catalogue</strong>.",
+            "Administration du CMS <strong>eZ Publish</strong> (catalogue produits, <strong>landing pages HTML/CSS</strong>), optimisation <strong>SEO</strong> et création graphique."
+          ]
           },
           en: {
             jobTitle: "Digital Marketing Manager & Web Referent",
@@ -421,12 +423,12 @@ export function getSkills(locale: string): {
           { 
             icon: "mdi:file-document-edit", 
             label: { fr: "Spécifications fonctionnelles", en: "Functional Specs" },
-            displayOnPrint: false
+            displayOnPrint: true
           },
           { 
             icon: "mdi:account-group", 
             label: { fr: "Gestion des parties prenantes", en: "Stakeholder Management" },
-            displayOnPrint: false
+            displayOnPrint: true
           }
         ]
       },
@@ -471,10 +473,11 @@ export function getSkills(locale: string): {
           { icon: "mdi:language-html5", label: "HTML5", displayOnPrint: false },
           { icon: "mdi:language-css3", label: "CSS3", displayOnPrint: false },
           { icon: "mdi:language-javascript", label: "JavaScript", displayOnPrint: true },
-          { icon: "mdi:tailwind", label: "Tailwind CSS", displayOnPrint: true },
-          { icon: "mdi:bootstrap", label: "Bootstrap", displayOnPrint: true },
+          { icon: "icon-park-solid:api", label: "Web APIs", displayOnPrint: true },
+          { icon: "mdi:tailwind", label: "Tailwind CSS", displayOnPrint: false },
+          { icon: "mdi:bootstrap", label: "Bootstrap", displayOnPrint: false },
           { icon: "mdi:vuejs", label: "Vue.js", displayOnPrint: true },
-          { icon: "lineicons:nuxt", label: "Nuxt.js", displayOnPrint: true }
+          { icon: "lineicons:nuxt", label: "Nuxt.js", displayOnPrint: false }
         ]
       },
       {
@@ -484,11 +487,11 @@ export function getSkills(locale: string): {
         items: [
           { icon: "mdi:git", label: "Git", displayOnPrint: true },
           { icon: "mdi:docker", label: "Docker", displayOnPrint: true },
-          { icon: "simple-icons:caddy", label: "Caddy", displayOnPrint: true },
+          { icon: "simple-icons:caddy", label: "Caddy", displayOnPrint: false },
           { icon: "mdi:github", label: "GitHub", displayOnPrint: false },
-          { icon: "ri:copilot-fill", label: "GitHub Copilot", displayOnPrint: true },
+          { icon: "ri:copilot-fill", label: "GitHub Copilot", displayOnPrint: false },
           { icon: "ri:claude-fill", label: "Claude Code", displayOnPrint: false },
-          { icon: "devicon-plain:vitest", label: "Vitest", displayOnPrint: true }
+          { icon: "devicon-plain:vitest", label: "Vitest", displayOnPrint: false }
         ]
       },
       {
@@ -496,20 +499,20 @@ export function getSkills(locale: string): {
         icon: "mdi:server-network",
         displayOnPrint: true,
         items: [
-          { icon: "mdi:nodejs", label: "Node.js / Express", displayOnPrint: true },
+          { icon: "mdi:nodejs", label: "Node.js", displayOnPrint: true },
           { icon: "lineicons:mongodb", label: "MongoDB", displayOnPrint: true },
           { icon: "mdi:language-python", label: "Python", displayOnPrint: true },
-          { icon: "mdi:database", label: "SQL", displayOnPrint: false }
+          { icon: "mdi:database", label: "SQL", displayOnPrint: true }
         ]
       },
       {
-        title: { fr: "Outils Créatifs", en: "Creative Tools" },
+        title: { fr: "Design", en: "Design Tools" },
         icon: "ion:color-palette",
-        displayOnPrint: false,
+        displayOnPrint: true,
         items: [
           { icon: "file-icons:gimp", label: "GIMP", displayOnPrint: false },
           { icon: "simple-icons:krita", label: "Krita", displayOnPrint: false },
-          { icon: "solar:figma-bold", label: "Figma", displayOnPrint: false }
+          { icon: "solar:figma-bold", label: "Figma", displayOnPrint: true }
         ]
       }
     ];
