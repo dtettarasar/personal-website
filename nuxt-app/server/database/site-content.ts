@@ -200,7 +200,7 @@ export function getResumePrintProfileText(locale: string): string {
               "<strong>Cadrage & Conception applicative (SaaS Otis AI) :</strong> Spécifications fonctionnelles, modélisation de données, intégration d'API (OpenAI, Stripe) et tests de recette.",
               "<strong>Projet Harvard CS50P (AI Art Shield) :</strong> Développement d'un logiciel en Python, dédié à la protection des créations visuelles.",
               "<strong>Architecture & Déploiement Web (Site Portfolio) :</strong> Conception UI/UX, intégration web, conteneurisation Docker, gestion de serveur VPS et configuration réseau (DNS/HTTPS).",
-              "<strong>Projets & Démonstrations :</strong> Retrouvez l'ensemble des études de cas et réalisations sur <strong>dylan-tettarasar.dev/portfolio</strong>."
+              "<strong>Projets & Démonstrations :</strong> Retrouvez l'ensemble des réalisations sur <br> <strong>dylan-tettarasar.dev/portfolio</strong>."
             ]
           },
           en: {
@@ -215,7 +215,7 @@ export function getResumePrintProfileText(locale: string): string {
               "Built <strong>AI Art Shield</strong> (Harvard CS50P final project): functional design, PRD/README writing, and Python OOP implementation.",
               "Designed, developed, and deployed the <strong>Nuxt.js</strong> portfolio in production: UI work, <strong>Docker</strong> containerization, <strong>Caddy</strong> reverse-proxy on VPS, and <strong>HTTPS/DNS</strong> configuration.",
               "Built the <strong>Otis AI</strong> SaaS end to end: interface design, data modeling, Vue.js / Node.js stack, <strong>OpenAI + Stripe</strong> integrations, Vitest tests, and production deployment.",
-              "<strong>Projects & Demos:</strong> Explore all case studies and live projects at <strong>dylan-tettarasar.dev/portfolio</strong>.",
+              "<strong>Projects & Demos:</strong> Explore all live projects and achievements at <br> <strong>dylan-tettarasar.dev/portfolio</strong>.",
             ]
           }
         }
