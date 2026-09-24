@@ -183,14 +183,14 @@ export function getResumePrintProfileText(locale: string): string {
     // 1. On définit la structure technique et les clés de traduction
     const experiencesBase = [
       {
-        companyName: "Projets Applicatifs & R&D",
+        companyName: "Projets & Prototypage",
         companyVenue: "Rambouillet, France",
         companyLogoSrc: "/img/resume/experiences/research-and-development.png",
         displayOnPrint: true,
         translations: {
           fr: {
             jobTitle: "Product Owner & Concepteur Web (Montée en compétences)",
-            period: "2024 - Présent",
+            period: "2025 - Présent",
             jobMissions: [
               "<strong>2025 : Cursus Harvard CS50P (Python) & Protection Créative :</strong> Approfondissement de la programmation orientée objet. Conception d’<em>AI Art Shield</em> (Projet final Harvard) : un MVP algorithmique en ligne de commande (CLI) dédié à la protection des œuvres des illustrateurs (Cadrage, PRD, logique POO).",
               "<strong>2025 : Architecture & DevOps (Site Portfolio) :</strong> Déploiement et maintenance en production du site portfolio (dylan-tettarasar.dev) développé sous <strong>Nuxt.js</strong>. Conteneurisation complète via <strong>Docker</strong> et configuration d'un reverse-proxy <strong>Caddy</strong> sur serveur VPS (gestion automatisée du HTTPS/DNS).",
