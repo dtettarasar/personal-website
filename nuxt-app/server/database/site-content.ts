@@ -63,7 +63,7 @@ export function getHeroData(locale: string) {
         faisant le lien entre les besoins business et l'exécution technique.`,
 
         `J'ai commencé ma carrière dans le développement web et la gestion de projets digitaux, en intervenant sur le design, l'intégration et le déploiement. 
-        Pendant plusieurs années, <strong>j'ai managé et maintenu des plateformes WordPress pour des clients Grands Comptes (Uber, KPMG, Politico), coordonné des équipes de développement, 
+        Pendant plusieurs années, <strong>j'ai managé et maintenu des plateformes WordPress pour des clients Grands Comptes (Uber, KPMG, Politico, L'Agefi...), coordonné des équipes de développement, 
         rédigé des spécifications techniques et supervisé le cycle de vie complet des projets, de la conception à la mise en production</strong>.`,
         
         `<strong>Cela m'a apporté une compréhension globale de la manière dont les applications web modernes sont construites, déployées et scalées</strong> — tant du point de vue de l'architecture technique que de l'impact produit et business. 
@@ -83,7 +83,7 @@ export function getHeroData(locale: string) {
         `Hello, I'm Dylan Tettarasar, a Digital Project Manager & Technical Product Owner with 7 years of experience in web environments, bridging the gap between business needs and technical execution.`,
 
         `I started my career in web development and digital project management, working across design, integration, and deployment. 
-        For several years, <strong>I managed and maintained WordPress platforms for enterprise clients (Uber, KPMG, Politico), 
+        For several years, <strong>I managed and maintained WordPress platforms for enterprise clients (Uber, KPMG, Politico, L'Agefi...), 
         coordinated development teams, wrote technical specifications, and oversaw the complete project lifecycle from conception to production</strong>.`,
         
         `<strong>This gave me a comprehensive understanding of how modern web applications are built, deployed, and scaled</strong> — 
