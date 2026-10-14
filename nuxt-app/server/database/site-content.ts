@@ -107,14 +107,14 @@ export function getHeroData(locale: string) {
 
     if (locale === 'fr') {
       return [
-        `Product Owner technico-fonctionnel avec 7 ans d'expérience, j'évolue à la croisée de la gestion de projet web, des plateformes CRM et du développement technique. J'ai notamment piloté des écosystèmes CMS (WordPress Multisite) pour des clients d'envergure (Uber, KPMG, Politico), managé des projets Salesforce de bout en bout et coordonné des équipes de delivery de la spécification à la mise en production.`,
+        `Product Owner technico-fonctionnel avec 7 ans d'expérience, j'évolue à la croisée de la gestion de projet web, des plateformes CRM et du développement technique. J'ai notamment piloté des écosystèmes CMS (WordPress Multisite) pour des clients d'envergure (Uber, KPMG, Le Figaro, L'Agefi, Politico...), managé des projets Salesforce de bout en bout et coordonné des équipes de delivery de la spécification à la mise en production.`,
         `Expert dans la traduction de besoins business en spécifications fonctionnelles (PRD, User Stories) et l'animation de backlogs (Jira), j'allie cette expérience terrain à un solide bagage technique renforcé par des cursus intensifs (Harvard CS50, freeCodeCamp). Cette double compétence me permet de garantir un dialogue d'égal à égal avec les développeurs et d'assurer une synchronisation parfaite avec les parties prenantes.`
       ]
     }
 
     // Par défaut / EN
     return [
-      `As a technico-functional Product Owner with 7 years of experience, I operate at the crossroads of web project management, CRM platforms, and technical development. My track record includes piloting CMS ecosystems (WordPress Multisite) for enterprise clients (Uber, KPMG, Politico), managing Salesforce projects end-to-end, and leading delivery teams from initial specifications to production.`,
+      `As a technico-functional Product Owner with 7 years of experience, I operate at the crossroads of web project management, CRM platforms, and technical development. My track record includes piloting CMS ecosystems (WordPress Multisite) for enterprise clients (Uber, KPMG, Le Figaro, L'Agefi, Politico...), managing Salesforce projects end-to-end, and leading delivery teams from initial specifications to production.`,
       `Expert in translating business needs into functional requirements (PRDs, User Stories) and managing backlogs (Jira), I combine hands-on product management with a strong technical background reinforced by intensive programs (Harvard CS50, freeCodeCamp). This dual expertise allows me to speak the same language as developers and bridge the gap with business stakeholders with confidence.`
     ]
 
@@ -237,7 +237,7 @@ export function getResumePrintProfileText(locale: string): string {
               "<strong>Build & Code CRM :</strong> Optimisation frontend (HTML/CSS) directement sur des composants <strong>LWC</strong> (Lightning Web Components) et gestion des déploiements via pull-requests sur <strong>GitHub</strong>."
             ],
             jobMissionsShort: [
-              "Pilotage de l'écosystème <strong>WordPress Multisite</strong> et des opérations <strong>DNS/HTTPS</strong> pour des conférences grands comptes.",
+              "Pilotage de l'écosystème <strong>WordPress Multisite</strong> et des opérations <strong>DNS/HTTPS</strong> pour des conférences grands comptes (Le Figaro, L'Agefi, KPMG...).",
               "Supervision de <strong>l'intégration des contenus événementiels</strong> (agendas, speakers, livestreams) et <strong>support technique</strong> des équipes marketing sur des <strong>pics supérieurs à 1 000 visites/jour</strong>.",
               "Transition CRM vers <strong>Salesforce en 3 mois</strong>, puis administration quotidienne (gouvernance, droits, Permission Sets, mapping objets).",
               "<strong>Conception de fonctionnalités complexes</strong> (membership, formulaires Salesforce) : rédaction des User Stories Jira, suivi des développements, <strong>élaboration des plans de tests</strong> et <strong>recette fonctionnelle (UAT)</strong>.",
