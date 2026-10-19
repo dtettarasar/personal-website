@@ -197,7 +197,7 @@ export function getResumePrintProfileText(locale: string): string {
               "<strong>Fin 2024 : Conception du SaaS <em>Otis AI</em> :</strong> Pilotage produit complet d'une application de génération de contenu IA. Cadrage des spécifications et déploiement d'une <strong>architecture découplée</strong> (Frontend Vue.js / Backend Node.js-Express) avec intégration des API OpenAI et Stripe. Mise en place de tests unitaires et d'intégration (Vitest)."
             ],
             jobMissionsShort: [
-              "<strong>Cadrage & développement (SaaS Otis AI) :</strong> Spécifications fonctionnelles, modélisation de données, développement avec Vue JS et Express, intégration d'API (OpenAI, Stripe), mise en place de tests unitaires et d'intégration (Vitest).",
+              "<strong>Cadrage & développement du SaaS Otis AI :</strong> Spécifications fonctionnelles, modélisation de données, développement avec Vue JS et Express, intégration d'API (OpenAI, Stripe), mise en place de tests unitaires et d'intégration (Vitest).",
               "<strong>Projet Harvard CS50P (AI Art Shield) :</strong> Développement d'un logiciel en Python, dédié à la protection des créations visuelles.",
               "<strong>Architecture & Déploiement Web (Site Portfolio) :</strong> Développement sous Nuxt.js, Conception UI/UX, intégration web, conteneurisation Docker, gestion de serveur VPS et configuration réseau (DNS/HTTPS).",
               "<strong>Projets & Démonstrations :</strong> Retrouvez l'ensemble des réalisations sur <br> <strong>dylan-tettarasar.dev/portfolio</strong>."
@@ -238,10 +238,10 @@ export function getResumePrintProfileText(locale: string): string {
             ],
             jobMissionsShort: [
               "Pilotage et administration globale du parc <strong>WordPress Multisite</strong> (gestion des thèmes, des plugins et des configurations <strong>DNS/HTTPS</strong> avec les prestataires).",
-              "Supervision de <strong>l'intégration des contenus web</strong> et événementiels (programmes, médias, landing pages) en assurant le respect des standards responsive (<strong>HTML5/CSS3</strong>).",
-	            "Support technique quotidien aux équipes marketing et gestion des pics de trafic sur les sites de conférences grands comptes (> 1 000 visites/jour).",
-              "Administration de la plateforme Salesforce et conception de parcours utilisateurs / formulaires connectés.",
-              "Optimisation frontend (HTML/CSS) sur des composants Salesforce LWC et gestion du versioning via <strong>GitHub / Pull Requests</strong>."
+              "<strong>Intégration des contenus web</strong> et événementiels (programmes, médias, landing pages) en assurant le respect des standards responsive (<strong>HTML5/CSS3</strong>).",
+	            "<strong>Support technique quotidien aux équipes marketing</strong> et gestion des pics de trafic (> 1 000 visites/jour) sur les sites de conférences grands comptes (L'AGEFI, KPMG, Le Figaro...) .",
+              "<strong>Administration de la plateforme Salesforce</strong> et conception de parcours utilisateurs / formulaires connectés.",
+              "<strong>Optimisation frontend (HTML/CSS)</strong> sur des composants Salesforce LWC et gestion du versioning via <strong>GitHub / Pull Requests</strong>."
             ]
 
           },
@@ -257,10 +257,10 @@ export function getResumePrintProfileText(locale: string): string {
             ],
             jobMissionsShort: [
               "Overall management and administration of the <strong>WordPress Multisite</strong> network (management of themes, plugins, and <strong>DNS/HTTPS</strong> configurations with service providers).",
-              "Overseeing <strong>the integration of web content</strong> and event-related content (programs, media, landing pages) while ensuring compliance with responsive design standards (<strong>HTML5/CSS3</strong>).",
-              "Providing daily technical support to marketing teams and managing traffic spikes on major client conference websites (> 1,000 visits/day).",
-              "Administration of the Salesforce platform and design of user flows and logged-in forms.",
-              "Front-end optimization (HTML/CSS) of Salesforce LWC components and version control via <strong>GitHub / Pull Requests</strong>."
+              "<strong>Integration of web content</strong> and event-related content (programs, media, landing pages) while ensuring compliance with responsive design standards (<strong>HTML5/CSS3</strong>).",
+              "<strong>Daily technical support for marketing teams</strong> and management of traffic spikes (> 1,000 visits/day) on conference websites for major clients (L'AGEFI, KPMG, Le Figaro...).",
+              "<strong>Administration of the Salesforce platform</strong> and design of user flows and logged-in forms.",
+              "<strong>Front-end optimization (HTML/CSS)</strong> of Salesforce LWC components and version control via <strong>GitHub / Pull Requests</strong>."
             ]
           }
         }
