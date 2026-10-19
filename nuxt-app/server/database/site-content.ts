@@ -414,6 +414,90 @@ export function getSkills(locale: string): {
     // 1. Définition de la base de données des compétences
     const skillsBase: SkillBaseCategory[] = [
       {
+        title: { fr: "CMS & Outils Web", en: "CMS & Web tools" },
+        icon: "lsicon:marketing-filled",
+        displayOnPrint: true,
+        items: [
+          { icon: "ic:baseline-wordpress", label: "WordPress", displayOnPrint: true },
+          { icon: "mdi:salesforce", label: "Salesforce", displayOnPrint: true },
+          { icon: "mdi:google-analytics", label: "Google Analytics", displayOnPrint: true },
+          { 
+            icon: "mdi:microsoft-office", 
+            label: { fr: "Suite Office", en: "Office Suite" },
+            displayOnPrint: false
+          }
+        ]
+      },
+      {
+        title: { fr: "Intégration & Frontend", en: "Integration & Front End" },
+        icon: "mdi:web",
+        displayOnPrint: true,
+        items: [
+          { icon: "mdi:language-html5", label: "HTML5", displayOnPrint: true },
+          { icon: "mdi:language-css3", label: "CSS3", displayOnPrint: true },
+          { icon: "mdi:language-javascript", label: "JavaScript", displayOnPrint: true },
+          { icon: "icon-park-solid:api", label: "Responsive Design", displayOnPrint: true },
+          { icon: "icon-park-solid:api", label: "Web APIs", displayOnPrint: false },
+          { icon: "mdi:tailwind", label: "Tailwind CSS", displayOnPrint: true },
+          { icon: "mdi:bootstrap", label: "Bootstrap", displayOnPrint: true },
+          { icon: "mdi:vuejs", label: "Vue.js", displayOnPrint: true },
+          { icon: "lineicons:nuxt", label: "Nuxt.js", displayOnPrint: false }
+        ]
+      },
+      {
+        title: { fr: "Outils & Workflow", en: "Tools & Workflow" },
+        icon: "carbon:tools-alt",
+        displayOnPrint: true,
+        items: [
+          { icon: "mdi:git", label: "Git", displayOnPrint: true },
+          { icon: "mdi:github", label: "GitHub", displayOnPrint: true },
+          { icon: "mdi:docker", label: "Docker", displayOnPrint: true },
+          { icon: "simple-icons:caddy", label: "Caddy", displayOnPrint: false },
+          { icon: "ri:copilot-fill", label: "GitHub Copilot", displayOnPrint: true },
+          { icon: "ri:claude-fill", label: "Claude Code", displayOnPrint: true },
+          { icon: "devicon-plain:vitest", label: "Vitest", displayOnPrint: false }
+        ]
+      },
+      {
+        title: { fr: "SEO & Performance", en: "SEO & Performance" },
+        icon: "mdi:magnify",
+        displayOnPrint: true,
+        items: [
+          { 
+            icon: "mdi:search-web", 
+            label: { fr: "SEO technique", en: "Technical SEO" },
+            displayOnPrint: true
+          },
+          { icon: "mdi:speedometer", label: "Core Web Vitals", displayOnPrint: true },
+          { 
+            icon: "mdi:eye-check", 
+            label: { fr: "Accessibilité (WCAG)", en: "Accessibility (WCAG)" },
+            displayOnPrint: true
+          }
+        ]
+      },
+      {
+        title: { fr: "Backend & Bases de données", en: "Backend & Databases" },
+        icon: "mdi:server-network",
+        displayOnPrint: false,
+        items: [
+          { icon: "mdi:nodejs", label: "Node.js", displayOnPrint: true },
+          { icon: "lineicons:mongodb", label: "MongoDB", displayOnPrint: true },
+          { icon: "mdi:language-python", label: "Python", displayOnPrint: true },
+          { icon: "mdi:database", label: "SQL", displayOnPrint: true }
+        ]
+      },
+      {
+        title: { fr: "Design", en: "Design Tools" },
+        icon: "ion:color-palette",
+        displayOnPrint: false,
+        items: [
+          { icon: "file-icons:gimp", label: "GIMP", displayOnPrint: false },
+          { icon: "simple-icons:krita", label: "Krita", displayOnPrint: false },
+          { icon: "solar:figma-bold", label: "Figma", displayOnPrint: true }
+        ]
+      },
+      {
         title: { fr: "Gestion de Projet", en: "Project Management" },
         icon: "mdi:clipboard-check",
         displayOnPrint: true,
@@ -429,93 +513,10 @@ export function getSkills(locale: string): {
           { 
             icon: "mdi:account-group", 
             label: { fr: "Gestion des parties prenantes", en: "Stakeholder Management" },
-            displayOnPrint: true
-          }
-        ]
-      },
-      {
-        title: { fr: "CRM & Plateformes Business", en: "CRM & Business Platforms" },
-        icon: "lsicon:marketing-filled",
-        displayOnPrint: true,
-        items: [
-          { icon: "mdi:salesforce", label: "Salesforce", displayOnPrint: true },
-          { icon: "ic:baseline-wordpress", label: "WordPress", displayOnPrint: true },
-          { icon: "mdi:google-analytics", label: "Google Analytics", displayOnPrint: true },
-          { 
-            icon: "mdi:microsoft-office", 
-            label: { fr: "Suite Office", en: "Office Suite" },
             displayOnPrint: false
           }
         ]
       },
-      {
-        title: { fr: "SEO & Performance", en: "SEO & Performance" },
-        icon: "mdi:magnify",
-        displayOnPrint: false,
-        items: [
-          { 
-            icon: "mdi:search-web", 
-            label: { fr: "SEO technique", en: "Technical SEO" },
-            displayOnPrint: false
-          },
-          { icon: "mdi:speedometer", label: "Core Web Vitals", displayOnPrint: false },
-          { 
-            icon: "mdi:eye-check", 
-            label: { fr: "Accessibilité (WCAG)", en: "Accessibility (WCAG)" },
-            displayOnPrint: false
-          }
-        ]
-      },
-      {
-        title: { fr: "Web & Digital", en: "Web & Digital" },
-        icon: "mdi:web",
-        displayOnPrint: true,
-        items: [
-          { icon: "mdi:language-html5", label: "HTML5", displayOnPrint: false },
-          { icon: "mdi:language-css3", label: "CSS3", displayOnPrint: false },
-          { icon: "mdi:language-javascript", label: "JavaScript", displayOnPrint: true },
-          { icon: "icon-park-solid:api", label: "Web APIs", displayOnPrint: true },
-          { icon: "mdi:tailwind", label: "Tailwind CSS", displayOnPrint: false },
-          { icon: "mdi:bootstrap", label: "Bootstrap", displayOnPrint: false },
-          { icon: "mdi:vuejs", label: "Vue.js", displayOnPrint: true },
-          { icon: "lineicons:nuxt", label: "Nuxt.js", displayOnPrint: false }
-        ]
-      },
-      {
-        title: { fr: "Outils & Workflow", en: "Tools & Workflow" },
-        icon: "carbon:tools-alt",
-        displayOnPrint: true,
-        items: [
-          { icon: "mdi:git", label: "Git", displayOnPrint: true },
-          { icon: "mdi:docker", label: "Docker", displayOnPrint: true },
-          { icon: "simple-icons:caddy", label: "Caddy", displayOnPrint: false },
-          { icon: "mdi:github", label: "GitHub", displayOnPrint: false },
-          { icon: "ri:copilot-fill", label: "GitHub Copilot", displayOnPrint: false },
-          { icon: "ri:claude-fill", label: "Claude Code", displayOnPrint: false },
-          { icon: "devicon-plain:vitest", label: "Vitest", displayOnPrint: false }
-        ]
-      },
-      {
-        title: { fr: "Backend & Bases de données", en: "Backend & Databases" },
-        icon: "mdi:server-network",
-        displayOnPrint: true,
-        items: [
-          { icon: "mdi:nodejs", label: "Node.js", displayOnPrint: true },
-          { icon: "lineicons:mongodb", label: "MongoDB", displayOnPrint: true },
-          { icon: "mdi:language-python", label: "Python", displayOnPrint: true },
-          { icon: "mdi:database", label: "SQL", displayOnPrint: true }
-        ]
-      },
-      {
-        title: { fr: "Design", en: "Design Tools" },
-        icon: "ion:color-palette",
-        displayOnPrint: true,
-        items: [
-          { icon: "file-icons:gimp", label: "GIMP", displayOnPrint: false },
-          { icon: "simple-icons:krita", label: "Krita", displayOnPrint: false },
-          { icon: "solar:figma-bold", label: "Figma", displayOnPrint: true }
-        ]
-      }
     ];
 
     // 2. Transformation dynamique du tableau selon la langue active
