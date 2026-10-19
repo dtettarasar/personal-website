@@ -122,10 +122,10 @@ export function getHeroData(locale: string) {
 
 export function getResumePrintProfileText(locale: string): string {
   if (locale === 'fr') {
-    return 'Product Owner technico-fonctionnel avec 7 ans d\'expérience, je fais le lien entre enjeux business, besoins utilisateurs et exécution technique pour concevoir et piloter des solutions web/CRM performantes.'
+    return "Webmaster & Chef de projet web avec 7 ans d'expérience, spécialisé dans l'administration de CMS (WordPress), l'intégration frontend (HTML5/CSS3) et la gestion de contenus. Rigoureux et polyvalent, je fais le lien entre les équipes et la technique pour administrer, optimiser et faire vivre des parcs de sites web performants."
   }
 
-  return 'Technical Product Owner with 7 years of experience, bridging business strategy, user needs, and technical delivery to build high-impact web solutions.'
+  return "Webmaster & Web Project Manager with 7 years of experience, specializing in CMS administration (WordPress), front-end development (HTML5/CSS3), and content management. Meticulous and versatile, I serve as the bridge between teams and technical operations to manage, optimize, and maintain a portfolio of high-performing websites."
 }
 
   export function getLanguageContent(locale: string): { name: string; level: string; img: string }[] {
