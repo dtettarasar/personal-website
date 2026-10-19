@@ -272,7 +272,7 @@ export function getResumePrintProfileText(locale: string): string {
         displayOnPrint: true,
         translations: {
           fr: {
-            jobTitle: "Chargé de Marketing Digital & Référent Web",
+            jobTitle: "Chargé de Webmarketing & Référent CMS",
             period: "Février 2016 - Juin 2017",
             jobMissions: [
               "<strong>Interface Technique Internationale :</strong> Point de contact unique de l'équipe de développement basée au <strong>siège allemand</strong> (<strong>suivi des bugs</strong> sur la plateforme interne, cadrage et remontée des <strong>demandes d’évolution</strong>).",
@@ -281,7 +281,7 @@ export function getResumePrintProfileText(locale: string): string {
             ],
            jobMissionsShort: [
             "<strong>Interface technique</strong> avec les équipes du siège allemand pour la maintenance et les évolutions du <strong>site web catalogue</strong>.",
-            "Administration du CMS <strong>eZ Publish</strong> (catalogue produits, <strong>landing pages HTML/CSS</strong>), optimisation <strong>SEO</strong> et création graphique."
+            "Administration du CMS <strong>eZ Publish</strong> (catalogue produits, <strong>création de landing pages en HTML/CSS</strong>), optimisation <strong>SEO</strong> et création graphique."
           ]
           },
           en: {
