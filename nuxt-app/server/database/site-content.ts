@@ -189,7 +189,7 @@ export function getResumePrintProfileText(locale: string): string {
         displayOnPrint: true,
         translations: {
           fr: {
-            jobTitle: "Product Owner & Concepteur Web (Montée en compétences)",
+            jobTitle: "Développement Web fullstack (Montée en compétences)",
             period: "2025 - Présent",
             jobMissions: [
               "<strong>2025 : Cursus Harvard CS50P (Python) & Protection Créative :</strong> Approfondissement de la programmation orientée objet. Conception d’<em>AI Art Shield</em> (Projet final Harvard) : un MVP algorithmique en ligne de commande (CLI) dédié à la protection des œuvres des illustrateurs (Cadrage, PRD, logique POO).",
@@ -197,9 +197,9 @@ export function getResumePrintProfileText(locale: string): string {
               "<strong>Fin 2024 : Conception du SaaS <em>Otis AI</em> :</strong> Pilotage produit complet d'une application de génération de contenu IA. Cadrage des spécifications et déploiement d'une <strong>architecture découplée</strong> (Frontend Vue.js / Backend Node.js-Express) avec intégration des API OpenAI et Stripe. Mise en place de tests unitaires et d'intégration (Vitest)."
             ],
             jobMissionsShort: [
-              "<strong>Cadrage & Conception applicative (SaaS Otis AI) :</strong> Spécifications fonctionnelles, modélisation de données, intégration d'API (OpenAI, Stripe), mise en place de tests unitaires et d'intégration (Vitest).",
+              "<strong>Cadrage & développement (SaaS Otis AI) :</strong> Spécifications fonctionnelles, modélisation de données, développement avec Vue JS et Express, intégration d'API (OpenAI, Stripe), mise en place de tests unitaires et d'intégration (Vitest).",
               "<strong>Projet Harvard CS50P (AI Art Shield) :</strong> Développement d'un logiciel en Python, dédié à la protection des créations visuelles.",
-              "<strong>Architecture & Déploiement Web (Site Portfolio) :</strong> Conception UI/UX, intégration web, conteneurisation Docker, gestion de serveur VPS et configuration réseau (DNS/HTTPS).",
+              "<strong>Architecture & Déploiement Web (Site Portfolio) :</strong> Développement sous Nuxt.js, Conception UI/UX, intégration web, conteneurisation Docker, gestion de serveur VPS et configuration réseau (DNS/HTTPS).",
               "<strong>Projets & Démonstrations :</strong> Retrouvez l'ensemble des réalisations sur <br> <strong>dylan-tettarasar.dev/portfolio</strong>."
             ]
           },
