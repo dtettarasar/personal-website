@@ -227,7 +227,7 @@ export function getResumePrintProfileText(locale: string): string {
         displayOnPrint: true,
         translations: {
           fr: {
-            jobTitle: "Product Owner Web & CRM",
+            jobTitle: "Webmaster & Chef de Projet Web",
             period: "Janvier 2018 - Décembre 2024",
             jobMissions: [
               "<strong>Gestion & Évolution du Parc CMS :</strong> Pilotage global de l’architecture <strong>WordPress Multisite</strong> pour l'ensemble des conférences de l'agence (marques propres et Grands Comptes : <em>Uber, KPMG, Le Figaro, L'Agefi, Politico...</em>). Gestion des déploiements et des configurations <strong>DNS/HTTPS</strong> avec les prestataires.",
@@ -237,15 +237,16 @@ export function getResumePrintProfileText(locale: string): string {
               "<strong>Build & Code CRM :</strong> Optimisation frontend (HTML/CSS) directement sur des composants <strong>LWC</strong> (Lightning Web Components) et gestion des déploiements via pull-requests sur <strong>GitHub</strong>."
             ],
             jobMissionsShort: [
-              "Pilotage de l'écosystème <strong>WordPress Multisite</strong> et des opérations <strong>DNS/HTTPS</strong> pour des conférences grands comptes (Le Figaro, L'Agefi, KPMG...).",
-              "Supervision de <strong>l'intégration des contenus événementiels</strong> (agendas, speakers, livestreams) et <strong>support technique</strong> des équipes marketing sur des <strong>pics supérieurs à 1 000 visites/jour</strong>.",
-              "Transition CRM vers <strong>Salesforce en 3 mois</strong>, puis administration quotidienne (gouvernance, droits, Permission Sets, mapping objets).",
-              "<strong>Conception de fonctionnalités complexes</strong> (membership, formulaires Salesforce) : rédaction des User Stories Jira, suivi des développements, <strong>élaboration des plans de tests</strong> et <strong>recette fonctionnelle (UAT)</strong>.",
-              "Optimisation frontend sur les <strong>composants Salesforce LWC</strong> et coordination des déploiements via <strong>pull requests GitHub</strong>."
+              "Pilotage et administration globale du parc <strong>WordPress Multisite</strong> (gestion des thèmes, des plugins et des configurations <strong>DNS/HTTPS</strong> avec les prestataires).",
+              "Supervision de <strong>l'intégration des contenus web</strong> et événementiels (programmes, médias, landing pages) en assurant le respect des standards responsive (<strong>HTML5/CSS3</strong>).",
+	            "Support technique quotidien aux équipes marketing et gestion des pics de trafic sur les sites de conférences grands comptes (> 1 000 visites/jour).",
+              "Administration de la plateforme Salesforce et conception de parcours utilisateurs / formulaires connectés.",
+              "Optimisation frontend (HTML/CSS) sur des composants Salesforce LWC et gestion du versioning via <strong>GitHub / Pull Requests</strong>."
             ]
+
           },
           en: {
-            jobTitle: "Web & CRM Product Owner",
+            jobTitle: "Webmaster & Web Project Manager",
             period: "January 2018 - December 2024",
             jobMissions: [
               "<strong>CMS Fleet Management & Evolution:</strong> Global management of the <strong>WordPress Multisite</strong> architecture for all agency conferences (own brands and key accounts: <em>Uber, KPMG, Le Figaro, Politico...</em>). Handled custom domain deployments and <strong>DNS/HTTPS</strong> configurations.",
@@ -255,11 +256,11 @@ export function getResumePrintProfileText(locale: string): string {
               "<strong>CRM Build & Code:</strong> Optimized frontend layouts (HTML/CSS) directly within <strong>LWC</strong> (Lightning Web Components) and managed delivery via GitHub <strong>pull-requests</strong>."
             ],
             jobMissionsShort: [
-              "Led <strong>WordPress Multisite</strong> operations and <strong>DNS/HTTPS</strong> setup for high-visibility conference websites.",
-              "Oversaw <strong>event content integration</strong> (agendas, speakers, livestream modules) and <strong>technical support</strong> for marketing teams during <strong>peaks above 1,000 daily visits</strong>.",
-              "Drove a <strong>3-month Salesforce migration</strong> and daily administration (governance, access rights, Permission Sets, object mapping).",
-              "Designed and delivered <strong>complex product features</strong> (membership journeys, dynamic Salesforce-connected forms) with Jira workflows and UAT.",
-              "Improved frontend layouts in Salesforce <strong>LWC</strong> components and coordinated deliveries through <strong>GitHub pull requests</strong>."
+              "Overall management and administration of the <strong>WordPress Multisite</strong> network (management of themes, plugins, and <strong>DNS/HTTPS</strong> configurations with service providers).",
+              "Overseeing <strong>the integration of web content</strong> and event-related content (programs, media, landing pages) while ensuring compliance with responsive design standards (<strong>HTML5/CSS3</strong>).",
+              "Providing daily technical support to marketing teams and managing traffic spikes on major client conference websites (> 1,000 visits/day).",
+              "Administration of the Salesforce platform and design of user flows and logged-in forms.",
+              "Front-end optimization (HTML/CSS) of Salesforce LWC components and version control via <strong>GitHub / Pull Requests</strong>."
             ]
           }
         }
