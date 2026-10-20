@@ -241,7 +241,8 @@ export function getResumePrintProfileText(locale: string): string {
               "<strong>Intégration des contenus web</strong> et événementiels (programmes, médias, landing pages) en assurant le respect des standards responsive (<strong>HTML5/CSS3</strong>).",
 	            "<strong>Support technique quotidien aux équipes marketing</strong> et gestion des pics de trafic (> 1 000 visites/jour) sur les sites de conférences grands comptes (L'AGEFI, KPMG, Le Figaro...) .",
               "<strong>Administration de la plateforme Salesforce</strong> et conception de parcours utilisateurs / formulaires connectés.",
-              "<strong>Optimisation frontend (HTML/CSS)</strong> sur des composants Salesforce LWC et gestion du versioning via <strong>GitHub / Pull Requests</strong>."
+              "<strong>Optimisation frontend (HTML/CSS)</strong> sur des composants Salesforce LWC et gestion du versioning via <strong>GitHub / Pull Requests</strong>.",
+              "Mise en place et suivi des outils de mesure d'audience (<strong>Google Analytics</strong>, intégration de tags/trackers), analyse des performances et optimisation continue du <strong>référencement naturel</strong> (SEO, balisage sémantique, méta-données)."
             ]
 
           },
@@ -260,7 +261,8 @@ export function getResumePrintProfileText(locale: string): string {
               "<strong>Integration of web content</strong> and event-related content (programs, media, landing pages) while ensuring compliance with responsive design standards (<strong>HTML5/CSS3</strong>).",
               "<strong>Daily technical support for marketing teams</strong> and management of traffic spikes (> 1,000 visits/day) on conference websites for major clients (L'AGEFI, KPMG, Le Figaro...).",
               "<strong>Administration of the Salesforce platform</strong> and design of user flows and logged-in forms.",
-              "<strong>Front-end optimization (HTML/CSS)</strong> of Salesforce LWC components and version control via <strong>GitHub / Pull Requests</strong>."
+              "<strong>Front-end optimization (HTML/CSS)</strong> of Salesforce LWC components and version control via <strong>GitHub / Pull Requests</strong>.",
+              "Implementation and monitoring of audience measurement tools (<strong>Google Analytics</strong>, integration of tags/trackers), performance analysis, and continuous optimization of <strong>search engine optimization</strong> (semantic markup, metadata)."
             ]
           }
         }
