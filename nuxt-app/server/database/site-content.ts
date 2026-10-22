@@ -408,32 +408,12 @@ export function getSkills(locale: string): {
     // 1. Définition de la base de données des compétences
     const skillsBase: SkillBaseCategory[] = [
       {
-        title: { fr: "Gestion de Projet", en: "Project Management" },
-        icon: "mdi:clipboard-check",
-        displayOnPrint: true,
-        items: [
-          { icon: "mdi:jira", label: "Jira", displayOnPrint: true },
-          { icon: "mdi:atlassian", label: "Confluence", displayOnPrint: true },
-          { icon: "bi:kanban-fill", label: "Agile / Kanban", displayOnPrint: true },
-          { 
-            icon: "mdi:file-document-edit", 
-            label: { fr: "Spécifications fonctionnelles", en: "Functional Specs" },
-            displayOnPrint: true
-          },
-          { 
-            icon: "mdi:account-group", 
-            label: { fr: "Gestion des parties prenantes", en: "Stakeholder Management" },
-            displayOnPrint: true
-          }
-        ]
-      },
-      {
-        title: { fr: "CRM & Plateformes Business", en: "CRM & Business Platforms" },
+        title: { fr: "CMS & Outils Web", en: "CMS & Web tools" },
         icon: "lsicon:marketing-filled",
         displayOnPrint: true,
         items: [
-          { icon: "mdi:salesforce", label: "Salesforce", displayOnPrint: true },
           { icon: "ic:baseline-wordpress", label: "WordPress", displayOnPrint: true },
+          { icon: "mdi:salesforce", label: "Salesforce", displayOnPrint: true },
           { icon: "mdi:google-analytics", label: "Google Analytics", displayOnPrint: true },
           { 
             icon: "mdi:microsoft-office", 
@@ -443,36 +423,30 @@ export function getSkills(locale: string): {
         ]
       },
       {
-        title: { fr: "SEO & Performance", en: "SEO & Performance" },
-        icon: "mdi:magnify",
-        displayOnPrint: false,
+        title: { fr: "Intégration & Design", en: "Integration & Design" },
+        icon: "ion:color-palette",
+        displayOnPrint: true,
         items: [
-          { 
-            icon: "mdi:search-web", 
-            label: { fr: "SEO technique", en: "Technical SEO" },
-            displayOnPrint: false
-          },
-          { icon: "mdi:speedometer", label: "Core Web Vitals", displayOnPrint: false },
-          { 
-            icon: "mdi:eye-check", 
-            label: { fr: "Accessibilité (WCAG)", en: "Accessibility (WCAG)" },
-            displayOnPrint: false
-          }
+          { icon: "mdi:language-html5", label: "HTML5", displayOnPrint: true },
+          { icon: "mdi:language-css3", label: "CSS3", displayOnPrint: true },
+          { icon: "solar:figma-bold", label: "Figma", displayOnPrint: true },
+          { icon: "file-icons:gimp", label: "Photoshop / GIMP", displayOnPrint: true },
+          { icon: "simple-icons:krita", label: "Krita", displayOnPrint: false },
+          { icon: "mdi:speedometer", label: "Supports Print & Web", displayOnPrint: true }
         ]
       },
       {
-        title: { fr: "Web & Digital", en: "Web & Digital" },
-        icon: "mdi:web",
+        title: { fr: "SEO & Rédaction", en: "SEO & Content" },
+        icon: "mdi:magnify",
         displayOnPrint: true,
         items: [
-          { icon: "mdi:language-html5", label: "HTML5", displayOnPrint: false },
-          { icon: "mdi:language-css3", label: "CSS3", displayOnPrint: false },
-          { icon: "mdi:language-javascript", label: "JavaScript", displayOnPrint: true },
-          { icon: "icon-park-solid:api", label: "Web APIs", displayOnPrint: true },
-          { icon: "mdi:tailwind", label: "Tailwind CSS", displayOnPrint: false },
-          { icon: "mdi:bootstrap", label: "Bootstrap", displayOnPrint: false },
-          { icon: "mdi:vuejs", label: "Vue.js", displayOnPrint: true },
-          { icon: "lineicons:nuxt", label: "Nuxt.js", displayOnPrint: false }
+          { 
+            icon: "mdi:search-web", 
+            label: { fr: "SEO technique & sémantique", en: "Technical & Semantic SEO" },
+            displayOnPrint: true
+          },
+          { icon: "mdi:file-document-edit", label: { fr: "Calendrier éditorial", en: "Editorial Calendar" }, displayOnPrint: true },
+          { icon: "mdi:speedometer", label: "Core Web Vitals", displayOnPrint: true }
         ]
       },
       {
@@ -481,37 +455,28 @@ export function getSkills(locale: string): {
         displayOnPrint: true,
         items: [
           { icon: "mdi:git", label: "Git", displayOnPrint: true },
-          { icon: "mdi:docker", label: "Docker", displayOnPrint: true },
-          { icon: "simple-icons:caddy", label: "Caddy", displayOnPrint: false },
-          { icon: "mdi:github", label: "GitHub", displayOnPrint: false },
+          { icon: "mdi:github", label: "GitHub", displayOnPrint: true },
+          { icon: "mdi:docker", label: "Docker", displayOnPrint: false },
           { icon: "ri:copilot-fill", label: "GitHub Copilot", displayOnPrint: false },
-          { icon: "ri:claude-fill", label: "Claude Code", displayOnPrint: false },
-          { icon: "devicon-plain:vitest", label: "Vitest", displayOnPrint: false }
+          { icon: "ri:claude-fill", label: "Claude Code", displayOnPrint: false }
         ]
       },
       {
-        title: { fr: "Backend & Bases de données", en: "Backend & Databases" },
-        icon: "mdi:server-network",
+        title: { fr: "Gestion de Projet", en: "Project Management" },
+        icon: "mdi:clipboard-check",
         displayOnPrint: true,
         items: [
-          { icon: "mdi:nodejs", label: "Node.js", displayOnPrint: true },
-          { icon: "lineicons:mongodb", label: "MongoDB", displayOnPrint: true },
-          { icon: "mdi:language-python", label: "Python", displayOnPrint: true },
-          { icon: "mdi:database", label: "SQL", displayOnPrint: true }
+          { icon: "mdi:jira", label: "Jira", displayOnPrint: true },
+          { icon: "bi:kanban-fill", label: "Agile / Kanban", displayOnPrint: true },
+          { 
+            icon: "mdi:file-document-edit", 
+            label: { fr: "Cahier des charges", en: "Specifications" },
+            displayOnPrint: true
+          }
         ]
       },
-      {
-        title: { fr: "Design", en: "Design Tools" },
-        icon: "ion:color-palette",
-        displayOnPrint: true,
-        items: [
-          { icon: "file-icons:gimp", label: "GIMP", displayOnPrint: false },
-          { icon: "simple-icons:krita", label: "Krita", displayOnPrint: false },
-          { icon: "solar:figma-bold", label: "Figma", displayOnPrint: true }
-        ]
-      }
     ];
-
+    
     // 2. Transformation dynamique du tableau selon la langue active
     return skillsBase.map(category => {
       return {
