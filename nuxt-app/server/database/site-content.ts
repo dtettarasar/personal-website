@@ -122,10 +122,9 @@ export function getHeroData(locale: string) {
 
 export function getResumePrintProfileText(locale: string): string {
   if (locale === 'fr') {
-    return 'Product Owner technico-fonctionnel avec 7 ans d\'expérience, je fais le lien entre enjeux business, besoins utilisateurs et exécution technique pour concevoir et piloter des solutions web/CRM performantes.'
+    return "Chargé de communication digitale & webmaster avec 7 ans d'expérience, spécialisé dans la gestion de contenus, l'intégration web et la création de supports de communication multicanaux (print et digitaux). Autonome et créatif, je conjugue compétences techniques et sensibilité graphique pour développer la visibilité et l'image de marque."
   }
-
-  return 'Technical Product Owner with 7 years of experience, bridging business strategy, user needs, and technical delivery to build high-impact web solutions.'
+  return "Digital Communication Manager & Webmaster with 7 years of experience, specializing in content management, web integration, and multi-channel communication asset creation (print and digital). Autonomous and creative, I combine technical skills and graphic design sensibility to develop brand visibility and identity."
 }
 
   export function getLanguageContent(locale: string): { name: string; level: string; img: string }[] {
@@ -189,7 +188,7 @@ export function getResumePrintProfileText(locale: string): string {
         displayOnPrint: true,
         translations: {
           fr: {
-            jobTitle: "Product Owner & Concepteur Web (Montée en compétences)",
+            jobTitle: "Projets Web & Création Graphique (Montée en compétences)",
             period: "2025 - Présent",
             jobMissions: [
               "<strong>2025 : Cursus Harvard CS50P (Python) & Protection Créative :</strong> Approfondissement de la programmation orientée objet. Conception d’<em>AI Art Shield</em> (Projet final Harvard) : un MVP algorithmique en ligne de commande (CLI) dédié à la protection des œuvres des illustrateurs (Cadrage, PRD, logique POO).",
@@ -197,25 +196,21 @@ export function getResumePrintProfileText(locale: string): string {
               "<strong>Fin 2024 : Conception du SaaS <em>Otis AI</em> :</strong> Pilotage produit complet d'une application de génération de contenu IA. Cadrage des spécifications et déploiement d'une <strong>architecture découplée</strong> (Frontend Vue.js / Backend Node.js-Express) avec intégration des API OpenAI et Stripe. Mise en place de tests unitaires et d'intégration (Vitest)."
             ],
             jobMissionsShort: [
-              "<strong>Cadrage & Conception applicative (SaaS Otis AI) :</strong> Spécifications fonctionnelles, modélisation de données, intégration d'API (OpenAI, Stripe), mise en place de tests unitaires et d'intégration (Vitest).",
-              "<strong>Projet Harvard CS50P (AI Art Shield) :</strong> Développement d'un logiciel en Python, dédié à la protection des créations visuelles.",
-              "<strong>Architecture & Déploiement Web (Site Portfolio) :</strong> Conception UI/UX, intégration web, conteneurisation Docker, gestion de serveur VPS et configuration réseau (DNS/HTTPS).",
+              "<strong>Conception UI/UX & Intégration Web (Site Portfolio) :</strong> Développement sous Nuxt.js, création graphique, intégration responsive et gestion de l'identité visuelle de la plateforme.",
               "<strong>Projets & Démonstrations :</strong> Retrouvez l'ensemble des réalisations sur <br> <strong>dylan-tettarasar.dev/portfolio</strong>."
             ]
           },
           en: {
-            jobTitle: "Product Owner & Web Designer (Skill Development)",
-            period: "2024 - Present",
+            jobTitle: "Web Projects & Graphic Creation (Skill Development)",
+            period: "2025 - Present",
             jobMissions: [
               "<strong>2025: Harvard CS50P (Python) & Creative Protection:</strong> Deep dive into Object-Oriented Programming. Conceived <em>AI Art Shield</em> (Harvard Final Project): an algorithmic Command Line Interface (CLI) MVP dedicated to protecting artists' artwork (Scoping, PRD, OOP logic).",
               "<strong>2025: Architecture & DevOps (Portfolio Site):</strong> Deployment and production maintenance of the portfolio website (dylan-tettarasar.dev) built with <strong>Nuxt.js</strong>. Full containerization via <strong>Docker</strong> and setup of a <strong>Caddy</strong> reverse-proxy on a VPS server (automated HTTPS/DNS management).",
               "<strong>Late 2024: SaaS Conception - <em>Otis AI</em>:</strong> Full product management of an AI content generation application. Scoped functional specifications and deployed a <strong>decoupled architecture</strong> (Vue.js Frontend / Node.js-Express Backend) integrated with OpenAI and Stripe APIs. Implemented testing with Vitest."
             ],
             jobMissionsShort: [
-              "Built <strong>AI Art Shield</strong> (Harvard CS50P final project): functional design, PRD/README writing, and Python OOP implementation.",
-              "Designed, developed, and deployed the <strong>Nuxt.js</strong> portfolio in production: UI work, <strong>Docker</strong> containerization, <strong>Caddy</strong> reverse-proxy on VPS, and <strong>HTTPS/DNS</strong> configuration.",
-              "Built the <strong>Otis AI</strong> SaaS end to end: interface design, data modeling, Vue.js / Node.js stack, <strong>OpenAI + Stripe</strong> integrations, Vitest tests, and production deployment.",
-              "<strong>Projects & Demos:</strong> Explore all live projects and achievements at <br> <strong>dylan-tettarasar.dev/portfolio</strong>.",
+              "<strong>UI/UX Design & Web Integration (Portfolio Site):</strong> Development using Nuxt.js, graphic creation, responsive integration, and visual identity management.",
+              "<strong>Projects & Demos:</strong> View all projects at <br> <strong>dylan-tettarasar.dev/portfolio</strong>.",
             ]
           }
         }
@@ -227,7 +222,7 @@ export function getResumePrintProfileText(locale: string): string {
         displayOnPrint: true,
         translations: {
           fr: {
-            jobTitle: "Product Owner Web & CRM",
+            jobTitle: "Chargé de Communication Digitale & Webmaster",
             period: "Janvier 2018 - Décembre 2024",
             jobMissions: [
               "<strong>Gestion & Évolution du Parc CMS :</strong> Pilotage global de l’architecture <strong>WordPress Multisite</strong> pour l'ensemble des conférences de l'agence (marques propres et Grands Comptes : <em>Uber, KPMG, Le Figaro, L'Agefi, Politico...</em>). Gestion des déploiements et des configurations <strong>DNS/HTTPS</strong> avec les prestataires.",
@@ -237,15 +232,16 @@ export function getResumePrintProfileText(locale: string): string {
               "<strong>Build & Code CRM :</strong> Optimisation frontend (HTML/CSS) directement sur des composants <strong>LWC</strong> (Lightning Web Components) et gestion des déploiements via pull-requests sur <strong>GitHub</strong>."
             ],
             jobMissionsShort: [
-              "Pilotage de l'écosystème <strong>WordPress Multisite</strong> et des opérations <strong>DNS/HTTPS</strong> pour des conférences grands comptes (Le Figaro, L'Agefi, KPMG...).",
-              "Supervision de <strong>l'intégration des contenus événementiels</strong> (agendas, speakers, livestreams) et <strong>support technique</strong> des équipes marketing sur des <strong>pics supérieurs à 1 000 visites/jour</strong>.",
-              "Transition CRM vers <strong>Salesforce en 3 mois</strong>, puis administration quotidienne (gouvernance, droits, Permission Sets, mapping objets).",
-              "<strong>Conception de fonctionnalités complexes</strong> (membership, formulaires Salesforce) : rédaction des User Stories Jira, suivi des développements, <strong>élaboration des plans de tests</strong> et <strong>recette fonctionnelle (UAT)</strong>.",
-              "Optimisation frontend sur les <strong>composants Salesforce LWC</strong> et coordination des déploiements via <strong>pull requests GitHub</strong>."
+              "Pilotage de la communication digitale et administration du parc <strong>WordPress Multisite</strong> pour des événements et conférences grands comptes (Le Figaro, L'Agefi, KPMG, Uber...).",
+              "<strong>Création de supports de communication print et digitaux :</strong> conception de bannières web promotionnelles, d'encarts publicitaires presse (Le Figaro, Le Point, Politico) et de visuels pour les campagnes.",
+              "<strong>Intégration de contenus web</strong> et de landing pages événementielles en veillant aux standards <strong>SEO</strong> et responsive design (HTML5/CSS3).",
+              "Animation des plateformes, gestion de projets de communication de la conception à la production, et support aux équipes marketing.",
+              "<strong>Administration de l'outil CRM Salesforce</strong> : gouvernance, droits, Permission Sets, mapping objets...",
+              "Mise en place et suivi des outils de mesure d'audience (<strong>Google Analytics</strong>, intégration de tags/trackers), analyse des performances et optimisation continue du <strong>référencement naturel</strong> (SEO, balisage sémantique, méta-données).",
             ]
           },
           en: {
-            jobTitle: "Web & CRM Product Owner",
+            jobTitle: "Digital Communication Manager & Webmaster",
             period: "January 2018 - December 2024",
             jobMissions: [
               "<strong>CMS Fleet Management & Evolution:</strong> Global management of the <strong>WordPress Multisite</strong> architecture for all agency conferences (own brands and key accounts: <em>Uber, KPMG, Le Figaro, Politico...</em>). Handled custom domain deployments and <strong>DNS/HTTPS</strong> configurations.",
@@ -255,11 +251,10 @@ export function getResumePrintProfileText(locale: string): string {
               "<strong>CRM Build & Code:</strong> Optimized frontend layouts (HTML/CSS) directly within <strong>LWC</strong> (Lightning Web Components) and managed delivery via GitHub <strong>pull-requests</strong>."
             ],
             jobMissionsShort: [
-              "Led <strong>WordPress Multisite</strong> operations and <strong>DNS/HTTPS</strong> setup for high-visibility conference websites.",
-              "Oversaw <strong>event content integration</strong> (agendas, speakers, livestream modules) and <strong>technical support</strong> for marketing teams during <strong>peaks above 1,000 daily visits</strong>.",
-              "Drove a <strong>3-month Salesforce migration</strong> and daily administration (governance, access rights, Permission Sets, object mapping).",
-              "Designed and delivered <strong>complex product features</strong> (membership journeys, dynamic Salesforce-connected forms) with Jira workflows and UAT.",
-              "Improved frontend layouts in Salesforce <strong>LWC</strong> components and coordinated deliveries through <strong>GitHub pull requests</strong>."
+              "Managed digital communication and administered the <strong>WordPress Multisite</strong> network for major corporate events and conferences (Le Figaro, L'Agefi, KPMG, Uber...).",
+              "<strong>Creation of print and digital communication assets:</strong> designed promotional web banners, press advertising inserts (Le Figaro, Le Point, Politico), and visuals for marketing campaigns.",
+              "<strong>Integration of web content</strong> and event landing pages ensuring compliance with <strong>SEO</strong> and responsive design standards (HTML5/CSS3).",
+              "Managed digital platforms, coordinated communication projects from concept to production, and supported marketing teams."
             ]
           }
         }
@@ -271,7 +266,7 @@ export function getResumePrintProfileText(locale: string): string {
         displayOnPrint: true,
         translations: {
           fr: {
-            jobTitle: "Chargé de Marketing Digital & Référent Web",
+            jobTitle: "Chargé de Communication Digitale & Webmaster",
             period: "Février 2016 - Juin 2017",
             jobMissions: [
               "<strong>Interface Technique Internationale :</strong> Point de contact unique de l'équipe de développement basée au <strong>siège allemand</strong> (<strong>suivi des bugs</strong> sur la plateforme interne, cadrage et remontée des <strong>demandes d’évolution</strong>).",
@@ -279,12 +274,12 @@ export function getResumePrintProfileText(locale: string): string {
               "<strong>Intégration & Création graphique :</strong> Développement et stylisation de <strong>landing pages personnalisées</strong> (<strong>HTML5/CSS3</strong>) et conception d'infographies complexes pour l'<strong>identité visuelle</strong> de la marque."
             ],
            jobMissionsShort: [
-            "<strong>Interface technique</strong> avec les équipes du siège allemand pour la maintenance et les évolutions du <strong>site web catalogue</strong>.",
-            "Administration du CMS <strong>eZ Publish</strong> (catalogue produits, <strong>landing pages HTML/CSS</strong>), optimisation <strong>SEO</strong> et création graphique."
+            "<strong>Création graphique & supports visuels :</strong> conception d'infographies de prévention (ex: statistiques incendie), bannières promotionnelles et retouche photographique pour les fiches produits.",
+            "Administration du CMS <strong>eZ Publish</strong> (catalogue produits, <strong>création de landing pages en HTML/CSS</strong>), optimisation <strong>SEO</strong> et coordination avec le siège."
           ]
           },
           en: {
-            jobTitle: "Digital Marketing Manager & Web Referent",
+            jobTitle: "Digital Communication Manager & Webmaster",
             period: "February 2016 - June 2017",
             jobMissions: [
               "<strong>International Technical Interface:</strong> Single point of contact for the core development team based at the <strong>German headquarters</strong> (<strong>bug tracking</strong> on the internal platform, scoping, and escalating <strong>technical evolution requests</strong>).",
@@ -292,8 +287,8 @@ export function getResumePrintProfileText(locale: string): string {
               "<strong>Integration & Graphic Design:</strong> Developed and styled <strong>responsive custom landing pages</strong> (<strong>HTML5/CSS3</strong>) and designed complex infographics for the brand's <strong>visual identity</strong>."
             ],
             jobMissionsShort: [
-              "Acted as <strong>technical liaison</strong> with the German HQ development team for bug follow-up and evolution requests.",
-              "Managed <strong>eZ Publish</strong> content operations, <strong>technical SEO</strong>, and responsive marketing page integration."
+              "<strong>Graphic design & visual assets:</strong> conceived prevention infographics (e.g., fire safety statistics), promotional banners, and photo retouching for product pages.",
+              "Managed <strong>eZ Publish</strong> CMS content operations (catalog, <strong>HTML/CSS landing pages</strong>), <strong>technical SEO</strong>, and liaison with the German headquarters."
             ]
           }
         }
