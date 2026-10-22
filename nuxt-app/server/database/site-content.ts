@@ -197,6 +197,7 @@ export function getResumePrintProfileText(locale: string): string {
             ],
             jobMissionsShort: [
               "<strong>Conception UI/UX & Intégration Web (Site Portfolio) :</strong> Développement sous Nuxt.js, création graphique, intégration responsive et gestion de l'identité visuelle de la plateforme.",
+              "<strong>Projet Harvard CS50P (AI Art Shield) :</strong> Développement d'un logiciel en Python, dédié à la protection des créations visuelles.",
               "<strong>Projets & Démonstrations :</strong> Retrouvez l'ensemble des réalisations sur <br> <strong>dylan-tettarasar.dev/portfolio</strong>."
             ]
           },
@@ -476,7 +477,7 @@ export function getSkills(locale: string): {
         ]
       },
     ];
-    
+
     // 2. Transformation dynamique du tableau selon la langue active
     return skillsBase.map(category => {
       return {
