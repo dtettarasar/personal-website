@@ -241,7 +241,8 @@ export function getResumePrintProfileText(locale: string): string {
               "Supervision de <strong>l'intégration des contenus événementiels</strong> (agendas, speakers, livestreams) et <strong>support technique</strong> des équipes marketing sur des <strong>pics supérieurs à 1 000 visites/jour</strong>.",
               "Transition CRM vers <strong>Salesforce en 3 mois</strong>, puis administration quotidienne (gouvernance, droits, Permission Sets, mapping objets).",
               "<strong>Conception de fonctionnalités complexes</strong> (membership, formulaires Salesforce) : rédaction des User Stories Jira, suivi des développements, <strong>élaboration des plans de tests</strong> et <strong>recette fonctionnelle (UAT)</strong>.",
-              "Optimisation frontend sur les <strong>composants Salesforce LWC</strong> et coordination des déploiements via <strong>pull requests GitHub</strong>."
+              "Optimisation frontend sur les <strong>composants Salesforce LWC</strong> et coordination des déploiements via <strong>pull requests GitHub</strong>.",
+              "Mise en place et suivi des outils de mesure d'audience (<strong>Google Analytics</strong>, intégration de tags/trackers), analyse des performances et optimisation continue du <strong>référencement naturel</strong> (SEO, balisage sémantique, méta-données).",
             ]
           },
           en: {
@@ -259,7 +260,8 @@ export function getResumePrintProfileText(locale: string): string {
               "Oversaw <strong>event content integration</strong> (agendas, speakers, livestream modules) and <strong>technical support</strong> for marketing teams during <strong>peaks above 1,000 daily visits</strong>.",
               "Drove a <strong>3-month Salesforce migration</strong> and daily administration (governance, access rights, Permission Sets, object mapping).",
               "Designed and delivered <strong>complex product features</strong> (membership journeys, dynamic Salesforce-connected forms) with Jira workflows and UAT.",
-              "Improved frontend layouts in Salesforce <strong>LWC</strong> components and coordinated deliveries through <strong>GitHub pull requests</strong>."
+              "Improved frontend layouts in Salesforce <strong>LWC</strong> components and coordinated deliveries through <strong>GitHub pull requests</strong>.",
+              "Implementation and monitoring of audience measurement tools (<strong>Google Analytics</strong>, integration of tags/trackers), performance analysis, and continuous optimization of <strong>search engine optimization</strong> (SEO, semantic markup, metadata).",
             ]
           }
         }
