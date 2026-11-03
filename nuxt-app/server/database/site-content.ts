@@ -421,7 +421,7 @@ export function getSkills(locale: string): {
         items: [
           { icon: "mdi:jira", label: "Jira", displayOnPrint: true },
           { icon: "mdi:atlassian", label: "Confluence", displayOnPrint: true },
-          { icon: "bi:kanban-fill", label: "Agile / Kanban", displayOnPrint: true },
+          { icon: "bi:kanban-fill", label: "Agile / Kanban & Scrum", displayOnPrint: true },
           { 
             icon: "mdi:file-document-edit", 
             label: { fr: "Spécifications fonctionnelles", en: "Functional Specs" },
