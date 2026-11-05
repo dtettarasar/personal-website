@@ -232,17 +232,17 @@ export function getResumePrintProfileText(locale: string): string {
             jobMissions: [
               "<strong>Gestion & Évolution du Parc CMS :</strong> Pilotage global de l’architecture <strong>WordPress Multisite</strong> pour l'ensemble des conférences de l'agence (marques propres et Grands Comptes : <em>Uber, KPMG, Le Figaro, L'Agefi, Politico...</em>). Gestion des déploiements et des configurations <strong>DNS/HTTPS</strong> avec les prestataires.",
               "<strong>Intégration Frontend & Support Interne :</strong> Intégration complète des contenus événementiels (programmes, intervenants, modules de vidéos et livestreams) et adaptation responsive des interfaces (<strong>HTML5/CSS3/JS</strong>). Support technique auprès des équipes marketing pour des événements <strong>Grands Comptes</strong>, avec la gestion de pics dépassant <strong>1 000 visites uniques</strong> par jour.",
-              "<strong>Migration & Administration Salesforce :</strong> Acteur clé de la transition critique en 3 mois d’un CRM legacy vers <strong>Salesforce</strong>. Administration quotidienne de la plateforme (gouvernance, droits d'accès, profils, <strong>Permission Sets</strong>, mapping d'objets et gestion des champs).",
+              "<strong>Migration, Data & Administration Salesforce :</strong> Acteur clé de la transition critique en 3 mois d’un CRM legacy vers <strong>Salesforce</strong>. Administration quotidienne (gouvernance, profils, <strong>Permission Sets</strong>, mapping d'objets, création & gestion de rapports, dashboards). Réalisation de requêtes <strong>SOQL (SQL)</strong> pour l'investigation de données, la vérification des recettes fonctionnelles et le support aux imports massifs (<strong>DataLoader / Pardot</strong>).",
               "<strong>Product Ownership & Pilotage Technique :</strong> Conception fonctionnelle et pilotage du cycle de vie de <strong>features complexes</strong> (parcours de membership, formulaires dynamiques via iframes connectées à Salesforce). Rédaction des cahiers des charges et des User Stories (<strong>Jira</strong>), modélisation des flux de données, suivi des développements et tests de recette (<strong>UAT</strong>).",
               "<strong>Build & Code CRM :</strong> Optimisation frontend (HTML/CSS) directement sur des composants <strong>LWC</strong> (Lightning Web Components) et gestion des déploiements via pull-requests sur <strong>GitHub</strong>."
             ],
             jobMissionsShort: [
               "Pilotage de l'écosystème <strong>WordPress Multisite</strong> et des opérations <strong>DNS/HTTPS</strong> pour des conférences grands comptes (Le Figaro, L'Agefi, KPMG...).",
               "Supervision de <strong>l'intégration des contenus événementiels</strong> (agendas, speakers, livestreams) et <strong>support technique</strong> des équipes marketing sur des <strong>pics supérieurs à 1 000 visites/jour</strong>.",
-              "Transition CRM vers <strong>Salesforce en 3 mois</strong>, puis administration quotidienne (gouvernance, droits, Permission Sets, mapping objets).",
+              "Transition CRM vers <strong>Salesforce en 3 mois</strong> et administration quotidienne. Requêtage <strong>SOQL (SQL)</strong> pour l'analyse de données, le contrôle UAT et la gestion des imports (<strong>DataLoader / Pardot</strong>).",
               "<strong>Conception de fonctionnalités complexes</strong> (membership, formulaires Salesforce) : rédaction des User Stories Jira, suivi des développements, <strong>élaboration des plans de tests</strong> et <strong>recette fonctionnelle (UAT)</strong>.",
               "Optimisation frontend sur les <strong>composants Salesforce LWC</strong> et coordination des déploiements via <strong>pull requests GitHub</strong>.",
-              "Mise en place et suivi des outils de mesure d'audience (<strong>Google Analytics</strong>, intégration de tags/trackers), analyse des performances et optimisation continue du <strong>référencement naturel</strong> (SEO, balisage sémantique, méta-données).",
+              "Mise en place et suivi des outils de mesure d'audience (<strong>Google Analytics</strong>, intégration de tags/trackers), analyse des performances et optimisation continue du <strong>référencement naturel</strong> (SEO, balisage sémantique, méta-données)."
             ]
           },
           en: {
@@ -251,17 +251,17 @@ export function getResumePrintProfileText(locale: string): string {
             jobMissions: [
               "<strong>CMS Fleet Management & Evolution:</strong> Global management of the <strong>WordPress Multisite</strong> architecture for all agency conferences (own brands and key accounts: <em>Uber, KPMG, Le Figaro, Politico...</em>). Handled custom domain deployments and <strong>DNS/HTTPS</strong> configurations.",
               "<strong>Frontend Integration & Internal Support:</strong> Full integration of event content (agendas, speakers, video modules, and livestreams) and responsive adaptation of interfaces (<strong>HTML5/CSS3/JS</strong>). Provided technical troubleshooting for marketing teams for <strong>key account</strong> events, managing traffic peaks exceeding <strong>1,000 unique visits</strong> per day.",
-              "<strong>Salesforce CRM Migration & Administration:</strong> Key player in the critical 3-month transition from a legacy CRM to <strong>Salesforce</strong>. Managed daily platform administration (governance, access rights, profiles, <strong>Permission Sets</strong>, object mapping, and field management).",
+              "<strong>Salesforce Migration, Data & Administration:</strong> Key player in the critical 3-month transition from a legacy CRM to <strong>Salesforce</strong>. Managed daily platform administration (governance, <strong>Permission Sets</strong>, object mapping, reports and dashboards management). Executed <strong>SOQL (SQL)</strong> queries for data investigation, UAT validation, and bulk import operations (<strong>DataLoader / Pardot</strong>).",
               "<strong>Product Ownership & Technical Delivery:</strong> Functional design and lifecycle management of <strong>complex features</strong> (membership paths, dynamic iframe forms connected to Salesforce). Wrote technical specifications and User Stories (<strong>Jira</strong>), modeled data flows, and executed User Acceptance Testing (<strong>UAT</strong>).",
               "<strong>CRM Build & Code:</strong> Optimized frontend layouts (HTML/CSS) directly within <strong>LWC</strong> (Lightning Web Components) and managed delivery via GitHub <strong>pull-requests</strong>."
             ],
             jobMissionsShort: [
               "Led <strong>WordPress Multisite</strong> operations and <strong>DNS/HTTPS</strong> setup for high-visibility conference websites.",
               "Oversaw <strong>event content integration</strong> (agendas, speakers, livestream modules) and <strong>technical support</strong> for marketing teams during <strong>peaks above 1,000 daily visits</strong>.",
-              "Drove a <strong>3-month Salesforce migration</strong> and daily administration (governance, access rights, Permission Sets, object mapping).",
+              "Drove a <strong>3-month Salesforce migration</strong> and daily administration. Used <strong>SOQL (SQL)</strong> for data analysis, UAT checks, and bulk imports (<strong>DataLoader / Pardot</strong>).",
               "Designed and delivered <strong>complex product features</strong> (membership journeys, dynamic Salesforce-connected forms) with Jira workflows and UAT.",
               "Improved frontend layouts in Salesforce <strong>LWC</strong> components and coordinated deliveries through <strong>GitHub pull requests</strong>.",
-              "Implementation and monitoring of audience measurement tools (<strong>Google Analytics</strong>, integration of tags/trackers), performance analysis, and continuous optimization of <strong>search engine optimization</strong> (SEO, semantic markup, metadata).",
+              "Implementation and monitoring of audience measurement tools (<strong>Google Analytics</strong>, integration of tags/trackers), performance analysis, and continuous optimization of <strong>search engine optimization</strong> (SEO, semantic markup, metadata)."
             ]
           }
         }
