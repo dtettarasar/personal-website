@@ -199,7 +199,7 @@ export function getResumePrintProfileText(locale: string): string {
             jobMissionsShort: [
               "<strong>Développement Web & UI/UX (Site Portfolio) :</strong> Conception et développement sous <strong>Nuxt.js / Vue.js</strong>, intégration responsive (HTML5/CSS3/Tailwind), conteneurisation Docker et déploiement en production (VPS, DNS/HTTPS).",
               "<strong>Développement Applicatif (SaaS Otis AI) :</strong> Développement frontend (<strong>Vue.js</strong>) et backend (Node.js/Express), modélisation de données, intégration d'APIs (OpenAI, Stripe) et tests automatisés (Vitest).",
-              "<strong>Projet Harvard CS50P (AI Art Shield) :</strong> Développement d'un outil CLI en <strong>Python</strong> (POO) dédié à la protection des créations visuelles.",
+              "<strong>Projet Harvard CS50P (AI Art Shield) :</strong> Développement d'un outil CLI en <strong>Python</strong> dédié à la protection des créations visuelles.",
               "<strong>Portfolio & Code :</strong> Retrouvez l'ensemble des réalisations et dépôts sur <br> <strong>dylan-tettarasar.dev/portfolio</strong>."
             ]
           },
