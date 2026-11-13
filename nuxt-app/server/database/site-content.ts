@@ -423,12 +423,12 @@ export function getSkills(locale: string): {
           { 
             icon: "mdi:file-document-edit", 
             label: { fr: "Spécifications fonctionnelles", en: "Functional Specs" },
-            displayOnPrint: true
+            displayOnPrint: false
           },
           { 
             icon: "mdi:account-group", 
             label: { fr: "Gestion des parties prenantes", en: "Stakeholder Management" },
-            displayOnPrint: true
+            displayOnPrint: false
           }
         ]
       },
@@ -450,14 +450,14 @@ export function getSkills(locale: string): {
       {
         title: { fr: "SEO & Performance", en: "SEO & Performance" },
         icon: "mdi:magnify",
-        displayOnPrint: false,
+        displayOnPrint: true,
         items: [
           { 
             icon: "mdi:search-web", 
             label: { fr: "SEO technique", en: "Technical SEO" },
-            displayOnPrint: false
+            displayOnPrint: true
           },
-          { icon: "mdi:speedometer", label: "Core Web Vitals", displayOnPrint: false },
+          { icon: "mdi:speedometer", label: "Core Web Vitals", displayOnPrint: true },
           { 
             icon: "mdi:eye-check", 
             label: { fr: "Accessibilité (WCAG)", en: "Accessibility (WCAG)" },
@@ -470,14 +470,14 @@ export function getSkills(locale: string): {
         icon: "mdi:web",
         displayOnPrint: true,
         items: [
-          { icon: "mdi:language-html5", label: "HTML5", displayOnPrint: false },
-          { icon: "mdi:language-css3", label: "CSS3", displayOnPrint: false },
+          { icon: "mdi:language-html5", label: "HTML5", displayOnPrint: true },
+          { icon: "mdi:language-css3", label: "CSS3", displayOnPrint: true },
           { icon: "mdi:language-javascript", label: "JavaScript", displayOnPrint: true },
           { icon: "icon-park-solid:api", label: "Web APIs", displayOnPrint: true },
-          { icon: "mdi:tailwind", label: "Tailwind CSS", displayOnPrint: false },
-          { icon: "mdi:bootstrap", label: "Bootstrap", displayOnPrint: false },
+          { icon: "mdi:tailwind", label: "Tailwind CSS", displayOnPrint: true },
+          { icon: "mdi:bootstrap", label: "Bootstrap", displayOnPrint: true },
           { icon: "mdi:vuejs", label: "Vue.js", displayOnPrint: true },
-          { icon: "lineicons:nuxt", label: "Nuxt.js", displayOnPrint: false }
+          { icon: "lineicons:nuxt", label: "Nuxt.js", displayOnPrint: true }
         ]
       },
       {
@@ -488,8 +488,8 @@ export function getSkills(locale: string): {
           { icon: "mdi:git", label: "Git", displayOnPrint: true },
           { icon: "mdi:docker", label: "Docker", displayOnPrint: true },
           { icon: "simple-icons:caddy", label: "Caddy", displayOnPrint: false },
-          { icon: "mdi:github", label: "GitHub", displayOnPrint: false },
-          { icon: "ri:copilot-fill", label: "GitHub Copilot", displayOnPrint: false },
+          { icon: "mdi:github", label: "GitHub", displayOnPrint: true },
+          { icon: "ri:copilot-fill", label: "GitHub Copilot", displayOnPrint: true },
           { icon: "ri:claude-fill", label: "Claude Code", displayOnPrint: false },
           { icon: "devicon-plain:vitest", label: "Vitest", displayOnPrint: false }
         ]
