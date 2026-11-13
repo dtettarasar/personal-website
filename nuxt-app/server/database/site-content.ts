@@ -29,12 +29,12 @@ export function getHeroData(locale: string) {
       en: "Hello World! I’m Dylan"
     },
     subtitle: {
-      fr: "Product Owner / Chef de Projet",
-      en: "Product Owner / Project Manager"
+      fr: "Développeur Web & Intégrateur Frontend",
+      en: "Web Developer & Frontend Integrator"
     },
     specialty: {
-      fr: "Web, CRM & Plateformes Digitales",
-      en: "Web, CRM & Digital Platforms"
+      fr: "CMS, E-commerce & Applications Web",
+      en: "CMS, E-commerce & Web Applications"
     },
     links: {
       email: "mailto:dtettarasar@gmail.com",
