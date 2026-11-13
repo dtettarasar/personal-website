@@ -189,7 +189,7 @@ export function getResumePrintProfileText(locale: string): string {
         displayOnPrint: true,
         translations: {
           fr: {
-            jobTitle: "Product Owner & Concepteur Web (Montée en compétences)",
+            jobTitle: "Développeur Web Fullstack (Montée en compétences)",
             period: "2025 - Présent",
             jobMissions: [
               "<strong>2025 : Cursus Harvard CS50P (Python) & Protection Créative :</strong> Approfondissement de la programmation orientée objet. Conception d’<em>AI Art Shield</em> (Projet final Harvard) : un MVP algorithmique en ligne de commande (CLI) dédié à la protection des œuvres des illustrateurs (Cadrage, PRD, logique POO).",
@@ -197,10 +197,10 @@ export function getResumePrintProfileText(locale: string): string {
               "<strong>Fin 2024 : Conception du SaaS <em>Otis AI</em> :</strong> Pilotage produit complet d'une application de génération de contenu IA. Cadrage des spécifications et déploiement d'une <strong>architecture découplée</strong> (Frontend Vue.js / Backend Node.js-Express) avec intégration des API OpenAI et Stripe. Mise en place de tests unitaires et d'intégration (Vitest)."
             ],
             jobMissionsShort: [
-              "<strong>Cadrage & Conception applicative (SaaS Otis AI) :</strong> Spécifications fonctionnelles, modélisation de données, intégration d'API (OpenAI, Stripe), mise en place de tests unitaires et d'intégration (Vitest).",
-              "<strong>Projet Harvard CS50P (AI Art Shield) :</strong> Développement d'un logiciel en Python, dédié à la protection des créations visuelles.",
-              "<strong>Architecture & Déploiement Web (Site Portfolio) :</strong> Conception UI/UX, intégration web, conteneurisation Docker, gestion de serveur VPS et configuration réseau (DNS/HTTPS).",
-              "<strong>Projets & Démonstrations :</strong> Retrouvez l'ensemble des réalisations sur <br> <strong>dylan-tettarasar.dev/portfolio</strong>."
+              "<strong>Développement Web & UI/UX (Site Portfolio) :</strong> Conception et développement sous <strong>Nuxt.js / Vue.js</strong>, intégration responsive (HTML5/CSS3/Tailwind), conteneurisation Docker et déploiement en production (VPS, DNS/HTTPS).",
+              "<strong>Développement Applicatif (SaaS Otis AI) :</strong> Développement frontend (<strong>Vue.js</strong>) et backend (Node.js/Express), modélisation de données, intégration d'APIs (OpenAI, Stripe) et tests automatisés (Vitest).",
+              "<strong>Projet Harvard CS50P (AI Art Shield) :</strong> Développement d'un outil CLI en <strong>Python</strong> (POO) dédié à la protection des créations visuelles.",
+              "<strong>Portfolio & Code :</strong> Retrouvez l'ensemble des réalisations et dépôts sur <br> <strong>dylan-tettarasar.dev/portfolio</strong>."
             ]
           },
           en: {
@@ -227,7 +227,7 @@ export function getResumePrintProfileText(locale: string): string {
         displayOnPrint: true,
         translations: {
           fr: {
-            jobTitle: "Product Owner Web & CRM",
+            jobTitle: "Chef de projet digital & Intégrateur Web / CMS",
             period: "Janvier 2018 - Décembre 2024",
             jobMissions: [
               "<strong>Gestion & Évolution du Parc CMS :</strong> Pilotage global de l’architecture <strong>WordPress Multisite</strong> pour l'ensemble des conférences de l'agence (marques propres et Grands Comptes : <em>Uber, KPMG, Le Figaro, L'Agefi, Politico...</em>). Gestion des déploiements et des configurations <strong>DNS/HTTPS</strong> avec les prestataires.",
@@ -237,12 +237,10 @@ export function getResumePrintProfileText(locale: string): string {
               "<strong>Build & Code CRM :</strong> Optimisation frontend (HTML/CSS) directement sur des composants <strong>LWC</strong> (Lightning Web Components) et gestion des déploiements via pull-requests sur <strong>GitHub</strong>."
             ],
             jobMissionsShort: [
-              "Pilotage de l'écosystème <strong>WordPress Multisite</strong> et des opérations <strong>DNS/HTTPS</strong> pour des conférences grands comptes (Le Figaro, L'Agefi, KPMG...).",
-              "Supervision de <strong>l'intégration des contenus événementiels</strong> (agendas, speakers, livestreams) et <strong>support technique</strong> des équipes marketing sur des <strong>pics supérieurs à 1 000 visites/jour</strong>.",
-              "Transition CRM vers <strong>Salesforce en 3 mois</strong> et administration quotidienne. Requêtage <strong>SOQL (SQL)</strong> pour l'analyse de données, le contrôle UAT et la gestion des imports (<strong>DataLoader / Pardot</strong>).",
-              "<strong>Conception de fonctionnalités complexes</strong> (membership, formulaires Salesforce) : rédaction des User Stories Jira, suivi des développements, <strong>élaboration des plans de tests</strong> et <strong>recette fonctionnelle (UAT)</strong>.",
-              "Optimisation frontend sur les <strong>composants Salesforce LWC</strong> et coordination des déploiements via <strong>pull requests GitHub</strong>.",
-              "Mise en place et suivi des outils de mesure d'audience (<strong>Google Analytics</strong>, intégration de tags/trackers), analyse des performances et optimisation continue du <strong>référencement naturel</strong> (SEO, balisage sémantique, méta-données)."
+              "<strong>Intégration Frontend & Responsive :</strong> Intégration complète de pages et contenus événementiels (programmes, médias, livestreams) en <strong>HTML5, CSS3 et JavaScript</strong> dans le respect des standards ergonomiques et UX.",
+              "<strong>Administration & Maintenance CMS :</strong> Gestion technique d'un parc <strong>WordPress Multisite</strong> (thèmes, plugins, évolutions fonctionnelles, résolution de bugs) et gestion des pics de trafic (> 1 000 visites/jour).",
+              "<strong>Développement Frontend CRM (Salesforce) :</strong> Personnalisation et optimisation d'interfaces sur des composants <strong>Salesforce LWC</strong> (HTML/CSS/JS), création de formulaires connectés et versioning via <strong>Git / GitHub</strong>.",
+              "<strong>Performance, SEO & Tracking :</strong> Optimisation technique (Core Web Vitals, balisage sémantique, méta-données) et intégration de tags/trackers (Google Analytics)."
             ]
           },
           en: {
@@ -273,7 +271,7 @@ export function getResumePrintProfileText(locale: string): string {
         displayOnPrint: true,
         translations: {
           fr: {
-            jobTitle: "Chargé de Marketing Digital & Référent Web",
+            jobTitle: "Intégrateur Web & Gestionnaire Catalogue Digital",
             period: "Février 2016 - Juin 2017",
             jobMissions: [
               "<strong>Interface Technique Internationale :</strong> Point de contact unique de l'équipe de développement basée au <strong>siège allemand</strong> (<strong>suivi des bugs</strong> sur la plateforme interne, cadrage et remontée des <strong>demandes d’évolution</strong>).",
@@ -281,8 +279,8 @@ export function getResumePrintProfileText(locale: string): string {
               "<strong>Intégration & Création graphique :</strong> Développement et stylisation de <strong>landing pages personnalisées</strong> (<strong>HTML5/CSS3</strong>) et conception d'infographies complexes pour l'<strong>identité visuelle</strong> de la marque."
             ],
            jobMissionsShort: [
-            "<strong>Interface technique</strong> avec les équipes du siège allemand pour la maintenance et les évolutions du <strong>site web catalogue</strong>.",
-            "Administration du CMS <strong>eZ Publish</strong> (catalogue produits, <strong>landing pages HTML/CSS</strong>), optimisation <strong>SEO</strong> et création graphique."
+            "<strong>Gestion de Catalogue & CMS :</strong> Administration structurelle du catalogue produits sur le CMS <strong>eZ Publish</strong> (mise à jour des références, fiches produits, visuels et arborescence).",
+            "<strong>Intégration & Ergonomie :</strong> Développement de landing pages sur mesure en <strong>HTML5/CSS3</strong>, ajustements graphiques et maintenance technique en lien avec les développeurs du siège."
           ]
           },
           en: {
@@ -620,7 +618,7 @@ export function getEducations(locale: string): {
       {
         educationLogoSrc: "/img/resume/educations/fcc_logo.png",
         year: "2020",
-        displayOnPrint: false,
+        displayOnPrint: true,
         certificationLink: "https://www.freecodecamp.org/certification/fcc9e0cf531/responsive-web-design",
         translations: {
           fr: {
