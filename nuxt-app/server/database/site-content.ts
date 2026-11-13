@@ -227,7 +227,7 @@ export function getResumePrintProfileText(locale: string): string {
         displayOnPrint: true,
         translations: {
           fr: {
-            jobTitle: "Chef de projet digital & Intégrateur Web / CMS",
+            jobTitle: "Chef de projet web/CRM (WordPress & Salesforce)",
             period: "Janvier 2018 - Décembre 2024",
             jobMissions: [
               "<strong>Gestion & Évolution du Parc CMS :</strong> Pilotage global de l’architecture <strong>WordPress Multisite</strong> pour l'ensemble des conférences de l'agence (marques propres et Grands Comptes : <em>Uber, KPMG, Le Figaro, L'Agefi, Politico...</em>). Gestion des déploiements et des configurations <strong>DNS/HTTPS</strong> avec les prestataires.",
@@ -237,11 +237,11 @@ export function getResumePrintProfileText(locale: string): string {
               "<strong>Build & Code CRM :</strong> Optimisation frontend (HTML/CSS) directement sur des composants <strong>LWC</strong> (Lightning Web Components) et gestion des déploiements via pull-requests sur <strong>GitHub</strong>."
             ],
             jobMissionsShort: [
-              "<strong>Intégration Frontend & Responsive :</strong> Intégration complète de pages et contenus événementiels (programmes, médias, livestreams) en <strong>HTML5, CSS3 et JavaScript</strong> dans le respect des standards ergonomiques et UX.",
-              "<strong>Administration & Maintenance CMS :</strong> Gestion technique d'un parc <strong>WordPress Multisite</strong> (thèmes, plugins, évolutions fonctionnelles, résolution de bugs) et gestion des pics de trafic (> 1 000 visites/jour).",
-              "<strong>Développement Frontend CRM (Salesforce) :</strong> Personnalisation et optimisation d'interfaces sur des composants <strong>Salesforce LWC</strong> (HTML/CSS/JS), création de formulaires connectés et versioning via <strong>Git / GitHub</strong>.",
-              "<strong>Performance, SEO & Tracking :</strong> Optimisation technique (Core Web Vitals, balisage sémantique, méta-données) et intégration de tags/trackers (Google Analytics)."
-            ]
+              "<strong>Pilotage Projet & Backlog :</strong> Gestion de projet agile, rédaction de spécifications fonctionnelles et User Stories (<strong>Jira</strong>) suivi des développements de features (parcours de membership, formulaires dynamiques via iframes connectées à Salesforce). Modélisation des flux de données, élaboration des plans de tests et recette fonctionnelle (UAT).",
+              "<strong>Intégration Frontend & CMS :</strong> Intégration et maintenance d’un parc <strong>WordPress Multisite</strong> (HTML5, CSS3, JS) pour des clients (marques propres et Grands Comptes : <em>Uber, KPMG, Le Figaro, L'Agefi, Politico...</em>).",
+              "<strong>Optimisation frontend</strong> (HTML/CSS) directement sur des composants <strong>LWC</strong> (Lightning Web Components) et gestion des déploiements via pull-requests sur <strong>GitHub</strong>.",
+              "<strong>Performance, SEO & Tracking :</strong> Optimisation technique (Core Web Vitals, balisage sémantique) et intégration des outils de mesure d'audience (Google Analytics).",
+            ],
           },
           en: {
             jobTitle: "Web & CRM Product Owner",
