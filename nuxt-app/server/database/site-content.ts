@@ -122,10 +122,10 @@ export function getHeroData(locale: string) {
 
 export function getResumePrintProfileText(locale: string): string {
   if (locale === 'fr') {
-    return 'Product Owner technico-fonctionnel avec 7 ans d\'expérience, je fais le lien entre enjeux business, besoins utilisateurs et exécution technique pour concevoir et piloter des solutions web/CRM performantes.'
+    return 'Développeur Web & Intégrateur Frontend avec une solide expérience des plateformes CMS et digitales. Spécialisé en HTML5, CSS3, JavaScript et frameworks modernes (Vue.js/Nuxt), j’assure l’intégration, la maintenance, l’optimisation ergonomique et technique de sites web et de catalogues e-commerce.';
   }
 
-  return 'Technical Product Owner with 7 years of experience, bridging business strategy, user needs, and technical delivery to build high-impact web solutions.'
+  return 'Web Developer & Front-End Integrator with extensive experience in CMS and digital platforms. Specializing in HTML5, CSS3, JavaScript, and modern frameworks (such as Vue.js/Nuxt), I handle the integration, maintenance, and usability and technical optimization of websites and e-commerce catalogs.';
 }
 
   export function getLanguageContent(locale: string): { name: string; level: string; img: string }[] {
