@@ -279,7 +279,7 @@ export function getResumePrintProfileText(locale: string): string {
               "<strong>Intégration & Création graphique :</strong> Développement et stylisation de <strong>landing pages personnalisées</strong> (<strong>HTML5/CSS3</strong>) et conception d'infographies complexes pour l'<strong>identité visuelle</strong> de la marque."
             ],
            jobMissionsShort: [
-            "<strong>Gestion de Catalogue & CMS :</strong> Administration structurelle du catalogue produits sur le CMS <strong>eZ Publish</strong> (mise à jour des références, fiches produits, visuels et arborescence).",
+            "<strong>Gestion de Catalogue & CMS :</strong> Administration du catalogue produits sur le CMS <strong>eZ Publish</strong> (mise à jour des références, fiches produits, visuels et arborescence).",
             "<strong>Intégration & Ergonomie :</strong> Développement de landing pages sur mesure en <strong>HTML5/CSS3</strong>, ajustements graphiques et maintenance technique en lien avec les développeurs du siège."
           ]
           },
