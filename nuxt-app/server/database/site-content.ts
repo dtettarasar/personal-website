@@ -63,7 +63,7 @@ export function getHeroData(locale: string) {
 
         `Pendant plusieurs années, notamment chez DII / POLITICO, <strong>j'ai piloté des plateformes web et des projets CRM (Salesforce) pour des marques propres et des clients Grands Comptes (Uber, KPMG, Le Figaro, L'Agefi, Politico...)</strong> : cadrage fonctionnel, rédaction de spécifications et User Stories (Jira), coordination des équipes, intégration frontend, suivi de production et recette (UAT).`,
 
-        `Cette expérience terrain m'a donné une vision concrète du cycle de vie d'un produit digital — de l'expression du besoin et des parcours utilisateurs jusqu'à la mise en ligne, la donnée et la mesure de performance.`,
+        `Cette expérience terrain m'a donné une vision concrète du cycle de vie d'un produit digital, de l'expression du besoin et des parcours utilisateurs jusqu'à la mise en ligne, en passant par le développement, les tests et la mesure de performance.`,
 
         `Entre <strong>août 2025 et janvier 2026</strong>, j'ai consacré une période structurée à la <strong>formation et au prototypage technique</strong> (Python / CS50P, Vue.js, Nuxt.js, Node.js, Docker, Caddy) afin de mieux comprendre le fonctionnement réel des applications, cerner les contraintes techniques en amont et gagner en autonomie sur la création. Construire des prototypes complets m'a permis d'affiner ma démarche de conception produit de bout en bout, du design et de l'architecture jusqu'aux tests et à la validation.`,
 
@@ -77,7 +77,7 @@ export function getHeroData(locale: string) {
 
       `Over several years, notably at DII / POLITICO, <strong>I led web ecosystems and Salesforce CRM projects for flagship brands and enterprise clients (Uber, KPMG, Le Figaro, L'Agefi, Politico...)</strong> — covering functional scoping, specs and User Stories (Jira), team coordination, frontend integration, production delivery, and UAT.`,
 
-      `That hands-on background gave me a grounded view of the full digital product lifecycle, from user journeys and business requirements to live operations, data flows, and performance tracking.`,
+      `That hands-on background gave me a grounded view of the full digital product lifecycle — from user needs and journeys through development, testing, and release to performance tracking.`,
 
       `Between <strong>August 2025 and January 2026</strong>, I dedicated a focused period to <strong>technical training and prototyping</strong> (Python / CS50P, Vue.js, Nuxt.js, Node.js, Docker, Caddy) to better understand how applications work under the hood, anticipate technical constraints earlier, and build with greater autonomy. Taking prototypes end to end sharpened my approach to product design and delivery, from initial concept and structure through testing and validation.`,
 
