@@ -183,7 +183,7 @@ export function getResumePrintProfileText(locale: string): string {
     // 1. On définit la structure technique et les clés de traduction
     const experiencesBase = [
       {
-        companyName: "Formation & Projets Techniques",
+        companyName: "Projets personnels",
         companyVenue: "Rambouillet, France",
         companyLogoSrc: "/img/resume/experiences/research-and-development.png",
         displayOnPrint: true,
@@ -192,7 +192,7 @@ export function getResumePrintProfileText(locale: string): string {
             jobTitle: "Formation & Montée en compétences",
             period: "Août 2025 - Janvier 2026",
             jobMissions: [
-              "<strong>Cursus Harvard CS50P (Python) & Protection Créative :</strong> Apprentissage des fondations de Python, approfondissement de la programmation orientée objet. Conception d’<em>AI Art Shield</em> (Projet final Harvard) : une application en ligne de commande (CLI) dédié à la protection des œuvres des illustrateurs (Cadrage, PRD, logique POO).",
+              "<strong>Cursus Harvard CS50P (Python) & Protection Créative :</strong> Apprentissage des fondations de Python, approfondissement de la programmation orientée objet. Conception d’<em>AI Art Shield</em> (Projet final Harvard) : une application en ligne de commande (CLI) dédiée à la protection des œuvres des illustrateurs (Cadrage, PRD, logique POO).",
               "<strong>Architecture & DevOps (Site Portfolio) :</strong> Déploiement et maintenance en production du site portfolio (dylan-tettarasar.dev) développé sous <strong>Nuxt.js</strong>. Conteneurisation complète via <strong>Docker</strong> et configuration d'un reverse-proxy <strong>Caddy</strong> sur serveur VPS (gestion automatisée du HTTPS/DNS).",
               "<strong>Conception du SaaS <em>Otis AI</em> :</strong> Pilotage produit complet d'une application de génération de contenu texte optimisé pour le SEO. Cadrage des spécifications, design d'interface (Figma) et déploiement d'une <strong>architecture découplée</strong> (Frontend Vue.js / Backend Node.js-Express) avec intégration des API OpenAI et Stripe. Mise en place de tests unitaires et d'intégration (Vitest)."
             ],
