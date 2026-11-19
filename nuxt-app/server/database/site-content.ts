@@ -59,22 +59,15 @@ export function getHeroData(locale: string) {
     
     if (locale === 'fr') {
       return [
-        `Bonjour, je suis Dylan Tettarasar, Chef de Projet Digital & Product Owner Technique avec 7 ans d'expérience dans les environnements web, 
-        faisant le lien entre les besoins business et l'exécution technique.`,
+        `Bonjour, je suis Dylan Tettarasar, Chef de Projet Digital & Product Owner avec 7 ans d'expérience concrète sur des applications web et plateformes CRM, à l'intersection des enjeux business, du design produit et de la technique.`,
 
-        `J'ai commencé ma carrière dans le développement web et la gestion de projets digitaux, en intervenant sur le design, l'intégration et le déploiement. 
-        Pendant plusieurs années, <strong>j'ai managé et maintenu des plateformes WordPress pour des clients Grands Comptes (Uber, KPMG, Politico, L'Agefi...), coordonné des équipes de développement, 
-        rédigé des spécifications techniques et supervisé le cycle de vie complet des projets, de la conception à la mise en production</strong>.`,
-        
-        `<strong>Cela m'a apporté une compréhension globale de la manière dont les applications web modernes sont construites, déployées et scalées</strong> — tant du point de vue de l'architecture technique que de l'impact produit et business. 
-        J'ai développé une solide expertise en gestion de projets digitaux, plateformes CRM (Salesforce), optimisation des performances, ainsi qu'une capacité à collaborer efficacement avec des équipes pluridisciplinaires grâce à ma double vision technique et business.`,
+        `Pendant plusieurs années, notamment chez DII / POLITICO, <strong>j'ai piloté des plateformes web et des projets CRM (Salesforce) pour des marques propres et des clients Grands Comptes (Uber, KPMG, Le Figaro, L'Agefi, Politico...)</strong> : cadrage fonctionnel, rédaction de spécifications et User Stories (Jira), coordination des équipes, intégration frontend, suivi de production et recette (UAT).`,
 
-        `Au fil du temps, <strong>j'ai approfondi mes compétences techniques sur les frameworks modernes et les architectures full-stack</strong>. 
-        J'ai maîtrisé Vue.js, Nuxt.js, Node.js ainsi que les workflows DevOps modernes (Docker, Git, CI/CD), et j'ai construit plusieurs applications prêtes pour la production. <strong>Cette expérience concrète du développement fait de moi un gestionnaire de projet plus efficace</strong> : je parle le même langage que les développeurs et je peux évaluer les solutions techniques avec assurance.`,
-       
-        `Aujourd'hui, je me positionne comme un <strong>Product Owner Technique avec une forte expertise web concrète</strong>. 
-        J'associe des compétences en gestion de projet (gestion du backlog, spécifications, coordination des parties prenantes) à une réelle compréhension des contraintes techniques et de la stratégie produit digitale. 
-        Cette combinaison me permet de <strong>livrer des projets qui sont non seulement bien exécutés, mais aussi stratégiquement alignés sur les objectifs business</strong>.`,
+        `Cette expérience terrain m'a donné une vision concrète du cycle de vie d'un produit digital — de l'expression du besoin et des parcours utilisateurs jusqu'à la mise en ligne, la donnée et la mesure de performance.`,
+
+        `Entre <strong>août 2025 et janvier 2026</strong>, j'ai consacré une période structurée à la <strong>formation et au prototypage technique</strong> (Python / CS50P, Vue.js, Nuxt.js, Node.js, Docker, Caddy) afin de mieux comprendre le fonctionnement réel des applications, cerner les contraintes techniques en amont et gagner en autonomie sur la création. Construire des prototypes complets m'a permis d'affiner ma démarche de conception produit de bout en bout, du design et de l'architecture jusqu'aux tests et à la validation.`,
+
+        `Aujourd'hui, je mets cette double culture produit et technique au service d'équipes et de projets digitaux : <strong>concevoir des solutions utiles, fluides et réalistes techniquement, de l'idée initiale jusqu'à la recette et au déploiement</strong>.`
       ]
     }
 
