@@ -73,27 +73,16 @@ export function getHeroData(locale: string) {
 
     // Par défaut / Version EN
     return [
-        `Hello, I'm Dylan Tettarasar, a Digital Project Manager & Technical Product Owner with 7 years of experience in web environments, bridging the gap between business needs and technical execution.`,
+      `Hello, I'm Dylan Tettarasar, a Digital Project Manager & Product Owner with 7 years of hands-on experience across web applications and CRM platforms, bridging business goals, product design, and technical execution.`,
 
-        `I started my career in web development and digital project management, working across design, integration, and deployment. 
-        For several years, <strong>I managed and maintained WordPress platforms for enterprise clients (Uber, KPMG, Politico, L'Agefi...), 
-        coordinated development teams, wrote technical specifications, and oversaw the complete project lifecycle from conception to production</strong>.`,
-        
-        `<strong>This gave me a comprehensive understanding of how modern web applications are built, deployed, and scaled</strong> — 
-        both from a technical architecture perspective and a product/business impact angle. I developed strong expertise in 
-        digital project management, CRM platforms (Salesforce), performance optimization, and the ability to collaborate 
-        effectively with cross-functional teams as I understand both the technical and business sides.`,
+      `Over several years, notably at DII / POLITICO, <strong>I led web ecosystems and Salesforce CRM projects for flagship brands and enterprise clients (Uber, KPMG, Le Figaro, L'Agefi, Politico...)</strong> — covering functional scoping, specs and User Stories (Jira), team coordination, frontend integration, production delivery, and UAT.`,
 
-        `Over time, <strong>I deepened my technical skills on modern frameworks and full-stack architectures</strong>. 
-        I mastered Vue.js, Nuxt.js, Node.js, and modern DevOps workflows (Docker, Git, CI/CD), 
-        and built several production-ready applications. <strong>This hands-on development experience makes me a more effective 
-        project manager</strong> — I speak the same language as developers and can evaluate technical solutions with confidence.`,
-       
-        `Today, I position myself as a <strong>Technical Product Owner with strong hands-on web expertise</strong>. I combine 
-        project management skills (backlog management, specs, stakeholder coordination) with a genuine understanding of 
-        technical constraints and digital product strategy. This combination allows me to <strong>deliver projects that are 
-        not only well-executed but also strategically aligned with business goals</strong>.`,
-    ]
+      `That hands-on background gave me a grounded view of the full digital product lifecycle, from user journeys and business requirements to live operations, data flows, and performance tracking.`,
+
+      `Between <strong>August 2025 and January 2026</strong>, I dedicated a focused period to <strong>technical training and prototyping</strong> (Python / CS50P, Vue.js, Nuxt.js, Node.js, Docker, Caddy) to better understand how applications work under the hood, anticipate technical constraints earlier, and build with greater autonomy. Taking prototypes end to end sharpened my approach to product design and delivery, from initial concept and structure through testing and validation.`,
+
+      `Today, I bring that combined product and technical perspective to digital teams and projects: <strong>shaping practical, user-centered solutions that are technically sound from early design to QA and release</strong>.`
+  ]
 }
 
   export function getResumeIntroText(locale: string): string[] {
