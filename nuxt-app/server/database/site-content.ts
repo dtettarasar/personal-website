@@ -197,9 +197,9 @@ export function getResumePrintProfileText(locale: string): string {
               "<strong>Conception du SaaS <em>Otis AI</em> :</strong> Pilotage produit complet d'une application de génération de contenu texte optimisé pour le SEO. Cadrage des spécifications, design d'interface (Figma) et déploiement d'une <strong>architecture découplée</strong> (Frontend Vue.js / Backend Node.js-Express) avec intégration des API OpenAI et Stripe. Mise en place de tests unitaires et d'intégration (Vitest)."
             ],
             jobMissionsShort: [
-              "<strong>Cadrage & Conception applicative (SaaS Otis AI) :</strong> Développement frontend (Vue JS) et Backend (Node JS & Express), rédaction des spécifications fonctionnelles, UX/UI design avec Figma, modélisation de données, intégration d'API (OpenAI, Stripe), mise en place de tests unitaires et d'intégration (Vitest).",
-              "<strong>Formation Harvard CS50P :</strong> Apprentissage des fondations de Python. Développement d'un logiciel dédié à la protection des créations visuelles.",
-              "<strong>Architecture & Déploiement Web (Site Portfolio) :</strong> Conception UI/UX, intégration web, conteneurisation Docker, gestion de serveur VPS et configuration réseau (DNS/HTTPS).",
+              "<strong>Application web de génération de contenu texte SEO :</strong> Cadrage fonctionnel, UX/UI (Figma), modélisation de données, développement Vue.js et Node.js/Express, intégration des API OpenAI et Stripe, tests unitaires et d'intégration (Vitest).",
+              "<strong>Formation Harvard CS50P :</strong> Apprentissage des fondations de Python et développement d'un outil dédié à la protection des créations visuelles.",
+              "<strong>Site portfolio personnel :</strong> Conception UI/UX, intégration web, déploiement sous Nuxt.js avec Docker, reverse-proxy Caddy sur VPS et configuration HTTPS/DNS.",
               "<strong>Projets & Démonstrations :</strong> Retrouvez l'ensemble des réalisations sur <br> <strong>dylan-tettarasar.dev/portfolio</strong>."
             ]
           },
@@ -212,9 +212,9 @@ export function getResumePrintProfileText(locale: string): string {
               "<strong>SaaS Conception - <em>Otis AI</em>:</strong> Full product management of an AI content generation application. Scoped functional specifications, UI design (Figma), and deployed a <strong>decoupled architecture</strong> (Vue.js Frontend / Node.js-Express Backend) integrated with OpenAI and Stripe APIs. Implemented testing with Vitest."
             ],
             jobMissionsShort: [
-              "<strong>App Scoping & Build (SaaS Otis AI):</strong> Frontend (Vue.js) and Backend (Node.js & Express) development, functional specs, UI/UX design in Figma, data modeling, OpenAI & Stripe API integrations, and unit/integration testing (Vitest).",
-              "<strong>Harvard CS50P Training:</strong> Python fundamentals and Object-Oriented Programming; built an algorithmic CLI tool for protecting visual artwork.",
-              "<strong>Web Architecture & Deployment (Portfolio Site):</strong> UI/UX design, web integration, Docker containerization, VPS administration, and DNS/HTTPS configuration.",
+              "<strong>Web app for SEO text content generation:</strong> Functional scoping, UI/UX in Figma, data modeling, Vue.js and Node.js/Express build, OpenAI and Stripe API integrations, and unit/integration testing (Vitest).",
+              "<strong>Harvard CS50P Training:</strong> Python fundamentals and development of a tool dedicated to protecting visual artwork.",
+              "<strong>Personal portfolio website:</strong> UI/UX design, web integration, Nuxt.js deployment with Docker, Caddy reverse-proxy on VPS, and HTTPS/DNS setup.",
               "<strong>Projects & Demos:</strong> Explore all live projects and achievements at <br> <strong>dylan-tettarasar.dev/portfolio</strong>."
             ]
           }
