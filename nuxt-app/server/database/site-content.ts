@@ -86,20 +86,18 @@ export function getHeroData(locale: string) {
 }
 
   export function getResumeIntroText(locale: string): string[] {
-
-    if (locale === 'fr') {
-      return [
-        `Product Owner technico-fonctionnel avec 7 ans d'expérience, j'évolue à la croisée de la gestion de projet web, des plateformes CRM et du développement technique. J'ai notamment piloté des écosystèmes CMS (WordPress Multisite) pour des clients d'envergure (Uber, KPMG, Le Figaro, L'Agefi, Politico...), managé des projets Salesforce de bout en bout et coordonné des équipes de delivery de la spécification à la mise en production.`,
-        `Expert dans la traduction de besoins business en spécifications fonctionnelles (PRD, User Stories) et l'animation de backlogs (Jira), j'allie cette expérience terrain à un solide bagage technique renforcé par des cursus intensifs (Harvard CS50, freeCodeCamp). Cette double compétence me permet de garantir un dialogue d'égal à égal avec les développeurs et d'assurer une synchronisation parfaite avec les parties prenantes.`
-      ]
-    }
-
-    // Par défaut / EN
+  if (locale === 'fr') {
     return [
-      `As a technico-functional Product Owner with 7 years of experience, I operate at the crossroads of web project management, CRM platforms, and technical development. My track record includes piloting CMS ecosystems (WordPress Multisite) for enterprise clients (Uber, KPMG, Le Figaro, L'Agefi, Politico...), managing Salesforce projects end-to-end, and leading delivery teams from initial specifications to production.`,
-      `Expert in translating business needs into functional requirements (PRDs, User Stories) and managing backlogs (Jira), I combine hands-on product management with a strong technical background reinforced by intensive programs (Harvard CS50, freeCodeCamp). This dual expertise allows me to speak the same language as developers and bridge the gap with business stakeholders with confidence.`
+      `Product Owner & Chef de projet digital avec 7 ans d'expérience sur des applications web et CRM (WordPress Multisite, Salesforce), j'interviens du cadrage produit et de la conception fonctionnelle jusqu'au suivi de réalisation et à la recette (UAT). J'ai notamment piloté des dispositifs web et CRM pour des acteurs tels qu'Uber, KPMG, Le Figaro, L'Agefi et Politico.`,
+      `Mon parcours associe gestion de backlog (Jira), spécifications/User Stories, culture produit/UX et une montée en compétences technique (août 2025 – janvier 2026 : Python/CS50P, Vue/Nuxt, Node, Docker) pour mieux appréhender les contraintes d'implémentation, gagner en autonomie et piloter une fonctionnalité ou une application de bout en bout.`
     ]
+  }
 
+  // Par défaut / EN
+  return [
+    `Product Owner & Digital Project Manager with 7 years of hands-on experience across web and CRM platforms (WordPress Multisite, Salesforce), working from product framing and functional design through delivery follow-up and UAT. My background includes leading web and CRM initiatives for organizations such as Uber, KPMG, Le Figaro, L'Agefi, and Politico.`,
+    `I combine Jira backlog management, PRDs/User Stories, and product/UX sensibility with hands-on technical upskilling (August 2025 – January 2026: Python/CS50P, Vue/Nuxt, Node, Docker) to better understand implementation constraints, build with greater autonomy, and guide features or applications end to end.`
+  ]
 }
 
 export function getResumePrintProfileText(locale: string): string {
