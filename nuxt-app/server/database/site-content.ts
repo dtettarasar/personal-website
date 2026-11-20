@@ -59,65 +59,45 @@ export function getHeroData(locale: string) {
     
     if (locale === 'fr') {
       return [
-        `Bonjour, je suis Dylan Tettarasar, Chef de Projet Digital & Product Owner Technique avec 7 ans d'expérience dans les environnements web, 
-        faisant le lien entre les besoins business et l'exécution technique.`,
+        `Bonjour, je suis Dylan Tettarasar, Chef de Projet Digital & Product Owner avec 7 ans d'expérience concrète sur des applications web et plateformes CRM, à l'intersection des enjeux business, du design produit et de la technique.`,
 
-        `J'ai commencé ma carrière dans le développement web et la gestion de projets digitaux, en intervenant sur le design, l'intégration et le déploiement. 
-        Pendant plusieurs années, <strong>j'ai managé et maintenu des plateformes WordPress pour des clients Grands Comptes (Uber, KPMG, Politico, L'Agefi...), coordonné des équipes de développement, 
-        rédigé des spécifications techniques et supervisé le cycle de vie complet des projets, de la conception à la mise en production</strong>.`,
-        
-        `<strong>Cela m'a apporté une compréhension globale de la manière dont les applications web modernes sont construites, déployées et scalées</strong> — tant du point de vue de l'architecture technique que de l'impact produit et business. 
-        J'ai développé une solide expertise en gestion de projets digitaux, plateformes CRM (Salesforce), optimisation des performances, ainsi qu'une capacité à collaborer efficacement avec des équipes pluridisciplinaires grâce à ma double vision technique et business.`,
+        `Pendant plusieurs années, notamment chez DII / POLITICO, <strong>j'ai piloté des plateformes web et des projets CRM (Salesforce) pour des marques propres et des clients Grands Comptes (Uber, KPMG, Le Figaro, L'Agefi, Politico...)</strong> : cadrage fonctionnel, rédaction de spécifications et User Stories (Jira), coordination des équipes, intégration frontend, suivi de production et recette (UAT).`,
 
-        `Au fil du temps, <strong>j'ai approfondi mes compétences techniques sur les frameworks modernes et les architectures full-stack</strong>. 
-        J'ai maîtrisé Vue.js, Nuxt.js, Node.js ainsi que les workflows DevOps modernes (Docker, Git, CI/CD), et j'ai construit plusieurs applications prêtes pour la production. <strong>Cette expérience concrète du développement fait de moi un gestionnaire de projet plus efficace</strong> : je parle le même langage que les développeurs et je peux évaluer les solutions techniques avec assurance.`,
-       
-        `Aujourd'hui, je me positionne comme un <strong>Product Owner Technique avec une forte expertise web concrète</strong>. 
-        J'associe des compétences en gestion de projet (gestion du backlog, spécifications, coordination des parties prenantes) à une réelle compréhension des contraintes techniques et de la stratégie produit digitale. 
-        Cette combinaison me permet de <strong>livrer des projets qui sont non seulement bien exécutés, mais aussi stratégiquement alignés sur les objectifs business</strong>.`,
+        `Cette expérience terrain m'a donné une vision concrète du cycle de vie d'un produit digital, de l'expression du besoin et des parcours utilisateurs jusqu'à la mise en ligne, en passant par le développement, les tests et la mesure de performance.`,
+
+        `Entre <strong>août 2025 et janvier 2026</strong>, j'ai consacré une période structurée à la <strong>formation et au prototypage technique</strong> (Python / CS50P, Vue.js, Nuxt.js, Node.js, Docker, Caddy) afin de mieux comprendre le fonctionnement réel des applications, cerner les contraintes techniques en amont et gagner en autonomie sur la création. Construire des prototypes complets m'a permis d'affiner ma démarche de conception produit de bout en bout, du design et de l'architecture jusqu'aux tests et à la validation.`,
+
+        `Aujourd'hui, je mets cette double culture produit et technique au service d'équipes et de projets digitaux : <strong>concevoir des solutions utiles, fluides et réalistes techniquement, de l'idée initiale jusqu'à la recette et au déploiement</strong>.`
       ]
     }
 
     // Par défaut / Version EN
     return [
-        `Hello, I'm Dylan Tettarasar, a Digital Project Manager & Technical Product Owner with 7 years of experience in web environments, bridging the gap between business needs and technical execution.`,
+      `Hello, I'm Dylan Tettarasar, a Digital Project Manager & Product Owner with 7 years of hands-on experience across web applications and CRM platforms, bridging business goals, product design, and technical execution.`,
 
-        `I started my career in web development and digital project management, working across design, integration, and deployment. 
-        For several years, <strong>I managed and maintained WordPress platforms for enterprise clients (Uber, KPMG, Politico, L'Agefi...), 
-        coordinated development teams, wrote technical specifications, and oversaw the complete project lifecycle from conception to production</strong>.`,
-        
-        `<strong>This gave me a comprehensive understanding of how modern web applications are built, deployed, and scaled</strong> — 
-        both from a technical architecture perspective and a product/business impact angle. I developed strong expertise in 
-        digital project management, CRM platforms (Salesforce), performance optimization, and the ability to collaborate 
-        effectively with cross-functional teams as I understand both the technical and business sides.`,
+      `Over several years, notably at DII / POLITICO, <strong>I led web ecosystems and Salesforce CRM projects for flagship brands and enterprise clients (Uber, KPMG, Le Figaro, L'Agefi, Politico...)</strong> — covering functional scoping, specs and User Stories (Jira), team coordination, frontend integration, production delivery, and UAT.`,
 
-        `Over time, <strong>I deepened my technical skills on modern frameworks and full-stack architectures</strong>. 
-        I mastered Vue.js, Nuxt.js, Node.js, and modern DevOps workflows (Docker, Git, CI/CD), 
-        and built several production-ready applications. <strong>This hands-on development experience makes me a more effective 
-        project manager</strong> — I speak the same language as developers and can evaluate technical solutions with confidence.`,
-       
-        `Today, I position myself as a <strong>Technical Product Owner with strong hands-on web expertise</strong>. I combine 
-        project management skills (backlog management, specs, stakeholder coordination) with a genuine understanding of 
-        technical constraints and digital product strategy. This combination allows me to <strong>deliver projects that are 
-        not only well-executed but also strategically aligned with business goals</strong>.`,
-    ]
+      `That hands-on background gave me a grounded view of the full digital product lifecycle — from user needs and journeys through development, testing, and release to performance tracking.`,
+
+      `Between <strong>August 2025 and January 2026</strong>, I dedicated a focused period to <strong>technical training and prototyping</strong> (Python / CS50P, Vue.js, Nuxt.js, Node.js, Docker, Caddy) to better understand how applications work under the hood, anticipate technical constraints earlier, and build with greater autonomy. Taking prototypes end to end sharpened my approach to product design and delivery, from initial concept and structure through testing and validation.`,
+
+      `Today, I bring that combined product and technical perspective to digital teams and projects: <strong>shaping practical, user-centered solutions that are technically sound from early design to QA and release</strong>.`
+  ]
 }
 
   export function getResumeIntroText(locale: string): string[] {
-
-    if (locale === 'fr') {
-      return [
-        `Product Owner technico-fonctionnel avec 7 ans d'expérience, j'évolue à la croisée de la gestion de projet web, des plateformes CRM et du développement technique. J'ai notamment piloté des écosystèmes CMS (WordPress Multisite) pour des clients d'envergure (Uber, KPMG, Le Figaro, L'Agefi, Politico...), managé des projets Salesforce de bout en bout et coordonné des équipes de delivery de la spécification à la mise en production.`,
-        `Expert dans la traduction de besoins business en spécifications fonctionnelles (PRD, User Stories) et l'animation de backlogs (Jira), j'allie cette expérience terrain à un solide bagage technique renforcé par des cursus intensifs (Harvard CS50, freeCodeCamp). Cette double compétence me permet de garantir un dialogue d'égal à égal avec les développeurs et d'assurer une synchronisation parfaite avec les parties prenantes.`
-      ]
-    }
-
-    // Par défaut / EN
+  if (locale === 'fr') {
     return [
-      `As a technico-functional Product Owner with 7 years of experience, I operate at the crossroads of web project management, CRM platforms, and technical development. My track record includes piloting CMS ecosystems (WordPress Multisite) for enterprise clients (Uber, KPMG, Le Figaro, L'Agefi, Politico...), managing Salesforce projects end-to-end, and leading delivery teams from initial specifications to production.`,
-      `Expert in translating business needs into functional requirements (PRDs, User Stories) and managing backlogs (Jira), I combine hands-on product management with a strong technical background reinforced by intensive programs (Harvard CS50, freeCodeCamp). This dual expertise allows me to speak the same language as developers and bridge the gap with business stakeholders with confidence.`
+      `Product Owner & Chef de projet digital avec 7 ans d'expérience sur des applications web et CRM (WordPress Multisite, Salesforce), j'interviens du cadrage produit et de la conception fonctionnelle jusqu'au suivi de réalisation et à la recette (UAT). J'ai notamment piloté des dispositifs web et CRM pour des acteurs tels qu'Uber, KPMG, Le Figaro, L'Agefi et Politico.`,
+      `Mon parcours associe gestion de backlog (Jira), spécifications/User Stories, culture produit/UX et une montée en compétences technique (août 2025 – janvier 2026 : Python/CS50P, Vue/Nuxt, Node, Docker) pour mieux appréhender les contraintes d'implémentation, gagner en autonomie et piloter une fonctionnalité ou une application de bout en bout.`
     ]
+  }
 
+  // Par défaut / EN
+  return [
+    `Product Owner & Digital Project Manager with 7 years of hands-on experience across web and CRM platforms (WordPress Multisite, Salesforce), working from product framing and functional design through delivery follow-up and UAT. My background includes leading web and CRM initiatives for organizations such as Uber, KPMG, Le Figaro, L'Agefi, and Politico.`,
+    `I combine Jira backlog management, PRDs/User Stories, and product/UX sensibility with hands-on technical upskilling (August 2025 – January 2026: Python/CS50P, Vue/Nuxt, Node, Docker) to better understand implementation constraints, build with greater autonomy, and guide features or applications end to end.`
+  ]
 }
 
 export function getResumePrintProfileText(locale: string): string {
@@ -183,39 +163,39 @@ export function getResumePrintProfileText(locale: string): string {
     // 1. On définit la structure technique et les clés de traduction
     const experiencesBase = [
       {
-        companyName: "Projets & Prototypage",
+        companyName: "Projets personnels",
         companyVenue: "Rambouillet, France",
         companyLogoSrc: "/img/resume/experiences/research-and-development.png",
         displayOnPrint: true,
         translations: {
           fr: {
-            jobTitle: "Product Owner & Concepteur Web (Montée en compétences)",
-            period: "2025 - Présent",
+            jobTitle: "Formation & Montée en compétences",
+            period: "Août 2025 - Janvier 2026",
             jobMissions: [
-              "<strong>2025 : Cursus Harvard CS50P (Python) & Protection Créative :</strong> Approfondissement de la programmation orientée objet. Conception d’<em>AI Art Shield</em> (Projet final Harvard) : un MVP algorithmique en ligne de commande (CLI) dédié à la protection des œuvres des illustrateurs (Cadrage, PRD, logique POO).",
-              "<strong>2025 : Architecture & DevOps (Site Portfolio) :</strong> Déploiement et maintenance en production du site portfolio (dylan-tettarasar.dev) développé sous <strong>Nuxt.js</strong>. Conteneurisation complète via <strong>Docker</strong> et configuration d'un reverse-proxy <strong>Caddy</strong> sur serveur VPS (gestion automatisée du HTTPS/DNS).",
-              "<strong>Fin 2024 : Conception du SaaS <em>Otis AI</em> :</strong> Pilotage produit complet d'une application de génération de contenu IA. Cadrage des spécifications et déploiement d'une <strong>architecture découplée</strong> (Frontend Vue.js / Backend Node.js-Express) avec intégration des API OpenAI et Stripe. Mise en place de tests unitaires et d'intégration (Vitest)."
+              "<strong>Cursus Harvard CS50P (Python) & Protection Créative :</strong> Apprentissage des fondations de Python, approfondissement de la programmation orientée objet. Conception d’<em>AI Art Shield</em> (Projet final Harvard) : une application en ligne de commande (CLI) dédiée à la protection des œuvres des illustrateurs (Cadrage, PRD, logique POO).",
+              "<strong>Architecture & DevOps (Site Portfolio) :</strong> Déploiement et maintenance en production du site portfolio (dylan-tettarasar.dev) développé sous <strong>Nuxt.js</strong>. Conteneurisation complète via <strong>Docker</strong> et configuration d'un reverse-proxy <strong>Caddy</strong> sur serveur VPS (gestion automatisée du HTTPS/DNS).",
+              "<strong>Conception du SaaS <em>Otis AI</em> :</strong> Pilotage produit complet d'une application de génération de contenu texte optimisé pour le SEO. Cadrage des spécifications, design d'interface (Figma) et déploiement d'une <strong>architecture découplée</strong> (Frontend Vue.js / Backend Node.js-Express) avec intégration des API OpenAI et Stripe. Mise en place de tests unitaires et d'intégration (Vitest)."
             ],
             jobMissionsShort: [
-              "<strong>Cadrage & Conception applicative (SaaS Otis AI) :</strong> Spécifications fonctionnelles, modélisation de données, intégration d'API (OpenAI, Stripe), mise en place de tests unitaires et d'intégration (Vitest).",
-              "<strong>Projet Harvard CS50P (AI Art Shield) :</strong> Développement d'un logiciel en Python, dédié à la protection des créations visuelles.",
-              "<strong>Architecture & Déploiement Web (Site Portfolio) :</strong> Conception UI/UX, intégration web, conteneurisation Docker, gestion de serveur VPS et configuration réseau (DNS/HTTPS).",
+              "<strong>Application web de génération de contenu texte SEO :</strong> Cadrage fonctionnel, UX/UI (Figma), modélisation de données, développement Vue.js et Node.js/Express, intégration des API OpenAI et Stripe, tests unitaires et d'intégration (Vitest).",
+              "<strong>Formation Harvard CS50P :</strong> Apprentissage des fondations de Python et développement d'un outil dédié à la protection des créations visuelles.",
+              "<strong>Site portfolio personnel :</strong> Conception UI/UX, intégration web, déploiement sous Nuxt.js avec Docker, reverse-proxy Caddy sur VPS et configuration HTTPS/DNS.",
               "<strong>Projets & Démonstrations :</strong> Retrouvez l'ensemble des réalisations sur <br> <strong>dylan-tettarasar.dev/portfolio</strong>."
             ]
           },
           en: {
-            jobTitle: "Product Owner & Web Designer (Skill Development)",
-            period: "2025 - Present",
+            jobTitle: "Training & Skill Development",
+            period: "August 2025 - January 2026",
             jobMissions: [
-              "<strong>2025: Harvard CS50P (Python) & Creative Protection:</strong> Deep dive into Object-Oriented Programming. Conceived <em>AI Art Shield</em> (Harvard Final Project): an algorithmic Command Line Interface (CLI) MVP dedicated to protecting artists' artwork (Scoping, PRD, OOP logic).",
-              "<strong>2025: Architecture & DevOps (Portfolio Site):</strong> Deployment and production maintenance of the portfolio website (dylan-tettarasar.dev) built with <strong>Nuxt.js</strong>. Full containerization via <strong>Docker</strong> and setup of a <strong>Caddy</strong> reverse-proxy on a VPS server (automated HTTPS/DNS management).",
-              "<strong>Late 2024: SaaS Conception - <em>Otis AI</em>:</strong> Full product management of an AI content generation application. Scoped functional specifications and deployed a <strong>decoupled architecture</strong> (Vue.js Frontend / Node.js-Express Backend) integrated with OpenAI and Stripe APIs. Implemented testing with Vitest."
+              "<strong>Harvard CS50P (Python) & Creative Protection:</strong> Deep dive into Object-Oriented Programming. Conceived <em>AI Art Shield</em> (Harvard Final Project): Command Line Interface (CLI) app dedicated to protecting artists' artwork (Scoping, PRD, OOP logic).",
+              "<strong>Architecture & DevOps (Portfolio Site):</strong> Deployment and production maintenance of the portfolio website (dylan-tettarasar.dev) built with <strong>Nuxt.js</strong>. Full containerization via <strong>Docker</strong> and setup of a <strong>Caddy</strong> reverse-proxy on a VPS server (automated HTTPS/DNS management).",
+              "<strong>SaaS Design - <em>Otis AI</em>:</strong> Full product management of an AI content generation application. Scoped functional specifications, UI design (Figma), and deployed a <strong>decoupled architecture</strong> (Vue.js Frontend / Node.js-Express Backend) integrated with OpenAI and Stripe APIs. Implemented testing with Vitest."
             ],
             jobMissionsShort: [
-              "Built <strong>AI Art Shield</strong> (Harvard CS50P final project): functional design, PRD/README writing, and Python OOP implementation.",
-              "Designed, developed, and deployed the <strong>Nuxt.js</strong> portfolio in production: UI work, <strong>Docker</strong> containerization, <strong>Caddy</strong> reverse-proxy on VPS, and <strong>HTTPS/DNS</strong> configuration.",
-              "Built the <strong>Otis AI</strong> SaaS end to end: interface design, data modeling, Vue.js / Node.js stack, <strong>OpenAI + Stripe</strong> integrations, Vitest tests, and production deployment.",
-              "<strong>Projects & Demos:</strong> Explore all live projects and achievements at <br> <strong>dylan-tettarasar.dev/portfolio</strong>.",
+              "<strong>Web app for SEO text content generation:</strong> Functional scoping, UI/UX in Figma, data modeling, Vue.js and Node.js/Express build, OpenAI and Stripe API integrations, and unit/integration testing (Vitest).",
+              "<strong>Harvard CS50P Training:</strong> Python fundamentals and development of a tool dedicated to protecting visual artwork.",
+              "<strong>Personal portfolio website:</strong> UI/UX design, web integration, Nuxt.js deployment with Docker, Caddy reverse-proxy on VPS, and HTTPS/DNS setup.",
+              "<strong>Projects & Demos:</strong> Explore all live projects and achievements at <br> <strong>dylan-tettarasar.dev/portfolio</strong>."
             ]
           }
         }
@@ -230,14 +210,16 @@ export function getResumePrintProfileText(locale: string): string {
             jobTitle: "Product Owner Web & CRM",
             period: "Janvier 2018 - Décembre 2024",
             jobMissions: [
-              "<strong>Gestion & Évolution du Parc CMS :</strong> Pilotage global de l’architecture <strong>WordPress Multisite</strong> pour l'ensemble des conférences de l'agence (marques propres et Grands Comptes : <em>Uber, KPMG, Le Figaro, L'Agefi, Politico...</em>). Gestion des déploiements et des configurations <strong>DNS/HTTPS</strong> avec les prestataires.",
-              "<strong>Intégration Frontend & Support Interne :</strong> Intégration complète des contenus événementiels (programmes, intervenants, modules de vidéos et livestreams) et adaptation responsive des interfaces (<strong>HTML5/CSS3/JS</strong>). Support technique auprès des équipes marketing pour des événements <strong>Grands Comptes</strong>, avec la gestion de pics dépassant <strong>1 000 visites uniques</strong> par jour.",
+              "<strong>Gestion & Évolution du Parc CMS :</strong> Pilotage global de l’architecture <strong>WordPress Multisite</strong> pour l'ensemble des conférences de l'agence (marques propres et Grands Comptes : <em>Uber, KPMG, Le Figaro, L'Agefi, Politico...</em>). Gestion des noms de domaine et des configurations <strong>DNS/HTTPS</strong> avec les prestataires.",
+              "<strong>Maquettage, Intégration Frontend & Support Interne :</strong> Création de maquettes sous <strong>Figma</strong> dans le cadre de refontes de pages web, intégration des contenus événementiels (programmes, intervenants, modules de vidéos et livestreams) et adaptation responsive des interfaces (<strong>HTML5/CSS3/JS</strong>). Support technique auprès des équipes marketing pour des événements <strong>Grands Comptes</strong>, avec la gestion de pics dépassant <strong>1 000 visites uniques</strong> par jour.",
               "<strong>Migration, Data & Administration Salesforce :</strong> Acteur clé de la transition critique en 3 mois d’un CRM legacy vers <strong>Salesforce</strong>. Administration quotidienne (gouvernance, profils, <strong>Permission Sets</strong>, mapping d'objets, création & gestion de rapports, dashboards). Réalisation de requêtes <strong>SOQL (SQL)</strong> pour l'investigation de données, la vérification des recettes fonctionnelles et le support aux imports massifs (<strong>DataLoader / Pardot</strong>).",
               "<strong>Product Ownership & Pilotage Technique :</strong> Conception fonctionnelle et pilotage du cycle de vie de <strong>features complexes</strong> (parcours de membership, formulaires dynamiques via iframes connectées à Salesforce). Rédaction des cahiers des charges et des User Stories (<strong>Jira</strong>), modélisation des flux de données, suivi des développements et tests de recette (<strong>UAT</strong>).",
               "<strong>Build & Code CRM :</strong> Optimisation frontend (HTML/CSS) directement sur des composants <strong>LWC</strong> (Lightning Web Components) et gestion des déploiements via pull-requests sur <strong>GitHub</strong>."
             ],
             jobMissionsShort: [
-              "Pilotage de l'écosystème <strong>WordPress Multisite</strong> et des opérations <strong>DNS/HTTPS</strong> pour des conférences grands comptes (Le Figaro, L'Agefi, KPMG...).",
+              "Pilotage de l'écosystème <strong>WordPress Multisite</strong> pour des conférences grands comptes (Le Figaro, L'Agefi, KPMG...).",
+              "Gestion des noms de domaine et des configurations DNS/HTTPS avec les prestataires.",
+              "Création de <strong>maquettes sous Figma</strong> lors de refontes de pages web et intégration responsive (<strong>HTML5/CSS3/JS</strong>).",
               "Supervision de <strong>l'intégration des contenus événementiels</strong> (agendas, speakers, livestreams) et <strong>support technique</strong> des équipes marketing sur des <strong>pics supérieurs à 1 000 visites/jour</strong>.",
               "Transition CRM vers <strong>Salesforce en 3 mois</strong> et administration quotidienne. Requêtage <strong>SOQL (SQL)</strong> pour l'analyse de données, le contrôle UAT et la gestion des imports (<strong>DataLoader / Pardot</strong>).",
               "<strong>Conception de fonctionnalités complexes</strong> (membership, formulaires Salesforce) : rédaction des User Stories Jira, suivi des développements, <strong>élaboration des plans de tests</strong> et <strong>recette fonctionnelle (UAT)</strong>.",
@@ -249,14 +231,16 @@ export function getResumePrintProfileText(locale: string): string {
             jobTitle: "Web & CRM Product Owner",
             period: "January 2018 - December 2024",
             jobMissions: [
-              "<strong>CMS Fleet Management & Evolution:</strong> Global management of the <strong>WordPress Multisite</strong> architecture for all agency conferences (own brands and key accounts: <em>Uber, KPMG, Le Figaro, Politico...</em>). Handled custom domain deployments and <strong>DNS/HTTPS</strong> configurations.",
-              "<strong>Frontend Integration & Internal Support:</strong> Full integration of event content (agendas, speakers, video modules, and livestreams) and responsive adaptation of interfaces (<strong>HTML5/CSS3/JS</strong>). Provided technical troubleshooting for marketing teams for <strong>key account</strong> events, managing traffic peaks exceeding <strong>1,000 unique visits</strong> per day.",
+              "<strong>CMS Fleet Management & Evolution:</strong> Global management of the <strong>WordPress Multisite</strong> architecture for all agency conferences (own brands and key accounts: <em>Uber, KPMG, Le Figaro, L'Agefi, Politico...</em>). Managed domain names and DNS/HTTPS configurations in coordination with external providers.",
+              "<strong>Wireframing, Frontend Integration & Internal Support:</strong> Created mockups in <strong>Figma</strong> for web page redesigns, integrated event content (agendas, speakers, video modules, and livestreams), and handled responsive interface adaptation (<strong>HTML5/CSS3/JS</strong>). Provided technical troubleshooting for marketing teams for <strong>key account</strong> events, managing traffic peaks exceeding <strong>1,000 unique visits</strong> per day.",
               "<strong>Salesforce Migration, Data & Administration:</strong> Key player in the critical 3-month transition from a legacy CRM to <strong>Salesforce</strong>. Managed daily platform administration (governance, <strong>Permission Sets</strong>, object mapping, reports and dashboards management). Executed <strong>SOQL (SQL)</strong> queries for data investigation, UAT validation, and bulk import operations (<strong>DataLoader / Pardot</strong>).",
               "<strong>Product Ownership & Technical Delivery:</strong> Functional design and lifecycle management of <strong>complex features</strong> (membership paths, dynamic iframe forms connected to Salesforce). Wrote technical specifications and User Stories (<strong>Jira</strong>), modeled data flows, and executed User Acceptance Testing (<strong>UAT</strong>).",
               "<strong>CRM Build & Code:</strong> Optimized frontend layouts (HTML/CSS) directly within <strong>LWC</strong> (Lightning Web Components) and managed delivery via GitHub <strong>pull-requests</strong>."
             ],
             jobMissionsShort: [
-              "Led <strong>WordPress Multisite</strong> operations and <strong>DNS/HTTPS</strong> setup for high-visibility conference websites.",
+              "Led <strong>WordPress Multisite</strong> operations for high-visibility conference websites.",
+              "Managed domain names and DNS/HTTPS configurations in coordination with external providers.",
+              "Created <strong>Figma mockups</strong> for web page redesigns and handled responsive frontend integration (<strong>HTML5/CSS3/JS</strong>).",
               "Oversaw <strong>event content integration</strong> (agendas, speakers, livestream modules) and <strong>technical support</strong> for marketing teams during <strong>peaks above 1,000 daily visits</strong>.",
               "Drove a <strong>3-month Salesforce migration</strong> and daily administration. Used <strong>SOQL (SQL)</strong> for data analysis, UAT checks, and bulk imports (<strong>DataLoader / Pardot</strong>).",
               "Designed and delivered <strong>complex product features</strong> (membership journeys, dynamic Salesforce-connected forms) with Jira workflows and UAT.",
